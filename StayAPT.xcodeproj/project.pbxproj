@@ -12,6 +12,10 @@
 		E24740211F4C3A5A001DC93D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E247401F1F4C3A5A001DC93D /* Main.storyboard */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
+		E24740311F4C629B001DC93D /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = E247402D1F4C629B001DC93D /* Controllers */; };
+		E24740321F4C629B001DC93D /* Helpers in Resources */ = {isa = PBXBuildFile; fileRef = E247402E1F4C629B001DC93D /* Helpers */; };
+		E24740331F4C629B001DC93D /* Services in Resources */ = {isa = PBXBuildFile; fileRef = E247402F1F4C629B001DC93D /* Services */; };
+		E24740341F4C629B001DC93D /* Views in Resources */ = {isa = PBXBuildFile; fileRef = E24740301F4C629B001DC93D /* Views */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24740251F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E24740271F4C3A5A001DC93D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E247402D1F4C629B001DC93D /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		E247402E1F4C629B001DC93D /* Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Helpers; sourceTree = "<group>"; };
+		E247402F1F4C629B001DC93D /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
+		E24740301F4C629B001DC93D /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 		E247401A1F4C3A5A001DC93D /* StayAPT */ = {
 			isa = PBXGroup;
 			children = (
+				E247402D1F4C629B001DC93D /* Controllers */,
+				E247402E1F4C629B001DC93D /* Helpers */,
+				E247402F1F4C629B001DC93D /* Services */,
+				E24740301F4C629B001DC93D /* Views */,
 				E247401B1F4C3A5A001DC93D /* AppDelegate.swift */,
 				E247401D1F4C3A5A001DC93D /* ViewController.swift */,
 				E247401F1F4C3A5A001DC93D /* Main.storyboard */,
@@ -123,9 +135,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24740331F4C629B001DC93D /* Services in Resources */,
 				E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */,
 				E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */,
+				E24740311F4C629B001DC93D /* Controllers in Resources */,
 				E24740211F4C3A5A001DC93D /* Main.storyboard in Resources */,
+				E24740321F4C629B001DC93D /* Helpers in Resources */,
+				E24740341F4C629B001DC93D /* Views in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +317,7 @@
 				E247402C1F4C3A5A001DC93D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
