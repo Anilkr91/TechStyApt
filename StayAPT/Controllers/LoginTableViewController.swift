@@ -9,26 +9,23 @@
 import UIKit
 
 class LoginTableViewController: BaseTableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.backgroundView?.backgroundColor = UIColor.clear
         setupBackgroundImage()
-        
-         tableView.backgroundColor = UIColor.clear
-        
-        
-        
-//        tableView.backgroundColor = UIColor.clearColor()
-//        tableFooterView?.backgroundColor = UIColor.clearColor()
-//        separatorColor = UIColor.clearColor()
     }
     
     func setupBackgroundImage() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg")
         backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.backgroundColor = UIColor.white
         self.view.insertSubview(backgroundImage, at: 0)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
+                            forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 }
