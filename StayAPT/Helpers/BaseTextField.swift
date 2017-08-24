@@ -13,14 +13,27 @@ class BaseTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        setBottomLine()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+        setBottomLine()
     }
     
     func setup() {
         backgroundColor = UIColor.clear
+    }
+    
+    func setBottomLine() {
+        
+        self.borderStyle = UITextBorderStyle.none
+        self.backgroundColor = UIColor.clear
+        let borderLine = UIView()
+        let height = 1.0
+        borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - height, width: Double(self.frame.width), height: height)
+        borderLine.backgroundColor = UIColor.white
+        self.addSubview(borderLine)
     }
 }

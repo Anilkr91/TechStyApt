@@ -1,5 +1,5 @@
 //
-//  LoginTableViewController.swift
+//  SignUpTableViewController.swift
 //  StayAPT
 //
 //  Created by admin on 24/08/17.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class LoginTableViewController: BaseTableViewController {
-    
+class SignUpTableViewController: BaseTableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupBackgroundImage()
         tableView.separatorStyle = .none
     }
+
     
     func setupBackgroundImage() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
@@ -29,4 +31,5 @@ class LoginTableViewController: BaseTableViewController {
                             forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
     }
+
 }

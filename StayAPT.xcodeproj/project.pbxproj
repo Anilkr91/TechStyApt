@@ -14,6 +14,9 @@
 		846250791F4EE5DF00654E3D /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250781F4EE5DF00654E3D /* LoginTableViewController.swift */; };
 		8462507B1F4EEEB100654E3D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462507A1F4EEEB100654E3D /* BaseView.swift */; };
 		8462507D1F4EF2CC00654E3D /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462507C1F4EF2CC00654E3D /* BaseTextField.swift */; };
+		8462507F1F4F08A200654E3D /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462507E1F4F08A200654E3D /* BaseButton.swift */; };
+		846250811F4F0B5500654E3D /* FacebookButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250801F4F0B5500654E3D /* FacebookButon.swift */; };
+		846250831F4F456100654E3D /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250821F4F456100654E3D /* SignUpTableViewController.swift */; };
 		84DDE4661F4D8E2A00A2E244 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4641F4D8E2A00A2E244 /* MenuTableViewController.swift */; };
 		84DDE4671F4D8E2A00A2E244 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4651F4D8E2A00A2E244 /* ViewController.swift */; };
 		84DDE46C1F4D8EC000A2E244 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE46B1F4D8EC000A2E244 /* MenuTableViewCell.swift */; };
@@ -35,6 +38,9 @@
 		846250781F4EE5DF00654E3D /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8462507A1F4EEEB100654E3D /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		8462507C1F4EF2CC00654E3D /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		8462507E1F4F08A200654E3D /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		846250801F4F0B5500654E3D /* FacebookButon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookButon.swift; sourceTree = "<group>"; };
+		846250821F4F456100654E3D /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		84DDE4641F4D8E2A00A2E244 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		84DDE4651F4D8E2A00A2E244 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84DDE46B1F4D8EC000A2E244 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				846250711F4EB20100654E3D /* MenuViewController.swift */,
 				846250761F4EC5FA00654E3D /* FitnessCenterDetailCollectionViewController.swift */,
 				846250781F4EE5DF00654E3D /* LoginTableViewController.swift */,
+				846250821F4F456100654E3D /* SignUpTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 			children = (
 				8462507A1F4EEEB100654E3D /* BaseView.swift */,
 				8462507C1F4EF2CC00654E3D /* BaseTextField.swift */,
+				8462507E1F4F08A200654E3D /* BaseButton.swift */,
+				846250801F4F0B5500654E3D /* FacebookButon.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -297,11 +306,14 @@
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
 				8462507B1F4EEEB100654E3D /* BaseView.swift in Sources */,
 				8462507D1F4EF2CC00654E3D /* BaseTextField.swift in Sources */,
+				846250811F4F0B5500654E3D /* FacebookButon.swift in Sources */,
 				84DDE46C1F4D8EC000A2E244 /* MenuTableViewCell.swift in Sources */,
+				846250831F4F456100654E3D /* SignUpTableViewController.swift in Sources */,
 				846250791F4EE5DF00654E3D /* LoginTableViewController.swift in Sources */,
 				84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */,
 				84DDE4711F4DFABF00A2E244 /* MenuListingTabeViewControllerTableViewController.swift in Sources */,
 				84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */,
+				8462507F1F4F08A200654E3D /* BaseButton.swift in Sources */,
 				84DDE4661F4D8E2A00A2E244 /* MenuTableViewController.swift in Sources */,
 				846250721F4EB20100654E3D /* MenuViewController.swift in Sources */,
 				846250771F4EC5FA00654E3D /* FitnessCenterDetailCollectionViewController.swift in Sources */,
