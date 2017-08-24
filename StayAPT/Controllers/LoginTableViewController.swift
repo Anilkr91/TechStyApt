@@ -1,24 +1,28 @@
 //
-//  ViewController.swift
+//  LoginTableViewController.swift
 //  StayAPT
 //
-//  Created by Macintosh on 22/08/17.
+//  Created by admin on 24/08/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: BaseViewController {
+class LoginTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setupNavigationBar()
-    }
-    
-    func setupNavigationBar() {
-        //self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        tableView.backgroundView?.backgroundColor = UIColor.clear
         setupBackgroundImage()
+        
+         tableView.backgroundColor = UIColor.clear
+        
+        
+        
+//        tableView.backgroundColor = UIColor.clearColor()
+//        tableFooterView?.backgroundColor = UIColor.clearColor()
+//        separatorColor = UIColor.clearColor()
     }
     
     func setupBackgroundImage() {
@@ -28,4 +32,3 @@ class ViewController: BaseViewController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
 }
-
