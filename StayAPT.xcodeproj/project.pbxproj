@@ -24,6 +24,9 @@
 		84DDE4711F4DFABF00A2E244 /* MenuListingTabeViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4701F4DFABF00A2E244 /* MenuListingTabeViewControllerTableViewController.swift */; };
 		84DDE4731F4DFAED00A2E244 /* MenuListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4721F4DFAED00A2E244 /* MenuListingTableViewCell.swift */; };
 		84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */; };
+		84F92F801F4FE2220002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F7F1F4FE2220002074D /* HomeViewController.swift */; };
+		84F92F821F4FECC20002074D /* FitnessCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F811F4FECC20002074D /* FitnessCenterTableViewController.swift */; };
+		84F92F841F4FF0A00002074D /* FitnessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F831F4FF0A00002074D /* FitnessHomeViewController.swift */; };
 		E24740211F4C3A5A001DC93D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E247401F1F4C3A5A001DC93D /* Main.storyboard */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
@@ -48,6 +51,9 @@
 		84DDE4701F4DFABF00A2E244 /* MenuListingTabeViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListingTabeViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		84DDE4721F4DFAED00A2E244 /* MenuListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListingTableViewCell.swift; sourceTree = "<group>"; };
 		84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		84F92F7F1F4FE2220002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84F92F811F4FECC20002074D /* FitnessCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterTableViewController.swift; sourceTree = "<group>"; };
+		84F92F831F4FF0A00002074D /* FitnessHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessHomeViewController.swift; sourceTree = "<group>"; };
 		E24740181F4C3A5A001DC93D /* StayAPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayAPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24740201F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 				846250761F4EC5FA00654E3D /* FitnessCenterDetailCollectionViewController.swift */,
 				846250781F4EE5DF00654E3D /* LoginTableViewController.swift */,
 				846250821F4F456100654E3D /* SignUpTableViewController.swift */,
+				84F92F7F1F4FE2220002074D /* HomeViewController.swift */,
+				84F92F811F4FECC20002074D /* FitnessCenterTableViewController.swift */,
+				84F92F831F4FF0A00002074D /* FitnessHomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,7 +313,10 @@
 				84DDE4671F4D8E2A00A2E244 /* ViewController.swift in Sources */,
 				84DDE4731F4DFAED00A2E244 /* MenuListingTableViewCell.swift in Sources */,
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
+				84F92F801F4FE2220002074D /* HomeViewController.swift in Sources */,
 				8462507B1F4EEEB100654E3D /* BaseView.swift in Sources */,
+				84F92F841F4FF0A00002074D /* FitnessHomeViewController.swift in Sources */,
+				84F92F821F4FECC20002074D /* FitnessCenterTableViewController.swift in Sources */,
 				8462507D1F4EF2CC00654E3D /* BaseTextField.swift in Sources */,
 				846250811F4F0B5500654E3D /* FacebookButon.swift in Sources */,
 				84DDE46C1F4D8EC000A2E244 /* MenuTableViewCell.swift in Sources */,
