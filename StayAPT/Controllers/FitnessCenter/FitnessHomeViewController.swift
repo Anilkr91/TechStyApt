@@ -12,7 +12,6 @@ class FitnessHomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupBackgroundImage()
     }
     
