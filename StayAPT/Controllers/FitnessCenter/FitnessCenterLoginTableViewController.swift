@@ -1,5 +1,5 @@
 //
-//  FitnessCenterTableViewController.swift
+//  FitnessCenterLoginTableViewController.swift
 //  StayAPT
 //
 //  Created by admin on 25/08/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FitnessCenterTableViewController: BaseTableViewController {
+class FitnessCenterLoginTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

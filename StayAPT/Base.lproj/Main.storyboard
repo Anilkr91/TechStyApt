@@ -990,7 +990,7 @@
         <!--Login-->
         <scene sceneID="kFo-F4-P2g">
             <objects>
-                <tableViewController id="QsO-S5-896" customClass="FitnessCenterTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="QsO-S5-896" customClass="FitnessCenterLoginTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="c6g-gn-fXV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
