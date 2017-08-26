@@ -14,4 +14,20 @@ class CheckedInMemberCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var saNameLabel: UILabel!
     @IBOutlet weak var saCountLabel: UILabel!
     
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        layer.cornerRadius = 10.0
+        layer.borderWidth = 1.0
+        backgroundColor = UIColor.clear
+    }
 }
