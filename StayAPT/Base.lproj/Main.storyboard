@@ -1365,6 +1365,9 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ltc-Qi-yvJ">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ltc-Qi-yvJ" secondAttribute="height" multiplier="4:5" id="g3W-1W-BO8"/>
+                                            </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5y-4v-cef">
                                             <rect key="frame" x="0.0" y="110" width="120" height="40"/>
