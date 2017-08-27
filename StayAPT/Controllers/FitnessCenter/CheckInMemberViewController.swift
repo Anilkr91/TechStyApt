@@ -9,10 +9,15 @@
 import UIKit
 
 class CheckInMemberViewController: BaseViewController {
+    
+    @IBOutlet weak var menuSegmentedControl: UISegmentedControl!
+    var cvc: CheckedInMemberCollectionViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupChild()
+        menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
         // Do any additional setup after loading the view.
     }
 
@@ -22,14 +27,80 @@ class CheckInMemberViewController: BaseViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupChild() {
+        cvc = childViewControllers[0] as! CheckedInMemberCollectionViewController
+        cvc.pvc = self
+        cvc.memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
+        ]
+        
     }
-    */
-
+    
+    func segmentIndex(sender: UISegmentedControl?) {
+        let index = sender!.selectedSegmentIndex
+        
+        switch index {
+        case 0:
+            cvc.memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
+            ]
+            cvc.collectionView?.reloadData()
+            
+        case 1:
+            cvc.memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
+            ]
+            cvc.collectionView?.reloadData()
+        default:
+            print("out of bound")
+        }
+    }
 }

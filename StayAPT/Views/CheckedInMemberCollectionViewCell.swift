@@ -9,11 +9,18 @@
 import UIKit
 
 class CheckedInMemberCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saNameLabel: UILabel!
     @IBOutlet weak var saCountLabel: UILabel!
     
+    var member: SACheckedInMember? {
+        didSet {
+            if let member = member {
+                didSetCategory(member: member)
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,5 +36,11 @@ class CheckedInMemberCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 10.0
         layer.borderWidth = 1.0
         backgroundColor = UIColor.clear
+    }
+    
+    func didSetCategory(member: SACheckedInMember) {
+        imageView.image = UIImage(imageLiteralResourceName: member.image)
+        saNameLabel.text = member.name
+        saCountLabel.text = member.counter
     }
 }
