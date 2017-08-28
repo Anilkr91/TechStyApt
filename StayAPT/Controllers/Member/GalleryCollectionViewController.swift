@@ -30,9 +30,6 @@ class GalleryCollectionViewController: BaseCollectionViewController {
                         SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
     ]
     
-     weak var pvc: MenuViewController?
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

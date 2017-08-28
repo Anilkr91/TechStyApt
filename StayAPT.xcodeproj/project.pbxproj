@@ -38,7 +38,9 @@
 		84F92FC21F52F6E00002074D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F92FC01F52F6E00002074D /* Main.storyboard */; };
 		84F92FC41F53D8730002074D /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FC31F53D8730002074D /* GalleryCollectionViewController.swift */; };
 		84F92FC61F53E0E90002074D /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FC51F53E0E90002074D /* GalleryCollectionViewCell.swift */; };
-		84F92FC81F53FDDF0002074D /* StayAptEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FC71F53FDDF0002074D /* StayAptEnums.swift */; };
+		84F92FCA1F5401AE0002074D /* BlogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */; };
+		84F92FCC1F5401CB0002074D /* BlogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */; };
+		84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FCE1F540DC20002074D /* StayAptEnums.swift */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -76,7 +78,9 @@
 		84F92FC01F52F6E00002074D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84F92FC31F53D8730002074D /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
 		84F92FC51F53E0E90002074D /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		84F92FC71F53FDDF0002074D /* StayAptEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptEnums.swift; sourceTree = "<group>"; };
+		84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewController.swift; sourceTree = "<group>"; };
+		84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewCell.swift; sourceTree = "<group>"; };
+		84F92FCE1F540DC20002074D /* StayAptEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptEnums.swift; sourceTree = "<group>"; };
 		E24740181F4C3A5A001DC93D /* StayAPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayAPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24740251F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,10 +129,10 @@
 		84DDE4681F4D8EC000A2E244 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84F92FCD1F540DC20002074D /* Enums */,
 				84F92F9B1F4FFD920002074D /* Buttons */,
 				84F92F9E1F4FFD920002074D /* TextFields */,
 				84F92FA01F4FFD920002074D /* View */,
-				84F92FC71F53FDDF0002074D /* StayAptEnums.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -148,6 +152,7 @@
 				846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */,
 				84F92FAA1F50313C0002074D /* CheckedInMemberCollectionViewCell.swift */,
 				84F92FB31F503F370002074D /* VisitorsListingTableViewCell.swift */,
+				84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84F92FC31F53D8730002074D /* GalleryCollectionViewController.swift */,
 				84F92FC51F53E0E90002074D /* GalleryCollectionViewCell.swift */,
+				84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -247,6 +253,14 @@
 				84F92FC01F52F6E00002074D /* Main.storyboard */,
 			);
 			path = Member;
+			sourceTree = "<group>";
+		};
+		84F92FCD1F540DC20002074D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84F92FCE1F540DC20002074D /* StayAptEnums.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		E247400F1F4C3A5A001DC93D = {
@@ -427,10 +441,11 @@
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
 				84F92FC41F53D8730002074D /* GalleryCollectionViewController.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */,
+				84F92FCC1F5401CB0002074D /* BlogsTableViewCell.swift in Sources */,
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
 				84F92FB01F50382D0002074D /* CheckInMemberViewController.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
-				84F92FC81F53FDDF0002074D /* StayAptEnums.swift in Sources */,
+				84F92FCA1F5401AE0002074D /* BlogsTableViewController.swift in Sources */,
 				84F92F991F4FF8610002074D /* SignUpTableViewController.swift in Sources */,
 				84DDE46C1F4D8EC000A2E244 /* MenuTableViewCell.swift in Sources */,
 				84F92F961F4FF8610002074D /* MenuListingTableViewController.swift in Sources */,
@@ -442,6 +457,7 @@
 				84F92FAE1F50329F0002074D /* SACheckedInMember.swift in Sources */,
 				84F92F951F4FF8610002074D /* LoginTableViewController.swift in Sources */,
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
+				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
 				84F92F981F4FF8610002074D /* MenuViewController.swift in Sources */,
 				84F92FAB1F50313C0002074D /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				84F92F911F4FF8610002074D /* FitnessCenterLoginTableViewController.swift in Sources */,

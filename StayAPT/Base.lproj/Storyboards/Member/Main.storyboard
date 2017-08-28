@@ -469,6 +469,80 @@
             </objects>
             <point key="canvasLocation" x="3537" y="294"/>
         </scene>
+        <!--Blogs Table View Controller-->
+        <scene sceneID="P7U-zC-dWM">
+            <objects>
+                <tableViewController storyboardIdentifier="BlogsTableViewController" id="wcY-WY-5Ms" customClass="BlogsTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" id="sP0-Cg-hfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="anC-Od-b60" customClass="BlogsTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="anC-Od-b60" id="6J3-14-VJY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jn6-4k-K8E">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-xI-FtC">
+                                            <rect key="frame" x="0.0" y="99" width="375" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTF-2Y-tnf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsZ-fy-jJP">
+                                                    <rect key="frame" x="0.0" y="21" width="375" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="xsZ-fy-jJP" firstAttribute="leading" secondItem="BhO-xI-FtC" secondAttribute="leading" id="40s-Zm-npS"/>
+                                                <constraint firstAttribute="bottom" secondItem="xsZ-fy-jJP" secondAttribute="bottom" constant="8" id="4ET-Qu-3XI"/>
+                                                <constraint firstAttribute="height" constant="50" id="Mzc-6P-NNX"/>
+                                                <constraint firstAttribute="trailing" secondItem="tTF-2Y-tnf" secondAttribute="trailing" id="W71-55-Beu"/>
+                                                <constraint firstItem="tTF-2Y-tnf" firstAttribute="leading" secondItem="BhO-xI-FtC" secondAttribute="leading" id="ZSx-Xk-dDD"/>
+                                                <constraint firstAttribute="trailing" secondItem="xsZ-fy-jJP" secondAttribute="trailing" id="Zjd-yT-Z2z"/>
+                                                <constraint firstItem="tTF-2Y-tnf" firstAttribute="top" secondItem="BhO-xI-FtC" secondAttribute="top" id="aM2-g4-977"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jn6-4k-K8E" firstAttribute="top" secondItem="6J3-14-VJY" secondAttribute="top" id="OyU-9U-MqJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="BhO-xI-FtC" secondAttribute="trailing" id="VG3-Tt-XbN"/>
+                                        <constraint firstAttribute="bottom" secondItem="BhO-xI-FtC" secondAttribute="bottom" id="W9r-lL-3be"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jn6-4k-K8E" secondAttribute="trailing" id="h1F-W3-jPB"/>
+                                        <constraint firstItem="Jn6-4k-K8E" firstAttribute="leading" secondItem="6J3-14-VJY" secondAttribute="leading" id="u3F-K3-mZ5"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jn6-4k-K8E" secondAttribute="bottom" id="uKC-a0-OOW"/>
+                                        <constraint firstItem="BhO-xI-FtC" firstAttribute="leading" secondItem="6J3-14-VJY" secondAttribute="leading" id="uhu-s5-3Wd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="blogNameLabel" destination="tTF-2Y-tnf" id="uwH-mQ-5GM"/>
+                                    <outlet property="blogWriterDateLabel" destination="xsZ-fy-jJP" id="gAZ-bs-esD"/>
+                                    <outlet property="blogsImageView" destination="Jn6-4k-K8E" id="lHd-yo-64B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wcY-WY-5Ms" id="Upy-of-QFO"/>
+                            <outlet property="delegate" destination="wcY-WY-5Ms" id="yOO-LL-LZx"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKF-ks-bfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4988" y="-421.43928035982015"/>
+        </scene>
         <!--Fitness Details-->
         <scene sceneID="idU-yP-N5b">
             <objects>

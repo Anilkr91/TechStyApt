@@ -20,8 +20,7 @@ class MenuViewController: BaseViewController {
     }()
     
     lazy var secondChildTabVC : UIViewController? = {
-        let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "GalleryCollectionViewController")
-        
+        let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "BlogsTableViewController")
         return secondChildTabVC
     }()
     
@@ -64,9 +63,9 @@ class MenuViewController: BaseViewController {
         case TabIndex.secondChildTab.rawValue :
             vc = secondChildTabVC
         case TabIndex.thirdChildTab.rawValue :
-            vc = firstChildTabVC
+            vc = thirdChildTabVC
         case TabIndex.fourthChildTab.rawValue :
-            vc = secondChildTabVC
+            vc = fourthChildTabVC 
         default:
             return nil
         }
