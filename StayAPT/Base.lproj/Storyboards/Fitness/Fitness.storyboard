@@ -317,6 +317,8 @@
                     <connections>
                         <segue destination="1Lp-rw-Dkf" kind="show" identifier="showMembersSegue" id="fZt-aE-CiL"/>
                         <segue destination="RVp-ri-Kud" kind="show" identifier="showVisitorsSegue" id="dad-3M-MJG"/>
+                        <segue destination="67j-0h-K9N" kind="show" identifier="showMemberFormSegue" id="kTe-Ya-N1Q"/>
+                        <segue destination="nFt-j4-qto" kind="show" identifier="showVisitorsFormSegue" id="Icv-mX-sd3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wn-GK-mdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCi-7P-IaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829.5999999999999" y="1842.7286356821592"/>
+            <point key="canvasLocation" x="1366" y="1888"/>
         </scene>
         <!--Checked In Member Collection View Controller-->
         <scene sceneID="0Mr-CV-3fE">
@@ -453,7 +455,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7W-u4-naJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="2516"/>
+            <point key="canvasLocation" x="1366" y="2596"/>
         </scene>
         <!--Visitiors Listing Table View Controller-->
         <scene sceneID="b7U-wh-RG0">
@@ -581,12 +583,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roM-KJ-FyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540" y="1842.7286356821592"/>
+            <point key="canvasLocation" x="2188" y="1956"/>
         </scene>
-        <!--Login-->
+        <!--Visitor's Form-->
         <scene sceneID="PgQ-fr-2Ds">
             <objects>
-                <tableViewController id="nFt-j4-qto" sceneMemberID="viewController">
+                <tableViewController id="nFt-j4-qto" customClass="VisitorsFormTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hvI-c1-g9U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -778,16 +780,16 @@
                             <outlet property="delegate" destination="nFt-j4-qto" id="7IT-p7-Hev"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="fMY-rk-BF7"/>
+                    <navigationItem key="navigationItem" title="Visitor's Form" id="fMY-rk-BF7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZ0-zJ-KsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3045.5999999999999" y="2751.2743628185908"/>
+            <point key="canvasLocation" x="3086" y="637"/>
         </scene>
-        <!--Login-->
+        <!--Personal Details-->
         <scene sceneID="YMB-Ug-LK6">
             <objects>
-                <tableViewController id="67j-0h-K9N" sceneMemberID="viewController">
+                <tableViewController id="67j-0h-K9N" customClass="PersonalDetailTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MZJ-wf-jbw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1001,16 +1003,16 @@
                             <outlet property="delegate" destination="67j-0h-K9N" id="nYx-Xt-fcj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="rAi-rn-U7e"/>
+                    <navigationItem key="navigationItem" title="Personal Details" id="rAi-rn-U7e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuU-Df-4DE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="3408"/>
+            <point key="canvasLocation" x="3086" y="1407"/>
         </scene>
-        <!--Login-->
+        <!--MemberShip Details-->
         <scene sceneID="Bz5-5S-COn">
             <objects>
-                <tableViewController id="hmO-Vw-fy4" sceneMemberID="viewController">
+                <tableViewController id="hmO-Vw-fy4" customClass="MembershipDetailsTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cA0-nZ-gBg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1203,16 +1205,16 @@
                             <outlet property="delegate" destination="hmO-Vw-fy4" id="D4S-sf-HT6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="dqP-Zd-jfR"/>
+                    <navigationItem key="navigationItem" title="MemberShip Details" id="dqP-Zd-jfR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkB-NV-A0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3143" y="3408"/>
+            <point key="canvasLocation" x="3906" y="1406"/>
         </scene>
-        <!--Login-->
+        <!--StayApt Details-->
         <scene sceneID="q1F-U5-SGw">
             <objects>
-                <tableViewController id="WeP-cQ-Nbm" sceneMemberID="viewController">
+                <tableViewController id="WeP-cQ-Nbm" customClass="StayAptTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LCQ-29-YT5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1317,11 +1319,11 @@
                             <outlet property="delegate" destination="WeP-cQ-Nbm" id="OSL-XD-Zec"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="WoX-Ju-ZJE"/>
+                    <navigationItem key="navigationItem" title="StayApt Details" id="WoX-Ju-ZJE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfj-RF-0tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3865" y="3408"/>
+            <point key="canvasLocation" x="4727" y="1406"/>
         </scene>
     </scenes>
     <resources>

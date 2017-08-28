@@ -78,14 +78,23 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showVisitorsSegue", sender: self)
             
         case 2:
-            print(index)
-
-            //performSegue(withIdentifier: "showGymSegue", sender: self)
+            performSegue(withIdentifier: "showMemberFormSegue", sender: self)
             
         case 3:
+            performSegue(withIdentifier: "showVisitorsSegue", sender: self)
+            
+        case 4:
+            performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
+            
+        case 5:
+            performSegue(withIdentifier: "", sender: self)
+            
+        case 6:
+            self.navigationController?.popViewController(animated: true)
+            
+        case 7:
+            performSegue(withIdentifier: "", sender: self)
             print(index)
-
-           // performSegue(withIdentifier: "showGymSegue", sender: self)
         
         default:
             print("out of bound")

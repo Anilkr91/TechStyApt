@@ -41,6 +41,10 @@
 		84F92FCA1F5401AE0002074D /* BlogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */; };
 		84F92FCC1F5401CB0002074D /* BlogsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */; };
 		84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FCE1F540DC20002074D /* StayAptEnums.swift */; };
+		84F92FD11F541BD40002074D /* PersonalDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD01F541BD40002074D /* PersonalDetailTableViewController.swift */; };
+		84F92FD31F541BE80002074D /* MembershipDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */; };
+		84F92FD51F541BF80002074D /* StayAptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD41F541BF80002074D /* StayAptTableViewController.swift */; };
+		84F92FD71F541F870002074D /* VisitorsFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -81,6 +85,10 @@
 		84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewController.swift; sourceTree = "<group>"; };
 		84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewCell.swift; sourceTree = "<group>"; };
 		84F92FCE1F540DC20002074D /* StayAptEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptEnums.swift; sourceTree = "<group>"; };
+		84F92FD01F541BD40002074D /* PersonalDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDetailTableViewController.swift; sourceTree = "<group>"; };
+		84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipDetailsTableViewController.swift; sourceTree = "<group>"; };
+		84F92FD41F541BF80002074D /* StayAptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptTableViewController.swift; sourceTree = "<group>"; };
+		84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormTableViewController.swift; sourceTree = "<group>"; };
 		E24740181F4C3A5A001DC93D /* StayAPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayAPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24740251F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,6 +182,10 @@
 				84F92FA81F5030ED0002074D /* CheckedInMemberCollectionViewController.swift */,
 				84F92FAF1F50382D0002074D /* CheckInMemberViewController.swift */,
 				84F92FB11F503E200002074D /* VisitiorsListingTableViewController.swift */,
+				84F92FD01F541BD40002074D /* PersonalDetailTableViewController.swift */,
+				84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */,
+				84F92FD41F541BF80002074D /* StayAptTableViewController.swift */,
+				84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */,
 			);
 			path = FitnessCenter;
 			sourceTree = "<group>";
@@ -431,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F92FD11F541BD40002074D /* PersonalDetailTableViewController.swift in Sources */,
 				84DDE4731F4DFAED00A2E244 /* MenuListingTableViewCell.swift in Sources */,
 				84F92F971F4FF8610002074D /* MenuTableViewController.swift in Sources */,
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
@@ -439,13 +452,16 @@
 				84F92FC61F53E0E90002074D /* GalleryCollectionViewCell.swift in Sources */,
 				84F92FA91F5030ED0002074D /* CheckedInMemberCollectionViewController.swift in Sources */,
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
+				84F92FD71F541F870002074D /* VisitorsFormTableViewController.swift in Sources */,
 				84F92FC41F53D8730002074D /* GalleryCollectionViewController.swift in Sources */,
+				84F92FD51F541BF80002074D /* StayAptTableViewController.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */,
 				84F92FCC1F5401CB0002074D /* BlogsTableViewCell.swift in Sources */,
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
 				84F92FB01F50382D0002074D /* CheckInMemberViewController.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84F92FCA1F5401AE0002074D /* BlogsTableViewController.swift in Sources */,
+				84F92FD31F541BE80002074D /* MembershipDetailsTableViewController.swift in Sources */,
 				84F92F991F4FF8610002074D /* SignUpTableViewController.swift in Sources */,
 				84DDE46C1F4D8EC000A2E244 /* MenuTableViewCell.swift in Sources */,
 				84F92F961F4FF8610002074D /* MenuListingTableViewController.swift in Sources */,
