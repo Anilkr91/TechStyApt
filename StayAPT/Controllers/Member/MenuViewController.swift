@@ -9,45 +9,73 @@
 import UIKit
 
 class MenuViewController: BaseViewController {
-
+    
     @IBOutlet weak var menuSegmentedControl: UISegmentedControl!
-    var cvc: MenuTableViewController!
+    @IBOutlet weak var containerView: UIView!
+    var currentViewController: UIViewController?
+    
+    lazy var firstChildTabVC: UIViewController? = {
+        let firstChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController")
+        return firstChildTabVC
+    }()
+    
+    lazy var secondChildTabVC : UIViewController? = {
+        let secondChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "GalleryCollectionViewController")
+        
+        return secondChildTabVC
+    }()
+    
+    lazy var thirdChildTabVC: UIViewController? = {
+        let thirdChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController")
+        return thirdChildTabVC
+    }()
+    
+    lazy var fourthChildTabVC : UIViewController? = {
+        let fourthChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "GalleryCollectionViewController")
+        return fourthChildTabVC
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupChild()
-        menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
+        setupSegmentControl()
     }
     
     func segmentIndex(sender: UISegmentedControl?) {
-        let index = sender!.selectedSegmentIndex
-        
-        switch index {
-        case 0:
-            cvc.gymArray = ["gym1", "gym2", "gym", "gym1", "gym2", "gym","gym1", "gym2", "gym", "gym1", "gym2"]
-            cvc.tableView.reloadData()
+        self.currentViewController!.view.removeFromSuperview()
+        self.currentViewController!.removeFromParentViewController()
+        displayCurrentTab(sender!.selectedSegmentIndex)
+    }
     
-        case 1:
-            cvc.gymArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2", "GGym", "GGym2"]
-            cvc.tableView.reloadData()
-            
-        case 2:
-            cvc.gymArray = ["gym1", "gym2", "gym", "gym1", "gym2", "gym","gym1", "gym2", "gym", "gym1", "gym2"]
-            cvc.tableView.reloadData()
-            
-        case 3:
-            cvc.gymArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2", "GGym", "GGym2"]
-            cvc.tableView.reloadData()
-
-        default:
-            print("out of bound")
+    func displayCurrentTab(_ tabIndex: Int){
+        if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
+            self.addChildViewController(vc)
+            vc.didMove(toParentViewController: self)
+            vc.view.frame = self.containerView.bounds
+            self.containerView.addSubview(vc.view)
+            self.currentViewController = vc
         }
     }
     
-    func setupChild() {
-        cvc = childViewControllers[0] as! MenuTableViewController
-        cvc.pvc = self
-        cvc.gymArray = ["gym1", "gym2", "gym", "gym1", "gym2", "gym","gym1", "gym2", "gym", "gym1", "gym2"]
+    func viewControllerForSelectedSegmentIndex(_ index: Int) -> UIViewController? {
+        var vc: UIViewController?
+        switch index {
+        case TabIndex.firstChildTab.rawValue :
+            vc = firstChildTabVC
+        case TabIndex.secondChildTab.rawValue :
+            vc = secondChildTabVC
+        case TabIndex.thirdChildTab.rawValue :
+            vc = firstChildTabVC
+        case TabIndex.fourthChildTab.rawValue :
+            vc = secondChildTabVC
+        default:
+            return nil
+        }
+        return vc
+    }
+    
+    func setupSegmentControl() {
+        menuSegmentedControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
+        displayCurrentTab(TabIndex.firstChildTab.rawValue)
+        menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
     }
 }

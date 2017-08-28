@@ -18,7 +18,6 @@ class CheckInMemberViewController: BaseViewController {
 
         setupChild()
         menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

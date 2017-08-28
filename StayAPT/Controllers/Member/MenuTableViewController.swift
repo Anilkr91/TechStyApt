@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableViewController: BaseTableViewController {
 
-    var gymArray: [String] = []
+    var gymArray = ["gym1", "gym2", "gym", "gym1", "gym2", "gym","gym1", "gym2", "gym", "gym1", "gym2"]
     weak var pvc: MenuViewController?
     
     override func viewDidLoad() {
