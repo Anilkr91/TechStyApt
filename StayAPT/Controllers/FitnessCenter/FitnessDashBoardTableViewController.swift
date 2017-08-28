@@ -93,8 +93,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             self.navigationController?.popViewController(animated: true)
             
         case 7:
-            performSegue(withIdentifier: "", sender: self)
-            print(index)
+            performSegue(withIdentifier: "showNotificationSegue", sender: self)
         
         default:
             print("out of bound")

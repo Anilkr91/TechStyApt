@@ -14,3 +14,8 @@ enum TabIndex : Int {
     case fourthChildTab = 3
 }
 
+
+enum Notification: String {
+    case Request = "Request"
+    case Information = "Information"
+}

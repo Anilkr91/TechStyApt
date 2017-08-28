@@ -45,6 +45,11 @@
 		84F92FD31F541BE80002074D /* MembershipDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */; };
 		84F92FD51F541BF80002074D /* StayAptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD41F541BF80002074D /* StayAptTableViewController.swift */; };
 		84F92FD71F541F870002074D /* VisitorsFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */; };
+		84F92FD91F54259E0002074D /* FitnessNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FD81F54259E0002074D /* FitnessNotificationTableViewController.swift */; };
+		84F92FDB1F54263C0002074D /* FitnessNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FDA1F54263C0002074D /* FitnessNotificationTableViewCell.swift */; };
+		84F92FDD1F542A3E0002074D /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FDC1F542A3E0002074D /* NotificationModel.swift */; };
+		84F92FDF1F54391A0002074D /* FitnessInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FDE1F54391A0002074D /* FitnessInformationTableViewCell.swift */; };
+		84F92FE11F544D770002074D /* BlogDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -89,6 +94,11 @@
 		84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipDetailsTableViewController.swift; sourceTree = "<group>"; };
 		84F92FD41F541BF80002074D /* StayAptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptTableViewController.swift; sourceTree = "<group>"; };
 		84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormTableViewController.swift; sourceTree = "<group>"; };
+		84F92FD81F54259E0002074D /* FitnessNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessNotificationTableViewController.swift; sourceTree = "<group>"; };
+		84F92FDA1F54263C0002074D /* FitnessNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessNotificationTableViewCell.swift; sourceTree = "<group>"; };
+		84F92FDC1F542A3E0002074D /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		84F92FDE1F54391A0002074D /* FitnessInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessInformationTableViewCell.swift; sourceTree = "<group>"; };
+		84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailTableViewController.swift; sourceTree = "<group>"; };
 		E24740181F4C3A5A001DC93D /* StayAPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayAPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24740251F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,6 +171,8 @@
 				84F92FAA1F50313C0002074D /* CheckedInMemberCollectionViewCell.swift */,
 				84F92FB31F503F370002074D /* VisitorsListingTableViewCell.swift */,
 				84F92FCB1F5401CB0002074D /* BlogsTableViewCell.swift */,
+				84F92FDA1F54263C0002074D /* FitnessNotificationTableViewCell.swift */,
+				84F92FDE1F54391A0002074D /* FitnessInformationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 				84F92FD21F541BE80002074D /* MembershipDetailsTableViewController.swift */,
 				84F92FD41F541BF80002074D /* StayAptTableViewController.swift */,
 				84F92FD61F541F870002074D /* VisitorsFormTableViewController.swift */,
+				84F92FD81F54259E0002074D /* FitnessNotificationTableViewController.swift */,
 			);
 			path = FitnessCenter;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 				84F92FC31F53D8730002074D /* GalleryCollectionViewController.swift */,
 				84F92FC51F53E0E90002074D /* GalleryCollectionViewCell.swift */,
 				84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */,
+				84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				84F92FAD1F50329F0002074D /* SACheckedInMember.swift */,
+				84F92FDC1F542A3E0002074D /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -448,17 +463,22 @@
 				84F92F971F4FF8610002074D /* MenuTableViewController.swift in Sources */,
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
 				84F92FA71F500B9A0002074D /* FitnessDashBoardTableViewController.swift in Sources */,
+				84F92FDF1F54391A0002074D /* FitnessInformationTableViewCell.swift in Sources */,
 				84F92FB21F503E200002074D /* VisitiorsListingTableViewController.swift in Sources */,
 				84F92FC61F53E0E90002074D /* GalleryCollectionViewCell.swift in Sources */,
 				84F92FA91F5030ED0002074D /* CheckedInMemberCollectionViewController.swift in Sources */,
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
 				84F92FD71F541F870002074D /* VisitorsFormTableViewController.swift in Sources */,
 				84F92FC41F53D8730002074D /* GalleryCollectionViewController.swift in Sources */,
+				84F92FE11F544D770002074D /* BlogDetailTableViewController.swift in Sources */,
+				84F92FDB1F54263C0002074D /* FitnessNotificationTableViewCell.swift in Sources */,
 				84F92FD51F541BF80002074D /* StayAptTableViewController.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */,
+				84F92FD91F54259E0002074D /* FitnessNotificationTableViewController.swift in Sources */,
 				84F92FCC1F5401CB0002074D /* BlogsTableViewCell.swift in Sources */,
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
 				84F92FB01F50382D0002074D /* CheckInMemberViewController.swift in Sources */,
+				84F92FDD1F542A3E0002074D /* NotificationModel.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84F92FCA1F5401AE0002074D /* BlogsTableViewController.swift in Sources */,
 				84F92FD31F541BE80002074D /* MembershipDetailsTableViewController.swift in Sources */,

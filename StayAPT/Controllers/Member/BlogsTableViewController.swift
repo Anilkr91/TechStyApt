@@ -53,6 +53,10 @@ class BlogsTableViewController: UITableViewController {
         return cell
     }
  
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showBlogDetailSegue", sender: self)
+    }
 
     /*
     // Override to support conditional editing of the table view.
