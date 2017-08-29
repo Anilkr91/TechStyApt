@@ -11,11 +11,14 @@ import UIKit
 class MenuTableViewController: BaseTableViewController {
 
     var gymArray = ["gym1", "gym2", "gym", "gym1", "gym2", "gym","gym1", "gym2", "gym", "gym1", "gym2"]
+    
+    var dataArray: [ClassModel] = []
     weak var pvc: MenuViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        populateTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +29,7 @@ class MenuTableViewController: BaseTableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return gymArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +41,7 @@ class MenuTableViewController: BaseTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuTableViewCell
         cell.saImageView.image = UIImage(imageLiteralResourceName: gymArray[indexPath.section])
         cell.saTitleLabel.text = "GYM"
-        cell.saSubTitleLabe.text = "detailed gym text"
+        cell.saSubTitleLabe.text = "Your Fitness Center"
         return cell
     }
     
@@ -61,5 +64,20 @@ class MenuTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func populateTableView() {
+        
+        ClassGetService.executeRequest { (data) in
+            self.dataArray = data
+            self.tableView.reloadData()
+            
+            for (k,v) in self.dataArray.enumerated() {
+                print(self.dataArray[k].id)
+                print(self.dataArray[k].className)
+                print(self.dataArray[k].img)
+            }
+        }
+        
     }
 }
