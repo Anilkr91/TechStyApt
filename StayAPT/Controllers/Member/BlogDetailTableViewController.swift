@@ -53,6 +53,10 @@ class BlogDetailTableViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.selectionStyle = .none
+    }
+    
     func setupBlog() {
         blogImageView.image = UIImage(imageLiteralResourceName: "gym")
         blogTitle.text = "The Importance of good eating habits"
