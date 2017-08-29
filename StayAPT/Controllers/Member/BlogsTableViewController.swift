@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlogsTableViewController: UITableViewController {
+class BlogsTableViewController: BaseTableViewController {
     
     let memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
                         SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),

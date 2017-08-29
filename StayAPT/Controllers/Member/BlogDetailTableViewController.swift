@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlogDetailTableViewController: UITableViewController {
+class BlogDetailTableViewController: BaseTableViewController {
     
     @IBOutlet weak var blogImageView: UIImageView!
     @IBOutlet weak var blogTitle: UILabel!

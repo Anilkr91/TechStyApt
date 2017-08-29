@@ -750,7 +750,7 @@
             </objects>
             <point key="canvasLocation" x="4988" y="-421.43928035982015"/>
         </scene>
-        <!--Blog Detail Table View Controller-->
+        <!--Blogs-->
         <scene sceneID="K20-Rs-axf">
             <objects>
                 <tableViewController id="Tlr-Jl-4Pn" customClass="BlogDetailTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
@@ -901,6 +901,7 @@
                             <outlet property="delegate" destination="Tlr-Jl-4Pn" id="6CN-MD-vyR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Blogs" id="qRS-Ba-NL8"/>
                     <connections>
                         <outlet property="authorName" destination="zP6-s8-qCo" id="1qX-Hq-lTg"/>
                         <outlet property="blogImageView" destination="nk2-Ln-u3s" id="GxG-Y4-Y5B"/>
