@@ -50,6 +50,7 @@
 		84F92FDD1F542A3E0002074D /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FDC1F542A3E0002074D /* NotificationModel.swift */; };
 		84F92FDF1F54391A0002074D /* FitnessInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FDE1F54391A0002074D /* FitnessInformationTableViewCell.swift */; };
 		84F92FE11F544D770002074D /* BlogDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */; };
+		84F92FE31F548CFC0002074D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92FE21F548CFC0002074D /* SettingsTableViewController.swift */; };
 		E24740231F4C3A5A001DC93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24740221F4C3A5A001DC93D /* Assets.xcassets */; };
 		E24740261F4C3A5A001DC93D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24740241F4C3A5A001DC93D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		84F92FDC1F542A3E0002074D /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		84F92FDE1F54391A0002074D /* FitnessInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessInformationTableViewCell.swift; sourceTree = "<group>"; };
 		84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailTableViewController.swift; sourceTree = "<group>"; };
+		84F92FE21F548CFC0002074D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		E24740181F4C3A5A001DC93D /* StayAPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StayAPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24740221F4C3A5A001DC93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E24740251F4C3A5A001DC93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				84F92FC51F53E0E90002074D /* GalleryCollectionViewCell.swift */,
 				84F92FC91F5401AE0002074D /* BlogsTableViewController.swift */,
 				84F92FE01F544D770002074D /* BlogDetailTableViewController.swift */,
+				84F92FE21F548CFC0002074D /* SettingsTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -424,11 +427,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StayAPT/Pods-StayAPT-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/YBSlantedCollectionViewLayout/YBSlantedCollectionViewLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBSlantedCollectionViewLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +500,7 @@
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
 				84F92F981F4FF8610002074D /* MenuViewController.swift in Sources */,
+				84F92FE31F548CFC0002074D /* SettingsTableViewController.swift in Sources */,
 				84F92FAB1F50313C0002074D /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				84F92F911F4FF8610002074D /* FitnessCenterLoginTableViewController.swift in Sources */,
 				84F92F921F4FF8610002074D /* FitnessHomeViewController.swift in Sources */,

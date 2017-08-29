@@ -24,6 +24,16 @@ class BlogDetailTableViewController: UITableViewController {
     
     @IBAction func BlogShare(_ sender: Any) {
         
+        let textToShare = "Checkout this cool blog"
+        if let appLink = NSURL(string: "http://www.healthline.com/health/fitness-exercise/best-blogs-of-the-year")
+        {
+            let objectsToShare = [textToShare, appLink] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.assignToContact, UIActivityType.addToReadingList,UIActivityType.copyToPasteboard,UIActivityType.saveToCameraRoll,UIActivityType.print]
+            self.present(activityVC, animated: true, completion: nil)
+        }
+        
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
