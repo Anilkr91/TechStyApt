@@ -9,4 +9,5 @@
 
 struct Constants {
     static let BASE_URL = "http://stayapt.com/api/"
+     static let API_KEY = "123456"
 }

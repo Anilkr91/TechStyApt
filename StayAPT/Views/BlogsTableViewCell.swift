@@ -25,19 +25,19 @@ class BlogsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    var member: SACheckedInMember? {
+    var info: SACheckedInMember? {
         didSet {
-            if let member = member {
-                didSetCategory(member: member)
+            if let member = info {
+                didSetCategory(info: member)
             }
         }
     }
 }
 
 extension BlogsTableViewCell {
-    func didSetCategory(member: SACheckedInMember) {
-        blogsImageView.image = UIImage(imageLiteralResourceName: member.image)
-        blogNameLabel.text = member.name
-        blogWriterDateLabel.text = member.counter
+    func didSetCategory(info: SACheckedInMember) {
+        blogsImageView.image = UIImage(imageLiteralResourceName: info.image)
+        blogNameLabel.text = info.name
+        blogWriterDateLabel.text = info.counter
     }
 }

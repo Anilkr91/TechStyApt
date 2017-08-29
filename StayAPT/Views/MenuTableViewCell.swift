@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 
 class MenuTableViewCell: UITableViewCell {
     
@@ -26,4 +26,23 @@ class MenuTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    var info: ClassModel? {
+        didSet {
+            if let member = info {
+                didSetCategory(info: member)
+            }
+        }
+    }
+}
+
+extension MenuTableViewCell {
+    func didSetCategory(info: ClassModel) {
+        let url = URL(string: info.img)!
+        let image = UIImage(named: "gym")
+        
+        saImageView.kf.setImage(with: url, placeholder: image)
+        saTitleLabel.text = info.className
+        saSubTitleLabe.text = "Your Fitness Center"
+    }
 }

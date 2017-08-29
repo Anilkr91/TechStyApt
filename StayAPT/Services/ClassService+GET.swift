@@ -13,7 +13,7 @@ class ClassGetService {
     
     static func executeRequest (completionHandler: @escaping ([ClassModel]) -> Void) {
         
-        let header: HTTPHeaders = ["X_API_KEY" : "123456"]
+        let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         let request = Alamofire.request( URL + "classes", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
             

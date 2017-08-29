@@ -49,7 +49,7 @@ class BlogsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!BlogsTableViewCell
-        cell.member = memberArray[indexPath.row]
+        cell.info = memberArray[indexPath.row]
         return cell
     }
  
