@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Gloss
 
 class BlogsTableViewCell: UITableViewCell {
     
@@ -25,19 +26,23 @@ class BlogsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    var info: SACheckedInMember? {
+    var info: BlogModel? {
         didSet {
-            if let member = info {
-                didSetCategory(info: member)
+            if let info = info {
+                didSetCategory(info: info)
             }
         }
     }
 }
 
 extension BlogsTableViewCell {
-    func didSetCategory(info: SACheckedInMember) {
-        blogsImageView.image = UIImage(imageLiteralResourceName: info.image)
-        blogNameLabel.text = info.name
-        blogWriterDateLabel.text = info.counter
+    func didSetCategory(info: BlogModel) {
+        
+        let url = URL(string: info.img)!
+        let image = UIImage(named: "gym")
+        
+        blogsImageView.kf.setImage(with: url, placeholder: image)
+        blogNameLabel.text = info.title
+        blogWriterDateLabel.text = info.datetime
     }
 }

@@ -29,9 +29,12 @@ class BlogsTableViewController: BaseTableViewController {
                         SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
                         SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
     ]
+    
+    var array: [BlogModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateBlogTableView()
     }
 
     // MARK: - Table view data source
@@ -43,13 +46,13 @@ class BlogsTableViewController: BaseTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memberArray.count
+        return array.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!BlogsTableViewCell
-        cell.info = memberArray[indexPath.row]
+        cell.info = array[indexPath.row]
         return cell
     }
  
@@ -61,5 +64,12 @@ class BlogsTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.selectionStyle = .none
+    }
+    
+    func populateBlogTableView(){
+        BlogGetService.executeRequest { (data) in
+            self.array = data
+            self.tableView.reloadData()
+        }
     }
 }
