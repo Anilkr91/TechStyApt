@@ -342,6 +342,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Login" id="JJJ-S9-wT2"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Lpk-aw-tsy" id="y9P-kZ-jsh"/>
+                        <outlet property="userIdTextField" destination="bkO-XF-kmF" id="KML-Mp-xa8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXF-WL-BIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
