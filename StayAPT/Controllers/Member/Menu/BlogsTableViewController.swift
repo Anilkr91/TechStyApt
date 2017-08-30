@@ -31,6 +31,7 @@ class BlogsTableViewController: BaseTableViewController {
     ]
     
     var array: [BlogModel] = []
+    var blog: BlogModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,7 @@ class BlogsTableViewController: BaseTableViewController {
  
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.blog = array[indexPath.row]
         performSegue(withIdentifier: "showBlogDetailSegue", sender: self)
     }
 
@@ -72,4 +74,11 @@ class BlogsTableViewController: BaseTableViewController {
             self.tableView.reloadData()
         }
     }
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showBlogDetailSegue" {
+                let dvc = segue.destination as! BlogDetailTableViewController
+                dvc.blog = blog
+            }
+        }
 }

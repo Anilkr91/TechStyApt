@@ -16,9 +16,10 @@ class BlogDetailTableViewController: BaseTableViewController {
     @IBOutlet weak var authorName: UILabel!
     @IBOutlet weak var blogLabel: UILabel!
     
+    var blog: BlogModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupBlog()
     }
     
@@ -58,10 +59,14 @@ class BlogDetailTableViewController: BaseTableViewController {
     }
     
     func setupBlog() {
-        blogImageView.image = UIImage(imageLiteralResourceName: "gym")
-        blogTitle.text = "The Importance of good eating habits"
-        dateLabel.text = "22, jun-2017"
-        blogLabel.text = "If you’re looking for new food ideas that are healthy and delicious then you’ve come to the right place. These are the very best “clean and lean” cooking blogs online, as nominated by readers like you.There are literally thousands of cooking blogs on the web, but we are only interested in those that are truly “clean and lean”. What’s that mean? Well, the blogs included here are reliably healthy. Their recipes avoid the junk and focus on creating meals with life-giving whole foods.If you are looking for clean recipe ideas, ones that will help you stay lean, fit, and healthy, then you will fall in love with our award winners in this list.So without further ado, and in no particular order, here are the top healthy food blogs that you can count on for clean and lean meal ideas"
+        
+        let url = URL(string: blog!.img)!
+        let image = UIImage(named: "gym")
+        
+        blogImageView.kf.setImage(with: url, placeholder: image)
+        blogTitle.text = blog?.title
+        dateLabel.text = blog?.datetime
+        blogLabel.text = blog?.des
         authorName.text = "Rohit Khetan"
     }
 }
