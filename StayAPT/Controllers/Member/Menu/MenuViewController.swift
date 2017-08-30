@@ -25,7 +25,7 @@ class MenuViewController: BaseViewController {
     }()
     
     lazy var thirdChildTabVC: UIViewController? = {
-        let thirdChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuTableViewController")
+        let thirdChildTabVC = self.storyboard?.instantiateViewController(withIdentifier: "DietTableViewController")
         return thirdChildTabVC
     }()
     

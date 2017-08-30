@@ -1081,7 +1081,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28736709434931884" green="0.054226711456710985" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1212,6 +1212,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JT-Hn-Iqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5103" y="1047"/>
+        </scene>
+        <!--Diet Table View Controller-->
+        <scene sceneID="uQr-cC-b7C">
+            <objects>
+                <tableViewController storyboardIdentifier="DietTableViewController" id="WMa-m0-f8t" customClass="DietTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="6tQ-od-igT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="9uN-5x-sWg" customClass="DietTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9uN-5x-sWg" id="LB0-Tf-OwD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGm-gv-bLH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="SGm-gv-bLH" secondAttribute="height" multiplier="15:8" id="OTJ-6b-tqR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymQ-xb-kmO">
+                                            <rect key="frame" x="8" y="162.5" width="359" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ymQ-xb-kmO" secondAttribute="bottom" constant="20" id="6fT-Fa-WZE"/>
+                                        <constraint firstItem="SGm-gv-bLH" firstAttribute="leading" secondItem="LB0-Tf-OwD" secondAttribute="leading" id="BC3-lC-lDW"/>
+                                        <constraint firstItem="ymQ-xb-kmO" firstAttribute="leading" secondItem="LB0-Tf-OwD" secondAttribute="leading" constant="8" id="PXH-KK-Fog"/>
+                                        <constraint firstAttribute="trailing" secondItem="ymQ-xb-kmO" secondAttribute="trailing" constant="8" id="U1V-R9-FnA"/>
+                                        <constraint firstItem="SGm-gv-bLH" firstAttribute="top" secondItem="LB0-Tf-OwD" secondAttribute="top" id="eQs-O2-69T"/>
+                                        <constraint firstAttribute="trailing" secondItem="SGm-gv-bLH" secondAttribute="trailing" id="ka1-zX-8v2"/>
+                                        <constraint firstAttribute="bottom" secondItem="SGm-gv-bLH" secondAttribute="bottom" id="pk0-i1-6P4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="saImageView" destination="SGm-gv-bLH" id="LQN-Q5-mzr"/>
+                                    <outlet property="saTitleLabel" destination="ymQ-xb-kmO" id="QiH-T4-ECL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WMa-m0-f8t" id="n4T-kh-mX0"/>
+                            <outlet property="delegate" destination="WMa-m0-f8t" id="dP8-J6-ZGg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssD-9t-DTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5889" y="788"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lkD-vG-red">
@@ -1576,12 +1631,12 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-7G-o7v">
-                                            <rect key="frame" x="66" y="65.5" width="147" height="23"/>
+                                            <rect key="frame" x="66" y="65.5" width="147" height="30"/>
                                             <color key="backgroundColor" red="0.33889259160000001" green="0.72336632010000002" blue="0.19142027889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Accept"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHz-Ga-4HQ">
-                                            <rect key="frame" x="221" y="65.5" width="147" height="23"/>
+                                            <rect key="frame" x="221" y="65.5" width="147" height="30"/>
                                             <color key="backgroundColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" title="Decline"/>
                                         </button>

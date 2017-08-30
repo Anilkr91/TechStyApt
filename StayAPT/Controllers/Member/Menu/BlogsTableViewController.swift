@@ -68,10 +68,13 @@ class BlogsTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
-    func populateBlogTableView(){
+    func populateBlogTableView() {
+        
+        Loader.sharedInstance.showLoader()
         BlogGetService.executeRequest { (data) in
             self.array = data
             self.tableView.reloadData()
+            Loader.sharedInstance.hideLoader()
         }
     }
     
