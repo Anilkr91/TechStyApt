@@ -16,6 +16,7 @@
 		84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF421F56AFB8001DA94A /* BlackButton.swift */; };
 		84C4CF451F56D445001DA94A /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF441F56D445001DA94A /* RedButton.swift */; };
 		84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF481F56D78E001DA94A /* BlackTextField.swift */; };
+		84C4CF4B1F56EB52001DA94A /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */; };
 		84CBB5141F559769001C369F /* BlogDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB50E1F559769001C369F /* BlogDetailTableViewController.swift */; };
 		84CBB5151F559769001C369F /* BlogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB50F1F559769001C369F /* BlogsTableViewController.swift */; };
 		84CBB5171F559769001C369F /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB5111F559769001C369F /* GalleryCollectionViewController.swift */; };
@@ -80,6 +81,7 @@
 		84C4CF421F56AFB8001DA94A /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		84C4CF441F56D445001DA94A /* RedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		84C4CF481F56D78E001DA94A /* BlackTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackTextField.swift; sourceTree = "<group>"; };
+		84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		84CBB50E1F559769001C369F /* BlogDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailTableViewController.swift; sourceTree = "<group>"; };
 		84CBB50F1F559769001C369F /* BlogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewController.swift; sourceTree = "<group>"; };
 		84CBB5111F559769001C369F /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				84F92F8C1F4FF8610002074D /* MenuListingTableViewController.swift */,
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84C4CF3A1F5699E0001DA94A /* DietTableViewController.swift */,
+				84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				84F92FB01F50382D0002074D /* CheckInMemberViewController.swift in Sources */,
 				84CBB5141F559769001C369F /* BlogDetailTableViewController.swift in Sources */,
 				84F92FDD1F542A3E0002074D /* NotificationModel.swift in Sources */,
+				84C4CF4B1F56EB52001DA94A /* EditProfileTableViewController.swift in Sources */,
 				84CBB5361F559A90001C369F /* MenuTableViewCell.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84CBB5191F559769001C369F /* MenuViewController.swift in Sources */,
