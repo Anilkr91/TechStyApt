@@ -14,7 +14,7 @@ struct BlogModelArray {
     
     init?(json: JSON) {
         
-        guard let results: [BlogModel] = "data" <~~ json else {
+        guard let results: [BlogModel] = "blog" <~~ json else {
             return nil
         }
         self.results = results
@@ -22,12 +22,12 @@ struct BlogModelArray {
     
     func toJSON() -> JSON? {
         return jsonify([
-            "data" ~~> self.results
+            "blog" ~~> self.results
             ])
     }
-    
-    init?(jsonArray: [AnyObject]) {
-        let jsonDictionary = ["data" : jsonArray]
-        self.init(json: jsonDictionary)
-    }
+//    
+//    init?(jsonArray: [AnyObject]) {
+//        let jsonDictionary = ["data" : jsonArray]
+//        self.init(json: jsonDictionary)
+//    }
 }

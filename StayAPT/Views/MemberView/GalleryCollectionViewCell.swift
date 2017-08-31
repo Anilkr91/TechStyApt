@@ -25,23 +25,28 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //setup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //setup()
+        setup()
     }
     
-//    func setup() {
+    func setup() {
 //        layer.cornerRadius = 10.0
 //        layer.borderWidth = 1.0
 //        layer.borderColor = UIColor.clear.cgColor
-//        backgroundColor = UIColor.clear
-//    }
+        backgroundColor = UIColor.clear
+    }
     
     func didSetCategory(member: SACheckedInMember) {
-        imageView.image = UIImage(imageLiteralResourceName: member.image)
+        
+        let url = URL(string: member.image)!
+        let image = UIImage(named: "gym")
+        
+        imageView.kf.setImage(with: url, placeholder: image)
+        //imageView.image = UIImage(imageLiteralResourceName: member.image)
         instaImageView.image = UIImage(imageLiteralResourceName: "insta-icon")
         gymNameLabel.text = member.name
         dateLabel.text = member.counter

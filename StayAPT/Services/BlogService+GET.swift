@@ -15,11 +15,11 @@ class BlogGetService {
         
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
-        let request = Alamofire.request( URL + "blog", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+        let request = Alamofire.request( URL + "blog", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
-                if let data = BlogModelArray.init(jsonArray: value as! [AnyObject])  {
+                if let data = BlogModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
                 }
                 

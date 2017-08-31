@@ -17,6 +17,10 @@
 		84C4CF451F56D445001DA94A /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF441F56D445001DA94A /* RedButton.swift */; };
 		84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF481F56D78E001DA94A /* BlackTextField.swift */; };
 		84C4CF4B1F56EB52001DA94A /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */; };
+		84C4CF4D1F57FA54001DA94A /* DietPlanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF4C1F57FA54001DA94A /* DietPlanTableViewController.swift */; };
+		84C4CF4F1F57FBCF001DA94A /* DietPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF4E1F57FBCF001DA94A /* DietPlanModel.swift */; };
+		84C4CF511F57FF35001DA94A /* DietPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF501F57FF35001DA94A /* DietPlanTableViewCell.swift */; };
+		84C4CF531F5833FC001DA94A /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF521F5833FC001DA94A /* CircleButton.swift */; };
 		84CBB5141F559769001C369F /* BlogDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB50E1F559769001C369F /* BlogDetailTableViewController.swift */; };
 		84CBB5151F559769001C369F /* BlogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB50F1F559769001C369F /* BlogsTableViewController.swift */; };
 		84CBB5171F559769001C369F /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB5111F559769001C369F /* GalleryCollectionViewController.swift */; };
@@ -82,6 +86,10 @@
 		84C4CF441F56D445001DA94A /* RedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		84C4CF481F56D78E001DA94A /* BlackTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackTextField.swift; sourceTree = "<group>"; };
 		84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		84C4CF4C1F57FA54001DA94A /* DietPlanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietPlanTableViewController.swift; sourceTree = "<group>"; };
+		84C4CF4E1F57FBCF001DA94A /* DietPlanModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietPlanModel.swift; sourceTree = "<group>"; };
+		84C4CF501F57FF35001DA94A /* DietPlanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietPlanTableViewCell.swift; sourceTree = "<group>"; };
+		84C4CF521F5833FC001DA94A /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		84CBB50E1F559769001C369F /* BlogDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailTableViewController.swift; sourceTree = "<group>"; };
 		84CBB50F1F559769001C369F /* BlogsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogsTableViewController.swift; sourceTree = "<group>"; };
 		84CBB5111F559769001C369F /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 				84CBB52D1F559A90001C369F /* MenuListingTableViewCell.swift */,
 				84CBB52E1F559A90001C369F /* MenuTableViewCell.swift */,
 				84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */,
+				84C4CF501F57FF35001DA94A /* DietPlanTableViewCell.swift */,
 			);
 			path = MemberView;
 			sourceTree = "<group>";
@@ -307,6 +316,7 @@
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84C4CF3A1F5699E0001DA94A /* DietTableViewController.swift */,
 				84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */,
+				84C4CF4C1F57FA54001DA94A /* DietPlanTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -318,6 +328,7 @@
 				84F92F9D1F4FFD920002074D /* FacebookButon.swift */,
 				84C4CF421F56AFB8001DA94A /* BlackButton.swift */,
 				84C4CF441F56D445001DA94A /* RedButton.swift */,
+				84C4CF521F5833FC001DA94A /* CircleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -348,6 +359,7 @@
 				84F92FEA1F5561C00002074D /* ClassModelArray.swift */,
 				84CBB5381F55C07C001C369F /* BlogModel.swift */,
 				84CBB53A1F55C1D9001C369F /* BlogModelArray.swift */,
+				84C4CF4E1F57FBCF001DA94A /* DietPlanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +469,7 @@
 				TargetAttributes = {
 					E24740171F4C3A5A001DC93D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Z8HU92LYAQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -575,6 +588,7 @@
 				84F92FA71F500B9A0002074D /* FitnessDashBoardTableViewController.swift in Sources */,
 				84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */,
 				84CBB5221F5597E3001C369F /* SignUpTableViewController.swift in Sources */,
+				84C4CF531F5833FC001DA94A /* CircleButton.swift in Sources */,
 				84F92FB21F503E200002074D /* VisitiorsListingTableViewController.swift in Sources */,
 				84CBB5211F5597E3001C369F /* SettingsTableViewController.swift in Sources */,
 				84CBB5321F559A90001C369F /* VisitorsListingTableViewCell.swift in Sources */,
@@ -584,6 +598,8 @@
 				84F92FD51F541BF80002074D /* StayAptTableViewController.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */,
 				84F92FD91F54259E0002074D /* FitnessNotificationTableViewController.swift in Sources */,
+				84C4CF511F57FF35001DA94A /* DietPlanTableViewCell.swift in Sources */,
+				84C4CF4F1F57FBCF001DA94A /* DietPlanModel.swift in Sources */,
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
 				84F92FE91F553B9B0002074D /* StayAptConstants.swift in Sources */,
 				84F92FB01F50382D0002074D /* CheckInMemberViewController.swift in Sources */,
@@ -603,6 +619,7 @@
 				84CBB5201F5597E3001C369F /* LoginTableViewController.swift in Sources */,
 				84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */,
 				84F92F931F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift in Sources */,
+				84C4CF4D1F57FA54001DA94A /* DietPlanTableViewController.swift in Sources */,
 				84CBB53B1F55C1D9001C369F /* BlogModelArray.swift in Sources */,
 				84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */,
 				84F92F9A1F4FF8610002074D /* ViewController.swift in Sources */,
@@ -733,6 +750,7 @@
 			baseConfigurationReference = 65E17ABEC52E49A16416692A /* Pods-StayAPT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8HU92LYAQ;
 				INFOPLIST_FILE = StayAPT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -747,6 +765,7 @@
 			baseConfigurationReference = E7E1724A211DA44BDEFD3C36 /* Pods-StayAPT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8HU92LYAQ;
 				INFOPLIST_FILE = StayAPT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

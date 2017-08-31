@@ -10,25 +10,16 @@ import UIKit
 
 class GalleryCollectionViewController: BaseCollectionViewController {
     
-    let memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
-    ]
+    let memberArray = [ SACheckedInMember(image: "http://crossislandfitness.com/wp-content/uploads/2016/01/s41.jpg", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "http://highlinefitness.in/img/gallery/new1.jpg", name: "John", counter: "20/20"),
+                        SACheckedInMember(image: "http://highlinefitness.in/img/gallery/img-gal-54.jpg", name: "Rohit", counter: "20/20"),
+                        SACheckedInMember(image: "http://www.generalgraphics.com/images/Installation_Keoki_2.jpg", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "http://leobrowngroup.com/wp-content/uploads/2017/02/fitness-center-gallery-768x510.jpg", name: "Rohan", counter: "20/20"),
+                        SACheckedInMember(image: "https://s-media-cache-ak0.pinimg.com/736x/08/7e/ca/087eca9383cd2d638cda904ed35c4035.jpg", name: "Prakash", counter: "20/20"),
+                        SACheckedInMember(image: "http://1jncer125gfi1y0shjjd6uib.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/equinox_06.jpg", name: "Ankur", counter: "20/20"),
+                        SACheckedInMember(image: "http://ygh.com/wp-content/uploads/01-TCO-Sports-Center-option-1.jpg", name: "Bhagat", counter: "20/20"),
+                        SACheckedInMember(image: "http://1jncer125gfi1y0shjjd6uib.wpengine.netdna-cdn.com/wp-content/uploads/2015/06/equinox_06.jpg", name: "Ram Rahim", counter: "20/20"),
+                        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +60,7 @@ extension GalleryCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     fileprivate var interitemSpace: CGFloat {
-        return 5.0
+        return 2.0
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -80,7 +71,7 @@ extension GalleryCollectionViewController: UICollectionViewDelegateFlowLayout {
         let availableWidth = collectionView.bounds.width - sectionPadding - interitemPadding
         let widthPerItem = availableWidth / itemsPerRow
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem, height: widthPerItem-30)
     }
     
     func collectionView(_ collectionView: UICollectionView,
