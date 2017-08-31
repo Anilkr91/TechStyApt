@@ -1091,26 +1091,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.28736709434931884" green="0.054226711456710985" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="5Dy-xL-5pK">
-                            <size key="itemSize" width="150" height="150"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5Dy-xL-5pK">
+                            <size key="itemSize" width="180" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="lsj-xy-pS8" customClass="GalleryCollectionViewCell" customModule="StayAPT" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="150" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="55f-pS-vng">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="B7L-NJ-Bw1"/>
-                                                <constraint firstAttribute="width" secondItem="55f-pS-vng" secondAttribute="height" multiplier="1:1" id="G7H-nd-9qV"/>
-                                                <constraint firstAttribute="width" constant="150" id="SkZ-nb-a80"/>
+                                                <constraint firstAttribute="width" constant="180" id="SkZ-nb-a80"/>
+                                                <constraint firstAttribute="width" secondItem="55f-pS-vng" secondAttribute="height" multiplier="6:5" id="dZz-vi-jhY"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCD-Bq-R0Q">
@@ -1122,13 +1122,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-rb-kA2">
-                                            <rect key="frame" x="41" y="115" width="93" height="14.5"/>
+                                            <rect key="frame" x="41" y="115" width="123" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-Kt-fef">
-                                            <rect key="frame" x="41" y="135.5" width="93" height="14.5"/>
+                                            <rect key="frame" x="41" y="135.5" width="123" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -1147,8 +1147,9 @@
                                     <constraint firstItem="Af0-rb-kA2" firstAttribute="centerY" secondItem="gCD-Bq-R0Q" secondAttribute="centerY" id="sP4-JZ-fUF"/>
                                     <constraint firstItem="55f-pS-vng" firstAttribute="top" secondItem="lsj-xy-pS8" secondAttribute="top" id="tdd-V1-KKg"/>
                                     <constraint firstItem="qhr-Kt-fef" firstAttribute="trailing" secondItem="Af0-rb-kA2" secondAttribute="trailing" id="vHX-V0-ISW"/>
+                                    <constraint firstAttribute="trailing" secondItem="55f-pS-vng" secondAttribute="trailing" id="wrK-Sl-H7Z"/>
                                 </constraints>
-                                <size key="customSize" width="150" height="150"/>
+                                <size key="customSize" width="180" height="150"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="qhr-Kt-fef" id="Zby-da-9w7"/>
                                     <outlet property="gymNameLabel" destination="Af0-rb-kA2" id="aeH-Ea-Jve"/>
@@ -1163,6 +1164,8 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Gallery" id="V39-NG-Eh8"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZG-8Q-Uk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
