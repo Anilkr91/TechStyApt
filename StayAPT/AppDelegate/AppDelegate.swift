@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupKeyBoardManager()
+        //setupNavigationAppearance()
+        setupSegmentedControlAppearance()
         return true
     }
 
@@ -44,5 +46,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupKeyBoardManager() {
       IQKeyboardManager.shared().isEnabled = true
+    }
+    
+    func setupSegmentedControlAppearance() {
+        let segmentedControlAppearance = UISegmentedControl.appearance()
+        segmentedControlAppearance.tintColor = UIColor.red
+//        segmentedControlAppearance.setTitleTextAttributes([ NSFontAttributeName : UIFont(name: Resources.defaultFont(), size: 13.0)!], forState: .Normal)
+    }
+    
+    func setupNavigationAppearance() {
+        let navigationbarAppearance = UINavigationBar.appearance()
+        //navigationbarAppearance.barStyle = .black
+        navigationbarAppearance.tintColor = UIColor.white
+        navigationbarAppearance.barTintColor = UIColor.red
+       // navigationbarAppearance.shadowImage = nil
+        //navigationbarAppearance.titleTextAttributes = [ NSFontAttributeName : UIFont(name: Resources.defaultMediumFont(), size: 18.0)!]
     }
 }

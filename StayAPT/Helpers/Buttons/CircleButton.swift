@@ -22,8 +22,9 @@ class CircleButton: UIButton {
     
     func setup() {
         clipsToBounds = true
-        layer.cornerRadius = 10;
+        layer.cornerRadius = frame.width/2;
+        layer.borderWidth = 0.3
+        layer.borderColor = UIColor.gray.cgColor
         backgroundColor = UIColor.white
-        titleLabel?.textColor = UIColor.red
     }
 }

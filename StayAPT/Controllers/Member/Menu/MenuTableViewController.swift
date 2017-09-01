@@ -16,7 +16,7 @@ class MenuTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateTableView()
+//        populateTableView()
     }
         
     // MARK: - Table view data source
@@ -63,7 +63,6 @@ class MenuTableViewController: BaseTableViewController {
             self.dataArray = data
             self.tableView.reloadData()
             Loader.sharedInstance.hideLoader()
-            
         }
     }
 }

@@ -1087,7 +1087,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1348,34 +1348,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Cv2-rY-btl" customClass="DietPlanTableViewCell" customModule="StayAPT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="Cv2-rY-btl" customClass="DietPlanTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cv2-rY-btl" id="4dn-y1-CIv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k83-F5-y97">
-                                            <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="107.5" y="8" width="259.5" height="33.5"/>
+                                            <color key="backgroundColor" red="1" green="0.13732521070000001" blue="0.16549000480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2A-s3-LoM" customClass="CircleButton" customModule="StayAPT" customModuleProvider="target">
-                                            <rect key="frame" x="164.5" y="0.0" width="46" height="43.5"/>
-                                            <state key="normal" title="Button"/>
+                                            <rect key="frame" x="157.5" y="0.0" width="60" height="49.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="oyt-96-szU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" red="1" green="0.13732521068223968" blue="0.16549000480443288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="k83-F5-y97" secondAttribute="bottom" id="8ay-Zb-XFj"/>
-                                        <constraint firstItem="k83-F5-y97" firstAttribute="centerY" secondItem="4dn-y1-CIv" secondAttribute="centerY" id="9h3-kB-Pwb"/>
-                                        <constraint firstItem="k83-F5-y97" firstAttribute="centerX" secondItem="4dn-y1-CIv" secondAttribute="centerX" id="FgQ-yb-9VY"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="k83-F5-y97" secondAttribute="trailing" id="IC4-jR-D5B"/>
-                                        <constraint firstItem="k83-F5-y97" firstAttribute="leading" secondItem="4dn-y1-CIv" secondAttribute="leadingMargin" id="JL6-pW-H8f"/>
+                                        <constraint firstItem="k83-F5-y97" firstAttribute="top" secondItem="4dn-y1-CIv" secondAttribute="top" constant="8" id="0Pc-bT-zjs"/>
+                                        <constraint firstItem="k83-F5-y97" firstAttribute="leading" secondItem="V2A-s3-LoM" secondAttribute="trailing" constant="-110" id="1gq-RC-T3k"/>
                                         <constraint firstItem="V2A-s3-LoM" firstAttribute="top" secondItem="4dn-y1-CIv" secondAttribute="top" id="L4J-6N-S4n"/>
+                                        <constraint firstAttribute="bottom" secondItem="k83-F5-y97" secondAttribute="bottom" constant="8" id="Swi-uc-ehd"/>
                                         <constraint firstItem="V2A-s3-LoM" firstAttribute="centerX" secondItem="4dn-y1-CIv" secondAttribute="centerX" id="ax7-0l-siQ"/>
                                         <constraint firstAttribute="bottom" secondItem="V2A-s3-LoM" secondAttribute="bottom" id="dJo-hn-MpR"/>
-                                        <constraint firstItem="k83-F5-y97" firstAttribute="top" secondItem="4dn-y1-CIv" secondAttribute="topMargin" id="om4-hr-Kfr"/>
+                                        <constraint firstAttribute="trailing" secondItem="k83-F5-y97" secondAttribute="trailing" constant="8" id="kUv-O5-eRI"/>
                                         <constraint firstItem="V2A-s3-LoM" firstAttribute="centerY" secondItem="4dn-y1-CIv" secondAttribute="centerY" id="owk-W1-55f"/>
                                     </constraints>
                                 </tableViewCellContentView>

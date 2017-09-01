@@ -18,6 +18,7 @@ class DietPlanTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        roundedLabel()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,12 +34,18 @@ class DietPlanTableViewCell: UITableViewCell {
             }
         }
     }
+    
+    func roundedLabel() {
+        mealDescription.layer.cornerRadius = 8.0
+        mealDescription.clipsToBounds = true
+    }
 }
 
 extension DietPlanTableViewCell {
     func didSetCategory(info: DietPlanModel) {
         mealButton.addTarget(self, action: #selector(animation(sender:)), for: .touchUpInside)
         mealDescription.alpha = 0.0
+        
         mealButton.setTitle(info.mealName, for:.normal)
         mealDescription.text = info.description
     }
@@ -51,28 +58,26 @@ extension DietPlanTableViewCell {
             
             // move button to left
             moveLeftAnimation()
+            //flip()
         } else {
             isClicked = false
             
             // move button to center
             moveToCenter()
-            print("clicked second")
         }
     }
     
     
     func moveLeftAnimation() {
         UIView.animate(withDuration: 1) {
-            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x - self.mealButton.frame.size.width - 95
-            self.mealButton.isSelected = true
+            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x - 125
             self.fadeOutAnimation()
         }
     }
     
     func moveToCenter() {
         UIView.animate(withDuration: 1) {
-            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x + 130
-            self.mealButton.isSelected = true
+            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x + 125
             self.fadeInAnimation()
         }
     }
@@ -87,6 +92,20 @@ extension DietPlanTableViewCell {
         
         UIView.animate(withDuration: 2.0, animations: {
             self.mealDescription.alpha = 0.0
+        })
+    }
+    
+    
+    
+    func flip() {
+        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
+        
+        UIView.transition(with: mealDescription, duration: 1.0, options: transitionOptions, animations: {
+            self.mealButton.isHidden = true
+        })
+        
+        UIView.transition(with: mealButton, duration: 1.0, options: transitionOptions, animations: {
+            self.mealDescription.isHidden = false
         })
     }
 }

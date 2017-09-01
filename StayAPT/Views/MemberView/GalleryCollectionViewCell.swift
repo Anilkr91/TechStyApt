@@ -6,6 +6,7 @@
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
+
 import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
@@ -34,9 +35,6 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }
     
     func setup() {
-//        layer.cornerRadius = 10.0
-//        layer.borderWidth = 1.0
-//        layer.borderColor = UIColor.clear.cgColor
         backgroundColor = UIColor.clear
     }
     

@@ -15,7 +15,6 @@ struct Loader {
     private let activityIndicator = UIActivityIndicatorView()
     
     //MARK: - Private Methods -
-    
     private init() { }
     
     private func setupLoader() {

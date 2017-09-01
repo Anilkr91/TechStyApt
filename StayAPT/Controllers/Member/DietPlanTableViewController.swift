@@ -16,15 +16,25 @@ class DietPlanTableViewController: BaseTableViewController {
                  DietPlanModel(mealName: "Meal 4", description: "2 slice of whole grain bread with 1sp\n peanut butter\n 3 egg whites"),
                  DietPlanModel(mealName: "Meal 5", description: "2 slice of whole grain bread with 1sp\n peanut butter\n 3 egg whites"),
                  DietPlanModel(mealName: "Meal 6", description: "2 slice of whole grain bread with 1sp\n peanut butter\n 3 egg whites"),
-                 DietPlanModel(mealName: "Meal 7", description: "Chicken breast\n Brown rice or pasta")
+                 DietPlanModel(mealName: "Meal 7", description: "Chicken breast\n Brown rice or pasta\n")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setupBackgroundImage()
+        tableView.separatorStyle = .none
     }
     
+    func setupBackgroundImage() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "diet_bg")
+        backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
+        self.view.backgroundColor = UIColor.white
+        self.view.insertSubview(backgroundImage, at: 0)
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return array.count
@@ -46,19 +56,15 @@ class DietPlanTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.selectionStyle = .none
+        cell.backgroundColor = UIColor.clear
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.section)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        return 2
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 8
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
+        return 8
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
