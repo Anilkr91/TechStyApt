@@ -26,7 +26,6 @@ class MenuTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     var info: ClassModel? {
         didSet {
             if let member = info {
@@ -39,9 +38,9 @@ class MenuTableViewCell: UITableViewCell {
 extension MenuTableViewCell {
     func didSetCategory(info: ClassModel) {
         let url = URL(string: info.img)!
-        let image = UIImage(named: "gym")
+        let placeholderImage = UIImage(named: "placeholder")
         
-        saImageView.kf.setImage(with: url, placeholder: image)
+        saImageView.kf.setImage(with: url, placeholder: placeholderImage)
         saTitleLabel.text = info.className
         saSubTitleLabe.text = "Your Fitness Center"
     }
