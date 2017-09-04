@@ -60,13 +60,10 @@ class FitnessCenterTableViewController: BaseTableViewController {
     }
     
     func populateTableView() {
-        
-        Loader.sharedInstance.showLoader()
         let param = ["class_id": 1]
         FitnessCenterGetService.executeRequest(params: param as [String : AnyObject]) { (data) in
             self.fitnessCenterArray = data
             self.tableView.reloadData()
-            Loader.sharedInstance.hideLoader()
         }
     }
 }

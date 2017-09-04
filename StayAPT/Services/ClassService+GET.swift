@@ -29,7 +29,6 @@ class ClassGetService {
                     print(error!.message)
                 }
                 
-                
             case .failure(let error):
                 print(error.localizedDescription)
             }

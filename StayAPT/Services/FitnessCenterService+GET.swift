@@ -13,6 +13,7 @@ import Gloss
 class FitnessCenterGetService {
     static func executeRequest (params:[String: AnyObject], completionHandler: @escaping ([FitnessCenterModel]) -> Void) {
         
+        Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         let request = Alamofire.request( URL + "fitness_center", method: .get, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
@@ -22,6 +23,7 @@ class FitnessCenterGetService {
                 
                 if let data = FitnessCenterModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
+                     Loader.sharedInstance.hideLoader()
                     
                 } else {
                     Loader.sharedInstance.hideLoader()

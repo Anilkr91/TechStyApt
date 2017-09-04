@@ -28,8 +28,7 @@ class BlogGetService {
                     let error = ErrorModel.init(json: value as! JSON)
                     print(error!.message)
                 }
-                
-                
+            
             case .failure(let error):
                 print(error.localizedDescription)
             }
