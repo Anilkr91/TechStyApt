@@ -1162,7 +1162,7 @@
             </objects>
             <point key="canvasLocation" x="2796" y="3041"/>
         </scene>
-        <!--Gallery-->
+        <!--#stayapt-->
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
@@ -1242,7 +1242,7 @@
                             <outlet property="delegate" destination="Iz2-ME-IO6" id="Yd8-kC-HeD"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Gallery" id="V39-NG-Eh8"/>
+                    <navigationItem key="navigationItem" title="#stayapt" id="V39-NG-Eh8"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                 </collectionViewController>
