@@ -70,14 +70,14 @@ extension DietPlanTableViewCell {
     
     func moveLeftAnimation() {
         UIView.animate(withDuration: 1) {
-            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x - 125
+            self.mealButton.frame.origin.x = self.contentView.frame.origin.x + 8
             self.fadeOutAnimation()
         }
     }
     
     func moveToCenter() {
         UIView.animate(withDuration: 1) {
-            self.mealButton.frame.origin.x = self.mealButton.frame.origin.x + 125
+            self.mealButton.center = self.contentView.center
             self.fadeInAnimation()
         }
     }
@@ -96,16 +96,16 @@ extension DietPlanTableViewCell {
     }
     
     
-    
-    func flip() {
-        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
-        
-        UIView.transition(with: mealDescription, duration: 1.0, options: transitionOptions, animations: {
-            self.mealButton.isHidden = true
-        })
-        
-        UIView.transition(with: mealButton, duration: 1.0, options: transitionOptions, animations: {
-            self.mealDescription.isHidden = false
-        })
-    }
+//    
+//    func flip() {
+//        let transitionOptions: UIViewAnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
+//        
+//        UIView.transition(with: mealDescription, duration: 1.0, options: transitionOptions, animations: {
+//            self.mealButton.isHidden = true
+//        })
+//        
+//        UIView.transition(with: mealButton, duration: 1.0, options: transitionOptions, animations: {
+//            self.mealDescription.isHidden = false
+//        })
+//    }
 }
