@@ -12,6 +12,8 @@ import Gloss
 class BlogGetService {
     
     static func executeRequest (completionHandler: @escaping ([BlogModel]) -> Void) {
+        
+        Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         let request = Alamofire.request( URL + "blog", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
@@ -20,10 +22,13 @@ class BlogGetService {
             case .success(let value) :
                 if let data = BlogModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
+                    Loader.sharedInstance.hideLoader()
+                } else {
+                    Loader.sharedInstance.hideLoader()
+                    let error = ErrorModel.init(json: value as! JSON)
+                    print(error!.message)
                 }
                 
-                let error = ErrorModel.init(json: value as! JSON)
-                print(error!.message)
                 
             case .failure(let error):
                 print(error.localizedDescription)

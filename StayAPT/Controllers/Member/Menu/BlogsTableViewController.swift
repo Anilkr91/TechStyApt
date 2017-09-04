@@ -69,12 +69,9 @@ class BlogsTableViewController: BaseTableViewController {
     }
     
     func populateBlogTableView() {
-        
-        Loader.sharedInstance.showLoader()
         BlogGetService.executeRequest { (data) in
             self.array = data
             self.tableView.reloadData()
-            Loader.sharedInstance.hideLoader()
         }
     }
     
