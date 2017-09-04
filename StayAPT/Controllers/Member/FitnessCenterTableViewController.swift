@@ -1,5 +1,5 @@
-//
-//  MenuListingTabeViewControllerTableViewController.swift
+ //
+// FitnessCenterTableViewController.swift
 //  StayAPT
 //
 //  Created by admin on 23/08/17.
@@ -8,46 +8,35 @@
 
 import UIKit
 
-class MenuListingTableViewController: BaseTableViewController {
+class FitnessCenterTableViewController: BaseTableViewController {
     
-    let gymArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2"]
-    let blogArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2"]
-    let dietArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2"]
-    let galleryArray = ["GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2", "GGym", "GGym2","GGym", "GGym2"]
-    
+    var fitnessCenterArray: [FitnessCenterModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateTableView()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 10
+        return fitnessCenterArray.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuListingTableViewCell
         
-        cell.saGymImageView.image = UIImage(imageLiteralResourceName: gymArray[indexPath.section])
-        cell.saGymTitleLabel.text = "GYM"
-        cell.saGymSubTitleLabe.text = "detailed gym text"
+        print(fitnessCenterArray[indexPath.section].facilities)
+        cell.info = fitnessCenterArray[indexPath.section]
         return cell
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
@@ -58,11 +47,9 @@ class MenuListingTableViewController: BaseTableViewController {
         return 2
     }
     
-    
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 2
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -71,7 +58,15 @@ class MenuListingTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-
- 
-
+    
+    func populateTableView() {
+        
+        Loader.sharedInstance.showLoader()
+        let param = ["class_id": 1]
+        FitnessCenterGetService.executeRequest(params: param as [String : AnyObject]) { (data) in
+            self.fitnessCenterArray = data
+            self.tableView.reloadData()
+            Loader.sharedInstance.hideLoader()
+        }
+    }
 }

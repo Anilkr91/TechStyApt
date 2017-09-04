@@ -1087,10 +1087,10 @@
             </objects>
             <point key="canvasLocation" x="567" y="-421"/>
         </scene>
-        <!--Menu Listing Table View Controller-->
+        <!--Fitness Center Table View Controller-->
         <scene sceneID="paa-pe-GJM">
             <objects>
-                <tableViewController id="2vh-q4-I9Z" customClass="MenuListingTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2vh-q4-I9Z" customClass="FitnessCenterTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="175" sectionHeaderHeight="18" sectionFooterHeight="18" id="SMv-wB-hs8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1116,7 +1116,6 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="ecx-L6-8A0"/>
                                             </constraints>
-                                            <state key="normal" title="Like"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQt-7I-POB">
                                             <rect key="frame" x="66" y="38.5" width="263" height="17"/>
@@ -1150,7 +1149,6 @@
                                     <outlet property="saGymImageView" destination="aHZ-fZ-oYr" id="S4R-bG-pls"/>
                                     <outlet property="saGymSubTitleLabe" destination="IQt-7I-POB" id="PoC-7e-nJ8"/>
                                     <outlet property="saGymTitleLabel" destination="E0K-Mn-Q1W" id="Ows-6J-ML0"/>
-                                    <segue destination="ssJ-Mt-JLj" kind="show" id="n0i-sV-IO8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1256,8 +1254,8 @@
         <scene sceneID="NOf-5D-oEq">
             <objects>
                 <collectionViewController id="ssJ-Mt-JLj" customClass="FitnessCenterDetailCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ouS-Jh-dIK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="ouS-Jh-dIK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UxI-nf-jwD">
@@ -1358,10 +1356,10 @@
             </objects>
             <point key="canvasLocation" x="4606" y="2239"/>
         </scene>
-        <!--View Controller-->
+        <!--Fitness Center-->
         <scene sceneID="lkD-vG-red">
             <objects>
-                <viewController id="ONg-vB-NJK" sceneMemberID="viewController">
+                <viewController id="ONg-vB-NJK" customClass="FitnessCenterViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YaD-Zj-jju"/>
                         <viewControllerLayoutGuide type="bottom" id="3e8-13-kL3"/>
@@ -1370,24 +1368,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-1R-wjh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="aHM-1R-wjh">
                                 <rect key="frame" x="2" y="0.0" width="181.5" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.2019609297838747" blue="0.61513181124594385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZHI-bS-Itj"/>
                                 </constraints>
-                                <state key="normal" title="Sort">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Sort" image="sorting">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="and-p6-okg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="and-p6-okg">
                                 <rect key="frame" x="191.5" y="0.0" width="181.5" height="40"/>
-                                <color key="backgroundColor" red="0.37470177639370827" green="0.39328229161961514" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Kyt-db-r1V"/>
                                 </constraints>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Filter" image="filter">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-6k-4eQ">
@@ -1397,7 +1396,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="and-p6-okg" firstAttribute="height" secondItem="aHM-1R-wjh" secondAttribute="height" id="2fF-eA-Pi2"/>
                             <constraint firstAttribute="trailing" secondItem="and-p6-okg" secondAttribute="trailing" constant="2" id="DMZ-jq-g78"/>
@@ -1412,6 +1411,7 @@
                             <constraint firstItem="aHM-1R-wjh" firstAttribute="top" secondItem="YaD-Zj-jju" secondAttribute="bottom" id="y1x-1p-Du8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Fitness Center" id="2A4-7n-NYo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTU-In-vdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2267,6 +2267,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="filter" width="50" height="50"/>
+        <image name="sorting" width="50" height="50"/>
         <image name="stayapt-icon-white" width="400" height="500"/>
     </resources>
 </document>

@@ -12,6 +12,11 @@
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B141F5D10B7005BAC61 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B131F5D10B7005BAC61 /* DietPlanViewController.swift */; };
 		84409B1A1F5D1D72005BAC61 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B191F5D1D72005BAC61 /* DietViewController.swift */; };
+		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
+		84409B1E1F5D3658005BAC61 /* FitnessCenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1D1F5D3658005BAC61 /* FitnessCenterModel.swift */; };
+		84409B201F5D36CA005BAC61 /* FacilitiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1F1F5D36CA005BAC61 /* FacilitiesModel.swift */; };
+		84409B221F5D3809005BAC61 /* FitnessCenterModelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B211F5D3809005BAC61 /* FitnessCenterModelArray.swift */; };
+		84409B241F5D56E5005BAC61 /* FitnessCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B231F5D56E5005BAC61 /* FitnessCenterViewController.swift */; };
 		846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */; };
 		84C4CF3B1F5699E0001DA94A /* DietTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF3A1F5699E0001DA94A /* DietTableViewController.swift */; };
 		84C4CF3D1F569AD9001DA94A /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */; };
@@ -50,7 +55,7 @@
 		84F92F921F4FF8610002074D /* FitnessHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F871F4FF8610002074D /* FitnessHomeViewController.swift */; };
 		84F92F931F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F891F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift */; };
 		84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8A1F4FF8610002074D /* HomeViewController.swift */; };
-		84F92F961F4FF8610002074D /* MenuListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8C1F4FF8610002074D /* MenuListingTableViewController.swift */; };
+		84F92F961F4FF8610002074D /* FitnessCenterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8C1F4FF8610002074D /* FitnessCenterTableViewController.swift */; };
 		84F92F9A1F4FF8610002074D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F901F4FF8610002074D /* ViewController.swift */; };
 		84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F9C1F4FFD920002074D /* BaseButton.swift */; };
 		84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F9D1F4FFD920002074D /* FacebookButon.swift */; };
@@ -85,6 +90,11 @@
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B131F5D10B7005BAC61 /* DietPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
 		84409B191F5D1D72005BAC61 /* DietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
+		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
+		84409B1D1F5D3658005BAC61 /* FitnessCenterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterModel.swift; sourceTree = "<group>"; };
+		84409B1F1F5D36CA005BAC61 /* FacilitiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacilitiesModel.swift; sourceTree = "<group>"; };
+		84409B211F5D3809005BAC61 /* FitnessCenterModelArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterModelArray.swift; sourceTree = "<group>"; };
+		84409B231F5D56E5005BAC61 /* FitnessCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterViewController.swift; sourceTree = "<group>"; };
 		846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C4CF3A1F5699E0001DA94A /* DietTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietTableViewController.swift; sourceTree = "<group>"; };
 		84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,7 +133,7 @@
 		84F92F871F4FF8610002074D /* FitnessHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessHomeViewController.swift; sourceTree = "<group>"; };
 		84F92F891F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		84F92F8A1F4FF8610002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		84F92F8C1F4FF8610002074D /* MenuListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListingTableViewController.swift; sourceTree = "<group>"; };
+		84F92F8C1F4FF8610002074D /* FitnessCenterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterTableViewController.swift; sourceTree = "<group>"; };
 		84F92F901F4FF8610002074D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84F92F9C1F4FFD920002074D /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		84F92F9D1F4FFD920002074D /* FacebookButon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookButon.swift; sourceTree = "<group>"; };
@@ -192,6 +202,7 @@
 				84CBB5121F559769001C369F /* MenuTableViewController.swift */,
 				84CBB5131F559769001C369F /* MenuViewController.swift */,
 				844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */,
+				84409B231F5D56E5005BAC61 /* FitnessCenterViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 			children = (
 				84F92FE61F553A4C0002074D /* ClassService+GET.swift */,
 				84CBB53C1F55C334001C369F /* BlogService+GET.swift */,
+				84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,7 +336,7 @@
 				84CBB50D1F559769001C369F /* Menu */,
 				84F92F891F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift */,
 				84F92F8A1F4FF8610002074D /* HomeViewController.swift */,
-				84F92F8C1F4FF8610002074D /* MenuListingTableViewController.swift */,
+				84F92F8C1F4FF8610002074D /* FitnessCenterTableViewController.swift */,
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84C4CF3A1F5699E0001DA94A /* DietTableViewController.swift */,
 				84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */,
@@ -372,6 +384,9 @@
 				84CBB5381F55C07C001C369F /* BlogModel.swift */,
 				84CBB53A1F55C1D9001C369F /* BlogModelArray.swift */,
 				84C4CF4E1F57FBCF001DA94A /* DietPlanModel.swift */,
+				84409B1D1F5D3658005BAC61 /* FitnessCenterModel.swift */,
+				84409B1F1F5D36CA005BAC61 /* FacilitiesModel.swift */,
+				84409B211F5D3809005BAC61 /* FitnessCenterModelArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -595,6 +610,7 @@
 				84CBB5171F559769001C369F /* GalleryCollectionViewController.swift in Sources */,
 				84CBB5351F559A90001C369F /* MenuListingTableViewCell.swift in Sources */,
 				84C4CF3F1F56A072001DA94A /* Loader.swift in Sources */,
+				84409B241F5D56E5005BAC61 /* FitnessCenterViewController.swift in Sources */,
 				84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */,
 				84409B141F5D10B7005BAC61 /* DietPlanViewController.swift in Sources */,
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
@@ -604,6 +620,7 @@
 				84C4CF531F5833FC001DA94A /* CircleButton.swift in Sources */,
 				84F92FB21F503E200002074D /* VisitiorsListingTableViewController.swift in Sources */,
 				84409B1A1F5D1D72005BAC61 /* DietViewController.swift in Sources */,
+				84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */,
 				84CBB5211F5597E3001C369F /* SettingsTableViewController.swift in Sources */,
 				84CBB5321F559A90001C369F /* VisitorsListingTableViewCell.swift in Sources */,
 				84F92FA91F5030ED0002074D /* CheckedInMemberCollectionViewController.swift in Sources */,
@@ -629,19 +646,22 @@
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
 				84C4CF3B1F5699E0001DA94A /* DietTableViewController.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
+				84409B1E1F5D3658005BAC61 /* FitnessCenterModel.swift in Sources */,
 				84F92FEB1F5561C00002074D /* ClassModelArray.swift in Sources */,
-				84F92F961F4FF8610002074D /* MenuListingTableViewController.swift in Sources */,
+				84F92F961F4FF8610002074D /* FitnessCenterTableViewController.swift in Sources */,
 				84CBB5201F5597E3001C369F /* LoginTableViewController.swift in Sources */,
 				84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */,
 				84F92F931F4FF8610002074D /* FitnessCenterDetailCollectionViewController.swift in Sources */,
 				84C4CF4D1F57FA54001DA94A /* DietPlanTableViewController.swift in Sources */,
 				84CBB53B1F55C1D9001C369F /* BlogModelArray.swift in Sources */,
+				84409B221F5D3809005BAC61 /* FitnessCenterModelArray.swift in Sources */,
 				84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */,
 				84F92F9A1F4FF8610002074D /* ViewController.swift in Sources */,
 				84F92FAE1F50329F0002074D /* SACheckedInMember.swift in Sources */,
 				84CBB5311F559A90001C369F /* FitnessNotificationTableViewCell.swift in Sources */,
 				844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */,
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
+				84409B201F5D36CA005BAC61 /* FacilitiesModel.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
 				84C4CF411F56AA8B001DA94A /* CheckInTableViewController.swift in Sources */,
 				84CBB5181F559769001C369F /* MenuTableViewController.swift in Sources */,
