@@ -10,7 +10,6 @@ import Alamofire
 import Gloss
 
 class ClassGetService {
-    
     static func executeRequest (completionHandler: @escaping ([ClassModel]) -> Void) {
         
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]

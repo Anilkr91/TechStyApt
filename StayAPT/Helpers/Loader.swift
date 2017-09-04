@@ -20,7 +20,7 @@ struct Loader {
     private func setupLoader() {
         hideLoader()
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = .gray
+        activityIndicator.color = UIColor(red: 255/255, green: 125/255, blue: 150/255, alpha: 1)
     }
     
     //MARK: - Public Methods -

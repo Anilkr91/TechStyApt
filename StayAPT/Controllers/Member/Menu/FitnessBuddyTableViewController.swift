@@ -1,23 +1,24 @@
 //
-//  MenuTableViewController.swift
+//  FitnessBuddyTableViewController.swift
 //  StayAPT
 //
-//  Created by Macintosh on 22/08/17.
+//  Created by admin on 02/09/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: BaseTableViewController {
-
+class FitnessBuddyTableViewController: BaseTableViewController {
+    
     var dataArray: [ClassModel] = []
     weak var pvc: MenuViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateTableView()
-    }
         
+        //        populateTableView()
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {

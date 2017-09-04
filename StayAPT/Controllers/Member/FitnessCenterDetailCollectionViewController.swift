@@ -49,7 +49,7 @@ class FitnessCenterDetailCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FitnessCenterDetailCollectionViewCell
-        cell.image = images[indexPath.row]
+        //cell.image = images[indexPath.row]
         return cell
     }
 

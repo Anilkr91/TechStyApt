@@ -12,7 +12,6 @@ import Gloss
 class BlogGetService {
     
     static func executeRequest (completionHandler: @escaping ([BlogModel]) -> Void) {
-        
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         let request = Alamofire.request( URL + "blog", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in

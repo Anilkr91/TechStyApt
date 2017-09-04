@@ -6,7 +6,7 @@
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
-
+import UIKit
 import YBSlantedCollectionViewLayout
 
 let yOffsetSpeed: CGFloat = 150.0
@@ -15,10 +15,13 @@ let xOffsetSpeed: CGFloat = 100.0
 class FitnessCenterDetailCollectionViewCell: YBSlantedCollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    var image: UIImage = UIImage() {
+    var member: SACheckedInMember? {
         didSet {
-            imageView.image = image
+            if let member = member {
+                didSetCategory(member: member)
+            }
         }
     }
     
@@ -30,8 +33,26 @@ class FitnessCenterDetailCollectionViewCell: YBSlantedCollectionViewCell {
         return (imageView?.image?.size.width) ?? 0.0
     }
     
-    
     func offset(_ offset: CGPoint) {
         imageView.frame = self.imageView.bounds.offsetBy(dx: offset.x, dy: offset.y)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        backgroundColor = UIColor.clear
+    }
+    
+    func didSetCategory(member: SACheckedInMember) {
+        imageView.image = UIImage(imageLiteralResourceName: member.image)
+        titleLabel.text = member.name
     }
 }
