@@ -21,6 +21,8 @@ class ClassGetService {
                if let data = ClassModelArray.init(json: value as! JSON)  {
                 completionHandler(data.results)
                 }
+                let error = ErrorModel.init(json: value as! JSON)
+                print(error!.message)
                 
             case .failure(let error):
                 print(error.localizedDescription)
