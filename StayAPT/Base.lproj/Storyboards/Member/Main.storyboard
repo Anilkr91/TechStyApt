@@ -208,7 +208,7 @@
                                                     <rect key="frame" x="48" y="5.5" width="294" height="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKt-i6-vXR">
                                                     <rect key="frame" x="347" y="10.5" width="20" height="20"/>
@@ -217,6 +217,9 @@
                                                         <constraint firstAttribute="height" constant="20" id="dhp-3Y-jKy"/>
                                                         <constraint firstAttribute="width" constant="20" id="s6R-pQ-3D0"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="togglePassword:" destination="C3v-Hl-yMS" eventType="touchUpInside" id="yhE-FR-HPo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1254,7 +1257,7 @@
         <scene sceneID="NOf-5D-oEq">
             <objects>
                 <collectionViewController id="ssJ-Mt-JLj" customClass="FitnessCenterDetailCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="ouS-Jh-dIK">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ouS-Jh-dIK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1422,7 +1425,7 @@
             <objects>
                 <tableViewController id="KTi-Pd-vlC" customClass="DietPlanTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5qg-zR-NAo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2139,7 +2142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-vK-rIv">
-                                <rect key="frame" x="8" y="28" width="359" height="29"/>
+                                <rect key="frame" x="8" y="8" width="359" height="29"/>
                                 <segments>
                                     <segment title="Beginner"/>
                                     <segment title="Intermediate"/>
@@ -2147,7 +2150,7 @@
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-Ks-Eg2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <connections>
                                     <segue destination="KTi-Pd-vlC" kind="embed" id="TYT-kF-6BC"/>
                                 </connections>

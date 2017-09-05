@@ -12,6 +12,7 @@ class LoginTableViewController: BaseTableViewController {
     
     @IBOutlet weak var userIdTextField: BaseTextField!
     @IBOutlet weak var passwordTextField: BaseTextField!
+    var isShowPassword : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +26,22 @@ class LoginTableViewController: BaseTableViewController {
         backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
         self.view.backgroundColor = UIColor.white
         self.view.insertSubview(backgroundImage, at: 0)
-        
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                             forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+    }
+    
+    @IBAction func togglePassword(_ sender: UIButton) {
+        
+        if(isShowPassword == true) {
+            passwordTextField.isSecureTextEntry = false
+            isShowPassword = false
+        } else {
+            passwordTextField.isSecureTextEntry = true
+            isShowPassword = true
+        }
     }
 }
