@@ -42,6 +42,6 @@ extension FitnessBuddyTableViewCell {
         
         saImageView.image = UIImage(imageLiteralResourceName: info.image)
         saNameLabel.text = info.name
-        saDetailLabel.text = "Your Fitness Center"
+        saDetailLabel.text = info.counter
     }
 }

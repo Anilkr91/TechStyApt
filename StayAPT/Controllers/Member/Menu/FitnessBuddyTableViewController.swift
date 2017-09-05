@@ -10,8 +10,20 @@ import UIKit
 
 class FitnessBuddyTableViewController: BaseTableViewController {
     
-    var dataArray: [ClassModel] = []
-    weak var pvc: MenuViewController?
+    //var dataArray: [ClassModel] = []
+   // weak var pvc: MenuViewController?
+    
+    let dataArray  = [SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM")
+                ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +43,14 @@ class FitnessBuddyTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FitnessBuddyTableViewCell
         cell.info = dataArray[indexPath.section]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
-        performSegue(withIdentifier: "showGymSegue", sender: self)
+        //performSegue(withIdentifier: "showGymSegue", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -57,10 +69,10 @@ class FitnessBuddyTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func populateTableView() {
-        ClassGetService.executeRequest { (data) in
-            self.dataArray = data
-            self.tableView.reloadData()
-        }
-    }
+//    func populateTableView() {
+//        ClassGetService.executeRequest { (data) in
+//            self.dataArray = data
+//            self.tableView.reloadData()
+//        }
+//    }
 }

@@ -1,16 +1,15 @@
 //
-//  TestViewController.swift
+//  FitnessCenterDetailsViewController.swift
 //  StayAPT
 //
-//  Created by admin on 04/09/17.
+//  Created by admin on 05/09/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
-
 
 import UIKit
 import YBSlantedCollectionViewLayout
 
-class DietViewController: BaseViewController {
+class FitnessCenterDetailsViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let reuseIdentifier = "Cell"
@@ -35,7 +34,7 @@ class DietViewController: BaseViewController {
     }
 }
 
-extension DietViewController: UICollectionViewDataSource {
+extension FitnessCenterDetailsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dietArray.count
@@ -50,16 +49,16 @@ extension DietViewController: UICollectionViewDataSource {
     }
 }
 
-extension DietViewController: UICollectionViewDelegate {
+extension FitnessCenterDetailsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
         
-        performSegue(withIdentifier: "showDietPlanSegue", sender: self)
+        //performSegue(withIdentifier: "showDietPlanSegue", sender: self)
     }
 }
 
-extension DietViewController: UIScrollViewDelegate {
+extension FitnessCenterDetailsViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let collectionView = self.collectionView else {return}
         guard let visibleCells = collectionView.visibleCells as? [FitnessCenterDetailCollectionViewCell] else {return}
