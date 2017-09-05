@@ -23,6 +23,7 @@ class GalleryCollectionViewController: BaseCollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+          collectionView?.backgroundColor = UIColor(red: 53/255, green: 53/255, blue: 53/255, alpha: 1)
         
     }
     

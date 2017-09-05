@@ -31,7 +31,6 @@ class DietPlanTableViewController: BaseTableViewController {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "diet_bg")
         backgroundImage.contentMode = UIViewContentMode.scaleAspectFill
-        self.view.backgroundColor = UIColor.white
         self.view.insertSubview(backgroundImage, at: 0)
     }
 

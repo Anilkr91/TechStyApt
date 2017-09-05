@@ -582,17 +582,24 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpx-X6-3p7">
-                                                    <rect key="frame" x="46" y="13" width="321" height="17.5"/>
+                                                    <rect key="frame" x="46" y="13" width="57" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt7-rs-4BL">
+                                                    <rect key="frame" x="325" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="wpx-X6-3p7" secondAttribute="trailing" constant="8" id="KY8-el-D2D"/>
+                                                <constraint firstItem="vt7-rs-4BL" firstAttribute="centerY" secondItem="wpx-X6-3p7" secondAttribute="centerY" id="4sW-fE-JKm"/>
                                                 <constraint firstAttribute="bottom" secondItem="Muo-Oa-wXJ" secondAttribute="bottom" constant="8" id="Lf9-DZ-TZe"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="wpx-X6-3p7" secondAttribute="bottom" constant="5" id="P3k-jO-zjV"/>
                                                 <constraint firstItem="Muo-Oa-wXJ" firstAttribute="top" secondItem="03l-ZA-win" secondAttribute="top" constant="8" id="atm-6E-zXS"/>
+                                                <constraint firstAttribute="trailing" secondItem="vt7-rs-4BL" secondAttribute="trailing" constant="8" id="bWM-K5-5az"/>
                                                 <constraint firstItem="Muo-Oa-wXJ" firstAttribute="leading" secondItem="03l-ZA-win" secondAttribute="leading" constant="10" id="fXg-PB-WOg"/>
                                                 <constraint firstItem="wpx-X6-3p7" firstAttribute="leading" secondItem="Muo-Oa-wXJ" secondAttribute="trailing" constant="8" symbolic="YES" id="jrf-E4-SXk"/>
                                                 <constraint firstItem="wpx-X6-3p7" firstAttribute="top" secondItem="03l-ZA-win" secondAttribute="topMargin" constant="5" id="nBD-pr-9i8"/>
@@ -646,7 +653,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="AUF-8K-lU3"/>
                     <connections>
-                        <outlet property="versionLabel" destination="wpx-X6-3p7" id="clh-7k-uMX"/>
+                        <outlet property="versionLabel" destination="vt7-rs-4BL" id="akl-GP-x3y"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JwE-Rh-62u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -912,9 +919,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCF-eo-WIQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCF-eo-WIQ">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -934,9 +941,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnv-99-2hV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnv-99-2hV">
                                                     <rect key="frame" x="8" y="8" width="323" height="28"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -969,9 +976,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBd-WD-3Qb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBd-WD-3Qb">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -984,33 +991,33 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="4yT-wv-S9r">
-                                        <rect key="frame" x="0.0" y="332" width="375" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="4yT-wv-S9r">
+                                        <rect key="frame" x="0.0" y="332" width="375" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4yT-wv-S9r" id="QTT-ZB-jCJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-Fa-qZZ">
-                                                    <rect key="frame" x="8" y="8" width="52.5" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ev-Fa-qZZ">
+                                                    <rect key="frame" x="8" y="8" width="46" height="12"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP6-s8-qCo">
-                                                    <rect key="frame" x="8" y="34" width="359" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP6-s8-qCo">
+                                                    <rect key="frame" x="8" y="28" width="359" height="11"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zP6-s8-qCo" secondAttribute="trailing" constant="8" id="8gh-GC-g3i"/>
-                                                <constraint firstItem="3ev-Fa-qZZ" firstAttribute="top" secondItem="QTT-ZB-jCJ" secondAttribute="top" constant="8" id="WzE-od-h8u"/>
+                                                <constraint firstItem="3ev-Fa-qZZ" firstAttribute="top" secondItem="QTT-ZB-jCJ" secondAttribute="top" constant="8" id="X3c-5J-rli"/>
                                                 <constraint firstItem="zP6-s8-qCo" firstAttribute="leading" secondItem="QTT-ZB-jCJ" secondAttribute="leading" constant="8" id="ZR3-fu-dwg"/>
+                                                <constraint firstItem="zP6-s8-qCo" firstAttribute="top" secondItem="3ev-Fa-qZZ" secondAttribute="bottom" constant="8" id="aIu-Bf-jHw"/>
                                                 <constraint firstItem="3ev-Fa-qZZ" firstAttribute="leading" secondItem="QTT-ZB-jCJ" secondAttribute="leading" constant="8" id="lpq-Xl-5WT"/>
-                                                <constraint firstAttribute="bottom" secondItem="zP6-s8-qCo" secondAttribute="bottom" constant="8" id="qaS-O6-RXo"/>
-                                                <constraint firstItem="zP6-s8-qCo" firstAttribute="top" secondItem="3ev-Fa-qZZ" secondAttribute="bottom" constant="8" id="w9B-M8-Xar"/>
+                                                <constraint firstAttribute="bottom" secondItem="zP6-s8-qCo" secondAttribute="bottom" constant="8" id="oqT-ne-4EW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1047,8 +1054,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FnL-GM-OlR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FnL-GM-OlR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="I9i-ig-ZQZ"/>
+                                </constraints>
                                 <segments>
                                     <segment title="CLASSES"/>
                                     <segment title="BLOGS"/>
@@ -1057,7 +1067,7 @@
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-IL-5b5">
-                                <rect key="frame" x="0.0" y="92" width="375" height="575"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
                                 <connections>
                                     <segue destination="4F3-2x-OQW" kind="embed" id="Agb-pI-QJN"/>
                                 </connections>
