@@ -24,31 +24,31 @@ class FitnessNotificationTableViewController: BaseTableViewController {
                              NotificationModel(image: "GGym2", name: "Rajeev", title: "Rajeev Fee Pending", type: Notification.Information.rawValue),
                              NotificationModel(image: "GGym", name: "Rajeev", title: "Rajeev Fee Pending", type: Notification.Request.rawValue)
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return notificationArray.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if notificationArray[indexPath.section].type == Notification.Information.rawValue {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "InformationCell", for: indexPath) as! FitnessInformationTableViewCell
-           cell.member = notificationArray[indexPath.section]
+            cell.member = notificationArray[indexPath.section]
             return cell
             
         } else if notificationArray[indexPath.section].type == Notification.Request.rawValue {

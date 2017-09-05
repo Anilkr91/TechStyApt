@@ -9,10 +9,14 @@
 import UIKit
 
 class SettingsTableViewController: BaseTableViewController {
+    
+    @IBOutlet weak var versionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let buildNumberString = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        versionLabel.text = "Version \t \t \t \t \t \t \t \t \(Double(buildNumberString)!)"
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
