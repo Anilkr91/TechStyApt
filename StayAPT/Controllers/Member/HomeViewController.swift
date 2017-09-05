@@ -14,5 +14,4 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
     }
-    
 }

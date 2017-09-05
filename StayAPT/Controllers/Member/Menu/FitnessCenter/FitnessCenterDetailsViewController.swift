@@ -22,15 +22,15 @@ class FitnessCenterDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCollectionView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.collectionView.reloadData()
-    }
-    
-    override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
-        return UIStatusBarAnimation.slide
+    func setUpCollectionView() {
+        let layout = collectionView.collectionViewLayout as! YBSlantedCollectionViewLayout
+        layout.reverseSlantingAngle = true
+        layout.firstCellSlantingEnabled = false
+        layout.lastCellSlantingEnabled = false
+        layout.lineSpacing = 0.5
     }
 }
 

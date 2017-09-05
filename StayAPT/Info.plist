@@ -44,5 +44,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>cuyabra.otf</string>
+		<string>cuyabra_bold.otf</string>
+		<string>Javacom.otf</string>
+	</array>
 </dict>
 </plist>

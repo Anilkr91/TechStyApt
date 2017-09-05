@@ -24,7 +24,6 @@ class GalleryCollectionViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     // MARK: UICollectionViewDataSource
@@ -51,12 +50,10 @@ class GalleryCollectionViewController: BaseCollectionViewController {
 extension GalleryCollectionViewController: UICollectionViewDelegateFlowLayout {
     fileprivate var sectionInsets: UIEdgeInsets {
         return .init(top: 8 , left: 8, bottom: 8, right: 8)
-        
     }
     
     fileprivate var itemsPerRow: CGFloat {
         return 2
-        
     }
     
     fileprivate var interitemSpace: CGFloat {

@@ -13,7 +13,6 @@ import YBSlantedCollectionViewLayout
 class DietViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let reuseIdentifier = "Cell"
     
     let dietArray = [ SACheckedInMember(image: "image-1", name: "Muscle Gain for Women", counter: "20/20"),
                       SACheckedInMember(image: "image-3", name: "Weight Loss for Men", counter: "20/20"),
@@ -23,15 +22,8 @@ class DietViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.collectionView.reloadData()
-    }
-    
-    override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
-        return UIStatusBarAnimation.slide
+        collectionView?.backgroundColor = UIColor(red: 53/255, green: 53/255, blue: 53/255, alpha: 1)
+        setUpCollectionView()
     }
 }
 
@@ -68,5 +60,13 @@ extension DietViewController: UIScrollViewDelegate {
             let xOffset = ((collectionView.contentOffset.x - parallaxCell.frame.origin.x) / parallaxCell.imageWidth) * xOffsetSpeed
             parallaxCell.offset(CGPoint(x: xOffset,y :yOffset))
         }
+    }
+    
+    func setUpCollectionView() {
+        let layout = collectionView.collectionViewLayout as! YBSlantedCollectionViewLayout
+        layout.reverseSlantingAngle = true
+        layout.firstCellSlantingEnabled = false
+        layout.lastCellSlantingEnabled = false
+        layout.lineSpacing = 0.5
     }
 }

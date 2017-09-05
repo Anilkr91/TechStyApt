@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupSegmentedControlAppearance() {
         let segmentedControlAppearance = UISegmentedControl.appearance()
         segmentedControlAppearance.tintColor = UIColor.red
-//        segmentedControlAppearance.setTitleTextAttributes([ NSFontAttributeName : UIFont(name: Resources.defaultFont(), size: 13.0)!], forState: .Normal)
+        segmentedControlAppearance.setTitleTextAttributes([ NSFontAttributeName : UIFont(name: "cuyabra", size: 12.0)!], for: .normal)
     }
     
     func setupNavigationAppearance() {
