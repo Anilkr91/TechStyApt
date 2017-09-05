@@ -28,11 +28,12 @@ class FitnessCenterGetService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
-                    print(error!.message)
+                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
                 }
                 
             case .failure(let error):
-                print(error.localizedDescription)
+                Loader.sharedInstance.hideLoader()
+                Alert.showAlertWithMessage(title: "Error", message: error.localizedDescription)
             }
         }
         debugPrint(request)

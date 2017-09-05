@@ -24,14 +24,11 @@ class DietViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        //self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
-        //UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.slide)
     }
     
     override var preferredStatusBarUpdateAnimation : UIStatusBarAnimation {
