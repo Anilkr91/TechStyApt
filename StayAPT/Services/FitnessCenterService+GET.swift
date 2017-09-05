@@ -20,7 +20,7 @@ class FitnessCenterGetService {
             
             switch response.result {
             case .success(let value) :
-                
+                print(value)
                 if let data = FitnessCenterModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
                      Loader.sharedInstance.hideLoader()
@@ -28,6 +28,7 @@ class FitnessCenterGetService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
+                    print(error)
                     Alert.showAlertWithMessage(title: "Error", message: error!.message)
                 }
                 

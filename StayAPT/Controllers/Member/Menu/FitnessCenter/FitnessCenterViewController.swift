@@ -10,10 +10,13 @@ import UIKit
 
 class FitnessCenterViewController: BaseViewController {
     
+    var cvc: FitnessCenterTableViewController!
+    var classId: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        cvc = childViewControllers[0] as! FitnessCenterTableViewController
+        cvc.pvc = self
     }
-    
 }

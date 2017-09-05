@@ -10,11 +10,17 @@ import UIKit
 
 class FitnessCenterTableViewController: BaseTableViewController {
     
+    weak var pvc: FitnessCenterViewController?
     var fitnessCenterArray: [FitnessCenterModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateTableView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let pvc = pvc {
+             populateTableView(classId: pvc.classId!)
+        }
     }
     
     // MARK: - Table view data source
@@ -32,8 +38,6 @@ class FitnessCenterTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuListingTableViewCell
-        
-        print(fitnessCenterArray[indexPath.section].facilities)
         cell.info = fitnessCenterArray[indexPath.section]
         return cell
     }
@@ -59,8 +63,8 @@ class FitnessCenterTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func populateTableView() {
-        let param = ["class_id": 1]
+    func populateTableView(classId: String) {
+        let param = ["class_id": classId]
         FitnessCenterGetService.executeRequest(params: param as [String : AnyObject]) { (data) in
             self.fitnessCenterArray = data
             self.tableView.reloadData()

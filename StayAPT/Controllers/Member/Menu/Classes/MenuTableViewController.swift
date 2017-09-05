@@ -37,7 +37,7 @@ class MenuTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
-        performSegue(withIdentifier: "showGymSegue", sender: self)
+        performSegue(withIdentifier: "showGymSegue", sender: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -60,6 +60,14 @@ class MenuTableViewController: BaseTableViewController {
         ClassGetService.executeRequest { (data) in
             self.dataArray = data
             self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGymSegue" {
+            let dvc = segue.destination as! FitnessCenterViewController
+            let sender = sender as! IndexPath
+            dvc.classId = dataArray[sender.section].id
         }
     }
 }
