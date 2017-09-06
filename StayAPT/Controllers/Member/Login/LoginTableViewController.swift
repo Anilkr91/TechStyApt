@@ -12,10 +12,12 @@ class LoginTableViewController: BaseTableViewController {
     
     @IBOutlet weak var userIdTextField: BaseTextField!
     @IBOutlet weak var passwordTextField: BaseTextField!
+    @IBOutlet weak var togglePassword: UIButton!
     var isShowPassword : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        togglePassword.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
     }
@@ -34,14 +36,19 @@ class LoginTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
-    @IBAction func togglePassword(_ sender: UIButton) {
+    func toggleButtonImage(sender: UIButton) {
+         let show = UIImage(named: "show")
+         let hide = UIImage(named: "hide")
         
         if(isShowPassword == true) {
-            passwordTextField.isSecureTextEntry = false
-            isShowPassword = false
-        } else {
             passwordTextField.isSecureTextEntry = true
+            togglePassword.setImage(hide, for: .normal)
+            isShowPassword = false
+            
+        } else {
+            passwordTextField.isSecureTextEntry = false
             isShowPassword = true
+            togglePassword.setImage(show, for: .normal)
         }
     }
 }

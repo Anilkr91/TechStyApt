@@ -52,6 +52,11 @@ class FitnessCenterDetailCollectionViewCell: YBSlantedCollectionViewCell {
     }
     
     func didSetCategory(member: SACheckedInMember) {
+        
+//        let url = URL(string: member.image)!
+//        let image = UIImage(named: "gym")
+        
+        //imageView.kf.setImage(with: url, placeholder: image)
         imageView.image = UIImage(imageLiteralResourceName: member.image)
         titleLabel.text = member.name
     }

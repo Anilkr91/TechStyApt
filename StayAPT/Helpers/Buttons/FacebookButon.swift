@@ -22,7 +22,7 @@ class FacebookButon: UIButton {
     
     func setup() {
         clipsToBounds = true
-        layer.cornerRadius = 15
+        layer.cornerRadius = 12
         backgroundColor = UIColor.blue
     }
 
