@@ -384,9 +384,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-Hs-VIF">
                                 <rect key="frame" x="26" y="201" width="323" height="30"/>
                                 <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="iAB-v9-hd6" kind="show" id="MlQ-Ox-KUg"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coA-p6-SsM">
                                 <rect key="frame" x="26" y="163" width="323" height="30"/>
@@ -398,9 +395,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fku-s6-mUH">
                                 <rect key="frame" x="26" y="74" width="323" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="iey-bh-Nib" kind="show" id="4tl-Bl-Rw0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-ht-dkw">
                                 <rect key="frame" x="26" y="241" width="323" height="30"/>
@@ -409,9 +403,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b17-La-8DM">
                                 <rect key="frame" x="26" y="279" width="323" height="30"/>
                                 <state key="normal" title="My Fitness Buddy"/>
-                                <connections>
-                                    <segue destination="GJx-DK-54h" kind="show" id="asF-hF-ViI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -683,13 +674,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNG-72-G0x">
-                                            <rect key="frame" x="0.0" y="158.5" width="375" height="14"/>
+                                            <rect key="frame" x="0.0" y="152" width="375" height="17.5"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtW-vz-BQ3">
-                                            <rect key="frame" x="0.0" y="180.5" width="375" height="11"/>
+                                            <rect key="frame" x="0.0" y="177.5" width="375" height="14"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -1099,7 +1090,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQZ-Yj-Pin" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="igJ-0T-g9M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igJ-0T-g9M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1174,7 +1165,6 @@
                                     <outlet property="saGymImageView" destination="aHZ-fZ-oYr" id="S4R-bG-pls"/>
                                     <outlet property="saGymSubTitleLabe" destination="IQt-7I-POB" id="PoC-7e-nJ8"/>
                                     <outlet property="saGymTitleLabel" destination="E0K-Mn-Q1W" id="Ows-6J-ML0"/>
-                                    <segue destination="4m2-b8-qnb" kind="show" id="whK-ZR-wB5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1192,7 +1182,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1227,13 +1217,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-rb-kA2">
-                                            <rect key="frame" x="41" y="114.5" width="123" height="14"/>
+                                            <rect key="frame" x="41" y="113" width="123" height="17.5"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-Kt-fef">
-                                            <rect key="frame" x="41" y="139" width="123" height="11"/>
+                                            <rect key="frame" x="41" y="136" width="123" height="14"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -2134,7 +2124,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="204" height="112"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v05-WU-1gg">
-                                                    <rect key="frame" x="8" y="49" width="188" height="14"/>
+                                                    <rect key="frame" x="8" y="49.5" width="188" height="14"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -2182,7 +2172,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="qkR-L6-ahC" id="KMR-ga-PAZ"/>
-                        <segue destination="xIp-zP-yBu" kind="show" identifier="showDietPlanSegue" id="JZR-sA-AsU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maz-ZB-3rT" sceneMemberID="firstResponder"/>
@@ -2274,11 +2263,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KO5-qj-oyL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6WN-jq-LQC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YFf-N8-cBJ">
-                                <rect key="frame" x="0.0" y="0.0" width="379" height="622"/>
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="0m8-ZO-WP8" customClass="YBSlantedCollectionViewLayout" customModule="YBSlantedCollectionViewLayout">
                                     <userDefinedRuntimeAttributes>

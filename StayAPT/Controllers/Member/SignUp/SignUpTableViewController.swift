@@ -17,7 +17,6 @@ class SignUpTableViewController: BaseTableViewController {
         tableView.separatorStyle = .none
     }
 
-    
     func setupBackgroundImage() {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bg")
@@ -30,6 +29,6 @@ class SignUpTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                             forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
     }
-
 }

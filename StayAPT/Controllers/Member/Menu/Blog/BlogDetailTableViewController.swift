@@ -67,6 +67,6 @@ class BlogDetailTableViewController: BaseTableViewController {
         blogTitle.text = blog?.title
         dateLabel.text = blog?.datetime
         blogLabel.text = blog?.des
-        authorName.text = "Rohit Khetan"
+        authorName.text = blog?.name
     }
 }

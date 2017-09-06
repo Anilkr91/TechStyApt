@@ -16,18 +16,21 @@ struct BlogModel: Decodable {
     let datetime: String
     let des: String
     let img: String
+    let name: String
     
     init?(json: JSON) {
         guard let id: String = "id" <~~ json,
             let title: String = "title" <~~ json,
             let datetime: String = "datetime" <~~ json,
             let des: String = "des" <~~ json,
-            let img: String = "img" <~~ json else { return nil }
+            let img: String = "img" <~~ json,
+            let name: String = "name" <~~ json else { return nil }
         
         self.id = id
         self.title = title
         self.datetime = datetime
         self.des = des
         self.img = img
+        self.name = name
     }
 }
