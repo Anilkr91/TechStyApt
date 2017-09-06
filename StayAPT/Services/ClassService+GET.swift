@@ -15,7 +15,11 @@ class ClassGetService {
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
-        let request = Alamofire.request( URL + "classes", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 60
+        
+        let request = manager.request( URL + "classes", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
