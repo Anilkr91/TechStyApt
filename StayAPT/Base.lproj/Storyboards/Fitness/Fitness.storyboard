@@ -172,6 +172,9 @@
                                                     <state key="normal" title="SIGN IN">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="kcx-ql-Gaq" kind="show" id="wsb-hd-1dM"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -500,65 +503,65 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold Gym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-j4-Pz4">
-                                    <rect key="frame" x="8" y="117" width="359" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="8" y="118" width="359" height="14"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dwarka Sec - 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-ef-ULM">
-                                    <rect key="frame" x="8" y="136" width="360" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <rect key="frame" x="8" y="140" width="360" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub. Package" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-f5-BcS">
-                                    <rect key="frame" x="8" y="156" width="180" height="18"/>
+                                    <rect key="frame" x="8" y="161" width="180" height="13"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="yUe-2h-23x"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StayApt ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-Ng-X0z">
-                                    <rect key="frame" x="8" y="182" width="180" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="8" y="182" width="180" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWA-YQ-fQp">
-                                    <rect key="frame" x="8" y="207" width="180" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="8" y="203" width="180" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub. Day's Remain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELj-Ko-tGg">
-                                    <rect key="frame" x="8" y="225" width="180" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="8" y="229" width="180" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platinum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-WK-5bF">
-                                    <rect key="frame" x="196" y="156" width="172" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="200" y="158.5" width="168" height="18"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAPT120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVU-wq-dup">
-                                    <rect key="frame" x="196" y="182" width="172" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="200" y="184.5" width="168" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-Vw-xKE">
-                                    <rect key="frame" x="196" y="207" width="172" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="200" y="205.5" width="168" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSk-Ef-fPB">
-                                    <rect key="frame" x="196" y="225" width="172" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="200" y="229" width="168" height="13"/>
+                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -573,7 +576,7 @@
                                 <constraint firstAttribute="bottom" secondItem="2bE-r4-voq" secondAttribute="bottom" id="7kF-hh-xB5"/>
                                 <constraint firstItem="XqI-WK-5bF" firstAttribute="top" secondItem="OYr-ef-ULM" secondAttribute="bottom" constant="5" id="9vg-7d-RUE"/>
                                 <constraint firstItem="ELj-Ko-tGg" firstAttribute="leading" secondItem="GWA-YQ-fQp" secondAttribute="leading" id="B3p-fT-dZ0"/>
-                                <constraint firstItem="OYr-ef-ULM" firstAttribute="top" secondItem="eLZ-j4-Pz4" secondAttribute="bottom" constant="2" id="Ev9-Yx-GrP"/>
+                                <constraint firstItem="OYr-ef-ULM" firstAttribute="top" secondItem="eLZ-j4-Pz4" secondAttribute="bottom" constant="8" id="Ev9-Yx-GrP"/>
                                 <constraint firstItem="XqI-WK-5bF" firstAttribute="trailing" secondItem="OYr-ef-ULM" secondAttribute="trailing" id="GQC-1Z-VXS"/>
                                 <constraint firstItem="XqI-WK-5bF" firstAttribute="centerY" secondItem="uU9-f5-BcS" secondAttribute="centerY" id="Gci-eo-o8n"/>
                                 <constraint firstItem="rVU-wq-dup" firstAttribute="trailing" secondItem="XqI-WK-5bF" secondAttribute="trailing" id="II9-KA-L1g"/>
@@ -584,9 +587,9 @@
                                 <constraint firstItem="GWA-YQ-fQp" firstAttribute="top" secondItem="bZY-Ng-X0z" secondAttribute="bottom" constant="8" id="R07-33-OfG"/>
                                 <constraint firstItem="eLZ-j4-Pz4" firstAttribute="centerX" secondItem="Dvs-vb-bHq" secondAttribute="centerX" id="SET-xo-rXG"/>
                                 <constraint firstItem="kSk-Ef-fPB" firstAttribute="leading" secondItem="ECT-Vw-xKE" secondAttribute="leading" id="TMG-mh-tpi"/>
-                                <constraint firstItem="XqI-WK-5bF" firstAttribute="leading" secondItem="uU9-f5-BcS" secondAttribute="trailing" constant="8" id="Ttr-Zc-spA"/>
+                                <constraint firstItem="XqI-WK-5bF" firstAttribute="leading" secondItem="uU9-f5-BcS" secondAttribute="trailing" constant="12" id="Ttr-Zc-spA"/>
                                 <constraint firstItem="eLZ-j4-Pz4" firstAttribute="leading" secondItem="Dvs-vb-bHq" secondAttribute="leading" constant="8" id="WHb-Km-pZy"/>
-                                <constraint firstItem="uU9-f5-BcS" firstAttribute="top" secondItem="OYr-ef-ULM" secondAttribute="bottom" constant="5" id="Y2a-XL-oaX"/>
+                                <constraint firstItem="uU9-f5-BcS" firstAttribute="top" secondItem="OYr-ef-ULM" secondAttribute="bottom" constant="8" id="Y2a-XL-oaX"/>
                                 <constraint firstItem="2bE-r4-voq" firstAttribute="top" secondItem="Dvs-vb-bHq" secondAttribute="top" id="Yie-JU-Axg"/>
                                 <constraint firstItem="OYr-ef-ULM" firstAttribute="centerX" secondItem="2bE-r4-voq" secondAttribute="centerX" id="ZOk-mf-ezh"/>
                                 <constraint firstAttribute="bottom" secondItem="ELj-Ko-tGg" secondAttribute="bottom" constant="8" id="Zcf-wF-mR6"/>
@@ -603,12 +606,21 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="pff-t0-D2E">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="OMT-sJ-9oM" style="IBUITableViewCellStyleDefault" id="pff-t0-D2E">
                                 <rect key="frame" x="0.0" y="305.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pff-t0-D2E" id="n9l-kS-VFj">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OMT-sJ-9oM">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -625,6 +637,7 @@
                         <segue destination="nFt-j4-qto" kind="show" identifier="showVisitorsFormSegue" id="Icv-mX-sd3"/>
                         <segue destination="HEa-eM-aod" kind="show" identifier="showNotificationSegue" id="GbY-iy-F8B"/>
                         <segue destination="24Y-FS-EpT" kind="show" identifier="showMembersListSegue" id="ibo-Yv-1i3"/>
+                        <segue destination="xA1-sQ-R5h" kind="show" identifier="showReportSegue" id="urG-AX-ARh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wn-GK-mdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -822,6 +835,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBK-RV-EWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4012" y="2469"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q5a-8O-aTP">
+            <objects>
+                <viewController id="xA1-sQ-R5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OgZ-Ns-MR7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Klo-nj-5dT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBo-YQ-4lF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2g-LP-Ctl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nx-Mn-oY1">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="75"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z57-vT-EBF">
+                                        <rect key="frame" x="125.5" y="0.0" width="125" height="75"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-Ae-bOK">
+                                        <rect key="frame" x="250.5" y="0.0" width="124.5" height="75"/>
+                                        <state key="normal" title="3 ZONE"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0nx-Mn-oY1" secondAttribute="bottom" id="6cd-bk-fc9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ybr-Ae-bOK" secondAttribute="trailing" id="8iK-jI-zQq"/>
+                                    <constraint firstItem="Ybr-Ae-bOK" firstAttribute="top" secondItem="Y2g-LP-Ctl" secondAttribute="top" id="ClL-Sg-88r"/>
+                                    <constraint firstItem="0nx-Mn-oY1" firstAttribute="top" secondItem="Y2g-LP-Ctl" secondAttribute="top" id="ELR-Bl-XTV"/>
+                                    <constraint firstItem="0nx-Mn-oY1" firstAttribute="leading" secondItem="Y2g-LP-Ctl" secondAttribute="leading" id="JPu-ot-eBV"/>
+                                    <constraint firstItem="z57-vT-EBF" firstAttribute="leading" secondItem="0nx-Mn-oY1" secondAttribute="trailing" constant="1" id="Lde-8b-wfc"/>
+                                    <constraint firstItem="z57-vT-EBF" firstAttribute="height" secondItem="0nx-Mn-oY1" secondAttribute="height" id="QaX-Rn-SDy"/>
+                                    <constraint firstItem="Ybr-Ae-bOK" firstAttribute="leading" secondItem="z57-vT-EBF" secondAttribute="trailing" id="RFW-3S-dQD"/>
+                                    <constraint firstItem="Ybr-Ae-bOK" firstAttribute="width" secondItem="0nx-Mn-oY1" secondAttribute="width" id="VgJ-18-sjh"/>
+                                    <constraint firstItem="z57-vT-EBF" firstAttribute="width" secondItem="0nx-Mn-oY1" secondAttribute="width" id="Zge-D6-eES"/>
+                                    <constraint firstItem="z57-vT-EBF" firstAttribute="top" secondItem="Y2g-LP-Ctl" secondAttribute="top" id="ciL-hm-trv"/>
+                                    <constraint firstAttribute="height" constant="75" id="ciU-R7-gXY"/>
+                                    <constraint firstItem="Ybr-Ae-bOK" firstAttribute="height" secondItem="0nx-Mn-oY1" secondAttribute="height" id="kTY-gx-A7G"/>
+                                    <constraint firstAttribute="bottom" secondItem="z57-vT-EBF" secondAttribute="bottom" id="mCI-5Y-dkr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ybr-Ae-bOK" secondAttribute="bottom" id="qRY-7a-P3n"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-JA-AUS">
+                                <rect key="frame" x="0.0" y="139" width="375" height="528"/>
+                                <connections>
+                                    <segue destination="7X6-xp-cgr" kind="embed" id="GdL-pu-4Na"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Y2g-LP-Ctl" secondAttribute="trailing" id="JAx-cT-yIf"/>
+                            <constraint firstItem="Rek-JA-AUS" firstAttribute="leading" secondItem="FBo-YQ-4lF" secondAttribute="leading" id="N0J-L7-n5Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Rek-JA-AUS" secondAttribute="trailing" id="SzI-Yh-ef3"/>
+                            <constraint firstItem="Y2g-LP-Ctl" firstAttribute="top" secondItem="OgZ-Ns-MR7" secondAttribute="bottom" id="ksZ-kv-oyU"/>
+                            <constraint firstItem="Y2g-LP-Ctl" firstAttribute="leading" secondItem="FBo-YQ-4lF" secondAttribute="leading" id="oin-QE-edY"/>
+                            <constraint firstAttribute="bottom" secondItem="Rek-JA-AUS" secondAttribute="bottom" id="qcy-hu-aGR"/>
+                            <constraint firstItem="Rek-JA-AUS" firstAttribute="top" secondItem="Y2g-LP-Ctl" secondAttribute="bottom" id="qsh-WO-JjX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1t-Tg-7vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3877.5999999999999" y="635.53223388305855"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="izO-XA-8U1">
+            <objects>
+                <tableViewController id="7X6-xp-cgr" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tIV-4g-JXi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dw2-5M-hdM">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dw2-5M-hdM" id="nEw-4c-mpt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7X6-xp-cgr" id="CQK-pM-PbM"/>
+                            <outlet property="delegate" destination="7X6-xp-cgr" id="uqV-dW-6jO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAy-rz-MBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4622" y="635"/>
         </scene>
         <!--Visitor's List-->
         <scene sceneID="b7U-wh-RG0">
