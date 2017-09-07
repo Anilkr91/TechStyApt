@@ -11,7 +11,6 @@ import UIKit
 class CheckedInMemberCollectionViewController: UICollectionViewController {
     
     var memberArray: [SACheckedInMember] = []
-    
     weak var pvc: CheckInMemberViewController?
     
     override func viewDidLoad() {
