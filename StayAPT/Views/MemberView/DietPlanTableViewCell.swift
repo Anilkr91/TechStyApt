@@ -36,6 +36,7 @@ class DietPlanTableViewCell: UITableViewCell {
     }
     
     func roundedLabel() {
+        mealDescription.alpha = 0.0
         mealDescription.layer.cornerRadius = 8.0
         mealDescription.clipsToBounds = true
     }
@@ -44,8 +45,6 @@ class DietPlanTableViewCell: UITableViewCell {
 extension DietPlanTableViewCell {
     func didSetCategory(info: DietPlanModel) {
         mealButton.addTarget(self, action: #selector(animation(sender:)), for: .touchUpInside)
-        mealDescription.alpha = 0.0
-        
         mealButton.setTitle(info.mealName, for:.normal)
         mealDescription.text = info.description
     }

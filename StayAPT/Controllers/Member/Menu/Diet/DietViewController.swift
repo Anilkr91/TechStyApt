@@ -45,8 +45,8 @@ extension DietViewController: UICollectionViewDataSource {
 extension DietViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
         
+        NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
         performSegue(withIdentifier: "showDietPlanSegue", sender: self)
     }
 }
