@@ -43,19 +43,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StayApt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUe-9L-Lqa">
-                                <rect key="frame" x="16" y="286.5" width="343" height="31"/>
+                                <rect key="frame" x="16" y="287" width="343" height="31"/>
                                 <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login As:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-Wk-RN1">
-                                <rect key="frame" x="16" y="325.5" width="343" height="16.5"/>
+                                <rect key="frame" x="16" y="326" width="343" height="16.5"/>
                                 <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDA-hP-sCK">
-                                <rect key="frame" x="16" y="357" width="171.5" height="25"/>
+                                <rect key="frame" x="16" y="357.5" width="171.5" height="25"/>
                                 <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                 <state key="normal" title="Fitness Center">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-nj-oTl">
-                                <rect key="frame" x="187.5" y="357" width="171.5" height="25"/>
+                                <rect key="frame" x="187.5" y="357.5" width="171.5" height="25"/>
                                 <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                 <state key="normal" title="Member">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,14 +328,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73V-d6-7uc" customClass="FacebookButon" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="9" width="152.5" height="26"/>
+                                                    <rect key="frame" x="10" y="2" width="162.5" height="39.5"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <state key="normal" title="Facebook">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-BM-NdH" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="212.5" y="9" width="152.5" height="26"/>
+                                                    <rect key="frame" x="202.5" y="2" width="162.5" height="39.5"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                                     <state key="normal" title="Google">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -345,12 +345,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="73V-d6-7uc" firstAttribute="centerY" secondItem="mJ3-ZI-pAm" secondAttribute="centerY" id="1WM-OB-HA6"/>
+                                                <constraint firstItem="73V-d6-7uc" firstAttribute="top" secondItem="mJ3-ZI-pAm" secondAttribute="top" constant="2" id="IWq-Pd-sbQ"/>
                                                 <constraint firstItem="cLs-BM-NdH" firstAttribute="centerY" secondItem="mJ3-ZI-pAm" secondAttribute="centerY" id="Kvo-Tk-MS6"/>
                                                 <constraint firstItem="cLs-BM-NdH" firstAttribute="height" secondItem="73V-d6-7uc" secondAttribute="height" id="UV2-ix-wUY"/>
                                                 <constraint firstItem="73V-d6-7uc" firstAttribute="leading" secondItem="mJ3-ZI-pAm" secondAttribute="leading" constant="10" id="UYM-RO-Pa0"/>
+                                                <constraint firstAttribute="bottom" secondItem="73V-d6-7uc" secondAttribute="bottom" constant="2" id="ZqR-6k-Ft6"/>
+                                                <constraint firstItem="cLs-BM-NdH" firstAttribute="top" secondItem="mJ3-ZI-pAm" secondAttribute="top" constant="2" id="cOx-he-hBc"/>
+                                                <constraint firstAttribute="bottom" secondItem="cLs-BM-NdH" secondAttribute="bottom" constant="2" id="iKj-ks-AQ2"/>
                                                 <constraint firstAttribute="trailing" secondItem="cLs-BM-NdH" secondAttribute="trailing" constant="10" id="mOk-hr-9Sg"/>
                                                 <constraint firstItem="cLs-BM-NdH" firstAttribute="width" secondItem="73V-d6-7uc" secondAttribute="width" id="owV-pa-vrA"/>
-                                                <constraint firstItem="cLs-BM-NdH" firstAttribute="leading" secondItem="73V-d6-7uc" secondAttribute="trailing" constant="50" id="yl4-gY-C2a"/>
+                                                <constraint firstItem="cLs-BM-NdH" firstAttribute="leading" secondItem="73V-d6-7uc" secondAttribute="trailing" constant="30" id="yl4-gY-C2a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1237,7 +1241,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-rb-kA2">
-                                            <rect key="frame" x="41" y="115" width="123" height="14"/>
+                                            <rect key="frame" x="41" y="114.5" width="123" height="14"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -2147,7 +2151,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="204" height="112"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v05-WU-1gg">
-                                                    <rect key="frame" x="8" y="49.5" width="188" height="14"/>
+                                                    <rect key="frame" x="8" y="49" width="188" height="14"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>

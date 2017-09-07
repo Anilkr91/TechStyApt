@@ -172,9 +172,6 @@
                                                     <state key="normal" title="SIGN IN">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="kcx-ql-Gaq" kind="show" id="rW0-Wp-PxE"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -193,9 +190,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hex-KF-AF7">
-                                                    <rect key="frame" x="10" y="19.5" width="355" height="5"/>
+                                                    <rect key="frame" x="10" y="20.5" width="355" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="5" id="67r-kG-yGm"/>
+                                                        <constraint firstAttribute="height" constant="1" id="67r-kG-yGm"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -215,14 +213,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-C0-QF1" customClass="FacebookButon" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="2" width="152.5" height="39.5"/>
+                                                    <rect key="frame" x="10" y="2" width="162.5" height="39.5"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <state key="normal" title="Facebook">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wk-0B-wSA" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="212.5" y="2" width="152.5" height="39.5"/>
+                                                    <rect key="frame" x="202.5" y="2" width="162.5" height="39.5"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <state key="normal" title="Google">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -238,7 +236,7 @@
                                                 <constraint firstItem="gBa-C0-QF1" firstAttribute="centerY" secondItem="ANk-BX-yvA" secondAttribute="centerY" id="VpA-Hz-Ub6"/>
                                                 <constraint firstAttribute="bottom" secondItem="4wk-0B-wSA" secondAttribute="bottom" constant="2" id="WNL-5m-JDO"/>
                                                 <constraint firstItem="gBa-C0-QF1" firstAttribute="top" secondItem="ANk-BX-yvA" secondAttribute="top" constant="2" id="dlb-am-3WO"/>
-                                                <constraint firstItem="4wk-0B-wSA" firstAttribute="leading" secondItem="gBa-C0-QF1" secondAttribute="trailing" constant="50" id="ptJ-p2-nXz"/>
+                                                <constraint firstItem="4wk-0B-wSA" firstAttribute="leading" secondItem="gBa-C0-QF1" secondAttribute="trailing" constant="30" id="ptJ-p2-nXz"/>
                                                 <constraint firstItem="4wk-0B-wSA" firstAttribute="width" secondItem="gBa-C0-QF1" secondAttribute="width" id="qon-2r-x1V"/>
                                                 <constraint firstItem="gBa-C0-QF1" firstAttribute="leading" secondItem="ANk-BX-yvA" secondAttribute="leading" constant="10" id="sqg-XM-eYc"/>
                                                 <constraint firstAttribute="bottom" secondItem="gBa-C0-QF1" secondAttribute="bottom" constant="2" id="xjC-xL-gWB"/>
@@ -626,6 +624,7 @@
                         <segue destination="67j-0h-K9N" kind="show" identifier="showMemberFormSegue" id="kTe-Ya-N1Q"/>
                         <segue destination="nFt-j4-qto" kind="show" identifier="showVisitorsFormSegue" id="Icv-mX-sd3"/>
                         <segue destination="HEa-eM-aod" kind="show" identifier="showNotificationSegue" id="GbY-iy-F8B"/>
+                        <segue destination="24Y-FS-EpT" kind="show" identifier="showMembersListSegue" id="ibo-Yv-1i3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wn-GK-mdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -645,14 +644,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N6s-nh-MPS">
-                                <rect key="frame" x="8" y="72" width="359" height="29"/>
+                                <rect key="frame" x="8" y="28" width="359" height="29"/>
                                 <segments>
                                     <segment title="Current Month"/>
                                     <segment title="Last Month"/>
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-db-tMy">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <connections>
                                     <segue destination="aqM-DG-w4t" kind="embed" id="i0e-0K-epQ"/>
                                 </connections>
@@ -683,9 +682,9 @@
             <objects>
                 <collectionViewController id="aqM-DG-w4t" customClass="CheckedInMemberCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a6C-mO-jvG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.66189996509703775" green="0.13453641836776065" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5B0-Wt-gpu">
                             <size key="itemSize" width="120" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -735,7 +734,6 @@
                                         </view>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="0.33889259160113827" green="0.72336632013320923" blue="0.19142027886291818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Ltc-Qi-yvJ" firstAttribute="top" secondItem="4LE-lR-sP1" secondAttribute="top" id="79x-fV-RS3"/>
                                     <constraint firstAttribute="trailing" secondItem="Ltc-Qi-yvJ" secondAttribute="trailing" id="Gey-yn-GOm"/>
@@ -764,7 +762,68 @@
             </objects>
             <point key="canvasLocation" x="1366" y="2596"/>
         </scene>
-        <!--Visitiors Listing Table View Controller-->
+        <!--Member's List-->
+        <scene sceneID="GVt-H5-Imn">
+            <objects>
+                <collectionViewController id="24Y-FS-EpT" customClass="MembersListCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="v3m-Hj-rtv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kPd-lN-heU">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="gqs-Rb-06P" customClass="MembersListCollectionViewCell" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z8R-yy-JX6">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ5-lV-uMo">
+                                            <rect key="frame" x="0.0" y="134" width="120" height="16"/>
+                                            <color key="backgroundColor" red="0.092780930378117729" green="0.8618932423857868" blue="0.063122772876557848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Z8R-yy-JX6" secondAttribute="bottom" id="1KH-pW-ODD"/>
+                                    <constraint firstItem="Z8R-yy-JX6" firstAttribute="top" secondItem="gqs-Rb-06P" secondAttribute="top" id="2Cs-OX-qZ9"/>
+                                    <constraint firstAttribute="trailing" secondItem="uJ5-lV-uMo" secondAttribute="trailing" id="7JB-zm-6tp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z8R-yy-JX6" secondAttribute="trailing" id="FEH-Un-usV"/>
+                                    <constraint firstItem="Z8R-yy-JX6" firstAttribute="leading" secondItem="gqs-Rb-06P" secondAttribute="leading" id="fcq-XO-ZX9"/>
+                                    <constraint firstAttribute="bottom" secondItem="uJ5-lV-uMo" secondAttribute="bottom" id="jEM-IF-StZ"/>
+                                    <constraint firstItem="uJ5-lV-uMo" firstAttribute="leading" secondItem="gqs-Rb-06P" secondAttribute="leading" id="spA-1F-KL3"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="150"/>
+                                <connections>
+                                    <outlet property="imageView" destination="Z8R-yy-JX6" id="XI3-zb-8Oe"/>
+                                    <outlet property="saNameLabel" destination="uJ5-lV-uMo" id="Fne-6F-eOS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="24Y-FS-EpT" id="qRS-Q6-aUV"/>
+                            <outlet property="delegate" destination="24Y-FS-EpT" id="22x-cQ-Y9I"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Member's List" id="ZOs-yi-6mB"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBK-RV-EWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4012" y="2469"/>
+        </scene>
+        <!--Visitor's List-->
         <scene sceneID="b7U-wh-RG0">
             <objects>
                 <tableViewController id="RVp-ri-Kud" customClass="VisitiorsListingTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
@@ -887,10 +946,11 @@
                             <outlet property="delegate" destination="RVp-ri-Kud" id="KVk-9G-b8v"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Visitor's List" id="tt3-4T-8GR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roM-KJ-FyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="1956"/>
+            <point key="canvasLocation" x="2244" y="2290"/>
         </scene>
         <!--Visitor's Form-->
         <scene sceneID="PgQ-fr-2Ds">

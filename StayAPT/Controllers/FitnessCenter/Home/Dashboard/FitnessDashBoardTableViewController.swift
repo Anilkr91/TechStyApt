@@ -49,15 +49,12 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         return 2
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 2
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -67,7 +64,6 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    
     func showSegue(index: Int) {
         
         switch index {
@@ -75,7 +71,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showMembersSegue", sender: self)
             
         case 1:
-            performSegue(withIdentifier: "showVisitorsSegue", sender: self)
+            performSegue(withIdentifier: "showMembersListSegue", sender: self)
             
         case 2:
             performSegue(withIdentifier: "showMemberFormSegue", sender: self)
@@ -87,7 +83,8 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
             
         case 5:
-            performSegue(withIdentifier: "", sender: self)
+            print(index)
+           // performSegue(withIdentifier: "", sender: self)
             
         case 6:
             self.navigationController?.popViewController(animated: true)
