@@ -10,6 +10,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Javacom.otf">
+            <string>Javacom</string>
+        </array>
+        <array key="cuyabra.otf">
+            <string>cuyabra-Regular</string>
+        </array>
+        <array key="cuyabra_bold.otf">
+            <string>cuyabra-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login-->
         <scene sceneID="kFo-F4-P2g">
@@ -20,20 +31,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="saq-sv-r76" customClass="BaseView" customModule="StayAPT" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-e5-KaN">
-                                    <rect key="frame" x="163" y="20" width="50" height="50"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="Bzi-e5-KaN">
+                                    <rect key="frame" x="153" y="20" width="70" height="100"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="HgC-cf-iQl"/>
-                                        <constraint firstAttribute="width" constant="50" id="h57-DP-GHp"/>
-                                        <constraint firstAttribute="width" secondItem="Bzi-e5-KaN" secondAttribute="height" multiplier="1:1" id="yoW-Tk-ets"/>
+                                        <constraint firstAttribute="width" secondItem="Bzi-e5-KaN" secondAttribute="height" multiplier="7:10" id="5HS-X9-7z2"/>
+                                        <constraint firstAttribute="height" constant="100" id="HgC-cf-iQl"/>
+                                        <constraint firstAttribute="width" constant="70" id="h57-DP-GHp"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Apt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-2U-Oph">
-                                    <rect key="frame" x="10" y="80" width="355" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="10" y="111" width="355" height="31"/>
+                                    <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -42,8 +53,8 @@
                             <constraints>
                                 <constraint firstItem="Bzi-e5-KaN" firstAttribute="top" secondItem="saq-sv-r76" secondAttribute="top" constant="20" id="866-z4-sXX"/>
                                 <constraint firstItem="Nj7-2U-Oph" firstAttribute="leading" secondItem="saq-sv-r76" secondAttribute="leading" constant="10" id="DFM-W4-aqR"/>
-                                <constraint firstItem="Nj7-2U-Oph" firstAttribute="top" secondItem="Bzi-e5-KaN" secondAttribute="bottom" constant="10" id="FU3-8i-mll"/>
                                 <constraint firstItem="Bzi-e5-KaN" firstAttribute="centerX" secondItem="saq-sv-r76" secondAttribute="centerX" id="MdP-n4-IJn"/>
+                                <constraint firstAttribute="bottom" secondItem="Nj7-2U-Oph" secondAttribute="bottom" constant="8" id="Xf9-ig-rJo"/>
                                 <constraint firstItem="Nj7-2U-Oph" firstAttribute="centerX" secondItem="Bzi-e5-KaN" secondAttribute="centerX" id="ZSC-Wn-H5m"/>
                                 <constraint firstAttribute="trailing" secondItem="Nj7-2U-Oph" secondAttribute="trailing" constant="10" id="gtC-aR-WZ5"/>
                             </constraints>
@@ -52,7 +63,7 @@
                             <tableViewSection id="3Gg-ho-9Zy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="s7p-un-rrA">
-                                        <rect key="frame" x="0.0" y="115" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="150" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s7p-un-rrA" id="iny-46-xTE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -67,8 +78,8 @@
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fitness Center's User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-Su-fmU" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="48" y="5" width="294" height="30"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -84,7 +95,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hag-e4-3jK">
-                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="194" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hag-e4-3jK" id="EcB-tm-Hwn">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -99,17 +110,18 @@
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fitness Center's Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-aH-KIK" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="48" y="5.5" width="294" height="30"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTi-I6-Uts">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTi-I6-Uts">
                                                     <rect key="frame" x="347" y="10.5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="FmH-oB-cL1"/>
                                                         <constraint firstAttribute="width" constant="20" id="kQS-ay-Oko"/>
                                                     </constraints>
+                                                    <state key="normal" image="hide"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -126,7 +138,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OUx-nE-RUv">
-                                        <rect key="frame" x="0.0" y="203" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="238" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OUx-nE-RUv" id="mAi-gO-9nq">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -134,7 +146,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-mR-uc2">
                                                     <rect key="frame" x="18" y="13" width="339" height="17.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -148,7 +160,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xjA-ZX-ffO">
-                                        <rect key="frame" x="0.0" y="247" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="282" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xjA-ZX-ffO" id="dfw-Ov-vBP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -156,6 +168,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vy-Ll-Qon" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="2" width="355" height="39.5"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                                     <state key="normal" title="SIGN IN">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -173,7 +186,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vPK-AB-f2m">
-                                        <rect key="frame" x="0.0" y="291" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="326" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vPK-AB-f2m" id="hCt-iV-yLd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -195,20 +208,22 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k7l-9h-PeJ">
-                                        <rect key="frame" x="0.0" y="335" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="370" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7l-9h-PeJ" id="ANk-BX-yvA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-C0-QF1" customClass="FacebookButon" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="7" width="152.5" height="30"/>
+                                                    <rect key="frame" x="10" y="2" width="152.5" height="39.5"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <state key="normal" title="Facebook">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wk-0B-wSA" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="212.5" y="7" width="152.5" height="30"/>
+                                                    <rect key="frame" x="212.5" y="2" width="152.5" height="39.5"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <state key="normal" title="Google">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,10 +234,14 @@
                                                 <constraint firstItem="4wk-0B-wSA" firstAttribute="centerY" secondItem="ANk-BX-yvA" secondAttribute="centerY" id="BST-1c-OJf"/>
                                                 <constraint firstAttribute="trailing" secondItem="4wk-0B-wSA" secondAttribute="trailing" constant="10" id="IKH-M2-sk2"/>
                                                 <constraint firstItem="4wk-0B-wSA" firstAttribute="height" secondItem="gBa-C0-QF1" secondAttribute="height" id="Q3f-fP-Boe"/>
+                                                <constraint firstItem="4wk-0B-wSA" firstAttribute="top" secondItem="ANk-BX-yvA" secondAttribute="top" constant="2" id="QKa-pr-i0Z"/>
                                                 <constraint firstItem="gBa-C0-QF1" firstAttribute="centerY" secondItem="ANk-BX-yvA" secondAttribute="centerY" id="VpA-Hz-Ub6"/>
+                                                <constraint firstAttribute="bottom" secondItem="4wk-0B-wSA" secondAttribute="bottom" constant="2" id="WNL-5m-JDO"/>
+                                                <constraint firstItem="gBa-C0-QF1" firstAttribute="top" secondItem="ANk-BX-yvA" secondAttribute="top" constant="2" id="dlb-am-3WO"/>
                                                 <constraint firstItem="4wk-0B-wSA" firstAttribute="leading" secondItem="gBa-C0-QF1" secondAttribute="trailing" constant="50" id="ptJ-p2-nXz"/>
                                                 <constraint firstItem="4wk-0B-wSA" firstAttribute="width" secondItem="gBa-C0-QF1" secondAttribute="width" id="qon-2r-x1V"/>
                                                 <constraint firstItem="gBa-C0-QF1" firstAttribute="leading" secondItem="ANk-BX-yvA" secondAttribute="leading" constant="10" id="sqg-XM-eYc"/>
+                                                <constraint firstAttribute="bottom" secondItem="gBa-C0-QF1" secondAttribute="bottom" constant="2" id="xjC-xL-gWB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -236,6 +255,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Login" id="KN3-DP-2jH"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="fitnessCenterIdTextField" destination="hdv-Su-fmU" id="6Lb-wu-Oqg"/>
+                        <outlet property="passwordTextField" destination="Z6a-aH-KIK" id="3eF-IZ-CCN"/>
+                        <outlet property="togglePasswordButton" destination="GTi-I6-Uts" id="xaA-KC-nyr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCg-4S-dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -658,7 +682,7 @@
         <scene sceneID="0Mr-CV-3fE">
             <objects>
                 <collectionViewController id="aqM-DG-w4t" customClass="CheckedInMemberCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a6C-mO-jvG">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a6C-mO-jvG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.66189996509703775" green="0.13453641836776065" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1751,6 +1775,7 @@
     </scenes>
     <resources>
         <image name="fitness-bg" width="800" height="533"/>
+        <image name="hide" width="50" height="50"/>
         <image name="stayapt-icon-white" width="400" height="500"/>
     </resources>
 </document>

@@ -9,9 +9,15 @@
 import UIKit
 
 class FitnessCenterLoginTableViewController: BaseTableViewController {
+    
+    @IBOutlet weak var fitnessCenterIdTextField: BaseTextField!
+    @IBOutlet weak var passwordTextField: BaseTextField!
+    @IBOutlet weak var togglePasswordButton: UIButton!
+    var isShowPassword : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        togglePasswordButton.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
     }
@@ -26,6 +32,24 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
                             forRowAt indexPath: IndexPath) {
+        
         cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+    }
+    
+    func toggleButtonImage(sender: UIButton) {
+        let show = UIImage(named: "show")
+        let hide = UIImage(named: "hide")
+        
+        if(isShowPassword == true) {
+            passwordTextField.isSecureTextEntry = true
+            togglePasswordButton.setImage(hide, for: .normal)
+            isShowPassword = false
+            
+        } else {
+            passwordTextField.isSecureTextEntry = false
+            isShowPassword = true
+            togglePasswordButton.setImage(show, for: .normal)
+        }
     }
 }
