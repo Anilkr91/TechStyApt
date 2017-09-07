@@ -60,6 +60,9 @@
                                 <state key="normal" title="Fitness Center">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="WuW-df-1WG" kind="show" id="gUR-fV-uM3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-nj-oTl">
                                 <rect key="frame" x="187.5" y="357" width="171.5" height="25"/>
@@ -402,7 +405,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fku-s6-mUH">
                                 <rect key="frame" x="26" y="74" width="323" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <segue destination="iey-bh-Nib" kind="show" id="Mtq-bw-uVk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-ht-dkw">
                                 <rect key="frame" x="26" y="241" width="323" height="30"/>
@@ -411,6 +417,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b17-La-8DM">
                                 <rect key="frame" x="26" y="279" width="323" height="30"/>
                                 <state key="normal" title="My Fitness Buddy"/>
+                                <connections>
+                                    <segue destination="GJx-DK-54h" kind="show" id="Flm-Dn-Jzm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1098,7 +1107,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQZ-Yj-Pin" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igJ-0T-g9M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="igJ-0T-g9M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1181,6 +1190,9 @@
                             <outlet property="delegate" destination="2vh-q4-I9Z" id="9ny-G0-nqE"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="4m2-b8-qnb" kind="show" id="hxg-i2-fQF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQv-j6-AQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1190,7 +1202,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1340,7 +1352,7 @@
             <objects>
                 <tableViewController id="KTi-Pd-vlC" customClass="DietPlanTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5qg-zR-NAo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2065,7 +2077,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-vK-rIv">
-                                <rect key="frame" x="8" y="28" width="359" height="29"/>
+                                <rect key="frame" x="8" y="8" width="359" height="29"/>
                                 <segments>
                                     <segment title="Beginner"/>
                                     <segment title="Intermediate"/>
@@ -2073,7 +2085,7 @@
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-Ks-Eg2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <connections>
                                     <segue destination="KTi-Pd-vlC" kind="embed" id="TYT-kF-6BC"/>
                                 </connections>
@@ -2183,6 +2195,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="qkR-L6-ahC" id="KMR-ga-PAZ"/>
+                        <segue destination="xIp-zP-yBu" kind="show" identifier="showDietPlanSegue" id="MBX-h5-iho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maz-ZB-3rT" sceneMemberID="firstResponder"/>
@@ -2202,7 +2215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitness-bg" translatesAutoresizingMaskIntoConstraints="NO" id="23T-Sx-Izm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwD-eZ-cod">
                                 <rect key="frame" x="8" y="588" width="359" height="71"/>
@@ -2256,7 +2269,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="3gs-7y-5h1">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="73T-Fa-Ofo">
                             <connections>
-                                <segue destination="nhB-sd-8Wl" kind="show" id="uqp-tc-aE8"/>
+                                <segue destination="nhB-sd-8Wl" kind="show" id="KKo-cr-OfD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2274,11 +2287,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KO5-qj-oyL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6WN-jq-LQC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YFf-N8-cBJ">
-                                <rect key="frame" x="0.0" y="0.0" width="379" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="0m8-ZO-WP8" customClass="YBSlantedCollectionViewLayout" customModule="YBSlantedCollectionViewLayout">
                                     <userDefinedRuntimeAttributes>

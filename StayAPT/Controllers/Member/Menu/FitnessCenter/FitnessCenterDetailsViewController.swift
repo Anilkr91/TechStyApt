@@ -54,7 +54,7 @@ extension FitnessCenterDetailsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
         
-        //performSegue(withIdentifier: "showDietPlanSegue", sender: self)
+//        performSegue(withIdentifier: "showDietPlanSegue", sender: self)
     }
 }
 

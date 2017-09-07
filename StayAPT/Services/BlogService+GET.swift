@@ -10,7 +10,6 @@ import Alamofire
 import Gloss
 
 class BlogGetService {
-    
     static func executeRequest (completionHandler: @escaping ([BlogModel]) -> Void) {
         
         Loader.sharedInstance.showLoader()
