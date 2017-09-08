@@ -51,19 +51,22 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         }
     }
     
-    @IBAction func loginTapped(_ sender: Any) {
+    @IBAction func signInTapped(_ sender: Any) {
         
-        let id = fitnessCenterIdTextField.text!
-        let password = passwordTextField.text!
+        performSegue(withIdentifier: "showSignInSegue", sender: self)
         
-        if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
-            
-        } else if password.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
-            
-        } else {
-            print("validation passed hit login api")
-        }
+//        let id = fitnessCenterIdTextField.text!
+//        let password = passwordTextField.text!
+//        
+//        if id.removeAllSpaces().isEmpty {
+//            Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
+//            
+//        } else if password.removeAllSpaces().isEmpty {
+//            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
+//            
+//        } else {
+//            performSegue(withIdentifier: "showSignInSegue", sender: self)
+//            print("validation passed hit login api")
+//        }
     }
 }

@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Apt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-2U-Oph">
-                                    <rect key="frame" x="10" y="111" width="355" height="31"/>
+                                    <rect key="frame" x="10" y="122" width="355" height="20"/>
                                     <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -440,7 +440,7 @@
                         <viewControllerLayoutGuide type="top" id="eNE-yT-Sjx"/>
                         <viewControllerLayoutGuide type="bottom" id="FCy-f3-suY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yfw-vy-jBE">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Yfw-vy-jBE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -496,7 +496,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitness-bg" translatesAutoresizingMaskIntoConstraints="NO" id="2bE-r4-voq">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gym" translatesAutoresizingMaskIntoConstraints="NO" id="2bE-r4-voq">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="2bE-r4-voq" secondAttribute="height" multiplier="3:2" id="iCF-0y-sIm"/>
@@ -657,14 +657,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N6s-nh-MPS">
-                                <rect key="frame" x="8" y="28" width="359" height="29"/>
+                                <rect key="frame" x="8" y="72" width="359" height="29"/>
                                 <segments>
                                     <segment title="Current Month"/>
                                     <segment title="Last Month"/>
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-db-tMy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <connections>
                                     <segue destination="aqM-DG-w4t" kind="embed" id="i0e-0K-epQ"/>
                                 </connections>
@@ -694,8 +694,8 @@
         <scene sceneID="0Mr-CV-3fE">
             <objects>
                 <collectionViewController id="aqM-DG-w4t" customClass="CheckedInMemberCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a6C-mO-jvG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a6C-mO-jvG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="5B0-Wt-gpu">
@@ -779,7 +779,7 @@
         <scene sceneID="GVt-H5-Imn">
             <objects>
                 <collectionViewController id="24Y-FS-EpT" customClass="MembersListCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="v3m-Hj-rtv">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v3m-Hj-rtv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1945,7 +1945,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fitness-bg" width="800" height="533"/>
+        <image name="gym" width="1080" height="608"/>
         <image name="hide" width="50" height="50"/>
         <image name="stayapt-icon-white" width="400" height="500"/>
     </resources>
