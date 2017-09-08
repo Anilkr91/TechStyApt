@@ -30,8 +30,7 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
-                            forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
@@ -50,6 +49,22 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
             passwordTextField.isSecureTextEntry = false
             isShowPassword = true
             togglePasswordButton.setImage(show, for: .normal)
+        }
+    }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        
+        let id = fitnessCenterIdTextField.text!
+        let password = passwordTextField.text!
+        
+        if id.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "PhoneNumber is empty")
+            
+        } else if password.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "Password is empty")
+            
+        } else {
+            print("validation passed hit login api")
         }
     }
 }
