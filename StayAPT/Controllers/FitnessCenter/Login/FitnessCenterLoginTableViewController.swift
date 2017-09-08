@@ -31,7 +31,6 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
     }
@@ -58,10 +57,10 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "PhoneNumber is empty")
+            Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Password is empty")
+            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
             
         } else {
             print("validation passed hit login api")

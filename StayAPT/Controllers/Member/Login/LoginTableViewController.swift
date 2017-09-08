@@ -51,4 +51,20 @@ class LoginTableViewController: BaseTableViewController {
             togglePassword.setImage(show, for: .normal)
         }
     }
+    
+    @IBAction func loginTapped(_ sender: Any) {
+        
+        let id = userIdTextField.text!
+        let password = passwordTextField.text!
+        
+        if id.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "User id cannot be empty")
+            
+        } else if password.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be  empty")
+            
+        } else {
+            print("validation passed hit login api")
+        }
+    }
 }
