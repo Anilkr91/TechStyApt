@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -24,5 +24,12 @@ class BaseButton: UIButton {
         clipsToBounds = true
         layer.cornerRadius = 18
         backgroundColor = UIColor.white
+        
+        let type = Device.userIntefaceType()
+        if type == .pad {
+            self.frame.size.height = 100.0
+        } else if type == .phone {
+            self.frame.size.height = 30.0
+        }
     }
 }

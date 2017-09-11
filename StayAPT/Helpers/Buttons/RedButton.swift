@@ -24,5 +24,11 @@ class RedButton: UIButton {
         clipsToBounds = true
         layer.cornerRadius = 8
         backgroundColor = UIColor.red
+        let type = Device.userIntefaceType()
+        if type == .pad {
+            self.frame.size.height = 45.0
+        } else if type == .phone {
+            self.frame.size.height = 30.0
+        }
     }
 }

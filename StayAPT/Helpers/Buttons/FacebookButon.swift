@@ -24,6 +24,13 @@ class FacebookButon: UIButton {
         clipsToBounds = true
         layer.cornerRadius = 18
         backgroundColor = UIColor.blue
+        
+        let type = Device.userIntefaceType()
+        if type == .pad {
+            self.frame.size.height = 45.0
+        } else if type == .phone {
+            self.frame.size.height = 30.0
+        }
     }
 
 }

@@ -70,27 +70,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="ru0-Zk-jQk">
-                                                    <rect key="frame" x="10" y="5" width="30" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="8Jo-tZ-TnP"/>
-                                                        <constraint firstAttribute="height" constant="30" id="aqn-gH-fjn"/>
+                                                        <constraint firstAttribute="height" constant="30" id="VFv-Ly-XBt"/>
+                                                        <constraint firstAttribute="width" secondItem="ru0-Zk-jQk" secondAttribute="height" multiplier="1:1" id="hba-c8-zG1"/>
+                                                        <constraint firstAttribute="width" constant="30" id="pzp-EN-Exh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fitness Center's User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-Su-fmU" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="48" y="5" width="943" height="14"/>
+                                                    <rect key="frame" x="46" y="8" width="962" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="xjn-9n-EFB"/>
+                                                    </constraints>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="hdv-Su-fmU" secondAttribute="bottom" constant="5" id="4Rq-kR-HyB"/>
-                                                <constraint firstItem="ru0-Zk-jQk" firstAttribute="leading" secondItem="iny-46-xTE" secondAttribute="leading" constant="10" id="Hpg-0L-c4o"/>
-                                                <constraint firstItem="hdv-Su-fmU" firstAttribute="top" secondItem="iny-46-xTE" secondAttribute="top" constant="5" id="KPS-di-pM1"/>
-                                                <constraint firstItem="ru0-Zk-jQk" firstAttribute="top" secondItem="iny-46-xTE" secondAttribute="top" constant="5" id="NNh-UR-aeS"/>
-                                                <constraint firstAttribute="trailing" secondItem="hdv-Su-fmU" secondAttribute="trailing" constant="33" id="qqZ-J9-BMc"/>
-                                                <constraint firstAttribute="bottom" secondItem="ru0-Zk-jQk" secondAttribute="bottom" id="rOx-vY-zkE"/>
-                                                <constraint firstItem="hdv-Su-fmU" firstAttribute="leading" secondItem="ru0-Zk-jQk" secondAttribute="trailing" constant="8" symbolic="YES" id="rb3-ZE-BRA"/>
+                                                <constraint firstItem="ru0-Zk-jQk" firstAttribute="top" secondItem="iny-46-xTE" secondAttribute="top" constant="8" id="0u7-cb-ni2"/>
+                                                <constraint firstItem="ru0-Zk-jQk" firstAttribute="leading" secondItem="iny-46-xTE" secondAttribute="leading" constant="8" id="2lf-eg-RT3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hdv-Su-fmU" secondAttribute="trailing" constant="8" id="a4i-Bi-bxl"/>
+                                                <constraint firstItem="hdv-Su-fmU" firstAttribute="centerY" secondItem="ru0-Zk-jQk" secondAttribute="centerY" id="ghE-1c-Qiu"/>
+                                                <constraint firstItem="hdv-Su-fmU" firstAttribute="leading" secondItem="ru0-Zk-jQk" secondAttribute="trailing" constant="8" id="tIo-vX-Nvm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -102,38 +104,41 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-VA-HEu">
-                                                    <rect key="frame" x="10" y="5.5" width="30" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="2LW-28-BKz"/>
-                                                        <constraint firstAttribute="width" constant="30" id="8HO-iO-OgR"/>
+                                                        <constraint firstAttribute="width" secondItem="wsu-VA-HEu" secondAttribute="height" multiplier="1:1" id="4iq-jd-Fy5"/>
+                                                        <constraint firstAttribute="width" constant="30" id="ZdP-Gv-Lys"/>
+                                                        <constraint firstAttribute="height" constant="30" id="k78-9V-fPJ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fitness Center's Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-aH-KIK" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="48" y="5.5" width="943" height="14"/>
+                                                    <rect key="frame" x="46" y="8" width="927" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="89Y-p6-vcy"/>
+                                                    </constraints>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTi-I6-Uts">
-                                                    <rect key="frame" x="996" y="2.5" width="20" height="20"/>
+                                                    <rect key="frame" x="981" y="5" width="35" height="35"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="FmH-oB-cL1"/>
-                                                        <constraint firstAttribute="width" constant="20" id="kQS-ay-Oko"/>
+                                                        <constraint firstAttribute="height" constant="35" id="4On-Wx-2fE"/>
+                                                        <constraint firstAttribute="width" secondItem="GTi-I6-Uts" secondAttribute="height" multiplier="1:1" id="Yo5-Ic-97O"/>
+                                                        <constraint firstAttribute="width" constant="35" id="kQS-ay-Oko"/>
                                                     </constraints>
                                                     <state key="normal" image="hide"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Z6a-aH-KIK" firstAttribute="leading" secondItem="wsu-VA-HEu" secondAttribute="trailing" constant="8" symbolic="YES" id="5W9-WP-99L"/>
-                                                <constraint firstItem="GTi-I6-Uts" firstAttribute="centerY" secondItem="Z6a-aH-KIK" secondAttribute="centerY" id="KzT-VI-nmm"/>
+                                                <constraint firstItem="Z6a-aH-KIK" firstAttribute="centerY" secondItem="wsu-VA-HEu" secondAttribute="centerY" id="6zU-g2-kxw"/>
                                                 <constraint firstAttribute="trailing" secondItem="GTi-I6-Uts" secondAttribute="trailing" constant="8" id="M5i-JI-dcg"/>
-                                                <constraint firstItem="GTi-I6-Uts" firstAttribute="leading" secondItem="Z6a-aH-KIK" secondAttribute="trailing" constant="5" id="Y8D-IR-eZC"/>
-                                                <constraint firstAttribute="bottom" secondItem="Z6a-aH-KIK" secondAttribute="bottom" constant="5" id="ZPL-mD-DEx"/>
-                                                <constraint firstAttribute="bottom" secondItem="wsu-VA-HEu" secondAttribute="bottom" id="ctA-LR-bKW"/>
-                                                <constraint firstItem="wsu-VA-HEu" firstAttribute="top" secondItem="EcB-tm-Hwn" secondAttribute="top" constant="5" id="h3E-Xv-oFF"/>
-                                                <constraint firstItem="wsu-VA-HEu" firstAttribute="leading" secondItem="EcB-tm-Hwn" secondAttribute="leading" constant="10" id="nZc-bj-Txj"/>
-                                                <constraint firstItem="Z6a-aH-KIK" firstAttribute="top" secondItem="EcB-tm-Hwn" secondAttribute="top" constant="5" id="vfJ-R1-DnB"/>
+                                                <constraint firstItem="wsu-VA-HEu" firstAttribute="top" secondItem="EcB-tm-Hwn" secondAttribute="top" constant="8" id="Q0A-61-tbl"/>
+                                                <constraint firstItem="wsu-VA-HEu" firstAttribute="leading" secondItem="EcB-tm-Hwn" secondAttribute="leading" constant="8" id="SbG-qp-kvY"/>
+                                                <constraint firstItem="GTi-I6-Uts" firstAttribute="leading" secondItem="Z6a-aH-KIK" secondAttribute="trailing" constant="8" id="TJv-Fs-mcS"/>
+                                                <constraint firstItem="GTi-I6-Uts" firstAttribute="centerY" secondItem="Z6a-aH-KIK" secondAttribute="centerY" id="pCv-Cg-gwu"/>
+                                                <constraint firstItem="Z6a-aH-KIK" firstAttribute="leading" secondItem="wsu-VA-HEu" secondAttribute="trailing" constant="8" id="uMi-eE-2AW"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -144,7 +149,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-mR-uc2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-mR-uc2" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="18" y="13" width="988" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,9 +173,6 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vy-Ll-Qon" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="1.5" width="1008" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="3vy-Ll-Qon" secondAttribute="height" multiplier="126:5" id="HKt-IJ-UX3"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
                                                     <state key="normal" title="SIGN IN">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,7 +298,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In training, you listen to your body.                                       In Competition, you tell your body to shut up. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-ML-Bau">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In training, you listen to your body.                                       In Competition, you tell your body to shut up. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-ML-Bau" customClass="BaseLabel" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="79.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,19 +331,19 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2c-nc-ngy">
                                                     <rect key="frame" x="8" y="8" width="1008" height="184.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Anytime Fitness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6x-v3-KPE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Anytime Fitness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6x-v3-KPE" customClass="MediumLabel" customModule="StayAPT" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8.5" width="992" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="1" green="0.17187885434530692" blue="0.16884349302248003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay APT ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSR-9F-hxE">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay APT ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSR-9F-hxE" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="37.5" width="992" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GD- 10-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-sa-Ytb">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GD- 10-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-sa-Ytb" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="66.5" width="62" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>

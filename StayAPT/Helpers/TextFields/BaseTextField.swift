@@ -35,5 +35,13 @@ class BaseTextField: UITextField {
         borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - height, width: Double(self.frame.width), height: height)
         borderLine.backgroundColor = UIColor.white
         self.addSubview(borderLine)
+        
+        let type = Device.userIntefaceType()
+        
+        if type == .pad {
+            self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
+        } else if type == .phone {
+            self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
+        }
     }
 }
