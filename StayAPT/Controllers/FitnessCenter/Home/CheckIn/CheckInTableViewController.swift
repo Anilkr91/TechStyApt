@@ -9,11 +9,15 @@
 import UIKit
 
 class CheckInTableViewController: BaseTableViewController {
-
+    
+    @IBOutlet weak var idTextField: UITextField!
+    var bottomBorder = CALayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         setupBackgroundImage()
+        
     }
     
     func setupBackgroundImage() {
@@ -28,5 +32,18 @@ class CheckInTableViewController: BaseTableViewController {
                             forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
+    }
+    
+    @IBAction func checkInTapped(_ sender: Any) {
+        
+        
+        
+    }
+    
+    
+    @IBAction func checkoutTapped(_ sender: Any) {
+        
+        
+        
     }
 }

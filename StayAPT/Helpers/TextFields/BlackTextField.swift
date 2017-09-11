@@ -27,11 +27,17 @@ class BlackTextField: UITextField {
     }
     
     func setBottomLine() {
+        //self.borderStyle = UITextBorderStyle.none
+        let type = Device.userIntefaceType()
+        if type == .pad {
+           self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
+        } else if type == .phone {
+           self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
+        }
         
-        self.borderStyle = UITextBorderStyle.none
         self.backgroundColor = UIColor.clear
         let borderLine = UIView()
-        let height = 1.0
+        let height = 0.5
         borderLine.frame = CGRect(x: 0, y: Double(self.frame.height) - height, width: Double(self.frame.width), height: height)
         borderLine.backgroundColor = UIColor.black
         self.addSubview(borderLine)

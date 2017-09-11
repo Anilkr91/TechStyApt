@@ -23,6 +23,7 @@
 		841CA2591F613DCE004C95CF /* MembersListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA2581F613DCE004C95CF /* MembersListCollectionViewController.swift */; };
 		841CA25B1F613EF4004C95CF /* MembersListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA25A1F613EF4004C95CF /* MembersListCollectionViewCell.swift */; };
 		841CA80A1F6258AC004C95CF /* Extension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8091F6258AC004C95CF /* Extension+Helpers.swift */; };
+		841CA80C1F6675E7004C95CF /* DeviceType+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA80B1F6675E7004C95CF /* DeviceType+Helper.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -110,6 +111,7 @@
 		841CA2581F613DCE004C95CF /* MembersListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersListCollectionViewController.swift; sourceTree = "<group>"; };
 		841CA25A1F613EF4004C95CF /* MembersListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersListCollectionViewCell.swift; sourceTree = "<group>"; };
 		841CA8091F6258AC004C95CF /* Extension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Helpers.swift"; sourceTree = "<group>"; };
+		841CA80B1F6675E7004C95CF /* DeviceType+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceType+Helper.swift"; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				84C4CF3E1F56A072001DA94A /* Loader.swift */,
 				84409B421F5E64B2005BAC61 /* AlertView+Helper.swift */,
 				841CA8091F6258AC004C95CF /* Extension+Helpers.swift */,
+				841CA80B1F6675E7004C95CF /* DeviceType+Helper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				84F92FE51F55380D0002074D /* ClassModel.swift in Sources */,
 				841CA2511F613A7D004C95CF /* PersonalDetailTableViewController.swift in Sources */,
 				84409B3F1F5D7041005BAC61 /* GalleryCollectionViewController.swift in Sources */,
+				841CA80C1F6675E7004C95CF /* DeviceType+Helper.swift in Sources */,
 				84409B2F1F5D6D20005BAC61 /* MenuTableViewController.swift in Sources */,
 				84409B351F5D6DFA005BAC61 /* BlogsTableViewController.swift in Sources */,
 				841CA24E1F613A7D004C95CF /* CheckInMemberViewController.swift in Sources */,
