@@ -1,14 +1,14 @@
 //
-//  RedButton.swift
+//  FitnessCenterButton.swift
 //  StayAPT
 //
-//  Created by admin on 30/08/17.
+//  Created by admin on 11/09/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
 import UIKit
 
-class RedButton: UIButton {
+class FitnessCenterButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,14 +21,19 @@ class RedButton: UIButton {
     }
     
     func setup() {
+        
         clipsToBounds = true
-        layer.cornerRadius = 8
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.white
+        
         let type = Device.userIntefaceType()
         if type == .pad {
+            layer.cornerRadius = 18
             self.frame.size.height = 50.0
+            self.titleLabel!.font =  UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
         } else if type == .phone {
+            layer.cornerRadius = 13
             self.frame.size.height = 30.0
+            self.titleLabel!.font =  UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
         }
     }
 }

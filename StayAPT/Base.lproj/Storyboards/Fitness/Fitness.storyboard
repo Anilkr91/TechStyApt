@@ -522,130 +522,117 @@
         <scene sceneID="uN9-XP-eVA">
             <objects>
                 <tableViewController id="ENk-pL-66F" customClass="FitnessDashBoardTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hEV-Dw-is5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hEV-Dw-is5">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Dvs-vb-bHq">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="cKA-q6-L5f">
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gym" translatesAutoresizingMaskIntoConstraints="NO" id="2bE-r4-voq">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitness-bg" translatesAutoresizingMaskIntoConstraints="NO" id="3MR-LD-IQe">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="250"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="250" id="neU-dD-qVR"/>
+                                        <constraint firstAttribute="width" secondItem="3MR-LD-IQe" secondAttribute="height" multiplier="512:125" id="upo-Jd-QEC"/>
+                                    </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gold Gym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-j4-Pz4">
-                                    <rect key="frame" x="8" y="112" width="1008" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoldGym" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ra-Fc-X7l">
+                                    <rect key="frame" x="8" y="114.5" width="1008" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="29"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dwarka Sec - 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-ef-ULM">
-                                    <rect key="frame" x="8" y="147" width="1009" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dwarka Sec-7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqh-Wb-JwA" customClass="wwt">
+                                    <rect key="frame" x="458.5" y="143.5" width="107.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="28"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sub. Package" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-f5-BcS">
-                                    <rect key="frame" x="8" y="180" width="180" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StayAPTID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z98-IM-yyQ">
+                                    <rect key="frame" x="8" y="201.5" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="29"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StayApt ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-Ng-X0z">
-                                    <rect key="frame" x="8" y="215" width="180" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Day's Remain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG5-EP-bS9">
+                                    <rect key="frame" x="8" y="230.5" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="29"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWA-YQ-fQp">
-                                    <rect key="frame" x="8" y="250" width="180" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StayAPT" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA9-Z4-Noy">
+                                    <rect key="frame" x="516" y="172.5" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="29"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sub. Day's Remain" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELj-Ko-tGg">
-                                    <rect key="frame" x="8" y="215" width="180" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLs-Gj-nWr">
+                                    <rect key="frame" x="516" y="202" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="29"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Platinum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-WK-5bF">
-                                    <rect key="frame" x="200" y="178" width="817" height="32"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="312" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KG5-Iz-Mvt">
+                                    <rect key="frame" x="516" y="230.5" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="28"/>
-                                    </variation>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SAPT120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVU-wq-dup">
-                                    <rect key="frame" x="200" y="218" width="817" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Package" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZe-jr-4ns">
+                                    <rect key="frame" x="8" y="172.5" width="500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="28"/>
-                                    </variation>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-Vw-xKE">
-                                    <rect key="frame" x="200" y="252" width="817" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="28"/>
-                                    </variation>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="312" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSk-Ef-fPB">
-                                    <rect key="frame" x="200" y="216" width="817" height="26"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                    <variation key="heightClass=regular-widthClass=regular">
-                                        <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="28"/>
-                                    </variation>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="PLs-Gj-nWr" firstAttribute="trailing" secondItem="UA9-Z4-Noy" secondAttribute="trailing" id="020-o2-Ldx"/>
+                                <constraint firstAttribute="trailing" secondItem="3MR-LD-IQe" secondAttribute="trailing" id="1mB-ap-qIT"/>
+                                <constraint firstItem="vqh-Wb-JwA" firstAttribute="centerX" secondItem="3ra-Fc-X7l" secondAttribute="centerX" id="3bW-Z9-BuV"/>
+                                <constraint firstAttribute="trailing" secondItem="UA9-Z4-Noy" secondAttribute="trailing" constant="8" id="49h-7o-ZFg"/>
+                                <constraint firstItem="UA9-Z4-Noy" firstAttribute="width" secondItem="JZe-jr-4ns" secondAttribute="width" id="65J-Rg-2fJ"/>
+                                <constraint firstItem="3MR-LD-IQe" firstAttribute="leading" secondItem="cKA-q6-L5f" secondAttribute="leading" id="8yC-Dd-sr8"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="leading" secondItem="HG5-EP-bS9" secondAttribute="trailing" constant="8" id="AiH-Ay-LxG"/>
+                                <constraint firstItem="HG5-EP-bS9" firstAttribute="trailing" secondItem="z98-IM-yyQ" secondAttribute="trailing" id="BXX-7u-c7x"/>
+                                <constraint firstItem="3ra-Fc-X7l" firstAttribute="centerY" secondItem="cKA-q6-L5f" secondAttribute="centerY" id="EHb-au-EiK"/>
+                                <constraint firstAttribute="trailing" secondItem="3ra-Fc-X7l" secondAttribute="trailing" constant="8" id="EKa-rb-dKW"/>
+                                <constraint firstItem="HG5-EP-bS9" firstAttribute="top" secondItem="z98-IM-yyQ" secondAttribute="bottom" constant="8" id="ExE-hO-UMz"/>
+                                <constraint firstItem="PLs-Gj-nWr" firstAttribute="width" secondItem="z98-IM-yyQ" secondAttribute="width" id="GFz-Nd-aPd"/>
+                                <constraint firstItem="PLs-Gj-nWr" firstAttribute="leading" secondItem="z98-IM-yyQ" secondAttribute="trailing" constant="8" id="Iew-P4-o4Y"/>
+                                <constraint firstAttribute="bottom" secondItem="3MR-LD-IQe" secondAttribute="bottom" id="JKr-QG-VOn"/>
+                                <constraint firstItem="vqh-Wb-JwA" firstAttribute="top" secondItem="3ra-Fc-X7l" secondAttribute="bottom" constant="8" id="KGt-7h-sfU"/>
+                                <constraint firstItem="PLs-Gj-nWr" firstAttribute="centerY" secondItem="z98-IM-yyQ" secondAttribute="centerY" id="MXh-VM-z1Q"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="leading" secondItem="PLs-Gj-nWr" secondAttribute="leading" id="OZU-da-xyA"/>
+                                <constraint firstItem="JZe-jr-4ns" firstAttribute="leading" secondItem="cKA-q6-L5f" secondAttribute="leading" constant="8" id="Om5-4f-b8G"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="centerY" secondItem="HG5-EP-bS9" secondAttribute="centerY" id="TsR-Pz-Ceb"/>
+                                <constraint firstItem="z98-IM-yyQ" firstAttribute="trailing" secondItem="JZe-jr-4ns" secondAttribute="trailing" id="Ugo-hl-rfx"/>
+                                <constraint firstItem="3ra-Fc-X7l" firstAttribute="leading" secondItem="cKA-q6-L5f" secondAttribute="leading" constant="8" id="VlF-u6-Qde"/>
+                                <constraint firstItem="z98-IM-yyQ" firstAttribute="leading" secondItem="JZe-jr-4ns" secondAttribute="leading" id="WER-aj-4Yg"/>
+                                <constraint firstItem="UA9-Z4-Noy" firstAttribute="height" secondItem="JZe-jr-4ns" secondAttribute="height" id="X8h-bI-CQ7"/>
+                                <constraint firstItem="UA9-Z4-Noy" firstAttribute="centerY" secondItem="JZe-jr-4ns" secondAttribute="centerY" id="aCk-Fh-umd"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="trailing" secondItem="PLs-Gj-nWr" secondAttribute="trailing" id="blE-h0-Kzp"/>
+                                <constraint firstItem="PLs-Gj-nWr" firstAttribute="height" secondItem="z98-IM-yyQ" secondAttribute="height" id="eGy-BH-gTv"/>
+                                <constraint firstItem="HG5-EP-bS9" firstAttribute="leading" secondItem="z98-IM-yyQ" secondAttribute="leading" id="gpP-K7-s1N"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="height" secondItem="HG5-EP-bS9" secondAttribute="height" id="k36-4z-5Hh"/>
+                                <constraint firstItem="UA9-Z4-Noy" firstAttribute="leading" secondItem="JZe-jr-4ns" secondAttribute="trailing" constant="8" id="num-bI-3oP"/>
+                                <constraint firstItem="3MR-LD-IQe" firstAttribute="top" secondItem="cKA-q6-L5f" secondAttribute="top" id="tHY-Bw-JjJ"/>
+                                <constraint firstItem="KG5-Iz-Mvt" firstAttribute="width" secondItem="HG5-EP-bS9" secondAttribute="width" id="tc6-pl-uIo"/>
+                                <constraint firstItem="JZe-jr-4ns" firstAttribute="top" secondItem="vqh-Wb-JwA" secondAttribute="bottom" constant="8" id="u0v-Vh-Fk6"/>
+                                <constraint firstItem="3ra-Fc-X7l" firstAttribute="centerX" secondItem="3MR-LD-IQe" secondAttribute="centerX" id="wja-zD-9Wb"/>
+                                <constraint firstItem="z98-IM-yyQ" firstAttribute="top" secondItem="JZe-jr-4ns" secondAttribute="bottom" constant="8" id="yGE-PE-MGE"/>
+                            </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="OMT-sJ-9oM" style="IBUITableViewCellStyleDefault" id="pff-t0-D2E">
-                                <rect key="frame" x="0.0" y="305.5" width="1024" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="ao0-jp-3y3" style="IBUITableViewCellStyleDefault" id="S7m-R8-Q9T">
+                                <rect key="frame" x="0.0" y="278" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pff-t0-D2E" id="n9l-kS-VFj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S7m-R8-Q9T" id="wNP-5h-nDe">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OMT-sJ-9oM">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ao0-jp-3y3">
                                             <rect key="frame" x="176" y="0.0" width="672" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="15"/>
@@ -659,6 +646,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="ENk-pL-66F" id="4CI-ch-hUT"/>
                             <outlet property="delegate" destination="ENk-pL-66F" id="ZOg-sM-hdA"/>
@@ -677,7 +665,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wn-GK-mdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="1085.3073463268368"/>
+            <point key="canvasLocation" x="2187.890625" y="1084.9194729136163"/>
         </scene>
         <!--Checked In Members-->
         <scene sceneID="qyb-t3-xtn">
@@ -1106,10 +1094,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6KR-9L-Nje">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6KR-9L-Nje" customClass="RedButton" customModule="StayAPT" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="388" width="1024" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="SUBMIT"/>
+                            <state key="normal" title="SUBMIT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                         </button>
                         <sections>
                             <tableViewSection id="Fto-Re-8WF">
@@ -2619,7 +2609,7 @@
     </scenes>
     <resources>
         <image name="GGym2" width="443" height="439"/>
-        <image name="gym" width="1080" height="608"/>
+        <image name="fitness-bg" width="800" height="533"/>
         <image name="hide" width="50" height="50"/>
         <image name="stayapt-icon-white" width="400" height="500"/>
     </resources>

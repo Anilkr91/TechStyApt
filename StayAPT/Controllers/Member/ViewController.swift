@@ -28,4 +28,3 @@ class ViewController: BaseViewController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
 }
-

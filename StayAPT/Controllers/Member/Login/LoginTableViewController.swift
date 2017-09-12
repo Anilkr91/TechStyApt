@@ -36,6 +36,20 @@ class LoginTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let type = Device.userIntefaceType()
+        var height: CGFloat = 0.0001
+        
+        if type == .pad {
+            height = 60.0
+            
+        } else if type == .phone {
+            height = UITableViewAutomaticDimension
+        }
+        return height
+    }
+    
     func toggleButtonImage(sender: UIButton) {
          let show = UIImage(named: "show")
          let hide = UIImage(named: "hide")

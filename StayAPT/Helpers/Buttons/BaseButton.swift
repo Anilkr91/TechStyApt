@@ -21,15 +21,19 @@ class BaseButton: UIButton {
     }
     
     func setup() {
+        
         clipsToBounds = true
-        layer.cornerRadius = 18
         backgroundColor = UIColor.white
         
         let type = Device.userIntefaceType()
         if type == .pad {
-            self.frame.size.height = 100.0
+            layer.cornerRadius = 18
+            self.frame.size.height = 50.0
+            self.titleLabel!.font =  UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
         } else if type == .phone {
+            layer.cornerRadius = 18
             self.frame.size.height = 30.0
+            self.titleLabel!.font =  UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
         }
     }
 }

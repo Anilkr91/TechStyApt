@@ -9,7 +9,7 @@
 import UIKit
 
 class FacebookButon: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -27,10 +27,13 @@ class FacebookButon: UIButton {
         
         let type = Device.userIntefaceType()
         if type == .pad {
-            self.frame.size.height = 45.0
+            
+            self.frame.size.height = 50.0
+            self.titleLabel!.font =  UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
         } else if type == .phone {
+            
             self.frame.size.height = 30.0
+            self.titleLabel!.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
         }
     }
-
 }
