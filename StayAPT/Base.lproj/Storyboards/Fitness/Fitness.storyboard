@@ -859,7 +859,7 @@
             </objects>
             <point key="canvasLocation" x="4012" y="2469"/>
         </scene>
-        <!--View Controller-->
+        <!--Report-->
         <scene sceneID="q5a-8O-aTP">
             <objects>
                 <viewController id="xA1-sQ-R5h" sceneMemberID="viewController">
@@ -924,26 +924,36 @@
                             <constraint firstItem="Rek-JA-AUS" firstAttribute="top" secondItem="Y2g-LP-Ctl" secondAttribute="bottom" id="qsh-WO-JjX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Report" id="0uz-g9-GQK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1t-Tg-7vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3877.5999999999999" y="635.53223388305855"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Report Table View Controller-->
         <scene sceneID="izO-XA-8U1">
             <objects>
-                <tableViewController id="7X6-xp-cgr" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tIV-4g-JXi">
+                <tableViewController id="7X6-xp-cgr" customClass="ReportTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tIV-4g-JXi">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1227"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dw2-5M-hdM">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="nL2-GO-pOe" style="IBUITableViewCellStyleDefault" id="dw2-5M-hdM">
+                                <rect key="frame" x="0.0" y="55.5" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dw2-5M-hdM" id="nEw-4c-mpt">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nL2-GO-pOe">
+                                            <rect key="frame" x="176" y="0.0" width="672" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

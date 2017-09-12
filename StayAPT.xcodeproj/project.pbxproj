@@ -29,6 +29,7 @@
 		841CA8121F669033004C95CF /* SmallLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8111F669033004C95CF /* SmallLabel.swift */; };
 		841CA8141F66E82B004C95CF /* MemberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8131F66E82B004C95CF /* MemberButton.swift */; };
 		841CA8161F66E83B004C95CF /* FitnessCenterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8151F66E83B004C95CF /* FitnessCenterButton.swift */; };
+		841CA8181F67A89B004C95CF /* ReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8171F67A89B004C95CF /* ReportTableViewController.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -122,6 +123,7 @@
 		841CA8111F669033004C95CF /* SmallLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallLabel.swift; sourceTree = "<group>"; };
 		841CA8131F66E82B004C95CF /* MemberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberButton.swift; sourceTree = "<group>"; };
 		841CA8151F66E83B004C95CF /* FitnessCenterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterButton.swift; sourceTree = "<group>"; };
+		841CA8171F67A89B004C95CF /* ReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewController.swift; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		841CA2481F613A7D004C95CF /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				841CA8171F67A89B004C95CF /* ReportTableViewController.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -815,6 +818,7 @@
 				84CBB5301F559A90001C369F /* FitnessInformationTableViewCell.swift in Sources */,
 				84CBB5351F559A90001C369F /* MenuListingTableViewCell.swift in Sources */,
 				84C4CF3F1F56A072001DA94A /* Loader.swift in Sources */,
+				841CA8181F67A89B004C95CF /* ReportTableViewController.swift in Sources */,
 				84409B431F5E64B2005BAC61 /* AlertView+Helper.swift in Sources */,
 				841CA2181F612F80004C95CF /* FitnessHomeViewController.swift in Sources */,
 				841CA2541F613A7D004C95CF /* VisitorsFormTableViewController.swift in Sources */,
