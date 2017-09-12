@@ -33,6 +33,8 @@
 		841CA82A1F68130E004C95CF /* Extension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8251F68130E004C95CF /* Extension+Helpers.swift */; };
 		841CA82B1F68130E004C95CF /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8261F68130E004C95CF /* Loader.swift */; };
 		841CA82C1F68130E004C95CF /* StayAptConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8271F68130E004C95CF /* StayAptConstants.swift */; };
+		841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */; };
+		841CA8321F6813C7004C95CF /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8311F6813C7004C95CF /* LoginService+POST.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -127,6 +129,8 @@
 		841CA8251F68130E004C95CF /* Extension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Helpers.swift"; sourceTree = "<group>"; };
 		841CA8261F68130E004C95CF /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		841CA8271F68130E004C95CF /* StayAptConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptConstants.swift; sourceTree = "<group>"; };
+		841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
+		841CA8311F6813C7004C95CF /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -503,6 +507,8 @@
 				84F92FE61F553A4C0002074D /* ClassService+GET.swift */,
 				84CBB53C1F55C334001C369F /* BlogService+GET.swift */,
 				84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */,
+				841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */,
+				841CA8311F6813C7004C95CF /* LoginService+POST.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -868,6 +874,7 @@
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				841CA8201F681212004C95CF /* MediumLabel.swift in Sources */,
+				841CA8321F6813C7004C95CF /* LoginService+POST.swift in Sources */,
 				84409B2B1F5D6B5F005BAC61 /* FitnessCenterViewController.swift in Sources */,
 				84409B1E1F5D3658005BAC61 /* FitnessCenterModel.swift in Sources */,
 				841CA24F1F613A7D004C95CF /* FitnessDashBoardTableViewController.swift in Sources */,
@@ -892,6 +899,7 @@
 				84409B201F5D36CA005BAC61 /* FacilitiesModel.swift in Sources */,
 				841CA82A1F68130E004C95CF /* Extension+Helpers.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
+				841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */,
 				84F92FE71F553A4C0002074D /* ClassService+GET.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
