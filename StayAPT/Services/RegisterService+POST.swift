@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class RegisterPostService {
-    static func executeRequest (completionHandler: @escaping ([ClassModel]) -> Void) {
+    static func executeRequest (params:[String: AnyObject], completionHandler: @escaping ([ClassModel]) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
@@ -23,15 +23,17 @@ class RegisterPostService {
             
             switch response.result {
             case .success(let value) :
-                if let data = ClassModelArray.init(json: value as! JSON)  {
-                    completionHandler(data.results)
-                    Loader.sharedInstance.hideLoader()
-                    
-                } else {
-                    Loader.sharedInstance.hideLoader()
-                    let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
-                }
+                
+                print(value)
+//                if let data = ClassModelArray.init(json: value as! JSON)  {
+//                    completionHandler(data.results)
+//                    Loader.sharedInstance.hideLoader()
+//                    
+//                } else {
+//                    Loader.sharedInstance.hideLoader()
+//                    let error = ErrorModel.init(json: value as! JSON)
+//                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
+//                }
                 
             case .failure(let error):
                 Loader.sharedInstance.hideLoader()

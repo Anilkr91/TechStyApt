@@ -17,6 +17,10 @@ class LoginTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //test
+        loginApi()
+        
         togglePassword.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
@@ -83,7 +87,15 @@ class LoginTableViewController: BaseTableViewController {
     }
     
     
-    func 
+    func loginApi() {
+        
+        let param = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
+        
+        LoginPostService.executeRequest(params: param as! [String : AnyObject]) { (response) in
+            print(response)
+        }
+        
+    }
     
     
     
