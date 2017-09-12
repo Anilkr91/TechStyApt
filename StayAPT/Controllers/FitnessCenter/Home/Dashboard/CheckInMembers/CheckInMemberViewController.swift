@@ -78,24 +78,25 @@ class CheckInMemberViewController: BaseViewController {
             cvc.collectionView?.reloadData()
             
         case 1:
-            cvc.memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+            cvc.memberArray = [
+                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Abhram", counter: "20/20"),
                                 SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
                                 SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Abhram", counter: "20/20"),
                                 SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Ram Rahim", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Abhram", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "John", counter: "20/20"),
                                 SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Prakash", counter: "20/20"),
+                                SACheckedInMember(image: "GGym2", name: "Ankur", counter: "20/20"),
                                 SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                                SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
+                                SACheckedInMember(image: "GGym2", name: "Ram Rahim", counter: "20/20")
             ]
             cvc.collectionView?.reloadData()
         default:
