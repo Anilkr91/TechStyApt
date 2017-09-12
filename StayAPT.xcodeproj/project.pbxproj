@@ -35,6 +35,8 @@
 		841CA82C1F68130E004C95CF /* StayAptConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8271F68130E004C95CF /* StayAptConstants.swift */; };
 		841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */; };
 		841CA8321F6813C7004C95CF /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8311F6813C7004C95CF /* LoginService+POST.swift */; };
+		841CA8341F681519004C95CF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8331F681519004C95CF /* LoginModel.swift */; };
+		841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8351F6816E1004C95CF /* RegisterModel.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -131,6 +133,8 @@
 		841CA8271F68130E004C95CF /* StayAptConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StayAptConstants.swift; sourceTree = "<group>"; };
 		841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
 		841CA8311F6813C7004C95CF /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
+		841CA8331F681519004C95CF /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		841CA8351F6816E1004C95CF /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -600,6 +604,8 @@
 				84409B1F1F5D36CA005BAC61 /* FacilitiesModel.swift */,
 				84409B211F5D3809005BAC61 /* FitnessCenterModelArray.swift */,
 				84409B251F5D58D4005BAC61 /* ErrorModel.swift */,
+				841CA8331F681519004C95CF /* LoginModel.swift */,
+				841CA8351F6816E1004C95CF /* RegisterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -842,6 +848,7 @@
 				841CA2181F612F80004C95CF /* FitnessHomeViewController.swift in Sources */,
 				841CA2541F613A7D004C95CF /* VisitorsFormTableViewController.swift in Sources */,
 				84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */,
+				841CA8341F681519004C95CF /* LoginModel.swift in Sources */,
 				841CA8161F66E83B004C95CF /* FitnessCenterButton.swift in Sources */,
 				846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */,
 				84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */,
@@ -886,6 +893,7 @@
 				84409B341F5D6DFA005BAC61 /* BlogDetailTableViewController.swift in Sources */,
 				84CBB53B1F55C1D9001C369F /* BlogModelArray.swift in Sources */,
 				84409B221F5D3809005BAC61 /* FitnessCenterModelArray.swift in Sources */,
+				841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */,
 				84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */,
 				84F92F9A1F4FF8610002074D /* ViewController.swift in Sources */,
 				841CA81F1F681212004C95CF /* BaseLabel.swift in Sources */,
