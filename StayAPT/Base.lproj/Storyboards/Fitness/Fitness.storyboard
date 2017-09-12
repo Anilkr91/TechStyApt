@@ -496,7 +496,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="ENk-pL-66F" kind="show" id="38q-m6-pKW"/>
+                                    <action selector="dashBoardButtonTapped:" destination="kcx-ql-Gaq" eventType="touchUpInside" id="9Ct-8T-dJ4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -513,6 +513,9 @@
                             <constraint firstItem="XgU-7L-dxK" firstAttribute="width" secondItem="97F-Pc-IMf" secondAttribute="width" id="vf8-aY-qB0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ENk-pL-66F" kind="show" identifier="showDashBoardSegue" id="IO0-8o-qHr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9b-RP-9cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
