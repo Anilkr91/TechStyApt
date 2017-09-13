@@ -30,7 +30,7 @@ class ClassGetService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
+                    Alert.showAlertWithMessage(title: "Error", message: error!.message!)
                 }
                 
             case .failure(let error):

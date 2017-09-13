@@ -19,7 +19,7 @@ class LocationGetService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "blog", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "location", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
@@ -29,7 +29,7 @@ class LocationGetService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
+                    Alert.showAlertWithMessage(title: "Error", message: error!.message!)
                 }
                 
             case .failure(let error):

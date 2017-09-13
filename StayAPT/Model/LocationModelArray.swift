@@ -14,7 +14,7 @@ struct LocationModelArray {
     
     init?(json: JSON) {
         
-        guard let results: [LocationModel] = "fitnessCenter" <~~ json else {
+        guard let results: [LocationModel] = "location" <~~ json else {
             return nil
         }
         self.results = results
@@ -22,7 +22,7 @@ struct LocationModelArray {
     
     func toJSON() -> JSON? {
         return jsonify([
-            "fitnessCenter" ~~> self.results
+            "location" ~~> self.results
             ])
     }
 }

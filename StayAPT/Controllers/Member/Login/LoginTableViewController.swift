@@ -19,7 +19,10 @@ class LoginTableViewController: BaseTableViewController {
         super.viewDidLoad()
         
         //test
-        loginApi()
+       // loginApi()
+        //locationApi()
+        regiterApi()
+        
         
         togglePassword.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
         setupBackgroundImage()
@@ -86,17 +89,30 @@ class LoginTableViewController: BaseTableViewController {
         }
     }
     
-    
     func loginApi() {
         
-        let param = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
+        let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
         
-        LoginPostService.executeRequest(params: param as! [String : AnyObject]) { (response) in
+        LoginPostService.executeRequest(params: params as! [String : AnyObject]) { (response) in
             print(response)
         }
         
     }
     
+    func locationApi() {
+      LocationGetService.executeRequest { (data) in
+        print(data)
+        }
+    }
     
     
+    func regiterApi() {
+        
+        let params = RegisterModel(name: "XYZ", email: "XYZ@gmail.com", password: "123456789", userType: 1).toJSON()
+        
+        RegisterPostService.executeRequest(params: params as! [String : AnyObject]) { (data) in
+            print(data)
+        }
+        
+    }
 }

@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class RegisterPostService {
-    static func executeRequest (params:[String: AnyObject], completionHandler: @escaping ([ClassModel]) -> Void) {
+    static func executeRequest (params:[String: AnyObject], completionHandler: @escaping (SuccessModel) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
@@ -19,21 +19,21 @@ class RegisterPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "user/register/", method: .post, parameters: nil, encoding: JSONEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "user/register/", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
                 
                 print(value)
-//                if let data = ClassModelArray.init(json: value as! JSON)  {
-//                    completionHandler(data.results)
-//                    Loader.sharedInstance.hideLoader()
-//                    
-//                } else {
-//                    Loader.sharedInstance.hideLoader()
-//                    let error = ErrorModel.init(json: value as! JSON)
-//                    Alert.showAlertWithMessage(title: "Error", message: error!.message)
-//                }
+                if let data = SuccessModel.init(json: value as! JSON)  {
+                    completionHandler(data)
+                    Loader.sharedInstance.hideLoader()
+                    
+                } else {
+                    Loader.sharedInstance.hideLoader()
+                    let error = ErrorModel.init(json: value as! JSON)
+                    Alert.showAlertWithMessage(title: "Error", message: error!.errorMessage!)
+                }
                 
             case .failure(let error):
                 Loader.sharedInstance.hideLoader()

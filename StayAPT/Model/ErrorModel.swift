@@ -10,13 +10,15 @@ import Gloss
 struct ErrorModel: Decodable {
     
     let status: Bool
-    let message: String
+    let message: String?
+    let errorMessage: String?
     
     init?(json: JSON) {
-        guard let status: Bool = "status" <~~ json,
-            let message: String = "error" <~~ json else { return nil }
+        print(json)
+        guard let status: Bool = "status" <~~ json else { return nil }
         
         self.status = status
-        self.message = message
+        self.message = "error" <~~ json
+        self.errorMessage = "message.email" <~~ json
     }
 }
