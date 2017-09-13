@@ -74,25 +74,33 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showMembersListSegue", sender: self)
             
         case 2:
-            performSegue(withIdentifier: "showMemberFormSegue", sender: self)
+            print("out of bound")
+            //performSegue(withIdentifier: "showMemberFormSegue", sender: self)
             
         case 3:
-            performSegue(withIdentifier: "showVisitorsSegue", sender: self)
+            print("out of bound")
+           // performSegue(withIdentifier: "showVisitorsSegue", sender: self)
             
         case 4:
-            performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
+            print("out of bound")
+            //performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
             
         case 5:
-            performSegue(withIdentifier: "showReportSegue", sender: self)
+            
+            print("out of bound")
+            //performSegue(withIdentifier: "showReportSegue", sender: self)
             
         case 6:
-            self.navigationController?.popViewController(animated: true)
+            print("out of bound")
+            //self.navigationController?.popViewController(animated: true)
             
         case 7:
-            performSegue(withIdentifier: "showNotificationSegue", sender: self)
+            print("out of bound")
+            //performSegue(withIdentifier: "showNotificationSegue", sender: self)
             
         case 8:
-            self.navigationController?.popToRootViewController(animated: true)
+            print("out of bound")
+            //self.navigationController?.popToRootViewController(animated: true)
             
         default:
             print("out of bound")

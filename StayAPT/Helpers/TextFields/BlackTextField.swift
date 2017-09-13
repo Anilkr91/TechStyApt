@@ -32,7 +32,7 @@ class BlackTextField: UITextField {
         if type == .pad {
            self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.ipad_baseFont))
         } else if type == .phone {
-           self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_baseFont))
+           self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_mediumFont))
         }
         
         self.backgroundColor = UIColor.clear
