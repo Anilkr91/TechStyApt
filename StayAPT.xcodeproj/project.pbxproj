@@ -38,6 +38,9 @@
 		841CA8341F681519004C95CF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8331F681519004C95CF /* LoginModel.swift */; };
 		841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8351F6816E1004C95CF /* RegisterModel.swift */; };
 		841CA8381F68493C004C95CF /* LoginModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8371F68493C004C95CF /* LoginModelResponse.swift */; };
+		841CA83A1F68FAD8004C95CF /* LocationServices+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA8391F68FAD8004C95CF /* LocationServices+GET.swift */; };
+		841CA83C1F68FB61004C95CF /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA83B1F68FB61004C95CF /* LocationModel.swift */; };
+		841CA83E1F68FD0A004C95CF /* LocationModelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CA83D1F68FD0A004C95CF /* LocationModelArray.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -137,6 +140,9 @@
 		841CA8331F681519004C95CF /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		841CA8351F6816E1004C95CF /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		841CA8371F68493C004C95CF /* LoginModelResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModelResponse.swift; sourceTree = "<group>"; };
+		841CA8391F68FAD8004C95CF /* LocationServices+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationServices+GET.swift"; sourceTree = "<group>"; };
+		841CA83B1F68FB61004C95CF /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		841CA83D1F68FD0A004C95CF /* LocationModelArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModelArray.swift; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -515,6 +521,7 @@
 				84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */,
 				841CA82F1F6813BC004C95CF /* RegisterService+POST.swift */,
 				841CA8311F6813C7004C95CF /* LoginService+POST.swift */,
+				841CA8391F68FAD8004C95CF /* LocationServices+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -609,6 +616,8 @@
 				841CA8331F681519004C95CF /* LoginModel.swift */,
 				841CA8351F6816E1004C95CF /* RegisterModel.swift */,
 				841CA8371F68493C004C95CF /* LoginModelResponse.swift */,
+				841CA83B1F68FB61004C95CF /* LocationModel.swift */,
+				841CA83D1F68FD0A004C95CF /* LocationModelArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -864,6 +873,7 @@
 				84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */,
 				84CBB5211F5597E3001C369F /* SettingsTableViewController.swift in Sources */,
 				841CA2571F613AAA004C95CF /* CheckInTableViewController.swift in Sources */,
+				841CA83E1F68FD0A004C95CF /* LocationModelArray.swift in Sources */,
 				84CBB5321F559A90001C369F /* VisitorsListingTableViewCell.swift in Sources */,
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
 				841CA2191F612F80004C95CF /* FitnessCenterLoginTableViewController.swift in Sources */,
@@ -895,6 +905,7 @@
 				84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */,
 				84409B3B1F5D6FB4005BAC61 /* DietPlanViewController.swift in Sources */,
 				84409B341F5D6DFA005BAC61 /* BlogDetailTableViewController.swift in Sources */,
+				841CA83C1F68FB61004C95CF /* LocationModel.swift in Sources */,
 				84CBB53B1F55C1D9001C369F /* BlogModelArray.swift in Sources */,
 				84409B221F5D3809005BAC61 /* FitnessCenterModelArray.swift in Sources */,
 				841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */,
@@ -911,6 +922,7 @@
 				84409B201F5D36CA005BAC61 /* FacilitiesModel.swift in Sources */,
 				841CA82A1F68130E004C95CF /* Extension+Helpers.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
+				841CA83A1F68FAD8004C95CF /* LocationServices+GET.swift in Sources */,
 				841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */,
 				84F92FE71F553A4C0002074D /* ClassService+GET.swift in Sources */,
 			);
