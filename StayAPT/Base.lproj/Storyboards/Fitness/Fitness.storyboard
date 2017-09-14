@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Apt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-2U-Oph">
-                                    <rect key="frame" x="10" y="122" width="1004" height="20"/>
+                                    <rect key="frame" x="10" y="111" width="1004" height="31"/>
                                     <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                                         <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="25"/>
                                                     </variation>
                                                     <connections>
-                                                        <segue destination="kcx-ql-Gaq" kind="show" id="wsb-hd-1dM"/>
+                                                        <action selector="signInTapped:" destination="QsO-S5-896" eventType="touchUpInside" id="Xgf-5I-Kjs"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -274,6 +274,7 @@
                         <outlet property="fitnessCenterIdTextField" destination="hdv-Su-fmU" id="6Lb-wu-Oqg"/>
                         <outlet property="passwordTextField" destination="Z6a-aH-KIK" id="3eF-IZ-CCN"/>
                         <outlet property="togglePasswordButton" destination="GTi-I6-Uts" id="xaA-KC-nyr"/>
+                        <segue destination="kcx-ql-Gaq" kind="show" identifier="showSignInSegue" id="E2U-zd-Pw9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCg-4S-dvk" userLabel="First Responder" sceneMemberID="firstResponder"/>

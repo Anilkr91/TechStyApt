@@ -1,5 +1,5 @@
 //
-//  LoginService+POST.swift
+//  UserLoginService+POST.swift
 //  StayAPT
 //
 //  Created by admin on 12/09/17.
@@ -9,7 +9,7 @@
 import Alamofire
 import Gloss
 
-class LoginPostService {
+class UserLoginPostService {
     static func executeRequest (params:[String: AnyObject], completionHandler: @escaping (LoginModelResponse) -> Void) {
         
         Loader.sharedInstance.showLoader()
