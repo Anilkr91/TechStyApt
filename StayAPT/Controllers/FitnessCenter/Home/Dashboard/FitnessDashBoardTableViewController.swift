@@ -75,7 +75,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             
         case 2:
             print("out of bound")
-            //performSegue(withIdentifier: "showMemberFormSegue", sender: self)
+            performSegue(withIdentifier: "showMemberFormSegue", sender: self)
             
         case 3:
             print("out of bound")

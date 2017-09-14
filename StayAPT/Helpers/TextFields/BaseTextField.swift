@@ -27,7 +27,7 @@ class BaseTextField: UITextField {
     }
     
     func setBottomLine() {
-        
+        self.textColor = UIColor.black
         self.borderStyle = UITextBorderStyle.none
         self.backgroundColor = UIColor.clear
         let borderLine = UIView()
