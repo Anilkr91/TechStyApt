@@ -1,5 +1,5 @@
 //
-//  FCLoginService+POST.swift
+//  FCCheckInService+POST.swift
 //  StayAPT
 //
 //  Created by admin on 14/09/17.

@@ -11,6 +11,7 @@ struct ErrorModel: Decodable {
     
     let status: Bool
     let message: String?
+    let error: String?
     let errorMessage: String?
     
     init?(json: JSON) {
@@ -18,6 +19,7 @@ struct ErrorModel: Decodable {
         guard let status: Bool = "status" <~~ json else { return nil }
         
         self.status = status
+        self.error = "message" <~~ json
         self.message = "error" <~~ json
         self.errorMessage = "message.email" <~~ json
     }

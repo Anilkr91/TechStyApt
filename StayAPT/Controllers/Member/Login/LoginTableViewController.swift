@@ -93,7 +93,7 @@ class LoginTableViewController: BaseTableViewController {
         
         let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
         
-        LoginPostService.executeRequest(params: params as! [String : AnyObject]) { (response) in
+        UserLoginPostService.executeRequest(params: params as! [String : AnyObject]) { (response) in
             print(response)
         }
         

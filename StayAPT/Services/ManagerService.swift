@@ -11,7 +11,14 @@ import Alamofire
 
 class ManagerService {
 
+    
+//    let configuration = URLSessionConfiguration.default
+//    configuration.timeoutIntervalForRequest = 60
+//    configuration.timeoutIntervalForResource = 60
+//    //self.alamoFireManager = Alamofire.Manager(configuration: configuration)
 //    let manager = Alamofire.SessionManager.default
+//    
+//    manager
 //    manager.session.configuration.timeoutIntervalForRequest = 120
 
 }

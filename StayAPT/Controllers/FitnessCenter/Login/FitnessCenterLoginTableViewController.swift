@@ -77,8 +77,9 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
         
         } else {
-        let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2).toJSON()
-        LoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+        let params = LoginModel(email: "lokesh@techximum.in", password: "12", userType: 2).toJSON()
+        FCLoginService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+            print(data)
         self.performSegue(withIdentifier: "showSignInSegue", sender: self)
         })
                    
