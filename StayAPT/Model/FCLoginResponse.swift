@@ -13,7 +13,7 @@ struct FCLoginResponse: Decodable {
     let datetime: String
     let ip_address: String
     let empID: String
-    let userName: String
+    let stayAptId: String
     let logoImage: String
     let fitness_center_name: String
     let fitness_email: String
@@ -35,7 +35,7 @@ struct FCLoginResponse: Decodable {
             let datetime: String = "fitness_login_session.datetime" <~~ json,
             let ip_address: String = "fitness_login_session.ip_address" <~~ json,
             let empID: String = "fitness_login_session.empID" <~~ json,
-            let userName: String = "fitness_login_session.userName" <~~ json,
+            let stayAptId: String = "fitness_login_session.userName" <~~ json,
             let logoImage: String = "fitness_login_session.logoImage" <~~ json,
             let fitness_center_name: String = "fitness_login_session.fitness_center_name" <~~ json,
             let fitness_email: String = "fitness_login_session.fitness_email" <~~ json,
@@ -56,7 +56,7 @@ struct FCLoginResponse: Decodable {
         self.datetime = datetime
         self.ip_address = ip_address
         self.empID = empID
-        self.userName = userName
+        self.stayAptId = stayAptId
         self.logoImage = logoImage
         self.fitness_center_name = fitness_center_name
         self.fitness_email = fitness_email

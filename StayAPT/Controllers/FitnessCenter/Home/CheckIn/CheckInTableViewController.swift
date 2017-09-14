@@ -36,14 +36,31 @@ class CheckInTableViewController: BaseTableViewController {
     
     @IBAction func checkInTapped(_ sender: Any) {
         
-        
-        
+        let id = idTextField.text!
+        if id.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
+            
+        } else {
+            let param = CheckInModel(fcID: "1", stayAptID: "STAYHFCSD010001").toJSON()
+            
+            FCCheckInServicePostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
+                Alert.showAlertWithMessage(title: "Success", message: data.response!)
+            })
+        }
     }
-    
     
     @IBAction func checkoutTapped(_ sender: Any) {
         
-        
-        
+        let id = idTextField.text!
+        if id.removeAllSpaces().isEmpty {
+            Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
+            
+        } else {
+            let param = CheckInModel(fcID: "1", stayAptID: "STAYHFCSD010001").toJSON()
+            
+            FCCheckoutPostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
+                Alert.showAlertWithMessage(title: "Success", message: "\(String(describing: data.response!)) \(String(describing: data.timeMessage!)) ")
+            })
+        }
     }
 }

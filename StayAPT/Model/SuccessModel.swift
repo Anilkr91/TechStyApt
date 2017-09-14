@@ -10,13 +10,17 @@ import Gloss
 struct SuccessModel: Decodable {
     
     let status: Bool
-    let message: String
+    let message: String?
+    let response: String?
+    let timeMessage: String?
+    
     
     init?(json: JSON) {
-        guard let status: Bool = "status" <~~ json,
-            let message: String = "error" <~~ json else { return nil }
+        guard let status: Bool = "status" <~~ json else { return nil }
         
         self.status = status
-        self.message = message
+        self.message = "error" <~~ json
+        self.response = "message" <~~ json
+        self.timeMessage = "timeMessage" <~~ json
     }
 }

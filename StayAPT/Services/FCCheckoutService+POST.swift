@@ -1,5 +1,5 @@
 //
-//  FCCheckInService+POST.swift
+//  FCCheckoutService+POST.swift
 //  StayAPT
 //
 //  Created by admin on 14/09/17.
@@ -9,7 +9,8 @@
 import Alamofire
 import Gloss
 
-class FCCheckInServicePostService {
+class FCCheckoutPostService {
+    
     static func executeRequest (params:[String: AnyObject], completionHandler: @escaping (SuccessModel) -> Void) {
         
         Loader.sharedInstance.showLoader()
@@ -19,7 +20,7 @@ class FCCheckInServicePostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "fitness_center/checkIn", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "fitness_center/checkOut", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :

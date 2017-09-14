@@ -9,7 +9,7 @@
 import Alamofire
 import Gloss
 
-class FCLoginService {
+class FCLoginPostService {
     static func executeRequest (params:[String: AnyObject], completionHandler: @escaping (FCLoginResponse) -> Void) {
         
         Loader.sharedInstance.showLoader()
