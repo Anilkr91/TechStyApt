@@ -73,4 +73,31 @@ struct FCLoginResponse: Decodable {
         self.status = status
         self.is_display = is_display
     }
+    
+    func toJSON() -> JSON? {
+        return jsonify([
+            
+            "fitness_login_session.id" ~~> self.id,
+            "fitness_login_session.datetime" ~~> self.datetime,
+            "fitness_login_session.ip_address" ~~> self.ip_address,
+            "fitness_login_session.empID" ~~> self.empID,
+            "fitness_login_session.userName" ~~> self.stayAptId,
+            "fitness_login_session.logoImage" ~~> self.logoImage,
+            "fitness_login_session.fitness_center_name" ~~> self.fitness_center_name,
+            "fitness_login_session.fitness_email" ~~> self.fitness_email,
+            "fitness_login_session.password" ~~> self.password,
+            "fitness_login_session.phone_number" ~~> self.phone_number,
+            "fitness_login_session.address" ~~> self.address,
+            "fitness_login_session.loc_id" ~~> self.loc_id,
+            "fitness_login_session.sub_loc_id" ~~> self.sub_loc_id,
+            "fitness_login_session.alternate_number" ~~> self.alternate_number,
+            "fitness_login_session.pincode" ~~> self.pincode,
+            "fitness_login_session.author_name" ~~> self.author_name,
+            "fitness_login_session.owner" ~~> self.owner,
+            "fitness_login_session.information" ~~> self.information,
+            "fitness_login_session.status" ~~> self.status,
+            "fitness_login_session.is_display" ~~> self.is_display
+            
+            ])
+    }
 }

@@ -77,12 +77,13 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
         
         } else {
-       // let params = LoginModel(email: "lokesh@techximum.in", password: "12", userType: 2).toJSON()
-       // FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
-            //print(data)
+        let params = LoginModel(email: "lokesh@techximum.in", password: "12", userType: 2).toJSON()
+        FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+            print(data)
+             LoginUtils.setCurrentFitnessCenterUser(user: data)
         self.performSegue(withIdentifier: "showSignInSegue", sender: self)
-        //})
-                   
+        })
+            
         }
     }
 }

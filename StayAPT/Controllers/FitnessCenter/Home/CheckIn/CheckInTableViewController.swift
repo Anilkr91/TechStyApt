@@ -17,7 +17,6 @@ class CheckInTableViewController: BaseTableViewController {
         super.viewDidLoad()
         tableView.separatorStyle = .none
         setupBackgroundImage()
-        
     }
     
     func setupBackgroundImage() {
@@ -28,8 +27,7 @@ class CheckInTableViewController: BaseTableViewController {
         self.view.insertSubview(backgroundImage, at: 0)
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
-                            forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
     }

@@ -29,7 +29,6 @@ struct LoginModelResponse: Decodable {
     
     init?(json: JSON) {
         guard let account_type: String = "user_login_session.account_type" <~~ json,
-//            let address: String = "address" <~~ json,
             let anniversary: String = "user_login_session.anniversary" <~~ json,
             let birthday: String = "user_login_session.birthday" <~~ json,
             let email_id: String = "user_login_session.email_id" <~~ json,
@@ -39,13 +38,7 @@ struct LoginModelResponse: Decodable {
             let is_verified: String = "user_login_session.is_verified" <~~ json,
             let mobile_no: String = "user_login_session.mobile_no" <~~ json,
             let name: String = "user_login_session.name" <~~ json,
-            let password: String = "user_login_session.password" <~~ json
-//            let stayAptID: String = "stayAptID" <~~ json,
-//            let title: String = "title" <~~ json,
-//            let user_photo: String = "user_photo" <~~ json,
-//            let verifiedCode: String = "verifiedCode" <~~ json
-        
-            else { return nil }
+            let password: String = "user_login_session.password" <~~ json else { return nil }
         
         self.account_type = account_type
         self.address = "user_login_session.address" <~~ json
@@ -63,7 +56,29 @@ struct LoginModelResponse: Decodable {
         self.title = "user_login_session.title" <~~ json
         self.user_photo = "user_login_session.user_photo" <~~ json
         self.verifiedCode = "user_login_session.verifiedCode" <~~ json
-        
-        
+    }
+    
+    
+    func toJSON() -> JSON? {
+        return jsonify([
+            
+            "user_login_session.account_type" ~~> self.account_type,
+            "user_login_session.anniversary" ~~> self.anniversary,
+            "user_login_session.birthday" ~~> self.birthday,
+            "user_login_session.email_id" ~~> self.email_id,
+            "user_login_session.emergency_no" ~~> self.emergency_no,
+            "user_login_session.gender" ~~> self.gender,
+            "user_login_session.id" ~~> self.id,
+            "user_login_session.is_verified" ~~> self.is_verified,
+            "user_login_session.mobile_no" ~~> self.mobile_no,
+            "user_login_session.name" ~~> self.name,
+            "user_login_session.password" ~~> self.password,
+            "user_login_session.address" ~~> self.address,
+            "user_login_session.stayAptID" ~~> self.stayAptID,
+            "user_login_session.title" ~~> self.title,
+            "user_login_session.user_photo" ~~> self.user_photo,
+            "user_login_session.verifiedCode" ~~> self.verifiedCode
+            
+            ])
     }
 }

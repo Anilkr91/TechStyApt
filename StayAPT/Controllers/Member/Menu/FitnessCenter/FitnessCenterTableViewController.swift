@@ -44,6 +44,8 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
+        
+        self.performSegue(withIdentifier: "showFitnessCenterDetailsSegue", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -64,7 +66,8 @@ class FitnessCenterTableViewController: BaseTableViewController {
     }
     
     func populateTableView(classId: String) {
-        let param = ["class_id": classId]
+        // Todo: change location id to dynamic
+        let param = ["class_id": classId, "loc_id": "5"]
         FitnessCenterGetService.executeRequest(params: param as [String : AnyObject]) { (data) in
             self.fitnessCenterArray = data
             self.tableView.reloadData()
