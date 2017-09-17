@@ -18,11 +18,13 @@ class LoginUtils {
         }
     }
     
-    class func setCurrentFitnessCenterUser(user: FCLoginResponse) {
+    class func setCurrentFitnessCenter(user: FCLoginResponse) {
         if let login = getCurrentFitnessCenterUserLogin() {
             let tmpLogin = login
             //tmpLogin.user = user
             setCurrentFitnessCenterUserLogin(login: tmpLogin)
+        } else {
+           setCurrentFitnessCenterUserLogin(login: user)
         }
     }
     
@@ -54,6 +56,7 @@ class LoginUtils {
     }
     
     class func getCurrentFitnessCenterUserLogin() -> FCLoginResponse? {
+     
         if let json = Defaults[.fitnessCenterLogin], let user = FCLoginResponse(json: json) {
             return user
         }

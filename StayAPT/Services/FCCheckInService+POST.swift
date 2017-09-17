@@ -23,14 +23,18 @@ class FCCheckInServicePostService {
             
             switch response.result {
             case .success(let value) :
-                if let data = SuccessModel.init(json: value as! JSON)  {
-                    completionHandler(data)
-                    Loader.sharedInstance.hideLoader()
+                if let data = SuccessModel.init(json: value as! JSON) {
                     
-                } else {
-                    Loader.sharedInstance.hideLoader()
-                    let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.error!)
+                    if data.status == true {
+                        completionHandler(data)
+                        Loader.sharedInstance.hideLoader()
+                        
+                    } else {
+                        Loader.sharedInstance.hideLoader()
+                        let error = ErrorModel.init(json: value as! JSON)
+                        Alert.showAlertWithMessage(title: "Error", message: error!.errorStayAptId!)
+                        
+                    }
                 }
                 
             case .failure(let error):

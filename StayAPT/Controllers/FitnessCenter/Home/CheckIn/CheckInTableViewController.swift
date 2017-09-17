@@ -13,6 +13,8 @@ class CheckInTableViewController: BaseTableViewController {
     @IBOutlet weak var idTextField: UITextField!
     var bottomBorder = CALayer()
     
+    let user = LoginUtils.getCurrentFitnessCenterUserLogin()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
@@ -39,7 +41,7 @@ class CheckInTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
             
         } else {
-            let param = CheckInModel(fcID: "1", stayAptID: "STAYHFCSD010001").toJSON()
+            let param = CheckInModel(fcID: user.id, stayAptID: id).toJSON()
             
             FCCheckInServicePostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
                 Alert.showAlertWithMessage(title: "Success", message: data.response!)
@@ -54,7 +56,7 @@ class CheckInTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
             
         } else {
-            let param = CheckInModel(fcID: "1", stayAptID: "STAYHFCSD010001").toJSON()
+            let param = CheckInModel(fcID: user.id, stayAptID: id).toJSON()
             
             FCCheckoutPostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
                 Alert.showAlertWithMessage(title: "Success", message: "\(String(describing: data.response!)) \(String(describing: data.timeMessage!)) ")
