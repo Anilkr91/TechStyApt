@@ -12,8 +12,7 @@ import Kingfisher
 class FitnessDashBoardTableViewController: BaseTableViewController {
     
     let fitnessOptions = ["Checked in Members", "Members", "Members Form", "Visitor's List", "Visitor's Form", "Report", "Home", "Notification", "Logout"]
-    
-    
+
     @IBOutlet weak var nameLabel: MediumLabel!
     @IBOutlet weak var locationLabel: smallLabel!
     @IBOutlet weak var packageLabel: smallLabel!
@@ -29,13 +28,10 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     }
     
     func setup() {
-        
-        
         let url = URL(string: user.logoImage)!
         let image = UIImage(named: "gym")
         
         imageView.kf.setImage(with: url, placeholder: image)
-
         nameLabel.text = user.fitness_center_name
         locationLabel.text = user.address
         packageLabel.text = user.owner
@@ -54,8 +50,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
