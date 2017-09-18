@@ -92,15 +92,15 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             
         case 6:
             print("out of bound")
-            //self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
             
         case 7:
             print("out of bound")
-            //performSegue(withIdentifier: "showNotificationSegue", sender: self)
+            performSegue(withIdentifier: "showNotificationSegue", sender: self)
             
         case 8:
             print("out of bound")
-            //self.navigationController?.popToRootViewController(animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
             
         default:
             print("out of bound")

@@ -73,6 +73,7 @@
 		84409B541F5EC836005BAC61 /* Javacom.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84409B511F5EC836005BAC61 /* Javacom.otf */; };
 		84409B561F5FD605005BAC61 /* ManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B551F5FD605005BAC61 /* ManagerService.swift */; };
 		846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */; };
+		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84C4CF3D1F569AD9001DA94A /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */; };
 		84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF421F56AFB8001DA94A /* BlackButton.swift */; };
 		84C4CF451F56D445001DA94A /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF441F56D445001DA94A /* RedButton.swift */; };
@@ -183,6 +184,7 @@
 		84409B511F5EC836005BAC61 /* Javacom.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Javacom.otf; sourceTree = "<group>"; };
 		84409B551F5FD605005BAC61 /* ManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerService.swift; sourceTree = "<group>"; };
 		846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
 		84C4CF421F56AFB8001DA94A /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		84C4CF441F56D445001DA94A /* RedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				841CA2581F613DCE004C95CF /* MembersListCollectionViewController.swift */,
+				84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */,
 			);
 			path = Members;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */,
 				84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */,
 				84F92F9A1F4FF8610002074D /* ViewController.swift in Sources */,
+				84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */,
 				841CA81F1F681212004C95CF /* BaseLabel.swift in Sources */,
 				841CA25B1F613EF4004C95CF /* MembersListCollectionViewCell.swift in Sources */,
 				84F92FAE1F50329F0002074D /* SACheckedInMember.swift in Sources */,

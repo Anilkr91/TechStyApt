@@ -858,6 +858,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Member's List" id="ZOs-yi-6mB"/>
+                    <connections>
+                        <segue destination="FSl-gp-4Ug" kind="show" identifier="showMembersDetailsSegue" id="B66-Fd-9Yx"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBK-RV-EWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1529,7 +1532,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuU-Df-4DE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086" y="1407"/>
+            <point key="canvasLocation" x="4702" y="1658"/>
         </scene>
         <!--MemberShip Details-->
         <scene sceneID="Bz5-5S-COn">
@@ -1733,7 +1736,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkB-NV-A0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3906" y="1406"/>
+            <point key="canvasLocation" x="5522" y="1656"/>
         </scene>
         <!--StayApt Details-->
         <scene sceneID="q1F-U5-SGw">
@@ -1849,7 +1852,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfj-RF-0tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4727" y="1406"/>
+            <point key="canvasLocation" x="6343" y="1656"/>
         </scene>
         <!--Notification-->
         <scene sceneID="bNa-f0-pDL">
@@ -1991,7 +1994,7 @@
         <!--Member Details-->
         <scene sceneID="cEH-Lu-0Zt">
             <objects>
-                <tableViewController id="FSl-gp-4Ug" sceneMemberID="viewController">
+                <tableViewController id="FSl-gp-4Ug" customClass="MembersDetailTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nEl-Za-2vM">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2602,11 +2605,16 @@
                             <outlet property="delegate" destination="FSl-gp-4Ug" id="lI5-pt-MWD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Member Details" id="foQ-Ca-5Vm"/>
+                    <navigationItem key="navigationItem" title="Member Details" id="foQ-Ca-5Vm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="P2l-wu-UTY"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="67j-0h-K9N" kind="show" identifier="showMemberFormSegue" id="i7d-6O-zJ1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fL-KO-ezW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305.859375" y="3241.5812591508052"/>
+            <point key="canvasLocation" x="4702" y="2469"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i7i-UF-Tt7">
@@ -2618,9 +2626,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FSl-gp-4Ug" kind="relationship" relationship="rootViewController" id="WID-QM-RX0"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovn-0s-Eja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2633,4 +2638,7 @@
         <image name="hide" width="50" height="50"/>
         <image name="stayapt-icon-white" width="400" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="i7d-6O-zJ1"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MembersListCollectionViewController: UICollectionViewController {
+class MembersListCollectionViewController: BaseCollectionViewController {
     
     let memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
     SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
@@ -55,6 +55,11 @@ class MembersListCollectionViewController: UICollectionViewController {
         cell.member = memberArray[indexPath.row]
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showMembersDetailsSegue", sender: self)
     }
 }
 

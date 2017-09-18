@@ -30,7 +30,9 @@ class FCLoginPostService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.error!)
+                    
+                    let message = error?.error ?? error?.errorMessage
+                    Alert.showAlertWithMessage(title: "Error", message: message!)
                 }
                 
             case .failure(let error):
