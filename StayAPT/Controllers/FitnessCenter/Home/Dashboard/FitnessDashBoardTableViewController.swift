@@ -7,20 +7,40 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FitnessDashBoardTableViewController: BaseTableViewController {
     
     let fitnessOptions = ["Checked in Members", "Members", "Members Form", "Visitor's List", "Visitor's Form", "Report", "Home", "Notification", "Logout"]
     
+    
+    @IBOutlet weak var nameLabel: MediumLabel!
+    @IBOutlet weak var locationLabel: smallLabel!
+    @IBOutlet weak var packageLabel: smallLabel!
+    @IBOutlet weak var stayaptId: smallLabel!
+    @IBOutlet weak var subscriptionLabel: smallLabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    let user = LoginUtils.getCurrentFitnessCenterUserLogin()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        setup()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setup() {
+        
+        
+        let url = URL(string: user.logoImage)!
+        let image = UIImage(named: "gym")
+        
+        imageView.kf.setImage(with: url, placeholder: image)
+
+        nameLabel.text = user.fitness_center_name
+        locationLabel.text = user.address
+        packageLabel.text = user.owner
+        stayaptId.text = user.stayAptId
+        subscriptionLabel.text = user.fitness_email
     }
     
     // MARK: - Table view data source
@@ -74,21 +94,16 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showMembersListSegue", sender: self)
             
         case 2:
-            print("out of bound")
             performSegue(withIdentifier: "showMemberFormSegue", sender: self)
             
         case 3:
-            print("out of bound")
-           // performSegue(withIdentifier: "showVisitorsSegue", sender: self)
+            performSegue(withIdentifier: "showVisitorsSegue", sender: self)
             
         case 4:
-            print("out of bound")
-            //performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
+            performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
             
         case 5:
-            
-            print("out of bound")
-            //performSegue(withIdentifier: "showReportSegue", sender: self)
+            performSegue(withIdentifier: "showReportSegue", sender: self)
             
         case 6:
             print("out of bound")
