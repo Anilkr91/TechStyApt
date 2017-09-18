@@ -29,4 +29,9 @@ class PersonalDetailTableViewController: BaseTableViewController {
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
 
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+    }
 }

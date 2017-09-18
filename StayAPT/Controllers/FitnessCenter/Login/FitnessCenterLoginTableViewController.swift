@@ -66,26 +66,26 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
     }
     
     @IBAction func signInTapped(_ sender: Any) {
-    
+        
         let id = fitnessCenterIdTextField.text!
         let password = passwordTextField.text!
-    
+        
         if id.removeAllSpaces().isEmpty {
-        Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
-    
+            Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
+            
         } else if password.removeAllSpaces().isEmpty {
             Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
-        
+            
         } else {
-        let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2).toJSON()
+            let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2).toJSON()
             
-//        let params = LoginModel(email: id, password: password, userType: 2).toJSON()
+            //        let params = LoginModel(email: id, password: password, userType: 2).toJSON()
             
-        FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
-            print(data)
-             LoginUtils.setCurrentFitnessCenter(user: data)
-        self.performSegue(withIdentifier: "showSignInSegue", sender: self)
-        })
+            FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+                print(data)
+                LoginUtils.setCurrentFitnessCenter(user: data)
+                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
+            })
             
         }
     }

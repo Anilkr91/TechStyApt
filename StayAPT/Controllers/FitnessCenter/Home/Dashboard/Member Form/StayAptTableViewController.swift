@@ -14,4 +14,9 @@ class StayAptTableViewController: BaseTableViewController {
         super.viewDidLoad()
         
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+    }
 }

@@ -959,10 +959,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nL2-GO-pOe">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nL2-GO-pOe" customClass="MediumLabel" customModule="StayAPT" customModuleProvider="target">
                                             <rect key="frame" x="176" y="0.0" width="672" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -1117,13 +1117,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6KR-9L-Nje" customClass="RedButton" customModule="StayAPT" customModuleProvider="target">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="5DH-M7-CwM">
                             <rect key="frame" x="0.0" y="388" width="1024" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="SUBMIT">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQH-4H-P3x" customClass="RedButton" customModule="StayAPT" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                    <state key="normal" title="SUBMIT">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="VQH-4H-P3x" firstAttribute="leading" secondItem="5DH-M7-CwM" secondAttribute="leading" constant="8" id="52y-So-mng"/>
+                                <constraint firstAttribute="trailing" secondItem="VQH-4H-P3x" secondAttribute="trailing" constant="8" id="DEG-cS-qxK"/>
+                                <constraint firstItem="VQH-4H-P3x" firstAttribute="centerY" secondItem="5DH-M7-CwM" secondAttribute="centerY" id="WRO-Nu-csb"/>
+                                <constraint firstItem="VQH-4H-P3x" firstAttribute="centerX" secondItem="5DH-M7-CwM" secondAttribute="centerX" id="zTT-dx-egw"/>
+                            </constraints>
+                        </view>
                         <sections>
                             <tableViewSection id="Fto-Re-8WF">
                                 <cells>

@@ -16,6 +16,8 @@ class FitnessHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundImage()
+        self.navigationItem.hidesBackButton = true
+        
     }
     
     func setupBackgroundImage() {
