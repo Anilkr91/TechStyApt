@@ -28,10 +28,13 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     }
     
     func setup() {
-        let url = URL(string: user.logoImage)!
-        let image = UIImage(named: "gym")
         
-        imageView.kf.setImage(with: url, placeholder: image)
+        let image = UIImage(named: "gym")
+        if let url = URL(string: user.logoImage ) {
+            imageView.kf.setImage(with: url, placeholder: image)
+        } else {
+            imageView.image = image
+        }
         nameLabel.text = user.fitness_center_name
         locationLabel.text = user.address
         packageLabel.text = user.owner
@@ -101,16 +104,15 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showReportSegue", sender: self)
             
         case 6:
-            print("out of bound")
             self.navigationController?.popViewController(animated: true)
             
         case 7:
-            print("out of bound")
             performSegue(withIdentifier: "showNotificationSegue", sender: self)
             
         case 8:
-            print("out of bound")
-            self.navigationController?.popToRootViewController(animated: true)
+            LoginUtils.setCurrentFitnessCenterUserLogin(login: nil)
+            let application = UIApplication.shared.delegate as! AppDelegate
+            application.setHomeGuestAsRVC()
             
         default:
             print("out of bound")

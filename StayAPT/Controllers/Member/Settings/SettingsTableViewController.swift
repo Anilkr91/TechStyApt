@@ -27,4 +27,18 @@ class SettingsTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 2
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.section)
+        
+        if indexPath.section == 4 {
+          
+            LoginUtils.setCurrentMemberUserLogin(login: nil)
+            let application = UIApplication.shared.delegate as! AppDelegate
+            application.setHomeGuestAsRVC()
+            
+            
+        }
+    }
 }

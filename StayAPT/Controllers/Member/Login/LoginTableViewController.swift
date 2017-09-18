@@ -19,9 +19,9 @@ class LoginTableViewController: BaseTableViewController {
         super.viewDidLoad()
         
         //test
-       // loginApi()
+        // loginApi()
         //locationApi()
-       // regiterApi()
+        // regiterApi()
         
         
         togglePassword.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
@@ -58,8 +58,8 @@ class LoginTableViewController: BaseTableViewController {
     }
     
     func toggleButtonImage(sender: UIButton) {
-         let show = UIImage(named: "show")
-         let hide = UIImage(named: "hide")
+        let show = UIImage(named: "show")
+        let hide = UIImage(named: "hide")
         
         if(isShowPassword == true) {
             passwordTextField.isSecureTextEntry = true
@@ -73,7 +73,7 @@ class LoginTableViewController: BaseTableViewController {
         }
     }
     
-    @IBAction func loginTapped(_ sender: Any) {
+    @IBAction func signInTapped(_ sender: Any) {
         
         let id = userIdTextField.text!
         let password = passwordTextField.text!
@@ -85,20 +85,18 @@ class LoginTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage(title: "Error", message: "Password cannot be  empty")
             
         } else {
+            let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
+            UserLoginPostService.executeRequest(params: params! as [String : AnyObject]) { (data) in
+                LoginUtils.setCurrentMemberUser(user: data)
+                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
+            }
             print("validation passed hit login api")
         }
     }
     
-    func loginApi() {
-        let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
-        UserLoginPostService.executeRequest(params: params! as [String : AnyObject]) { (response) in
-            print(response)
-        }
-    }
-    
     func locationApi() {
-      LocationGetService.executeRequest { (data) in
-        print(data)
+        LocationGetService.executeRequest { (data) in
+            print(data)
         }
     }
     

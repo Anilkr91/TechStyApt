@@ -15,7 +15,6 @@ class MembersDetailTableViewController: BaseTableViewController {
         
         let rightBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MembersDetailTableViewController.self.editDetails(sender:)))
         self.navigationItem.rightBarButtonItem = rightBarButton
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -34,9 +33,13 @@ class MembersDetailTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    
     func editDetails(sender: Any) {
         performSegue(withIdentifier: "showMemberFormSegue", sender: self)
-        
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.textLabel?.font = UIFont(name: "cuyabra_bold", size: CGFloat(Constants.iPhone_mediumFont))
+        }
     }
 }

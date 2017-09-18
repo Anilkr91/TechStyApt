@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        checkLoginState()
         setupKeyBoardManager()
         setupNavigationAppearance()
         setupSegmentedControlAppearance()
@@ -60,6 +61,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //navigationbarAppearance.tintColor = UIColor.white
         //navigationbarAppearance.barTintColor = UIColor.red
        // navigationbarAppearance.shadowImage = nil
-        navigationbarAppearance.titleTextAttributes = [ NSFontAttributeName : UIFont(name: "Javacom", size: 17.0)!]
+        navigationbarAppearance.titleTextAttributes = [NSFontAttributeName : UIFont(name: "Javacom", size: 17.0)!]
+    }
+    
+    func checkLoginState() {
+        let member = LoginUtils.getCurrentMemberUserLogin()
+        let fc = LoginUtils.getCurrentFitnessCenterUserLogin()
+        
+        if member != nil {
+            setHomeMemberUserAsRVC()
+            
+        } else if fc != nil {
+            setHomeFitnessCenterUserAsRVC()
+        } else {
+           setHomeGuestAsRVC()
+        }
+    }
+    
+    func setHomeMemberUserAsRVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        window?.rootViewController = vc
+    }
+    
+    func setHomeFitnessCenterUserAsRVC() {
+        let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
+        window?.rootViewController = vc
+    }
+    
+    func setHomeGuestAsRVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as? UINavigationController
+        window?.rootViewController = vc
     }
 }
