@@ -78,7 +78,6 @@ extension MenuListingTableViewCell {
         print(userId)
         
         let param = ["fcID": "1", "userId": "1"]
-        
         AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
             print(data)
         }
