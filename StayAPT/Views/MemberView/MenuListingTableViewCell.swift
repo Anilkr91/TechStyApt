@@ -14,19 +14,22 @@ class MenuListingTableViewCell: UITableViewCell {
     @IBOutlet weak var saGymTitleLabel: UILabel!
     @IBOutlet weak var saGymSubTitleLabe: UILabel!
     @IBOutlet weak var saAddGymButton: UIButton!
+    var selectedCategory: FitnessCenterModel!
     var isClicked: Bool = false
-
+    
+    let user = LoginUtils.getCurrentMemberUserLogin()!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-   
+    
     var info: FitnessCenterModel? {
         didSet {
             if let member = info {
@@ -49,29 +52,45 @@ extension MenuListingTableViewCell {
         saGymTitleLabel.text = info.name
         saGymSubTitleLabe.text = info.address
         
-        saAddGymButton.addTarget(self, action: #selector(animation(sender:)), for: .touchUpInside)
+        selectedCategory = info
+        saAddGymButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
     }
     
-    func animation(sender: UIButton) {
+    func animation() {
+        
         let heart = UIImage(named: "heart")
         let heartfilled = UIImage(named: "heart-Filled")
         
         if !isClicked {
             isClicked = true
             saAddGymButton.setBackgroundImage(heartfilled, for: .normal)
-          
+            addFitnessCenter(fcId: selectedCategory.id, userId: user.id)
+            
         } else {
             isClicked = false
             saAddGymButton.setBackgroundImage(heart, for: .normal)
-           
+            removeFitnessCenter(fcId: selectedCategory.id, userId: user.id)
         }
     }
     
-//    func addFitnessCenter() {
-//        let param = ["fcID": classId, "userId": "5"]
+    func addFitnessCenter(fcId: String, userId: String ) {
+        print(fcId)
+        print(userId)
+        
+        let param = ["fcID": "1", "userId": "1"]
+        
+        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
+            print(data)
+        }
+    }
     
-//        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (<#SuccessModel#>) in
-//            <#code#>
-//        }
-    //}
+    func removeFitnessCenter(fcId: String, userId: String) {
+        print(fcId)
+        print(userId)
+        
+        //let param = ["fcID": "1", "userId": "1"]
+        //        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (<#SuccessModel#>) in
+        //            <#code#>
+        //        }
+    }
 }
