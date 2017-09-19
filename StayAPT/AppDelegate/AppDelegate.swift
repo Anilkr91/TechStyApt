@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        checkLoginState()
+       // checkLoginState()
         setupKeyBoardManager()
         setupNavigationAppearance()
         setupSegmentedControlAppearance()
@@ -70,7 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if member != nil {
             setHomeMemberUserAsRVC()
-            
         } else if fc != nil {
             setHomeFitnessCenterUserAsRVC()
         } else {

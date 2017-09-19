@@ -27,6 +27,5 @@ class MediumLabel: UILabel {
         } else if type == .phone {
             self.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_mediumFont))
         }
-        
     }
 }
