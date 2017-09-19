@@ -53,7 +53,6 @@ extension MenuListingTableViewCell {
     }
     
     func animation(sender: UIButton) {
-        
         let heart = UIImage(named: "heart")
         let heartfilled = UIImage(named: "heart-Filled")
         
@@ -67,4 +66,12 @@ extension MenuListingTableViewCell {
            
         }
     }
+    
+//    func addFitnessCenter() {
+//        let param = ["fcID": classId, "userId": "5"]
+    
+//        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (<#SuccessModel#>) in
+//            <#code#>
+//        }
+    //}
 }
