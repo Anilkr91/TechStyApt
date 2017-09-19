@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManager
+import RevealingSplashView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-       // checkLoginState()
+        checkLoginState()
         setupKeyBoardManager()
         setupNavigationAppearance()
         setupSegmentedControlAppearance()
+//        setupGuestSplash()
         return true
     }
 
@@ -94,4 +96,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as? UINavigationController
         window?.rootViewController = vc
     }
+    
+    func setupGuestSplash() {
+        
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:0.11, green:0.56, blue:0.95, alpha:1.0))
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController?.view.addSubview(revealingSplashView)
+        //Starts animation
+        revealingSplashView.startAnimation(){
+            
+        }
+    }
+    
+//     func setupGuestSplash() {
+//
+//    }
+    
+    func setupFitnessSplas() {
+        
+   
+    }
+    
+    func setupHomeSplash() {
+        
+    }
+    
+    
+    
 }
