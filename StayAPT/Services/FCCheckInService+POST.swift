@@ -31,9 +31,10 @@ class FCCheckInServicePostService {
                         
                     } else {
                         Loader.sharedInstance.hideLoader()
-                        let error = ErrorModel.init(json: value as! JSON)
-                        Alert.showAlertWithMessage(title: "Error", message: error!.errorStayAptId!)
                         
+                        let error = ErrorModel.init(json: value as! JSON)
+                        let message = error?.errorStayAptId ?? error?.error
+                        Alert.showAlertWithMessage(title: "Error", message: message!)
                     }
                 }
                 
