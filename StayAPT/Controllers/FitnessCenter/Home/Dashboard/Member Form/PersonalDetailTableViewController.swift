@@ -20,7 +20,7 @@ class PersonalDetailTableViewController: BaseTableViewController {
     @IBOutlet weak var emailTextField: BaseTextField!
     @IBOutlet weak var uploadImageButton: UIButton!
     
-    
+    let imagePickerController = UIImagePickerController()
     lazy var dateOfBirthDatePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -28,45 +28,37 @@ class PersonalDetailTableViewController: BaseTableViewController {
         
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
-        // uploadImageButton.addTarget(self, action: #selector(AddDiaryTableViewController.uploadButtonTapped(_:)), forControlEvents: .TouchUpInside)
+        uploadImageButton.addTarget(self, action: #selector(PersonalDetailTableViewController.uploadButtonTapped(sender:)), for: .touchUpInside)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
     }
+    
+    func uploadButtonTapped(sender: AnyObject) {
+        handleImageTapGestureRecognizer()
+    }
 }
 
-extension PersonalDetailTableViewController: UIImagePickerControllerDelegate {
+extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func handleImageTapGestureRecognizer() {
         let imagePickerMenu = UIAlertController(title: "Choose image to upload", message: nil, preferredStyle: .actionSheet)
         
         let cameraAction = UIAlertAction(title: "Take photo", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            self.imagePickerController.sourceType = .Camera
-            self.imagePickerController.cameraDevice = .Front
+            
+            self.imagePickerController.sourceType = .camera
+            self.imagePickerController.cameraDevice = .front
             self.presentImagePickerController()
         })
         
         let galleryAction = UIAlertAction(title: "Choose from Library", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            self.imagePickerController.sourceType = .PhotoLibrary
+            self.imagePickerController.sourceType = .photoLibrary
             self.presentImagePickerController()
         })
-        
-        if let _ = displayImageView.image {
-            let removeAction = UIAlertAction(title: "Remove Photo", style: .default, handler: {
-                (alert: UIAlertAction!) -> Void in
-                self.uploadImageButton.hidden = false
-                self.optionalLabel.hidden = false
-                self.imageUrl = ""
-                self.displayImageView.image = nil
-                self.displayImageView.userInteractionEnabled = false
-            })
-            imagePickerMenu.addAction(removeAction)
-        }
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         imagePickerMenu.addAction(cameraAction)
@@ -77,15 +69,20 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate {
     }
     
     func presentImagePickerController() {
-        imagePickerController.delegate = self
-        presentViewController(imagePickerController, animated: true, completion: nil)
+        self.imagePickerController.delegate = self
+        self.present(imagePickerController, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.imagePickerController.dismiss(animated: true, completion: nil)
         
-        //        self.imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+        print(image)
+
+        
         //        ProgressBarView.showHUD()
         //        let data = self.getDataFromImage(image!)
         //        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -120,34 +117,35 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate {
         //        )
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        picker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
-    func getDataFromImage(image: UIImage) -> NSData {
-        if image.size.width < 500 || image.size.height < 500 {
-            return UIImageJPEGRepresentation(image, 1.0)!
-        } else {
-            var newWidth: CGFloat = 500
-            var newHeight: CGFloat = 500
-            if image.size.width > image.size.height {
-                let scale = newHeight / image.size.height
-                newHeight = image.size.height * scale
-                newWidth = image.size.width * scale
-            } else if image.size.width == image.size.height {
-                
-            } else {
-                let scale = newWidth / image.size.width
-                newHeight = image.size.height * scale
-                newWidth = image.size.width * scale
-            }
-            let size = CGSizeMake(newWidth, newHeight)
-            UIGraphicsBeginImageContextWithOptions(size, false, image.scale);
-            let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-            image.drawInRect(rect)
-            let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return UIImageJPEGRepresentation(normalizedImage, 1.0)!
-        }
-    }
+    
+    /*func getDataFromImage(image: UIImage) -> NSData {
+     if image.size.width < 500 || image.size.height < 500 {
+     return UIImageJPEGRepresentation(image, 1.0)!
+     } else {
+     var newWidth: CGFloat = 500
+     var newHeight: CGFloat = 500
+     if image.size.width > image.size.height {
+     let scale = newHeight / image.size.height
+     newHeight = image.size.height * scale
+     newWidth = image.size.width * scale
+     } else if image.size.width == image.size.height {
+     
+     } else {
+     let scale = newWidth / image.size.width
+     newHeight = image.size.height * scale
+     newWidth = image.size.width * scale
+     }
+     let size = CGSizeMake(newWidth, newHeight)
+     UIGraphicsBeginImageContextWithOptions(size, false, image.scale);
+     let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+     image.drawInRect(rect)
+     let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+     UIGraphicsEndImageContext()
+     return UIImageJPEGRepresentation(normalizedImage, 1.0)!
+     }
+     }*/
 }
