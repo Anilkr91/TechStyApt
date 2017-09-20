@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKeyBoardManager()
         setupNavigationAppearance()
         setupSegmentedControlAppearance()
-//        setupGuestSplash()
         return true
     }
 
@@ -75,20 +74,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if fc != nil {
             setHomeFitnessCenterUserAsRVC()
         } else {
-           setHomeGuestAsRVC()
+            
+            setupSplash()
+//           setHomeGuestAsRVC()
         }
     }
     
     func setHomeMemberUserAsRVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        window?.rootViewController = vc
+        //window?.rootViewController = vc
+        setupSplash(vc: vc)
     }
     
     func setHomeFitnessCenterUserAsRVC() {
         let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
-        window?.rootViewController = vc
+        //window?.rootViewController = vc
+        setupSplash(vc: vc)
     }
     
     func setHomeGuestAsRVC() {
@@ -97,9 +100,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
     }
     
-    func setupGuestSplash() {
+    func setupSplash(vc: UIViewController) {
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:62, alpha:1.0))
         
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:0.11, green:0.56, blue:0.95, alpha:1.0))
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController?.view.addSubview(revealingSplashView)
+        //Starts animation
+        revealingSplashView.startAnimation(){
+            
+        }
+    }
+    
+    func setupSplash() {
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:57, alpha:1.0))
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
@@ -111,20 +127,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     }
-    
-//     func setupGuestSplash() {
-//
-//    }
-    
-    func setupFitnessSplas() {
-        
-   
-    }
-    
-    func setupHomeSplash() {
-        
-    }
-    
-    
-    
 }

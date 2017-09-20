@@ -14,6 +14,7 @@ struct ErrorModel: Decodable {
     let error: String?
     let errorMessage: String?
     let errorStayAptId: String?
+    let errorFCId: String?
     
     init?(json: JSON) {
         
@@ -24,5 +25,6 @@ struct ErrorModel: Decodable {
         self.message = "error" <~~ json
         self.errorMessage = "message.email" <~~ json
         self.errorStayAptId = "message.stayAptID" <~~ json
+        self.errorFCId = "message.fcID" <~~ json
     }
 }

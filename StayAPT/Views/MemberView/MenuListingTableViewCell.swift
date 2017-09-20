@@ -63,33 +63,27 @@ extension MenuListingTableViewCell {
         
         if !isClicked {
             isClicked = true
-            saAddGymButton.setBackgroundImage(heartfilled, for: .normal)
-            addFitnessCenter(fcId: selectedCategory.id, userId: user.id)
+            addFitnessCenter(fcId: selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
             
         } else {
             isClicked = false
-            saAddGymButton.setBackgroundImage(heart, for: .normal)
-            removeFitnessCenter(fcId: selectedCategory.id, userId: user.id)
+            removeFitnessCenter(fcId: selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
         }
     }
     
-    func addFitnessCenter(fcId: String, userId: String ) {
-        print(fcId)
-        print(userId)
-        
-        let param = ["fcID": "1", "userId": "1"]
+    func addFitnessCenter(fcId: String, userId: String, heart: UIImage, heartfilled: UIImage ) {
+        let param = ["fcID": fcId, "userId": userId]
         AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
-            print(data)
+            self.saAddGymButton.setBackgroundImage(heartfilled, for: .normal)
+            Alert.showAlertWithMessage(title: "Success", message: data.response!)
         }
     }
     
-    func removeFitnessCenter(fcId: String, userId: String) {
-        print(fcId)
-        print(userId)
-        
-        //let param = ["fcID": "1", "userId": "1"]
-        //        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (<#SuccessModel#>) in
-        //            <#code#>
-        //        }
+    func removeFitnessCenter(fcId: String, userId: String, heart: UIImage, heartfilled: UIImage) {
+         let param = ["fcID": fcId, "userId": userId]
+        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
+            self.saAddGymButton.setBackgroundImage(heart, for: .normal)
+            Alert.showAlertWithMessage(title: "Success", message: data.response!)
+        }
     }
 }
