@@ -10,6 +10,17 @@ import UIKit
 
 class MembershipDetailsTableViewController: BaseTableViewController {
 
+    // properties
+    @IBOutlet weak var membershipPlanTextField: BaseTextField!
+    @IBOutlet weak var startDateTextField: BaseTextField!
+    @IBOutlet weak var endDateTextField: BaseTextField!
+    @IBOutlet weak var membershipFeeTextField: BaseTextField!
+    @IBOutlet weak var registrationFeeTextField: BaseTextField!
+    @IBOutlet weak var totalPaidTextField: BaseTextField!
+     @IBOutlet weak var paymentDueTextField: BaseTextField!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

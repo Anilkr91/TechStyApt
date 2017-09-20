@@ -10,6 +10,12 @@ import UIKit
 
 class StayAptTableViewController: BaseTableViewController {
 
+    // properties
+    @IBOutlet weak var sourceTextField: BaseTextField!
+    @IBOutlet weak var membershipNumberTextField: BaseTextField!
+    @IBOutlet weak var salesPersonTextField: BaseTextField!
+    @IBOutlet weak var generateStayAptCodeTextField: BaseTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

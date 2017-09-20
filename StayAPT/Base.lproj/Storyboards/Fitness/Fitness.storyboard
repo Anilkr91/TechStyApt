@@ -1570,7 +1570,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Personal Details" id="rAi-rn-U7e"/>
                     <connections>
+                        <outlet property="anniversaryTextField" destination="li4-P9-ccp" id="Sdf-du-O6m"/>
                         <outlet property="dateOfBirthTextField" destination="9i3-sK-rbn" id="Y6K-2d-z7g"/>
+                        <outlet property="emailTextField" destination="sWB-Fb-41d" id="mV0-QR-lJZ"/>
+                        <outlet property="emergencyNumberTextField" destination="wlK-by-61m" id="aIb-JA-daM"/>
+                        <outlet property="fullNameTextField" destination="8e9-Av-Cgq" id="7Gi-7y-jEx"/>
+                        <outlet property="genderSegmentationControl" destination="Pgf-VG-EXp" id="jJA-MR-t9r"/>
+                        <outlet property="mobileNumberTextField" destination="Rhp-VS-20f" id="kwW-VG-xUL"/>
+                        <outlet property="uploadImageButton" destination="PP6-DZ-woe" id="EaB-fV-pcV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuU-Df-4DE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1794,6 +1801,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MemberShip Details" id="dqP-Zd-jfR"/>
+                    <connections>
+                        <outlet property="endDateTextField" destination="yqH-dP-mUV" id="u5O-ET-AeT"/>
+                        <outlet property="membershipFeeTextField" destination="Kmt-iF-dEZ" id="sIi-C8-LRb"/>
+                        <outlet property="membershipPlanTextField" destination="kPH-t1-lan" id="iIb-Cq-Zhh"/>
+                        <outlet property="paymentDueTextField" destination="rJl-8I-gVu" id="O2O-3F-rSd"/>
+                        <outlet property="registrationFeeTextField" destination="so6-f0-g2j" id="We0-0r-20k"/>
+                        <outlet property="startDateTextField" destination="HBf-AE-rUq" id="6sm-fB-vel"/>
+                        <outlet property="totalPaidTextField" destination="uTZ-24-yMK" id="l4f-0q-QSa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkB-NV-A0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1922,6 +1938,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="StayApt Details" id="WoX-Ju-ZJE"/>
+                    <connections>
+                        <outlet property="generateStayAptCodeTextField" destination="HWz-cY-WdS" id="jMo-cW-evd"/>
+                        <outlet property="membershipNumberTextField" destination="d2i-TJ-hDO" id="Nrv-pd-Uu1"/>
+                        <outlet property="salesPersonTextField" destination="7kG-2C-Uc7" id="HSx-c3-FfV"/>
+                        <outlet property="sourceTextField" destination="Gj1-mR-Ov7" id="9kW-U6-lwg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfj-RF-0tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
