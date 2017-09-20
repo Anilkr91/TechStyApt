@@ -74,23 +74,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else if fc != nil {
             setHomeFitnessCenterUserAsRVC()
         } else {
-            
             setupSplash()
-//           setHomeGuestAsRVC()
         }
     }
     
     func setHomeMemberUserAsRVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        //window?.rootViewController = vc
         setupSplash(vc: vc)
     }
     
     func setHomeFitnessCenterUserAsRVC() {
         let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
-        //window?.rootViewController = vc
         setupSplash(vc: vc)
     }
     
@@ -103,21 +99,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupSplash(vc: UIViewController) {
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:62, alpha:1.0))
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
         revealingSplashView.startAnimation(){
-            
         }
     }
     
     func setupSplash() {
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:57, alpha:1.0))
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()

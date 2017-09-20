@@ -1148,7 +1148,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srx-VF-hc1" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1156,7 +1156,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="srx-VF-hc1" secondAttribute="trailing" constant="8" id="6Q9-fh-QY3"/>
+                                                <constraint firstItem="srx-VF-hc1" firstAttribute="top" secondItem="D7C-Ks-VdS" secondAttribute="top" id="Fyu-q6-TTY"/>
                                                 <constraint firstItem="srx-VF-hc1" firstAttribute="centerY" secondItem="D7C-Ks-VdS" secondAttribute="centerY" id="PS0-pR-jhE"/>
+                                                <constraint firstAttribute="bottom" secondItem="srx-VF-hc1" secondAttribute="bottom" id="Ta7-XQ-6t5"/>
                                                 <constraint firstItem="srx-VF-hc1" firstAttribute="leading" secondItem="D7C-Ks-VdS" secondAttribute="leading" constant="8" id="xOJ-5M-rr4"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1169,7 +1171,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etd-dF-yrv" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1177,8 +1179,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="etd-dF-yrv" firstAttribute="leading" secondItem="ej8-oT-vEq" secondAttribute="leading" constant="8" id="1EP-C3-SSU"/>
+                                                <constraint firstItem="etd-dF-yrv" firstAttribute="top" secondItem="ej8-oT-vEq" secondAttribute="top" id="Km3-ez-ov1"/>
                                                 <constraint firstAttribute="trailing" secondItem="etd-dF-yrv" secondAttribute="trailing" constant="8" id="ao2-nV-15C"/>
                                                 <constraint firstItem="etd-dF-yrv" firstAttribute="centerY" secondItem="ej8-oT-vEq" secondAttribute="centerY" id="dfy-5u-wWM"/>
+                                                <constraint firstAttribute="bottom" secondItem="etd-dF-yrv" secondAttribute="bottom" id="oTp-Vo-Pwc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1190,16 +1194,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-DG-cvl" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hn9-DG-cvl" secondAttribute="bottom" id="3C7-Qt-yM8"/>
                                                 <constraint firstItem="hn9-DG-cvl" firstAttribute="leading" secondItem="nBA-6j-ZUw" secondAttribute="leading" constant="8" id="KsP-8b-bef"/>
                                                 <constraint firstItem="hn9-DG-cvl" firstAttribute="centerY" secondItem="nBA-6j-ZUw" secondAttribute="centerY" id="N8c-8X-uqm"/>
                                                 <constraint firstAttribute="trailing" secondItem="hn9-DG-cvl" secondAttribute="trailing" constant="8" id="jAG-jr-VbP"/>
+                                                <constraint firstItem="hn9-DG-cvl" firstAttribute="top" secondItem="nBA-6j-ZUw" secondAttribute="top" id="nbk-NY-O9j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1211,16 +1217,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile No" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iD6-jx-vcb" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="iD6-jx-vcb" firstAttribute="top" secondItem="CpA-v8-jdV" secondAttribute="top" id="296-Me-Jp4"/>
                                                 <constraint firstItem="iD6-jx-vcb" firstAttribute="leading" secondItem="CpA-v8-jdV" secondAttribute="leading" constant="8" id="Dfy-Qy-nmU"/>
                                                 <constraint firstAttribute="trailing" secondItem="iD6-jx-vcb" secondAttribute="trailing" constant="8" id="VU1-4P-gYS"/>
                                                 <constraint firstItem="iD6-jx-vcb" firstAttribute="centerY" secondItem="CpA-v8-jdV" secondAttribute="centerY" id="f01-cT-gc7"/>
+                                                <constraint firstAttribute="bottom" secondItem="iD6-jx-vcb" secondAttribute="bottom" id="nW4-MF-YbF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1232,7 +1240,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-AY-jgZ" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1242,6 +1250,8 @@
                                                 <constraint firstAttribute="trailing" secondItem="H7M-AY-jgZ" secondAttribute="trailing" constant="8" id="3TY-5u-HJP"/>
                                                 <constraint firstItem="H7M-AY-jgZ" firstAttribute="leading" secondItem="A5f-td-deU" secondAttribute="leading" constant="8" id="4oZ-V2-uu6"/>
                                                 <constraint firstItem="H7M-AY-jgZ" firstAttribute="centerY" secondItem="A5f-td-deU" secondAttribute="centerY" id="BDt-Gs-APM"/>
+                                                <constraint firstItem="H7M-AY-jgZ" firstAttribute="top" secondItem="A5f-td-deU" secondAttribute="top" id="ODt-2q-kdU"/>
+                                                <constraint firstAttribute="bottom" secondItem="H7M-AY-jgZ" secondAttribute="bottom" id="Wfm-6Z-BM5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1253,7 +1263,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Remainder*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVQ-d1-iuz" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1262,7 +1272,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="aVQ-d1-iuz" secondAttribute="trailing" constant="8" id="DD6-1r-lWI"/>
                                                 <constraint firstItem="aVQ-d1-iuz" firstAttribute="leading" secondItem="N3F-pm-SLP" secondAttribute="leading" constant="8" id="WIM-is-uZs"/>
+                                                <constraint firstAttribute="bottom" secondItem="aVQ-d1-iuz" secondAttribute="bottom" id="aXU-os-l5f"/>
                                                 <constraint firstItem="aVQ-d1-iuz" firstAttribute="centerY" secondItem="N3F-pm-SLP" secondAttribute="centerY" id="fZf-AX-6f3"/>
+                                                <constraint firstItem="aVQ-d1-iuz" firstAttribute="top" secondItem="N3F-pm-SLP" secondAttribute="top" id="fiu-EO-gIh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1273,7 +1285,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cRS-I6-NID" customClass="IQTextView">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cRS-I6-NID">
                                                     <rect key="frame" x="8" y="0.0" width="1008" height="79.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1372,14 +1384,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-Av-Cgq" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8e9-Av-Cgq" secondAttribute="bottom" id="JWO-wp-czf"/>
                                                 <constraint firstItem="8e9-Av-Cgq" firstAttribute="leading" secondItem="Khn-8s-p8W" secondAttribute="leading" constant="8" id="OTB-gS-FzV"/>
+                                                <constraint firstItem="8e9-Av-Cgq" firstAttribute="top" secondItem="Khn-8s-p8W" secondAttribute="top" id="YLq-dT-Zcd"/>
                                                 <constraint firstItem="8e9-Av-Cgq" firstAttribute="centerY" secondItem="Khn-8s-p8W" secondAttribute="centerY" id="eER-Eg-NsR"/>
                                                 <constraint firstAttribute="trailing" secondItem="8e9-Av-Cgq" secondAttribute="trailing" constant="8" id="k34-QL-Fa0"/>
                                             </constraints>
@@ -1393,13 +1407,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9i3-sK-rbn" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="9i3-sK-rbn" firstAttribute="top" secondItem="BnE-Aq-x5K" secondAttribute="top" id="EEz-Qt-jV2"/>
+                                                <constraint firstAttribute="bottom" secondItem="9i3-sK-rbn" secondAttribute="bottom" id="HXl-o5-UP0"/>
                                                 <constraint firstAttribute="trailing" secondItem="9i3-sK-rbn" secondAttribute="trailing" constant="8" id="Mir-1o-TCK"/>
                                                 <constraint firstItem="9i3-sK-rbn" firstAttribute="leading" secondItem="BnE-Aq-x5K" secondAttribute="leading" constant="8" id="XW8-Mw-ZJf"/>
                                                 <constraint firstItem="9i3-sK-rbn" firstAttribute="centerY" secondItem="BnE-Aq-x5K" secondAttribute="centerY" id="nNX-rg-wNg"/>
@@ -1414,7 +1430,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Anniversary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="li4-P9-ccp" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1424,6 +1440,8 @@
                                                 <constraint firstAttribute="trailing" secondItem="li4-P9-ccp" secondAttribute="trailing" constant="8" id="N6L-oz-pkK"/>
                                                 <constraint firstItem="li4-P9-ccp" firstAttribute="leading" secondItem="P8Z-uH-UzG" secondAttribute="leading" constant="8" id="Q1h-v6-0mc"/>
                                                 <constraint firstItem="li4-P9-ccp" firstAttribute="centerY" secondItem="P8Z-uH-UzG" secondAttribute="centerY" id="Qsr-Zo-0W2"/>
+                                                <constraint firstItem="li4-P9-ccp" firstAttribute="top" secondItem="P8Z-uH-UzG" secondAttribute="top" id="Vlc-HC-Fmo"/>
+                                                <constraint firstAttribute="bottom" secondItem="li4-P9-ccp" secondAttribute="bottom" id="iWn-Ah-sXa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1458,7 +1476,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile No*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhp-VS-20f" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -1466,6 +1484,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Rhp-VS-20f" secondAttribute="trailing" constant="8" id="RJZ-aC-ZXz"/>
+                                                <constraint firstAttribute="bottom" secondItem="Rhp-VS-20f" secondAttribute="bottom" id="gHd-td-N4S"/>
+                                                <constraint firstItem="Rhp-VS-20f" firstAttribute="top" secondItem="JqH-9h-fVa" secondAttribute="top" id="j7o-VD-D13"/>
                                                 <constraint firstItem="Rhp-VS-20f" firstAttribute="leading" secondItem="JqH-9h-fVa" secondAttribute="leading" constant="8" id="oae-8Z-fxX"/>
                                                 <constraint firstItem="Rhp-VS-20f" firstAttribute="centerY" secondItem="JqH-9h-fVa" secondAttribute="centerY" id="uKH-4V-QvW"/>
                                             </constraints>
@@ -1479,7 +1499,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emergency Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-by-61m" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -1488,7 +1508,9 @@
                                             <constraints>
                                                 <constraint firstItem="wlK-by-61m" firstAttribute="leading" secondItem="GMs-jw-7Eh" secondAttribute="leading" constant="8" id="2dP-ee-v4W"/>
                                                 <constraint firstItem="wlK-by-61m" firstAttribute="centerY" secondItem="GMs-jw-7Eh" secondAttribute="centerY" id="3Uv-WH-j8w"/>
+                                                <constraint firstAttribute="bottom" secondItem="wlK-by-61m" secondAttribute="bottom" id="Zxq-hl-3EJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="wlK-by-61m" secondAttribute="trailing" constant="8" id="nyT-De-aAF"/>
+                                                <constraint firstItem="wlK-by-61m" firstAttribute="top" secondItem="GMs-jw-7Eh" secondAttribute="top" id="wHd-UF-zSH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1518,7 +1540,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ElW-Rj-iGc" customClass="IQTextView">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ElW-Rj-iGc">
                                                     <rect key="frame" x="8" y="0.0" width="1008" height="79.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1547,16 +1569,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Id*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWB-Fb-41d" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="sWB-Fb-41d" firstAttribute="top" secondItem="1TD-lc-OVh" secondAttribute="top" id="4Zv-W6-0bk"/>
                                                 <constraint firstItem="sWB-Fb-41d" firstAttribute="centerY" secondItem="1TD-lc-OVh" secondAttribute="centerY" id="Vqy-YG-dXs"/>
                                                 <constraint firstItem="sWB-Fb-41d" firstAttribute="leading" secondItem="1TD-lc-OVh" secondAttribute="leading" constant="8" id="d9H-ix-J6d"/>
                                                 <constraint firstAttribute="trailing" secondItem="sWB-Fb-41d" secondAttribute="trailing" constant="8" id="igf-yA-s0y"/>
+                                                <constraint firstAttribute="bottom" secondItem="sWB-Fb-41d" secondAttribute="bottom" id="wVB-TQ-2pv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1625,7 +1649,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Membership plan*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPH-t1-lan" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1634,6 +1658,8 @@
                                             <constraints>
                                                 <constraint firstItem="kPH-t1-lan" firstAttribute="leading" secondItem="Psu-lA-E4M" secondAttribute="leading" constant="8" id="L26-Ye-B9X"/>
                                                 <constraint firstAttribute="trailing" secondItem="kPH-t1-lan" secondAttribute="trailing" constant="8" id="Vvq-vQ-I71"/>
+                                                <constraint firstAttribute="bottom" secondItem="kPH-t1-lan" secondAttribute="bottom" id="Y0o-su-Wuz"/>
+                                                <constraint firstItem="kPH-t1-lan" firstAttribute="top" secondItem="Psu-lA-E4M" secondAttribute="top" id="Znr-X3-fsc"/>
                                                 <constraint firstItem="kPH-t1-lan" firstAttribute="centerY" secondItem="Psu-lA-E4M" secondAttribute="centerY" id="bLH-fJ-1z9"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1646,14 +1672,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Date*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBf-AE-rUq" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="HBf-AE-rUq" firstAttribute="top" secondItem="f9l-L2-YYj" secondAttribute="top" id="2TE-Bh-7gH"/>
                                                 <constraint firstAttribute="trailing" secondItem="HBf-AE-rUq" secondAttribute="trailing" constant="8" id="6sN-Xu-hQG"/>
+                                                <constraint firstAttribute="bottom" secondItem="HBf-AE-rUq" secondAttribute="bottom" id="JuG-Fc-weS"/>
                                                 <constraint firstItem="HBf-AE-rUq" firstAttribute="leading" secondItem="f9l-L2-YYj" secondAttribute="leading" constant="8" id="N1D-xz-r5R"/>
                                                 <constraint firstItem="HBf-AE-rUq" firstAttribute="centerY" secondItem="f9l-L2-YYj" secondAttribute="centerY" id="O6O-5G-1NI"/>
                                             </constraints>
@@ -1667,7 +1695,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqH-dP-mUV" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1675,7 +1703,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yqH-dP-mUV" firstAttribute="centerY" secondItem="lqp-Mt-l4O" secondAttribute="centerY" id="63T-tj-RR4"/>
+                                                <constraint firstItem="yqH-dP-mUV" firstAttribute="top" secondItem="lqp-Mt-l4O" secondAttribute="top" id="AjS-pz-HXI"/>
                                                 <constraint firstItem="yqH-dP-mUV" firstAttribute="leading" secondItem="lqp-Mt-l4O" secondAttribute="leading" constant="8" id="OAd-1O-YBW"/>
+                                                <constraint firstAttribute="bottom" secondItem="yqH-dP-mUV" secondAttribute="bottom" id="blH-lt-6rs"/>
                                                 <constraint firstAttribute="trailing" secondItem="yqH-dP-mUV" secondAttribute="trailing" constant="8" id="cti-MN-2sn"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1688,7 +1718,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Membershhip fee*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmt-iF-dEZ" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1696,7 +1726,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Kmt-iF-dEZ" firstAttribute="centerY" secondItem="Fsb-aE-OgB" secondAttribute="centerY" id="6PO-TR-aY1"/>
+                                                <constraint firstItem="Kmt-iF-dEZ" firstAttribute="top" secondItem="Fsb-aE-OgB" secondAttribute="top" id="8dB-xM-YQk"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kmt-iF-dEZ" secondAttribute="trailing" constant="8" id="RdP-Cr-w0d"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kmt-iF-dEZ" secondAttribute="bottom" id="Zl2-8I-HqE"/>
                                                 <constraint firstItem="Kmt-iF-dEZ" firstAttribute="leading" secondItem="Fsb-aE-OgB" secondAttribute="leading" constant="8" id="hO0-Z6-hG0"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1709,13 +1741,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registration Fee" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="so6-f0-g2j" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="so6-f0-g2j" firstAttribute="top" secondItem="Js5-6J-LFe" secondAttribute="top" id="AWb-a1-g2a"/>
+                                                <constraint firstAttribute="bottom" secondItem="so6-f0-g2j" secondAttribute="bottom" id="Lot-wA-Sew"/>
                                                 <constraint firstItem="so6-f0-g2j" firstAttribute="centerY" secondItem="Js5-6J-LFe" secondAttribute="centerY" id="QXe-x4-1Ry"/>
                                                 <constraint firstAttribute="trailing" secondItem="so6-f0-g2j" secondAttribute="trailing" constant="8" id="Zkl-Cm-LLE"/>
                                                 <constraint firstItem="so6-f0-g2j" firstAttribute="leading" secondItem="Js5-6J-LFe" secondAttribute="leading" constant="8" id="ejv-aU-AMm"/>
@@ -1730,13 +1764,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Paid*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTZ-24-yMK" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="uTZ-24-yMK" firstAttribute="top" secondItem="PAC-0B-GbC" secondAttribute="top" id="6LM-hU-DVL"/>
+                                                <constraint firstAttribute="bottom" secondItem="uTZ-24-yMK" secondAttribute="bottom" id="82Q-aT-tyE"/>
                                                 <constraint firstAttribute="trailing" secondItem="uTZ-24-yMK" secondAttribute="trailing" constant="8" id="9MK-0a-RUI"/>
                                                 <constraint firstItem="uTZ-24-yMK" firstAttribute="leading" secondItem="PAC-0B-GbC" secondAttribute="leading" constant="8" id="GJL-Wo-cWB"/>
                                                 <constraint firstItem="uTZ-24-yMK" firstAttribute="centerY" secondItem="PAC-0B-GbC" secondAttribute="centerY" id="mmx-PD-2QC"/>
@@ -1751,7 +1787,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Payment Due*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJl-8I-gVu" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="7" width="1008" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -1759,7 +1795,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rJl-8I-gVu" firstAttribute="leading" secondItem="bHx-UY-Q4F" secondAttribute="leading" constant="8" id="0Gq-EA-WiS"/>
+                                                <constraint firstAttribute="bottom" secondItem="rJl-8I-gVu" secondAttribute="bottom" id="E0m-WQ-v1r"/>
                                                 <constraint firstItem="rJl-8I-gVu" firstAttribute="centerY" secondItem="bHx-UY-Q4F" secondAttribute="centerY" id="Zdb-58-xsC"/>
+                                                <constraint firstItem="rJl-8I-gVu" firstAttribute="top" secondItem="bHx-UY-Q4F" secondAttribute="top" id="i3e-03-2kr"/>
                                                 <constraint firstAttribute="trailing" secondItem="rJl-8I-gVu" secondAttribute="trailing" constant="8" id="mh2-eL-G1J"/>
                                             </constraints>
                                         </tableViewCellContentView>
