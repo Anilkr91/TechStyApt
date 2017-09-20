@@ -19,10 +19,14 @@ class MembershipDetailsTableViewController: BaseTableViewController {
     @IBOutlet weak var totalPaidTextField: BaseTextField!
      @IBOutlet weak var paymentDueTextField: BaseTextField!
 
-    
+    lazy var dateOfBirthDatePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateOfBirthDatePicker.datePickerMode = .date
+        startDateTextField.inputView = dateOfBirthDatePicker
+        endDateTextField.inputView = dateOfBirthDatePicker
         
     }
     

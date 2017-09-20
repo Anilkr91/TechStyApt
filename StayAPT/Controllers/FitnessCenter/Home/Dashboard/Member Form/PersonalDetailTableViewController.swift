@@ -28,6 +28,7 @@ class PersonalDetailTableViewController: BaseTableViewController {
         
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
+        anniversaryTextField.inputView = dateOfBirthDatePicker
         uploadImageButton.addTarget(self, action: #selector(PersonalDetailTableViewController.uploadButtonTapped(sender:)), for: .touchUpInside)
     }
     
