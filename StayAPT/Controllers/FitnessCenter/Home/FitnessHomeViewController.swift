@@ -10,14 +10,12 @@ import UIKit
 
 class FitnessHomeViewController: BaseViewController {
     
-    
     let user = LoginUtils.getCurrentFitnessCenterUserLogin()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundImage()
         self.navigationItem.hidesBackButton = true
-        
     }
     
     func setupBackgroundImage() {
@@ -45,21 +43,17 @@ class FitnessHomeViewController: BaseViewController {
                         print("empty")
                         
                     } else {
-//                        let password = field.text!
-//                        
-//                        let params = LoginModel(email: self.user.fitness_email, password: password, userType: 2).toJSON()
-//                        
-//                        FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
-//                            print(data)
-//                            LoginUtils.setCurrentFitnessCenter(user: data)
-                            self.performSegue(withIdentifier: "showDashBoardSegue", sender: self)
-                        //})
+                        let password = field.text!
                         
+                        let params = LoginModel(email: self.user.fitness_email, password: password, userType: 2).toJSON()
+                        
+                        FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+                            LoginUtils.setCurrentFitnessCenter(user: data)
+                            self.performSegue(withIdentifier: "showDashBoardSegue", sender: self)
+                        })
                     }
-                    
                 }
             }
-            
             alertController.addAction(cancelAction)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
