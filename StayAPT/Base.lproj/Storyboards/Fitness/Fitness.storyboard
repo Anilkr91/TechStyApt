@@ -1127,6 +1127,9 @@
                                     <state key="normal" title="SUBMIT">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="SubmitButtonTapped:" destination="nFt-j4-qto" eventType="touchUpInside" id="jab-Sc-NfL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1338,6 +1341,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Visitor's Form" id="fMY-rk-BF7"/>
+                    <connections>
+                        <outlet property="dateOfBirthTextField" destination="etd-dF-yrv" id="yIh-O9-pEj"/>
+                        <outlet property="dateTextField" destination="hn9-DG-cvl" id="Sa3-v4-Tyx"/>
+                        <outlet property="emailTextField" destination="H7M-AY-jgZ" id="ZLC-JZ-2xq"/>
+                        <outlet property="fullNameTextField" destination="srx-VF-hc1" id="DaX-dP-36X"/>
+                        <outlet property="mobileNumberTextField" destination="iD6-jx-vcb" id="XUS-o1-ZUh"/>
+                        <outlet property="remainderTextField" destination="aVQ-d1-iuz" id="2Rf-ZS-YpO"/>
+                        <outlet property="visitorsTextView" destination="cRS-I6-NID" id="PX4-Br-54m"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZ0-zJ-KsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
