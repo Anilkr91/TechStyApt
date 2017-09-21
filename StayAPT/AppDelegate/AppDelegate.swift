@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:57, alpha:1.0))
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")as? UINavigationController
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)

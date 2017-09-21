@@ -8,51 +8,81 @@
 
 import UIKit
 
-class MembersListCollectionViewController: BaseCollectionViewController {
+class MembersListCollectionViewController: BaseCollectionViewController, UISearchResultsUpdating {
     
-    let memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-    SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
+    var memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
+                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
     ]
-
+    
+    var filteredArray = [SACheckedInMember]()
+    let searchController = UISearchController(searchResultsController: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        filteredArray = memberArray
+        setupSearchController()
+    }
+    
+    func setupSearchController() {
+        
+        self.searchController.searchResultsUpdater = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.dimsBackgroundDuringPresentation = true
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search for tools and resources"
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.becomeFirstResponder()
+        self.navigationItem.titleView = searchController.searchBar
+        
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        // If we haven't typed anything into the search bar then do not filter the results
+        if searchController.searchBar.text! == "" {
+            filteredArray = memberArray
+        } else {
+            // Filter the results
+            filteredArray = memberArray.filter { $0.name.lowercased().contains(searchController.searchBar.text!.lowercased()) }
+            print(filteredArray)
+        }
+        self.collectionView?.reloadData()
     }
     
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return  memberArray.count
-
+        
+        return filteredArray.count
+        
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MembersListCollectionViewCell
-        cell.member = memberArray[indexPath.row]
+        cell.member = filteredArray[indexPath.row]
         
         return cell
     }
