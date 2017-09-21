@@ -8,33 +8,48 @@
 
 import UIKit
 
-class FitnessBuddyTableViewController: BaseTableViewController {
+class FitnessBuddyTableViewController: BaseTableViewController, UISearchResultsUpdating {
     
     //var dataArray: [ClassModel] = []
    // weak var pvc: MenuViewController?
     
     let dataArray  = [SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
-                      SACheckedInMember(image: "GGym2", name: "Rajeev", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM")
+                      SACheckedInMember(image: "GGym2", name: "Lokesh", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Ankur", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Harsharan", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Sojo", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Anil", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Bhagat", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Nikhil", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym", name: "Ashwani", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM"),
+                      SACheckedInMember(image: "GGym2", name: "Dhruv", counter: "Anytime Fitness \n thu, 6 july 2017 6:11PM")
                 ]
+    
+     var filteredArray = [SACheckedInMember]()
+     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        filteredArray = dataArray
+        setupSearchController()
         //        populateTableView()
+    }
+    
+    func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.becomeFirstResponder()
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return dataArray.count
+        return filteredArray.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +59,7 @@ class FitnessBuddyTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FitnessBuddyTableViewCell
-        cell.info = dataArray[indexPath.section]
+        cell.info = filteredArray[indexPath.section]
         return cell
     }
     
@@ -75,4 +90,16 @@ class FitnessBuddyTableViewController: BaseTableViewController {
 //            self.tableView.reloadData()
 //        }
 //    }
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        // If we haven't typed anything into the search bar then do not filter the results
+        if searchController.searchBar.text! == "" {
+            filteredArray = dataArray
+        } else {
+            // Filter the results
+            filteredArray = dataArray.filter { $0.name.lowercased().contains(searchController.searchBar.text!.lowercased()) }
+        }
+        self.tableView.reloadData()
+    }
 }
