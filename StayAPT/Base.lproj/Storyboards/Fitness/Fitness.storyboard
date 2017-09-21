@@ -1361,6 +1361,7 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
+                                        <action selector="NextButtonTapped:" destination="67j-0h-K9N" eventType="touchUpInside" id="cow-34-azj"/>
                                         <segue destination="hmO-Vw-fy4" kind="show" id="CBc-h2-MHd"/>
                                     </connections>
                                 </button>
@@ -1626,6 +1627,7 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
+                                        <action selector="NextButtonTapped:" destination="hmO-Vw-fy4" eventType="touchUpInside" id="J5T-VQ-OrA"/>
                                         <segue destination="WeP-cQ-Nbm" kind="show" id="OEu-53-IIk"/>
                                     </connections>
                                 </button>
@@ -1870,6 +1872,9 @@
                                     <state key="normal" title="Submit">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="SubmitButtonTapped:" destination="WeP-cQ-Nbm" eventType="touchUpInside" id="b0U-B4-1ZU"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

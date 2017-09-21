@@ -38,13 +38,11 @@ extension StayAptTableViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return array.count;
     }
-    
-    
+     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1;
     }
-    
-    
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         return array[row]
@@ -53,5 +51,29 @@ extension StayAptTableViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         salesPersonTextField.text = array[row]
+    }
+    
+    @IBAction func SubmitButtonTapped(_ sender: UIButton) {
+        
+        let source = sourceTextField.text!
+        let membershipNumber = membershipNumberTextField.text!
+        let salesPerson = salesPersonTextField.text!
+        let generateStayAptCode = generateStayAptCodeTextField.text!
+        
+        if source.removeAllSpaces().isEmpty {
+            print("source all validation")
+            
+        } else if membershipNumber.removeAllSpaces().isEmpty {
+            print("membershipNumber all validation")
+            
+        } else if salesPerson.removeAllSpaces().isEmpty {
+            print("salesPerson all validation")
+        
+        } else if generateStayAptCode.removeAllSpaces().isEmpty {
+            print("generateStayAptCode all validation")
+            
+        }   else {
+            print("passed all validation")
+        }
     }
 }

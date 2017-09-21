@@ -34,4 +34,40 @@ class MembershipDetailsTableViewController: BaseTableViewController {
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
     }
+    
+    @IBAction func NextButtonTapped(_ sender: UIButton) {
+        
+        let membershipPlan = membershipPlanTextField.text!
+        let startDate = startDateTextField.text!
+        let endDate = endDateTextField.text!
+        let membershipFee = membershipFeeTextField.text!
+        let registrationFee = registrationFeeTextField.text!
+        let totalPaid = totalPaidTextField.text!
+        let paymentDue = paymentDueTextField.text!
+ 
+        
+        if membershipPlan.removeAllSpaces().isEmpty {
+            print("membershipPlan all validation")
+            
+        } else if startDate.removeAllSpaces().isEmpty {
+            print("startDate all validation")
+            
+        } else if endDate.removeAllSpaces().isEmpty {
+            print("endDate all validation")
+        } else if membershipFee.removeAllSpaces().isEmpty {
+            print("membershipFee all validation")
+            
+        } else if registrationFee.removeAllSpaces().isEmpty {
+            print("registrationFee all validation")
+            
+        } else if totalPaid.removeAllSpaces().isEmpty {
+            print("totalPaid all validation")
+            
+        } else if paymentDue.removeAllSpaces().isEmpty {
+            print("paymentDue all validation")
+            
+        } else {
+            print("passed all validation")
+        }
+    }
 }

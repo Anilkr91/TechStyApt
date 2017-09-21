@@ -82,7 +82,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         self.imagePickerController.dismiss(animated: true, completion: nil)
         
         print(image)
-
+        
         
         //        ProgressBarView.showHUD()
         //        let data = self.getDataFromImage(image!)
@@ -149,4 +149,35 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
      return UIImageJPEGRepresentation(normalizedImage, 1.0)!
      }
      }*/
+    
+    @IBAction func NextButtonTapped(_ sender: UIButton) {
+        
+        let fullName = fullNameTextField.text!
+        let dateOfBirth = dateOfBirthTextField.text!
+        let anniversary = anniversaryTextField.text!
+        let mobileNumber = mobileNumberTextField.text!
+        let emergencyNumber = emergencyNumberTextField.text!
+        let email = emailTextField.text!
+        
+        if fullName.removeAllSpaces().isEmpty {
+            print("fullName all validation")
+            
+        } else if dateOfBirth.removeAllSpaces().isEmpty {
+            print("dateOfBirth all validation")
+            
+        } else if anniversary.removeAllSpaces().isEmpty {
+            print("anniversary all validation")
+        } else if mobileNumber.removeAllSpaces().isEmpty {
+            print("mobileNumber all validation")
+            
+        } else if emergencyNumber.removeAllSpaces().isEmpty {
+            print("emergencyNumber all validation")
+            
+        } else if email.removeAllSpaces().isEmpty {
+            print("email all validation")
+            
+        }  else {
+            print("passed all validation")
+        }
+    }
 }
