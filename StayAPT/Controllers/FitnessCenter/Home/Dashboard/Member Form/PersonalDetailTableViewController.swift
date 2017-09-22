@@ -77,15 +77,33 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.imagePickerController.dismiss(animated: true, completion: nil)
         
-        print(image)
+        let size = calculateImageSize(image: image!)
+        print("size of image in MB: %f ", Double(size) / 1024.0 / 1024.0)
         
+        
+        
+        
+        if let data = image?.jpeg(.medium) {
+            
+            let compressedLength = calculateSizeFromData(data: data)
+             print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
+            //print(imageData.count)
+        }
         
         //        ProgressBarView.showHUD()
-        //        let data = self.getDataFromImage(image!)
+        let data = self.getDataFromImage(image: image!)
+        
+        
+        let imagewithimagedata = UIImage(data: data as Data)
+        print(imagewithimagedata?.size.width)
+        print(imagewithimagedata?.size.height)
+        
+        
+        let compressedLength = calculateSizeFromData(data: data as Data)
+        print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
         //        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         //        configuration.timeoutIntervalForRequest = 60 // seconds
         //        configuration.timeoutIntervalForResource = 60
@@ -123,32 +141,32 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     }
     
     
-    /*func getDataFromImage(image: UIImage) -> NSData {
-     if image.size.width < 500 || image.size.height < 500 {
-     return UIImageJPEGRepresentation(image, 1.0)!
-     } else {
-     var newWidth: CGFloat = 500
-     var newHeight: CGFloat = 500
-     if image.size.width > image.size.height {
-     let scale = newHeight / image.size.height
-     newHeight = image.size.height * scale
-     newWidth = image.size.width * scale
-     } else if image.size.width == image.size.height {
-     
-     } else {
-     let scale = newWidth / image.size.width
-     newHeight = image.size.height * scale
-     newWidth = image.size.width * scale
-     }
-     let size = CGSizeMake(newWidth, newHeight)
-     UIGraphicsBeginImageContextWithOptions(size, false, image.scale);
-     let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-     image.drawInRect(rect)
-     let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
-     UIGraphicsEndImageContext()
-     return UIImageJPEGRepresentation(normalizedImage, 1.0)!
-     }
-     }*/
+    func getDataFromImage(image: UIImage) -> NSData {
+        if image.size.width < 500 || image.size.height < 500 {
+            return UIImageJPEGRepresentation(image, 1.0)! as NSData
+        } else {
+            var newWidth: CGFloat = 500
+            var newHeight: CGFloat = 500
+            if image.size.width > image.size.height {
+                let scale = newHeight / image.size.height
+                newHeight = image.size.height * scale
+                newWidth = image.size.width * scale
+            } else if image.size.width == image.size.height {
+                
+            } else {
+                let scale = newWidth / image.size.width
+                newHeight = image.size.height * scale
+                newWidth = image.size.width * scale
+            }
+            let size = CGSize(width: newWidth, height: newHeight)
+            UIGraphicsBeginImageContextWithOptions(size, false, image.scale);
+            let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+            image.draw(in: rect)
+            let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return UIImageJPEGRepresentation(normalizedImage, 1.0)! as NSData
+        }
+    }
     
     @IBAction func NextButtonTapped(_ sender: UIButton) {
         
@@ -179,5 +197,27 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         }  else {
             print("passed all validation")
         }
+    }
+    
+    
+    
+    func calculateImageSize(image: UIImage) -> Int {
+        
+        print(image.size.width)
+        print(image.size.height)
+        
+        let imgData: NSData = NSData(data: UIImageJPEGRepresentation((image), 1)!)
+        let imageSize: Int = imgData.length
+        return imageSize
+    }
+    
+    func calculateSizeFromData(data: Data) -> Int {
+        
+        let imagewithimagedata = UIImage(data: data)
+        print(imagewithimagedata?.size.width)
+        print(imagewithimagedata?.size.height)
+
+        let imageSize: Int = data.count
+        return imageSize
     }
 }

@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSplash(vc: UIViewController) {
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:62, alpha:1.0))
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:1, green:0, blue:0, alpha:1.0))
         
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
@@ -108,7 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSplash() {
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:204, green:0, blue:57, alpha:1.0))
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:1, green:0, blue:0
+            , alpha:1.0))
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")as? UINavigationController

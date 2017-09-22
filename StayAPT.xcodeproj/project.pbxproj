@@ -73,6 +73,7 @@
 		84409B541F5EC836005BAC61 /* Javacom.otf in Resources */ = {isa = PBXBuildFile; fileRef = 84409B511F5EC836005BAC61 /* Javacom.otf */; };
 		84409B561F5FD605005BAC61 /* ManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B551F5FD605005BAC61 /* ManagerService.swift */; };
 		846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */; };
+		84824A551F74EA21006F8C8C /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */; };
 		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */; };
 		84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */; };
@@ -188,6 +189,7 @@
 		84409B511F5EC836005BAC61 /* Javacom.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Javacom.otf; sourceTree = "<group>"; };
 		84409B551F5FD605005BAC61 /* ManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerService.swift; sourceTree = "<group>"; };
 		846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
 		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddFitnessCenterService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBoldLabel.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				841CA8271F68130E004C95CF /* StayAptConstants.swift */,
 				841CA8CF1F6D38B5004C95CF /* LoginUtils.swift */,
 				841CA8D11F6D42DA004C95CF /* DefaultKeys.swift */,
+				84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -928,6 +931,7 @@
 				841CA2191F612F80004C95CF /* FitnessCenterLoginTableViewController.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */,
 				84C4CF511F57FF35001DA94A /* DietPlanTableViewCell.swift in Sources */,
+				84824A551F74EA21006F8C8C /* UIImageView+Helper.swift in Sources */,
 				84409B301F5D6D20005BAC61 /* MenuViewController.swift in Sources */,
 				84C4CF4F1F57FBCF001DA94A /* DietPlanModel.swift in Sources */,
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
