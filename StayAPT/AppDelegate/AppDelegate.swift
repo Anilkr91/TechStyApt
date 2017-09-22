@@ -70,26 +70,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fc = LoginUtils.getCurrentFitnessCenterUserLogin()
         
         if member != nil {
-            setHomeMemberUserAsRVC()
+            setHomeMemberAsRVC()
         } else if fc != nil {
-            setHomeFitnessCenterUserAsRVC()
+            setHomeFitnessCenterAsRVC()
         } else {
             setupSplash()
         }
     }
     
+    func setHomeMemberAsRVC() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        setupSplash(vc: vc)
+    }
+    
+    func setHomeFitnessCenterAsRVC() {
+    
+        let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
+        setupSplash(vc: vc)
+    }
+
+    
     func setHomeMemberUserAsRVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") 
         window?.rootViewController = vc
-        //setupSplash(vc: vc)
     }
     
     func setHomeFitnessCenterUserAsRVC() {
         let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
         window?.rootViewController = vc
-        //setupSplash(vc: vc)
     }
     
     func setHomeGuestAsRVC() {
