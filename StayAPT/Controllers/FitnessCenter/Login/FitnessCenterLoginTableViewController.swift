@@ -84,7 +84,11 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
             FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
                 print(data)
                 LoginUtils.setCurrentFitnessCenter(user: data)
-                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
+                
+                let application = UIApplication.shared.delegate as! AppDelegate
+                application.setHomeFitnessCenterUserAsRVC()
+                
+//                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
             })
             
         }

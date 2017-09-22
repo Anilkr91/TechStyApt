@@ -88,7 +88,9 @@ class LoginTableViewController: BaseTableViewController {
             let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
             UserLoginPostService.executeRequest(params: params! as [String : AnyObject]) { (data) in
                 LoginUtils.setCurrentMemberUser(user: data)
-                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
+                let application = UIApplication.shared.delegate as! AppDelegate
+                application.setHomeMemberUserAsRVC()
+//                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
             }
             print("validation passed hit login api")
         }

@@ -80,14 +80,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setHomeMemberUserAsRVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        setupSplash(vc: vc)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") 
+        window?.rootViewController = vc
+        //setupSplash(vc: vc)
     }
     
     func setHomeFitnessCenterUserAsRVC() {
         let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
-        setupSplash(vc: vc)
+        window?.rootViewController = vc
+        //setupSplash(vc: vc)
     }
     
     func setHomeGuestAsRVC() {
