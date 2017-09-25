@@ -92,7 +92,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupSplash(vc)
     }
 
-    
     func setHomeMemberUserAsRVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") 

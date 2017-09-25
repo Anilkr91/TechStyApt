@@ -400,53 +400,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUh-lj-5Bh">
-                                <rect key="frame" x="26" y="114" width="323" height="30"/>
+                                <rect key="frame" x="227" y="114" width="122" height="30"/>
                                 <state key="normal" title="Bell"/>
                                 <connections>
                                     <segue destination="env-p5-QVW" kind="show" id="cdm-C5-O71"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-Hs-VIF">
-                                <rect key="frame" x="26" y="201" width="323" height="30"/>
+                                <rect key="frame" x="227" y="201" width="122" height="30"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="iAB-v9-hd6" kind="show" id="7pk-SN-MSc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coA-p6-SsM">
-                                <rect key="frame" x="26" y="163" width="323" height="30"/>
+                                <rect key="frame" x="227" y="163" width="122" height="30"/>
                                 <state key="normal" title="Notification"/>
                                 <connections>
                                     <segue destination="Ab4-Zd-XBc" kind="show" id="k3K-vo-v4f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fku-s6-mUH">
-                                <rect key="frame" x="26" y="74" width="323" height="30"/>
+                                <rect key="frame" x="227" y="74" width="122" height="30"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
                                     <segue destination="iey-bh-Nib" kind="show" id="Mtq-bw-uVk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcz-ht-dkw">
-                                <rect key="frame" x="26" y="241" width="323" height="30"/>
+                                <rect key="frame" x="227" y="241" width="122" height="30"/>
                                 <state key="normal" title="Cup"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b17-La-8DM">
-                                <rect key="frame" x="26" y="279" width="323" height="30"/>
+                                <rect key="frame" x="227" y="279" width="122" height="30"/>
                                 <state key="normal" title="My Fitness Buddy"/>
                                 <connections>
                                     <segue destination="GJx-DK-54h" kind="show" id="Flm-Dn-Jzm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7K-oa-QSG">
-                                <rect key="frame" x="139" y="317" width="97" height="30"/>
+                                <rect key="frame" x="239.66666666666669" y="317" width="97.000000000000057" height="30"/>
                                 <state key="normal" title="Goal of Month"/>
                                 <connections>
                                     <segue destination="JXN-S3-te8" kind="show" id="3dN-Gf-nP8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-uS-m5q">
-                                <rect key="frame" x="127" y="355" width="121" height="30"/>
+                                <rect key="frame" x="227.66666666666669" y="355" width="121.00000000000006" height="30"/>
                                 <state key="normal" title="Daily Weight Goal"/>
                                 <connections>
                                     <segue destination="6sz-aC-9ua" kind="show" id="8Bv-Bn-eKc"/>
@@ -476,7 +476,6 @@
                             <constraint firstItem="YUh-lj-5Bh" firstAttribute="trailing" secondItem="fku-s6-mUH" secondAttribute="trailing" id="nC2-dF-1GF"/>
                             <constraint firstItem="b17-La-8DM" firstAttribute="leading" secondItem="Bcz-ht-dkw" secondAttribute="leading" id="nE4-3j-fff"/>
                             <constraint firstItem="Bcz-ht-dkw" firstAttribute="trailing" secondItem="Fg6-Hs-VIF" secondAttribute="trailing" id="pC0-vk-WRg"/>
-                            <constraint firstItem="fku-s6-mUH" firstAttribute="leading" secondItem="ev4-8D-44W" secondAttribute="leadingMargin" constant="10" id="plO-s4-MbW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="wGP-v6-NdW"/>
@@ -1141,7 +1140,7 @@
             <objects>
                 <navigationController storyboardIdentifier="InitialViewController" automaticallyAdjustsScrollViewInsets="NO" id="bQZ-Yj-Pin" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="igJ-0T-g9M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igJ-0T-g9M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1236,7 +1235,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3211,7 +3210,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sJm-dS-Vju" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BTc-rS-5GI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BTc-rS-5GI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3226,7 +3225,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="bu5-BS-3tc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Is9-N9-ZKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Is9-N9-ZKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
