@@ -29,14 +29,14 @@ class BlogsTableViewCell: UITableViewCell {
     var info: BlogModel? {
         didSet {
             if let info = info {
-                didSetCategory(info: info)
+                didSetCategory(info)
             }
         }
     }
 }
 
 extension BlogsTableViewCell {
-    func didSetCategory(info: BlogModel) {
+    func didSetCategory(_ info: BlogModel) {
         
         let url = URL(string: info.img)!
         let image = UIImage(named: "gym")

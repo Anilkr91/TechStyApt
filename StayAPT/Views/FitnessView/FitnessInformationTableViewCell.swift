@@ -27,14 +27,14 @@ class FitnessInformationTableViewCell: UITableViewCell {
     var member: NotificationModel? {
         didSet {
             if let member = member {
-                didSetCategory(member: member)
+                didSetCategory(member)
             }
         }
     }
 }
 
 extension FitnessInformationTableViewCell {
-    func didSetCategory(member: NotificationModel) {
+    func didSetCategory(_ member: NotificationModel) {
         notificationImageView.image = UIImage(imageLiteralResourceName: member.image)
         notificationLabel.text = member.title
         notificationNameLabel.text = member.name

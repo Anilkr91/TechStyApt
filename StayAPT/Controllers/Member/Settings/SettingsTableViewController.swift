@@ -34,7 +34,7 @@ class SettingsTableViewController: BaseTableViewController {
         
         if indexPath.section == 4 {
           
-            LoginUtils.setCurrentMemberUserLogin(login: nil)
+            LoginUtils.setCurrentMemberUserLogin(nil)
             let application = UIApplication.shared.delegate as! AppDelegate
             application.setHomeGuestAsRVC()
             

@@ -39,7 +39,7 @@ class MenuViewController: BaseViewController {
         setupSegmentControl()
     }
     
-    func segmentIndex(sender: UISegmentedControl?) {
+    func segmentIndex(_ sender: UISegmentedControl?) {
         self.currentViewController!.view.removeFromSuperview()
         self.currentViewController!.removeFromParentViewController()
         displayCurrentTab(sender!.selectedSegmentIndex)
@@ -75,6 +75,6 @@ class MenuViewController: BaseViewController {
     func setupSegmentControl() {
         menuSegmentedControl.selectedSegmentIndex = TabIndex.firstChildTab.rawValue
         displayCurrentTab(TabIndex.firstChildTab.rawValue)
-        menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
+        menuSegmentedControl.addTarget(self, action: #selector(segmentIndex), for: .valueChanged)
     }
 }

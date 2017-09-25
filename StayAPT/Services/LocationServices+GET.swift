@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class LocationGetService {
-    static func executeRequest (completionHandler: @escaping ([LocationModel]) -> Void) {
+    static func executeRequest (_ completionHandler: @escaping ([LocationModel]) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
@@ -29,12 +29,12 @@ class LocationGetService {
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage(title: "Error", message: error!.message!)
+                    Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):
                 Loader.sharedInstance.hideLoader()
-                Alert.showAlertWithMessage(title: "Error", message: error.localizedDescription)
+                Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }
         debugPrint(request)

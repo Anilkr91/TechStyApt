@@ -63,7 +63,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
-        showSegue(index: indexPath.section)
+        showSegue(indexPath.section)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -82,7 +82,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func showSegue(index: Int) {
+    func showSegue(_ index: Int) {
         
         switch index {
         case 0:
@@ -110,7 +110,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showNotificationSegue", sender: self)
             
         case 8:
-            LoginUtils.setCurrentFitnessCenterUserLogin(login: nil)
+            LoginUtils.setCurrentFitnessCenterUserLogin(nil)
             let application = UIApplication.shared.delegate as! AppDelegate
             application.setHomeGuestAsRVC()
             

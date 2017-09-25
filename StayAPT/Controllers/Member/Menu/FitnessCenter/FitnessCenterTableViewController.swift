@@ -19,7 +19,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if let pvc = pvc {
-             populateTableView(classId: pvc.classId!)
+             populateTableView(pvc.classId!)
         }
     }
     
@@ -65,10 +65,10 @@ class FitnessCenterTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func populateTableView(classId: String) {
+    func populateTableView(_ classId: String) {
         // Todo: change location id to dynamic
         let param = ["class_id": classId, "loc_id": "5"]
-        FitnessCenterGetService.executeRequest(params: param as [String : AnyObject]) { (data) in
+        FitnessCenterGetService.executeRequest(param as [String : AnyObject]) { (data) in
             self.fitnessCenterArray = data
             self.tableView.reloadData()
         }

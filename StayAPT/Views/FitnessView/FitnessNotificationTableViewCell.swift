@@ -30,29 +30,29 @@ class FitnessNotificationTableViewCell: UITableViewCell {
     var member: NotificationModel? {
         didSet {
             if let member = member {
-                didSetCategory(member: member)
+                didSetCategory(member)
             }
         }
     }
 }
 
 extension FitnessNotificationTableViewCell {
-    func didSetCategory(member: NotificationModel) {
+    func didSetCategory(_ member: NotificationModel) {
         notificationImageView.image = UIImage(imageLiteralResourceName: member.image)
         notificationLabel.text = member.title
         notificationNameLabel.text = member.name
         
         if member.type == Notification.Request.rawValue {
-            notificationAcceptButton.addTarget(self, action: #selector(Acceptrequest(sender:)), for: .touchUpInside)
-             notificationRejectButton.addTarget(self, action: #selector(Rejectrequest(sender:)), for: .touchUpInside)
+            notificationAcceptButton.addTarget(self, action: #selector(Acceptrequest), for: .touchUpInside)
+             notificationRejectButton.addTarget(self, action: #selector(Rejectrequest), for: .touchUpInside)
         }
     }
     
-    func Acceptrequest(sender: UIButton) {
+    func Acceptrequest(_ sender: UIButton) {
         print(sender.tag)
     }
     
-    func Rejectrequest(sender: UIButton) {
+    func Rejectrequest(_ sender: UIButton) {
         print(sender.tag)
     }
 }

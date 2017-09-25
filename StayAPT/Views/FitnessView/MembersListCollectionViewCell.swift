@@ -17,7 +17,7 @@ class MembersListCollectionViewCell: UICollectionViewCell {
     var member: SACheckedInMember? {
         didSet {
             if let member = member {
-                didSetCategory(member: member)
+                didSetCategory(member)
             }
         }
     }
@@ -38,7 +38,7 @@ class MembersListCollectionViewCell: UICollectionViewCell {
         backgroundColor = UIColor.lightGray
     }
     
-    func didSetCategory(member: SACheckedInMember) {
+    func didSetCategory(_ member: SACheckedInMember) {
         imageView.image = UIImage(imageLiteralResourceName: member.image)
         saNameLabel.text = member.name
     }

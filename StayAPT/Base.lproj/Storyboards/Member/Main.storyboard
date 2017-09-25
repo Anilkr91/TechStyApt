@@ -1097,7 +1097,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FnL-GM-OlR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="I9i-ig-ZQZ"/>
                                 </constraints>
@@ -1109,7 +1109,7 @@
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-IL-5b5">
-                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
                                 <connections>
                                     <segue destination="4F3-2x-OQW" kind="embed" id="Agb-pI-QJN"/>
                                 </connections>
@@ -2182,14 +2182,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhE-ZK-wPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6193.4782608695659" y="-421.05978260869568"/>
+            <point key="canvasLocation" x="6240" y="-394"/>
         </scene>
         <!--Diet Plan Table View Controller-->
         <scene sceneID="4xi-z1-sVR">
             <objects>
                 <tableViewController id="KTi-Pd-vlC" customClass="DietPlanTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="5qg-zR-NAo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="654"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2881,7 +2881,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-vK-rIv">
-                                <rect key="frame" x="8" y="8" width="398" height="29"/>
+                                <rect key="frame" x="8" y="46" width="398" height="29"/>
                                 <segments>
                                     <segment title="Beginner"/>
                                     <segment title="Intermediate"/>
@@ -2889,28 +2889,59 @@
                                 </segments>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-Ks-Eg2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="654"/>
                                 <connections>
                                     <segue destination="KTi-Pd-vlC" kind="embed" id="TYT-kF-6BC"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW7-FB-ghy">
+                                <rect key="frame" x="362" y="8" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Qoe-QU-6Jx"/>
+                                    <constraint firstAttribute="height" constant="30" id="nSc-a8-NxR"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6f-1r-Yu3">
+                                <rect key="frame" x="8" y="8" width="44" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ue9-Xj-F2A"/>
+                                    <constraint firstAttribute="width" constant="44" id="hID-9D-y1k"/>
+                                </constraints>
+                                <state key="normal" title="Prev"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle Gain For Women" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phj-bn-Ats" customClass="MediumBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="60" y="8" width="294" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6dN-vK-rIv" firstAttribute="top" secondItem="phj-bn-Ats" secondAttribute="bottom" constant="8" id="5Ll-Zu-lhV"/>
                             <constraint firstAttribute="trailing" secondItem="6dN-vK-rIv" secondAttribute="trailing" constant="8" id="5Y1-Ar-cF3"/>
-                            <constraint firstItem="8yX-Ks-Eg2" firstAttribute="top" secondItem="6dN-vK-rIv" secondAttribute="bottom" constant="8" id="H07-GX-pn0"/>
-                            <constraint firstItem="6dN-vK-rIv" firstAttribute="top" secondItem="DGA-ql-PxZ" secondAttribute="bottom" constant="8" id="Jk4-ru-RvZ"/>
+                            <constraint firstItem="phj-bn-Ats" firstAttribute="top" secondItem="DGA-ql-PxZ" secondAttribute="bottom" constant="8" id="9Oo-wZ-XcX"/>
+                            <constraint firstItem="H6f-1r-Yu3" firstAttribute="top" secondItem="DGA-ql-PxZ" secondAttribute="bottom" constant="8" id="Gm7-7o-m73"/>
+                            <constraint firstItem="8yX-Ks-Eg2" firstAttribute="top" secondItem="6dN-vK-rIv" secondAttribute="bottom" constant="8" id="SNK-Mm-Z3z"/>
+                            <constraint firstItem="H6f-1r-Yu3" firstAttribute="leading" secondItem="fV2-ZU-Wjg" secondAttribute="leading" constant="8" id="T2c-T2-bgu"/>
                             <constraint firstItem="8yX-Ks-Eg2" firstAttribute="leading" secondItem="fV2-ZU-Wjg" secondAttribute="leading" id="Vfr-TZ-87t"/>
                             <constraint firstItem="6dN-vK-rIv" firstAttribute="leading" secondItem="fV2-ZU-Wjg" secondAttribute="leading" constant="8" id="ZTS-Xa-3Pn"/>
+                            <constraint firstItem="6dN-vK-rIv" firstAttribute="top" secondItem="H6f-1r-Yu3" secondAttribute="bottom" constant="8" id="aul-em-Zke"/>
+                            <constraint firstAttribute="trailing" secondItem="cW7-FB-ghy" secondAttribute="trailing" constant="8" id="hSX-yK-zp5"/>
                             <constraint firstAttribute="trailing" secondItem="8yX-Ks-Eg2" secondAttribute="trailing" id="j4s-Ts-AKH"/>
                             <constraint firstItem="H4z-nd-Wbh" firstAttribute="top" secondItem="8yX-Ks-Eg2" secondAttribute="bottom" id="j5i-7c-gFx"/>
+                            <constraint firstItem="phj-bn-Ats" firstAttribute="leading" secondItem="H6f-1r-Yu3" secondAttribute="trailing" constant="8" id="jjj-CX-lJY"/>
+                            <constraint firstItem="cW7-FB-ghy" firstAttribute="leading" secondItem="phj-bn-Ats" secondAttribute="trailing" constant="8" id="kOE-Qf-Ay8"/>
+                            <constraint firstItem="6dN-vK-rIv" firstAttribute="top" secondItem="cW7-FB-ghy" secondAttribute="bottom" constant="8" id="le0-yg-AxF"/>
+                            <constraint firstItem="cW7-FB-ghy" firstAttribute="top" secondItem="DGA-ql-PxZ" secondAttribute="bottom" constant="8" id="wIf-gL-65F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Diet Plans" id="mYa-iv-dby"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VXa-uL-QX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6818" y="1307"/>
+            <point key="canvasLocation" x="6817.3913043478269" y="1306.7934782608697"/>
         </scene>
         <!--Sample-->
         <scene sceneID="jzK-Of-1ZC">
@@ -3019,7 +3050,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitness-bg" translatesAutoresizingMaskIntoConstraints="NO" id="23T-Sx-Izm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwD-eZ-cod">
                                 <rect key="frame" x="8" y="588" width="359" height="71"/>
@@ -3195,7 +3226,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="bu5-BS-3tc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Is9-N9-ZKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Is9-N9-ZKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -82,14 +82,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-        setupSplash(vc: vc)
+        setupSplash(vc)
     }
     
     func setHomeFitnessCenterAsRVC() {
     
         let storyboard = UIStoryboard(name: "Fitness", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FitnessHomeViewController")
-        setupSplash(vc: vc)
+        setupSplash(vc)
     }
 
     
@@ -111,13 +111,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
     }
     
-    func setupSplash(vc: UIViewController) {
+    func setupSplash(_ vc: UIViewController) {
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:1, green:0, blue:0, alpha:1.0))
         
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
+        revealingSplashView.animationType = .swingAndZoomOut
         revealingSplashView.startAnimation(){
         }
     }
@@ -132,6 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
+        revealingSplashView.animationType = .heartBeat
         revealingSplashView.startAnimation(){
             
         }

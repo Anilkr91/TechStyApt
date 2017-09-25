@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class FCCheckInServicePostService {
-    static func executeRequest (params:[String: AnyObject], completionHandler: @escaping (SuccessModel) -> Void) {
+    static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (SuccessModel) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
@@ -34,13 +34,13 @@ class FCCheckInServicePostService {
                         
                         let error = ErrorModel.init(json: value as! JSON)
                         let message = error?.errorStayAptId ?? error?.error
-                        Alert.showAlertWithMessage(title: "Error", message: message!)
+                        Alert.showAlertWithMessage("Error", message: message!)
                     }
                 }
                 
             case .failure(let error):
                 Loader.sharedInstance.hideLoader()
-                Alert.showAlertWithMessage(title: "Error", message: error.localizedDescription)
+                Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }
         debugPrint(request)

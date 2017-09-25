@@ -47,8 +47,8 @@ class FitnessHomeViewController: BaseViewController {
                         
                         let params = LoginModel(email: self.user.fitness_email, password: password, userType: 2).toJSON()
                         
-                        FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
-                            LoginUtils.setCurrentFitnessCenter(user: data)
+                        FCLoginPostService.executeRequest(params! as [String : AnyObject] , completionHandler: { (data) in
+                            LoginUtils.setCurrentFitnessCenter(data)
                             self.performSegue(withIdentifier: "showDashBoardSegue", sender: self)
                         })
                     }

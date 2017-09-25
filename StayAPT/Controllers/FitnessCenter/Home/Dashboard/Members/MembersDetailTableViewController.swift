@@ -13,7 +13,7 @@ class MembersDetailTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rightBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MembersDetailTableViewController.self.editDetails(sender:)))
+        let rightBarButton = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MembersDetailTableViewController.self.editDetails))
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
     
@@ -33,7 +33,7 @@ class MembersDetailTableViewController: BaseTableViewController {
         return UITableViewAutomaticDimension
     }
     
-    func editDetails(sender: Any) {
+    func editDetails() {
         performSegue(withIdentifier: "showMemberFormSegue", sender: self)
     }
     

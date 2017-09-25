@@ -28,14 +28,14 @@ class FitnessBuddyTableViewCell: UITableViewCell {
     var info: SACheckedInMember? {
         didSet {
             if let member = info {
-                didSetCategory(info: member)
+                didSetCategory(member)
             }
         }
     }
 }
 
 extension FitnessBuddyTableViewCell {
-    func didSetCategory(info: SACheckedInMember) {
+    func didSetCategory(_ info: SACheckedInMember) {
         // let url = URL(string: info.image)!
         // let image = UIImage(named: "gym")
         //saImageView.kf.setImage(with: url, placeholder: image)

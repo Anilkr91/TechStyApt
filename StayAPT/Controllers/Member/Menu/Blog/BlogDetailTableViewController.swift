@@ -26,7 +26,7 @@ class BlogDetailTableViewController: BaseTableViewController {
     @IBAction func BlogShare(_ sender: Any) {
         
         let textToShare = "Checkout this cool blog"
-        if let appLink = NSURL(string: "http://www.healthline.com/health/fitness-exercise/best-blogs-of-the-year")
+        if let appLink = URL(string: "http://www.healthline.com/health/fitness-exercise/best-blogs-of-the-year")
         {
             let objectsToShare = [textToShare, appLink] as [Any]
             let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)

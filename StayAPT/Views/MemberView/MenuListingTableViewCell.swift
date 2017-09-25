@@ -33,14 +33,14 @@ class MenuListingTableViewCell: UITableViewCell {
     var info: FitnessCenterModel? {
         didSet {
             if let member = info {
-                didSetCategory(info: member)
+                didSetCategory(member)
             }
         }
     }
 }
 
 extension MenuListingTableViewCell {
-    func didSetCategory(info: FitnessCenterModel) {
+    func didSetCategory(_ info: FitnessCenterModel) {
         let url = URL(string: info.img)!
         let image = UIImage(named: "gym")
         let heart = UIImage(named: "heart")
@@ -63,27 +63,27 @@ extension MenuListingTableViewCell {
         
         if !isClicked {
             isClicked = true
-            addFitnessCenter(fcId: selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
+            addFitnessCenter(selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
             
         } else {
             isClicked = false
-            removeFitnessCenter(fcId: selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
+            removeFitnessCenter(selectedCategory.id, userId: user.id, heart: heart!, heartfilled: heartfilled!)
         }
     }
     
-    func addFitnessCenter(fcId: String, userId: String, heart: UIImage, heartfilled: UIImage ) {
+    func addFitnessCenter(_ fcId: String, userId: String, heart: UIImage, heartfilled: UIImage ) {
         let param = ["fcID": fcId, "userId": userId]
-        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
+        AddFitnessCenterPostService.executeRequest(param as [String : AnyObject]) { (data) in
             self.saAddGymButton.setBackgroundImage(heartfilled, for: .normal)
-            Alert.showAlertWithMessage(title: "Success", message: data.response!)
+            Alert.showAlertWithMessage("Success", message: data.response!)
         }
     }
     
-    func removeFitnessCenter(fcId: String, userId: String, heart: UIImage, heartfilled: UIImage) {
+    func removeFitnessCenter(_ fcId: String, userId: String, heart: UIImage, heartfilled: UIImage) {
          let param = ["fcID": fcId, "userId": userId]
-        AddFitnessCenterPostService.executeRequest(params: param as [String : AnyObject]) { (data) in
+        AddFitnessCenterPostService.executeRequest(param as [String : AnyObject]) { (data) in
             self.saAddGymButton.setBackgroundImage(heart, for: .normal)
-            Alert.showAlertWithMessage(title: "Success", message: data.response!)
+            Alert.showAlertWithMessage("Success", message: data.response!)
         }
     }
 }

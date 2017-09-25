@@ -30,7 +30,7 @@ class DietPlanTableViewCell: UITableViewCell {
     var info: DietPlanModel? {
         didSet {
             if let member = info {
-                didSetCategory(info: member)
+                didSetCategory(member)
             }
         }
     }
@@ -43,14 +43,14 @@ class DietPlanTableViewCell: UITableViewCell {
 }
 
 extension DietPlanTableViewCell {
-    func didSetCategory(info: DietPlanModel) {
-        mealButton.addTarget(self, action: #selector(animation(sender:)), for: .touchUpInside)
+    func didSetCategory(_ info: DietPlanModel) {
+        mealButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
         mealButton.setTitle(info.mealName, for:.normal)
         mealDescription.text = info.description
     }
     
     
-    func animation(sender: UIButton) {
+    func animation(_ sender: UIButton) {
         
         if !isClicked {
             isClicked = true

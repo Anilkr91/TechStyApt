@@ -24,7 +24,7 @@ class LoginTableViewController: BaseTableViewController {
         // regiterApi()
         
         
-        togglePassword.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
+        togglePassword.addTarget(self, action: #selector(toggleButtonImage), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
     }
@@ -57,7 +57,7 @@ class LoginTableViewController: BaseTableViewController {
         return height
     }
     
-    func toggleButtonImage(sender: UIButton) {
+    func toggleButtonImage(_ sender: UIButton) {
         let show = UIImage(named: "show")
         let hide = UIImage(named: "hide")
         
@@ -79,15 +79,15 @@ class LoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "User id cannot be empty")
+            Alert.showAlertWithMessage("Error", message: "User id cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be  empty")
+            Alert.showAlertWithMessage("Error", message: "Password cannot be  empty")
             
         } else {
             let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
-            UserLoginPostService.executeRequest(params: params! as [String : AnyObject]) { (data) in
-                LoginUtils.setCurrentMemberUser(user: data)
+            UserLoginPostService.executeRequest(params! as [String : AnyObject]) { (data) in
+                LoginUtils.setCurrentMemberUser(data)
                 let application = UIApplication.shared.delegate as! AppDelegate
                 application.setHomeMemberUserAsRVC()
 //                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
@@ -104,7 +104,7 @@ class LoginTableViewController: BaseTableViewController {
     
     func regiterApi() {
         let params = RegisterModel(name: "XYZ", email: "XYZ@gmail.com", password: "123456789", userType: 1).toJSON()
-        RegisterPostService.executeRequest(params: params! as [String : AnyObject]) { (data) in
+        RegisterPostService.executeRequest(params! as [String : AnyObject]) { (data) in
             print(data)
         }
     }

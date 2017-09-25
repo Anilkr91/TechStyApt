@@ -29,7 +29,7 @@ class PersonalDetailTableViewController: BaseTableViewController {
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
         anniversaryTextField.inputView = dateOfBirthDatePicker
-        uploadImageButton.addTarget(self, action: #selector(PersonalDetailTableViewController.uploadButtonTapped(sender:)), for: .touchUpInside)
+        uploadImageButton.addTarget(self, action: #selector(PersonalDetailTableViewController.uploadButtonTapped), for: .touchUpInside)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -37,7 +37,7 @@ class PersonalDetailTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
-    func uploadButtonTapped(sender: AnyObject) {
+    func uploadButtonTapped() {
         handleImageTapGestureRecognizer()
     }
 }
@@ -80,7 +80,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.imagePickerController.dismiss(animated: true, completion: nil)
         
-        let size = calculateImageSize(image: image!)
+        let size = calculateImageSize(image!)
         print("size of image in MB: %f ", Double(size) / 1024.0 / 1024.0)
         
         
@@ -88,13 +88,13 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         
         if let data = image?.jpeg(.medium) {
             
-            let compressedLength = calculateSizeFromData(data: data)
+            let compressedLength = calculateSizeFromData(data)
              print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
             //print(imageData.count)
         }
         
         //        ProgressBarView.showHUD()
-        let data = self.getDataFromImage(image: image!)
+        let data = self.getDataFromImage(image!)
         
         
         let imagewithimagedata = UIImage(data: data as Data)
@@ -102,7 +102,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         print(imagewithimagedata?.size.height)
         
         
-        let compressedLength = calculateSizeFromData(data: data as Data)
+        let compressedLength = calculateSizeFromData(data as Data)
         print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
         //        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         //        configuration.timeoutIntervalForRequest = 60 // seconds
@@ -141,9 +141,9 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     }
     
     
-    func getDataFromImage(image: UIImage) -> NSData {
+    func getDataFromImage(_ image: UIImage) -> Data {
         if image.size.width < 500 || image.size.height < 500 {
-            return UIImageJPEGRepresentation(image, 1.0)! as NSData
+            return UIImageJPEGRepresentation(image, 1.0)! as Data
         } else {
             var newWidth: CGFloat = 500
             var newHeight: CGFloat = 500
@@ -164,7 +164,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
             image.draw(in: rect)
             let normalizedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
-            return UIImageJPEGRepresentation(normalizedImage, 1.0)! as NSData
+            return UIImageJPEGRepresentation(normalizedImage, 1.0)! as Data
         }
     }
     
@@ -201,17 +201,17 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     
     
     
-    func calculateImageSize(image: UIImage) -> Int {
+    func calculateImageSize(_ image: UIImage) -> Int {
         
         print(image.size.width)
         print(image.size.height)
         
-        let imgData: NSData = NSData(data: UIImageJPEGRepresentation((image), 1)!)
-        let imageSize: Int = imgData.length
+        let imgData: Data = NSData(data: UIImageJPEGRepresentation((image), 1)!) as Data
+        let imageSize: Int = imgData.count
         return imageSize
     }
     
-    func calculateSizeFromData(data: Data) -> Int {
+    func calculateSizeFromData(_ data: Data) -> Int {
         
         let imagewithimagedata = UIImage(data: data)
         print(imagewithimagedata?.size.width)

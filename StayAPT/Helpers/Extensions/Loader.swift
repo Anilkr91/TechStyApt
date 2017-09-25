@@ -12,12 +12,12 @@ import UIKit
 struct Loader {
     
     static let sharedInstance = Loader()
-    private let activityIndicator = UIActivityIndicatorView()
+    fileprivate let activityIndicator = UIActivityIndicatorView()
     
     //MARK: - Private Methods -
-    private init() { }
+    fileprivate init() { }
     
-    private func setupLoader() {
+    fileprivate func setupLoader() {
         hideLoader()
         activityIndicator.hidesWhenStopped = true
         activityIndicator.color = UIColor(red: 255/255, green: 125/255, blue: 150/255, alpha: 1)

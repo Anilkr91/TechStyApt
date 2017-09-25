@@ -10,27 +10,27 @@ import SwiftyUserDefaults
 
 class LoginUtils {
     
-    class func setCurrentMemberUser(user: LoginModelResponse) {
+    class func setCurrentMemberUser(_ user: LoginModelResponse) {
         if let login = getCurrentMemberUserLogin() {
             let tmpLogin = login
             //tmpLogin.user = user
-            setCurrentMemberUserLogin(login: tmpLogin)
+            setCurrentMemberUserLogin(tmpLogin)
         } else {
-            setCurrentMemberUserLogin(login: user)
+            setCurrentMemberUserLogin(user)
         }
         
     }
     
-    class func setCurrentFitnessCenter(user: FCLoginResponse) {
+    class func setCurrentFitnessCenter(_ user: FCLoginResponse) {
         if let login = getCurrentFitnessCenterUserLogin() {
             let tmpLogin = login
-            setCurrentFitnessCenterUserLogin(login: tmpLogin)
+            setCurrentFitnessCenterUserLogin(tmpLogin)
         } else {
-           setCurrentFitnessCenterUserLogin(login: user)
+           setCurrentFitnessCenterUserLogin(user)
         }
     }
     
-    class func setCurrentMemberUserLogin(login: LoginModelResponse?) {
+    class func setCurrentMemberUserLogin(_ login: LoginModelResponse?) {
         if let login = login {
             
             Defaults[.memberLogin] = login.toJSON()
@@ -39,7 +39,7 @@ class LoginUtils {
         }
     }
     
-    class func setCurrentFitnessCenterUserLogin(login: FCLoginResponse?) {
+    class func setCurrentFitnessCenterUserLogin(_ login: FCLoginResponse?) {
         if let login = login {
             Defaults[.fitnessCenterLogin] = login.toJSON()
         } else {

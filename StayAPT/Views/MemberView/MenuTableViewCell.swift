@@ -29,14 +29,14 @@ class MenuTableViewCell: UITableViewCell {
     var info: ClassModel? {
         didSet {
             if let member = info {
-                didSetCategory(info: member)
+                didSetCategory(member)
             }
         }
     }
 }
 
 extension MenuTableViewCell {
-    func didSetCategory(info: ClassModel) {
+    func didSetCategory(_ info: ClassModel) {
         let url = URL(string: info.img)!
         let placeholderImage = UIImage(named: "placeholder")
         

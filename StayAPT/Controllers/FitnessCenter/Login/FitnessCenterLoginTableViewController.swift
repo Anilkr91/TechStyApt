@@ -17,7 +17,7 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        togglePasswordButton.addTarget(self, action: #selector(toggleButtonImage(sender:)), for: .touchUpInside)
+        togglePasswordButton.addTarget(self, action: #selector(toggleButtonImage), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
     }
@@ -49,7 +49,7 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         return height
     }
     
-    func toggleButtonImage(sender: UIButton) {
+    func toggleButtonImage() {
         let show = UIImage(named: "show")
         let hide = UIImage(named: "hide")
         
@@ -71,19 +71,19 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Center ID cannot be empty")
+            Alert.showAlertWithMessage("Error", message: "Center ID cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "Password cannot be empty")
+            Alert.showAlertWithMessage("Error", message: "Password cannot be empty")
             
         } else {
             let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2).toJSON()
             
             //        let params = LoginModel(email: id, password: password, userType: 2).toJSON()
             
-            FCLoginPostService.executeRequest(params: params! as [String : AnyObject] , completionHandler: { (data) in
+            FCLoginPostService.executeRequest(params! as [String : AnyObject] , completionHandler: { (data) in
                 print(data)
-                LoginUtils.setCurrentFitnessCenter(user: data)
+                LoginUtils.setCurrentFitnessCenter(data)
                 
                 let application = UIApplication.shared.delegate as! AppDelegate
                 application.setHomeFitnessCenterUserAsRVC()

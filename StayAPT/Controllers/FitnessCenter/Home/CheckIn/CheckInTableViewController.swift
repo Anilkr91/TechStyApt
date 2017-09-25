@@ -38,13 +38,13 @@ class CheckInTableViewController: BaseTableViewController {
         
         let id = idTextField.text!
         if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
+            Alert.showAlertWithMessage("Error", message: "StayAPTID cannot be empty")
             
         } else {
             let param = CheckInModel(fcID: user.id, stayAptID: id).toJSON()
             
-            FCCheckInServicePostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
-                Alert.showAlertWithMessage(title: "Success", message: data.response!)
+            FCCheckInServicePostService.executeRequest(param! as [String : AnyObject], completionHandler: { (data) in
+                Alert.showAlertWithMessage("Success", message: data.response!)
             })
         }
     }
@@ -53,13 +53,13 @@ class CheckInTableViewController: BaseTableViewController {
         
         let id = idTextField.text!
         if id.removeAllSpaces().isEmpty {
-            Alert.showAlertWithMessage(title: "Error", message: "StayAPTID cannot be empty")
+            Alert.showAlertWithMessage("Error", message: "StayAPTID cannot be empty")
             
         } else {
             let param = CheckInModel(fcID: user.id, stayAptID: id).toJSON()
             
-            FCCheckoutPostService.executeRequest(params: param! as [String : AnyObject], completionHandler: { (data) in
-                Alert.showAlertWithMessage(title: "Success", message: "\(String(describing: data.response!)) \(String(describing: data.timeMessage!)) ")
+            FCCheckoutPostService.executeRequest(param! as [String : AnyObject], completionHandler: { (data) in
+                Alert.showAlertWithMessage("Success", message: "\(String(describing: data.response!)) \(String(describing: data.timeMessage!)) ")
             })
         }
     }

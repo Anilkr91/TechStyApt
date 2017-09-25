@@ -19,7 +19,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     var member: SACheckedInMember? {
         didSet {
             if let member = member {
-                didSetCategory(member: member)
+                didSetCategory(member)
             }
         }
     }
@@ -38,7 +38,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         backgroundColor = UIColor.clear
     }
     
-    func didSetCategory(member: SACheckedInMember) {
+    func didSetCategory(_ member: SACheckedInMember) {
         
         let url = URL(string: member.image)!
         let image = UIImage(named: "gym")
