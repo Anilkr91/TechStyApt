@@ -83,9 +83,6 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         let size = calculateImageSize(image!)
         print("size of image in MB: %f ", Double(size) / 1024.0 / 1024.0)
         
-        
-        
-        
         if let data = image?.jpeg(.medium) {
             
             let compressedLength = calculateSizeFromData(data)
@@ -96,11 +93,9 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         //        ProgressBarView.showHUD()
         let data = self.getDataFromImage(image!)
         
-        
         let imagewithimagedata = UIImage(data: data as Data)
         print(imagewithimagedata?.size.width)
         print(imagewithimagedata?.size.height)
-        
         
         let compressedLength = calculateSizeFromData(data as Data)
         print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
@@ -199,10 +194,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         }
     }
     
-    
-    
     func calculateImageSize(_ image: UIImage) -> Int {
-        
         print(image.size.width)
         print(image.size.height)
         
@@ -212,7 +204,6 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     }
     
     func calculateSizeFromData(_ data: Data) -> Int {
-        
         let imagewithimagedata = UIImage(data: data)
         print(imagewithimagedata?.size.width)
         print(imagewithimagedata?.size.height)

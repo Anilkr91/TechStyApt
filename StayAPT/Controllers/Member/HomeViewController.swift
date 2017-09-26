@@ -18,15 +18,13 @@ class HomeViewController: BaseViewController, SpinWheelControlDataSource, SpinWh
     
     func wedgeForSliceAtIndex(index: UInt) -> SpinWheelWedge {
         
-        
         let wedge = SpinWheelWedge()
         if index % 2 == 0 {
             
             wedge.shape.fillColor = colorPalette[Int(0)].cgColor
             wedge.label.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_mediumFont))
             wedge.label.text = titleString[Int(index)]
-            
-            
+        
         } else {
             wedge.shape.fillColor = colorPalette[Int(1)].cgColor
             wedge.label.font = UIFont(name: "cuyabra", size: CGFloat(Constants.iPhone_mediumFont))
