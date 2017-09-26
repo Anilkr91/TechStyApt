@@ -132,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
-        revealingSplashView.animationType = .heartBeat
+        revealingSplashView.animationType = .swingAndZoomOut
         revealingSplashView.startAnimation(){
             
         }
