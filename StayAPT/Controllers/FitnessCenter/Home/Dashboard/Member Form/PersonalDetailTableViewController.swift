@@ -86,12 +86,13 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         if let data = image?.jpeg(.medium) {
             
             let compressedLength = calculateSizeFromData(data)
-             print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
+            print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
             //print(imageData.count)
         }
         
         //        ProgressBarView.showHUD()
         let data = self.getDataFromImage(image!)
+        countDataInMB(data: data as NSData)
         
         let imagewithimagedata = UIImage(data: data as Data)
         print(imagewithimagedata?.size.width)
@@ -194,6 +195,8 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         }
     }
     
+    
+    // Test Methods
     func calculateImageSize(_ image: UIImage) -> Int {
         print(image.size.width)
         print(image.size.height)
@@ -203,12 +206,22 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
         return imageSize
     }
     
+    // Test Methods
     func calculateSizeFromData(_ data: Data) -> Int {
         let imagewithimagedata = UIImage(data: data)
         print(imagewithimagedata?.size.width)
         print(imagewithimagedata?.size.height)
-
+        
         let imageSize: Int = data.count
         return imageSize
+    }
+    
+    // Test Methods
+    func countDataInMB(data: NSData) {
+        let bcf = ByteCountFormatter()
+        bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+        bcf.countStyle = .file
+        let string = bcf.string(fromByteCount: Int64(data.length))
+        print("formatted result: \(string)")
     }
 }

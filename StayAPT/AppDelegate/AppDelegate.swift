@@ -111,19 +111,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSplash(_ vc: UIViewController) {
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:1, green:0, blue:0, alpha:1.0))
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-white")!,iconInitialSize: CGSize(width: 150, height: 150), backgroundColor: UIColor(red:1, green:0, blue:0, alpha:1.0))
         
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
-        revealingSplashView.animationType = .swingAndZoomOut
+        revealingSplashView.animationType = .rotateOut
         revealingSplashView.startAnimation(){
         }
     }
     
     func setupSplash() {
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-red")!,iconInitialSize: CGSize(width: 70, height: 70), backgroundColor: UIColor(red:1, green:0, blue:0
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "stayapt-icon-white")!,iconInitialSize: CGSize(width: 150, height: 150), backgroundColor: UIColor(red:1, green:0, blue:0
             , alpha:1.0))
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -132,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self.window?.rootViewController?.view.addSubview(revealingSplashView)
         //Starts animation
-        revealingSplashView.animationType = .swingAndZoomOut
+        revealingSplashView.animationType = .rotateOut
         revealingSplashView.startAnimation(){
             
         }

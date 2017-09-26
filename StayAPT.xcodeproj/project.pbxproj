@@ -101,6 +101,8 @@
 		84CBB5391F55C07C001C369F /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB5381F55C07C001C369F /* BlogModel.swift */; };
 		84CBB53B1F55C1D9001C369F /* BlogModelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB53A1F55C1D9001C369F /* BlogModelArray.swift */; };
 		84CBB53D1F55C334001C369F /* BlogService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB53C1F55C334001C369F /* BlogService+GET.swift */; };
+		84CCA04C1F7A196A006E3388 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */; };
+		84CCA04E1F7A2051006E3388 /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */; };
 		84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */; };
 		84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */; };
 		84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8A1F4FF8610002074D /* HomeViewController.swift */; };
@@ -217,6 +219,8 @@
 		84CBB5381F55C07C001C369F /* BlogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
 		84CBB53A1F55C1D9001C369F /* BlogModelArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogModelArray.swift; sourceTree = "<group>"; };
 		84CBB53C1F55C334001C369F /* BlogService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BlogService+GET.swift"; sourceTree = "<group>"; };
+		84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
 		84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84F92F8A1F4FF8610002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -561,6 +565,7 @@
 				841CA8C31F6ADF64004C95CF /* FCCheckInService+POST.swift */,
 				841CA8C71F6AEE01004C95CF /* FCCheckoutService+POST.swift */,
 				84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */,
+				84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				84F92F8A1F4FF8610002074D /* HomeViewController.swift */,
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84C4CF4A1F56EB52001DA94A /* EditProfileTableViewController.swift */,
+				84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -924,6 +930,7 @@
 				84409B3C1F5D6FB4005BAC61 /* DietViewController.swift in Sources */,
 				84409B381F5D6F2B005BAC61 /* DietPlanTableViewController.swift in Sources */,
 				84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */,
+				84CCA04E1F7A2051006E3388 /* ForgotPasswordService+POST.swift in Sources */,
 				84CBB5211F5597E3001C369F /* SettingsTableViewController.swift in Sources */,
 				841CA2571F613AAA004C95CF /* CheckInTableViewController.swift in Sources */,
 				841CA83E1F68FD0A004C95CF /* LocationModelArray.swift in Sources */,
@@ -952,6 +959,7 @@
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				841CA8D01F6D38B5004C95CF /* LoginUtils.swift in Sources */,
+				84CCA04C1F7A196A006E3388 /* ForgotPasswordTableViewController.swift in Sources */,
 				841CA8201F681212004C95CF /* MediumLabel.swift in Sources */,
 				841CA8321F6813C7004C95CF /* UserLoginService+POST.swift in Sources */,
 				84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */,

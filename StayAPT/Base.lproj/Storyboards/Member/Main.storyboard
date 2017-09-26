@@ -3244,17 +3244,17 @@
         <!--Forgot Password-->
         <scene sceneID="0Qi-1k-4o4">
             <objects>
-                <tableViewController id="xDz-17-rGs" sceneMemberID="viewController">
+                <tableViewController id="xDz-17-rGs" customClass="ForgotPasswordTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rMH-hS-7Yx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="zGb-hM-xQs" customClass="BaseView" customModule="StayAPT" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="246"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="IZQ-3b-QHs">
-                                    <rect key="frame" x="172.66666666666666" y="73" width="70" height="100"/>
+                                    <rect key="frame" x="172.66666666666666" y="50" width="70" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="Mm8-sG-HaY"/>
                                         <constraint firstAttribute="width" constant="70" id="XxX-lP-Ff3"/>
@@ -3262,7 +3262,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay APT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcG-E5-IfL">
-                                    <rect key="frame" x="10" y="207.33333333333337" width="394" height="30.666666666666657"/>
+                                    <rect key="frame" x="10" y="158" width="394" height="34"/>
                                     <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -3273,26 +3273,16 @@
                                 <constraint firstItem="IZQ-3b-QHs" firstAttribute="centerY" secondItem="zGb-hM-xQs" secondAttribute="centerY" id="5u3-WJ-TtQ"/>
                                 <constraint firstItem="IZQ-3b-QHs" firstAttribute="centerX" secondItem="zGb-hM-xQs" secondAttribute="centerX" id="8ot-RX-jjU"/>
                                 <constraint firstAttribute="trailing" secondItem="FcG-E5-IfL" secondAttribute="trailing" constant="10" id="9zW-lL-bLy"/>
+                                <constraint firstAttribute="bottom" secondItem="FcG-E5-IfL" secondAttribute="bottom" constant="8" id="CW9-8s-Jgc"/>
                                 <constraint firstItem="FcG-E5-IfL" firstAttribute="leading" secondItem="zGb-hM-xQs" secondAttribute="leading" constant="10" id="JT1-e2-TxV"/>
-                                <constraint firstAttribute="bottom" secondItem="FcG-E5-IfL" secondAttribute="bottom" constant="8" id="ZOx-6z-qFA"/>
+                                <constraint firstItem="FcG-E5-IfL" firstAttribute="top" secondItem="IZQ-3b-QHs" secondAttribute="bottom" constant="8" id="VZX-VO-0HM"/>
                             </constraints>
                         </view>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="phf-Qc-HqM">
-                            <rect key="frame" x="0.0" y="422" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="12"/>
-                            <state key="normal" title="Don't have an Account? Sign Up">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <variation key="heightClass=regular-widthClass=regular">
-                                <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="24"/>
-                            </variation>
-                        </button>
                         <sections>
                             <tableViewSection id="iXp-R6-5xI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PgM-EO-Sd3">
-                                        <rect key="frame" x="0.0" y="246" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="200" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PgM-EO-Sd3" id="piL-y1-nJw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -3326,7 +3316,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YLz-SB-KWy">
-                                        <rect key="frame" x="0.0" y="290" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="244" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YLz-SB-KWy" id="80l-qa-wlG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -3338,6 +3328,9 @@
                                                     <state key="normal" title="Submit">
                                                         <color key="titleColor" red="1" green="0.14338752599999999" blue="0.24713950940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="SubmitTapped:" destination="xDz-17-rGs" eventType="touchUpInside" id="UnX-0B-a6O"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -3349,16 +3342,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TE0-KG-xN2">
-                                        <rect key="frame" x="0.0" y="334" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="288" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TE0-KG-xN2" id="eOq-we-tHq">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you forget your password just enter your email id to change password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-zC-SfQ" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you forget your password just enter your email id to change password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-zC-SfQ" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="11.333333333333336" width="398" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -3370,7 +3363,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qag-Px-tic">
-                                        <rect key="frame" x="0.0" y="378" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="332" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qag-Px-tic" id="qV4-4v-Zg9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -3386,10 +3379,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Forgot Password" id="mgJ-bT-PrY"/>
+                    <connections>
+                        <outlet property="emailIdTextField" destination="WLo-5s-vau" id="Uk5-7X-Mrd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iC0-P6-gX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="-1119"/>
+            <point key="canvasLocation" x="2962.3188405797105" y="-1119.2934782608697"/>
         </scene>
     </scenes>
     <resources>
