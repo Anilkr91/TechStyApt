@@ -2694,6 +2694,9 @@
                             <rect key="frame" x="0.0" y="508" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="SUBMIT"/>
+                            <connections>
+                                <action selector="SubmitTapped:" destination="nhB-sd-8Wl" eventType="touchUpInside" id="cm0-cn-kmW"/>
+                            </connections>
                         </button>
                         <sections>
                             <tableViewSection id="vLe-ZR-7fC">
