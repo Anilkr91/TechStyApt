@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stayapt-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-Jf-Oij">
-                                <rect key="frame" x="172" y="144" width="70" height="100"/>
+                                <rect key="frame" x="172" y="184" width="70" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="Ow5-jY-VVR"/>
                                     <constraint firstAttribute="height" constant="100" id="aW5-Uh-dUR"/>
@@ -107,10 +107,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6RM-fJ-Pyy" secondAttribute="trailing" constant="20" id="Qyr-Hf-qOD"/>
                             <constraint firstItem="vxy-nj-oTl" firstAttribute="width" secondItem="NDA-hP-sCK" secondAttribute="width" id="RuW-2I-FsE"/>
                             <constraint firstItem="C7Y-qq-HOS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XJs-2V-vfh"/>
+                            <constraint firstItem="dUe-9L-Lqa" firstAttribute="top" secondItem="DjV-Jf-Oij" secondAttribute="bottom" constant="15" id="bQ1-wj-NRS"/>
                             <constraint firstItem="Nhh-Wk-RN1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cB1-cq-Pt8"/>
                             <constraint firstItem="C7Y-qq-HOS" firstAttribute="top" secondItem="6RM-fJ-Pyy" secondAttribute="bottom" constant="20" id="fY1-Qa-HWO"/>
                             <constraint firstItem="NDA-hP-sCK" firstAttribute="top" secondItem="Nhh-Wk-RN1" secondAttribute="bottom" constant="30" id="kcL-nm-5fa"/>
-                            <constraint firstItem="DjV-Jf-Oij" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="nqF-e9-O3w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nhh-Wk-RN1" secondAttribute="trailing" id="oIy-dw-UK3"/>
                             <constraint firstItem="vxy-nj-oTl" firstAttribute="leading" secondItem="NDA-hP-sCK" secondAttribute="trailing" constant="30" id="rg1-sW-dpo"/>
                             <constraint firstItem="6RM-fJ-Pyy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="sfu-8z-X5q"/>
