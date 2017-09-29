@@ -12,6 +12,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     weak var pvc: FitnessCenterViewController?
     var fitnessCenterArray: [FitnessCenterModel] = []
+    var fcId : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +45,12 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
+        fcId = fitnessCenterArray[indexPath.section].id
         
         self.performSegue(withIdentifier: "showFitnessCenterDetailsSegue", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         return 2
     }
     
@@ -63,6 +64,14 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFitnessCenterDetailsSegue" {
+            
+            let dvc = segue.destination as! FitnessCenterDetailsTableViewController
+            dvc.fcId = fcId
+        }
     }
     
     func populateTableView(_ classId: String) {
