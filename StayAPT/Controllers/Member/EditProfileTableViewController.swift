@@ -26,6 +26,14 @@ class EditProfileTableViewController: BaseTableViewController {
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
         
+        let image = UIImage(named: "show")!
+        let data = image.jpeg(.medium)
+        let param = ProfileModel(user_photo: "", /*userImage: "", */ fname: "anil", lname: "kumar", loc_id: "1", height: "20", weight: "58", about_me: "about me loreum ipsum", gender: "male", birthday: "1970-01-01").toJSON()
+       
+        EditProfilePostService.executeRequest(data: data!, param!, completionHandler: { (data) in
+            print(data)
+        })
+        
     }
     
     
@@ -62,26 +70,22 @@ class EditProfileTableViewController: BaseTableViewController {
             print("passed all validation")
             
             
-        let param = ProfileModel(user_photo: "", userImage: "", fname: firstName, lname: lastName, loc_id: "", height: height, weight: weight, about_me: aboutme, gender: "", birthday: dateOfBirth).toJSON()
+//            let param = [
+//                "hometown": "yalikavak",
+//                "living": "istanbul"
+//            ]
+//            
+//            EditProfilePostService.executeRequest(data: UIImage(named: "show")!, param, completionHandler: { (data) in
+//                print(data)
+//            })
+//        let param = ProfileModel(user_photo: "", userImage: "", fname: firstName, lname: lastName, loc_id: "", height: height, weight: weight, about_me: aboutme, gender: "", birthday: dateOfBirth).toJSON()
             
-        EditProfilePostService.executeRequest(param!, completionHandler: { (data) in
-            print(data)
-        })
             
             
             
         }
         
-        
-        
-        
-        
     }
-    
-    
-    
-    
-    
 }
 
 /*
