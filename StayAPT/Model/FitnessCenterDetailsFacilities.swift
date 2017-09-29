@@ -1,5 +1,5 @@
 //
-//  FitnessFacilities.swift
+//  FitnessCenterDetailsFacilities.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -8,11 +8,10 @@
 
 import Gloss
 
-struct FitnessFacilities: Decodable {
+struct FitnessCenterDetailsFacilities: Decodable {
     
     let fac_image: String
     let fac_name: String
-    
     
     init?(json: JSON) {
         guard let fac_image: String = "fac_image" <~~ json,

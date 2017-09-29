@@ -31,7 +31,7 @@ class FitnessCenterDetailsGetService {
 //                    Loader.sharedInstance.hideLoader()
                 
 //                } else {
-//                    Loader.sharedInstance.hideLoader()
+                    Loader.sharedInstance.hideLoader()
 //                    let error = ErrorModel.init(json: value as! JSON)
 //                    Alert.showAlertWithMessage("Error", message: error!.message!)
 //                }

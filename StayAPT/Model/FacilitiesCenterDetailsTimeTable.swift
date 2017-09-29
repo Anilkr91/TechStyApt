@@ -1,5 +1,5 @@
 //
-//  FacilitiesTimeTable.swift
+//  FacilitiesCenterDetailsTimeTable.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FacilitiesTimeTable {
+struct FacilitiesCenterDetailsTimeTable {
     
     let status: String
     let singleSession: String
@@ -22,7 +22,6 @@ struct FacilitiesTimeTable {
     init?(json: JSON) {
         guard let status: String = "status" <~~ json,
             let singleSession: String = "singleSession" <~~ json,
-            
             let coupleSession: String = "coupleSession" <~~ json,
             let freeSession: String = "freeSession" <~~ json,
             let class_id: String = "class_id" <~~ json,

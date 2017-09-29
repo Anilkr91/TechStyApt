@@ -1,5 +1,5 @@
 //
-//  FacilitiesTrainer.swift
+//  FacilitiesCenterDetailsTrainer.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -7,8 +7,7 @@
 //
 
 import Gloss
-
-struct FacilitiesTrainer: Decodable {
+struct FacilitiesCenterDetailsTrainer: Decodable {
     
     let trainerImage: String
     let trainerName: String

@@ -1,5 +1,5 @@
 //
-//  InformationModel.swift
+//  FitnessCenterDetailInformationModel.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct InformationModel {
+struct FitnessCenterDetailInformationModel {
     
     let id: String
     let fitness_center_name: String

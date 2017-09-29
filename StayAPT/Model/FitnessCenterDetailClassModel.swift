@@ -1,5 +1,5 @@
 //
-//  FitnessClass.swift
+//  FitnessCenterDetailClassModel.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -8,11 +8,10 @@
 
 import Gloss
 
-struct FitnessClass: Decodable {
+struct FitnessCenterDetailClassModel: Decodable {
     
     let classImage: String
     let className: String
-    
     
     init?(json: JSON) {
         guard let classImage: String = "classImage" <~~ json,

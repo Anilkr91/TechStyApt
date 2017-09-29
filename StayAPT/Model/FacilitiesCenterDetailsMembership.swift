@@ -1,5 +1,5 @@
 //
-//  FacilitiesMembership.swift
+//  FacilitiesCenterDetails.swift
 //  StayAPT
 //
 //  Created by admin on 29/09/17.
@@ -7,8 +7,7 @@
 //
 
 import Gloss
-
-struct FacilitiesMembership: Decodable {
+struct FacilitiesCenterDetailsMembership: Decodable {
     
     let price: String
     let features: [String]
