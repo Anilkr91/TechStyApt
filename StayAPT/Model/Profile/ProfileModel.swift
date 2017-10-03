@@ -11,8 +11,6 @@ import Gloss
 
 struct ProfileModel {
     
-    let user_photo: String
-//    let userImage: Data
     let fname: String
     let lname: String
     let loc_id: String
@@ -21,11 +19,10 @@ struct ProfileModel {
     let about_me: String
     let gender: String
     let birthday: String
-
-    init(user_photo: String, /*userImage: Data,*/ fname: String, lname: String, loc_id: String, height: String, weight: String, about_me: String, gender: String, birthday: String) {
-       
-        self.user_photo = user_photo
-//        self.userImage =  userImage
+    let userId: String
+    
+    init(fname: String, lname: String, loc_id: String, height: String, weight: String, about_me: String, gender: String, birthday: String, userId: String ) {
+        
         self.fname = fname
         self.lname = lname
         self.loc_id = loc_id
@@ -34,13 +31,12 @@ struct ProfileModel {
         self.about_me = about_me
         self.gender = gender
         self.birthday = birthday
+        self.userId = userId
     }
     
     func toJSON() -> JSON? {
         return jsonify([
             
-            "user_photo" ~~> self.user_photo,
-//            "userImage" ~~> self.userImage,
             "fname" ~~> self.fname,
             "lname" ~~> self.lname,
             "loc_id" ~~> self.loc_id,
@@ -48,7 +44,8 @@ struct ProfileModel {
             "weight" ~~> self.weight,
             "about_me" ~~> self.about_me,
             "gender" ~~> self.gender,
-            "birthday" ~~> self.birthday
+            "birthday" ~~> self.birthday,
+            "userId" ~~> self.userId
             
             ])
     }

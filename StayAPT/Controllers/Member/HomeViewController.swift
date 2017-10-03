@@ -37,6 +37,9 @@ class HomeViewController: BaseViewController, SpinWheelControlDataSource, SpinWh
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let user = LoginUtils.getCurrentMemberUserLogin()
+        print(user?.id)
 //        let frame = CGRect(x: -150, y: 25, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
 //        spinWheelControl = SpinWheelControl(frame: frame)
 //        spinWheelControl.dataSource = self

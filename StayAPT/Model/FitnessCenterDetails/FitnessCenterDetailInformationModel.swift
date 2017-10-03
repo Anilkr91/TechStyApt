@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FitnessCenterDetailInformationModel {
+struct FitnessCenterDetailInformationModel: Decodable {
     
     let id: String
     let fitness_center_name: String

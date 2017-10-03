@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 class EditProfileTableViewController: BaseTableViewController {
     
@@ -20,22 +21,49 @@ class EditProfileTableViewController: BaseTableViewController {
     @IBOutlet weak var weightTextField: BaseTextField!
     
     lazy var dateOfBirthDatePicker = UIDatePicker()
+    let dateFormatter = "YYYY-MM-dd"
+    var gender: String = "Male"
+    
+//    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
         
-        let image = UIImage(named: "show")!
-        let data = image.jpeg(.medium)
-        let param = ProfileModel(user_photo: "", /*userImage: "", */ fname: "anil", lname: "kumar", loc_id: "1", height: "20", weight: "58", about_me: "about me loreum ipsum", gender: "male", birthday: "1970-01-01").toJSON()
-       
-        EditProfilePostService.executeRequest(data: data!, param!, completionHandler: { (data) in
-            print(data)
-        })
-        
+         dateOfBirthDatePicker.addTarget(self, action: #selector(EditProfileTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
     }
     
+    func segmentIndex(sender: UISegmentedControl?) {
+        
+        let index = sender!.selectedSegmentIndex
+        
+        switch index {
+            
+        case 0:
+            gender = "Male"
+            
+        case 1:
+            gender = "Female"
+            
+        case 2:
+            gender = "Other"
+            
+        default:
+            print("out of bound")
+        }
+    }
+    
+    func getDate(sender: Any) {
+//        let selectedDate =  datePicker.date
+//        date = selectedDate
+//        dateString = selectedDate.toString(.Custom(dateFormatter))
+//        dateTextField.text = dateString
+        
+        let selectedDate =  dateOfBirthDatePicker.date
+        let dateString =  selectedDate.string(custom: dateFormatter)
+        dateOfBirthTextField.text = dateString
+    }
     
     @IBAction func SubmitTapped(_ sender: Any) {
         
@@ -45,9 +73,6 @@ class EditProfileTableViewController: BaseTableViewController {
         let dateOfBirth = dateOfBirthTextField.text!
         let height = heightTextField.text!
         let weight = weightTextField.text!
-        
-        
-        
         
         if aboutme.removeAllSpaces().isEmpty {
             print("aboutme all validation")
@@ -69,22 +94,14 @@ class EditProfileTableViewController: BaseTableViewController {
         } else {
             print("passed all validation")
             
-            
-//            let param = [
-//                "hometown": "yalikavak",
-//                "living": "istanbul"
-//            ]
-//            
-//            EditProfilePostService.executeRequest(data: UIImage(named: "show")!, param, completionHandler: { (data) in
-//                print(data)
-//            })
-//        let param = ProfileModel(user_photo: "", userImage: "", fname: firstName, lname: lastName, loc_id: "", height: height, weight: weight, about_me: aboutme, gender: "", birthday: dateOfBirth).toJSON()
-            
-            
-            
-            
-        }
+            let user = LoginUtils.getCurrentMemberUserLogin()
         
+            let param = ProfileModel(fname: firstName, lname: lastName, loc_id: "1", height: height, weight: weight, about_me: aboutme, gender: gender, birthday: dateOfBirth, userId: user!.id).toJSON()
+            
+            EditProfilePostService.executeRequest(param! as [String : AnyObject]) { (data) in
+                Alert.showAlertWithMessage("Success", message: data.response!)
+            }
+        }
     }
 }
 

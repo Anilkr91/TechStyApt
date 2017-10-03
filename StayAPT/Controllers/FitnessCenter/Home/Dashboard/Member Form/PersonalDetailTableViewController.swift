@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PersonalDetailTableViewController: BaseTableViewController {
     
@@ -78,58 +79,88 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.imagePickerController.dismiss(animated: true, completion: nil)
+//        self.imagePickerController.dismiss(animated: true, completion: nil)
         
-        let size = calculateImageSize(image!)
-        print("size of image in MB: %f ", Double(size) / 1024.0 / 1024.0)
-        
+//        let size = calculateImageSize(image!)
+//        print("size of image in MB: %f ", Double(size) / 1024.0 / 1024.0)
+//        
         if let data = image?.jpeg(.medium) {
+//
+//            let compressedLength = calculateSizeFromData(data)
+//            print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
+//            //print(imageData.count)
             
-            let compressedLength = calculateSizeFromData(data)
-            print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
-            //print(imageData.count)
+            
+            let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
+            let BaseUrl = Constants.BASE_URL
+
+            
+            let parameters: Parameters = [
+                "userId" : "25",
+                "oldImage" : ""
+            ]
+            
+            let request =  Alamofire.upload(multipartFormData:{ multipartFormData in
+                
+                multipartFormData.append(data, withName: "newImage", fileName: "image", mimeType: "image/png")
+                
+                
+                for (key,value) in parameters {
+                    
+                    multipartFormData.append((value as! String).data(using: .utf8)!, withName: key)
+               
+                
+                } },
+                                            usingThreshold:UInt64.init(),
+                                            to: BaseUrl + "user/profile/profileImage",
+                                            method:.post,
+                                            headers: header,
+                                            encodingCompletion: { encodingResult in
+                                                
+                                                switch encodingResult {
+                                                    
+                                                case .success(let upload, _, _):
+                                                    
+                                                    debugPrint(upload)
+                                                    
+                                                    upload.responseJSON { response in
+                                                        
+                                                        debugPrint(response)
+                                                    }
+                                                    
+                                                case .failure(let encodingError):
+                                                    print(encodingError)
+                                                }
+            })
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+//
+//        //        ProgressBarView.showHUD()
+//        let data = self.getDataFromImage(image!)
+//        countDataInMB(data: data as NSData)
+//        
+//        let imagewithimagedata = UIImage(data: data as Data)
+//        print(imagewithimagedata?.size.width)
+//        print(imagewithimagedata?.size.height)
+//        
+//        let compressedLength = calculateSizeFromData(data as Data)
+//        print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
+
         
-        //        ProgressBarView.showHUD()
-        let data = self.getDataFromImage(image!)
-        countDataInMB(data: data as NSData)
         
-        let imagewithimagedata = UIImage(data: data as Data)
-        print(imagewithimagedata?.size.width)
-        print(imagewithimagedata?.size.height)
         
-        let compressedLength = calculateSizeFromData(data as Data)
-        print("size of image in MB: %f ", Double(compressedLength) / 1024.0 / 1024.0)
-        //        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        //        configuration.timeoutIntervalForRequest = 60 // seconds
-        //        configuration.timeoutIntervalForResource = 60
-        //        self.alamoFireManager = Alamofire.Manager(configuration: configuration)
-        //        alamoFireManager.upload(
-        //            .POST,  Restofire.defaultConfiguration.baseURL + "upload",headers: Restofire.defaultConfiguration.headers,
-        //            multipartFormData: { multipartFormData in
-        //                multipartFormData.appendBodyPart(data: data, name: "file", fileName: "file", mimeType: "image/png")
-        //        },
-        //            encodingCompletion: { encodingResult in
-        //                switch encodingResult {
-        //                case .Success(let upload, _, _):
-        //                    upload.responseJSON { JSON in
-        //                        if let info = JSON.result.value as? [String: AnyObject] {
-        //                            self.imageUrl = "\(info["data"]!)"
-        //                            self.displayImageView.image = image
-        //                            self.displayImageView.userInteractionEnabled = true
-        //                            self.uploadImageButton.hidden = true
-        //                            self.optionalLabel.hidden = true
-        //
-        //                        } else {
-        //                            VCErrorUtils.showError(JSON.result.error!.localizedDescription, navigationController: self.navigationController!)
-        //                        }
-        //                        ProgressBarView.hideHUD()
-        //                    }
-        //                case .Failure(let encodingError):
-        //                    VCErrorUtils.showError(encodingError as! String, navigationController: self.navigationController!)
-        //                }
-        //        }
-        //        )
+
+        
+        
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

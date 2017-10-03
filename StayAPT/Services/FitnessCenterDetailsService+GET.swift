@@ -26,6 +26,9 @@ class FitnessCenterDetailsGetService {
             case .success(let value) :
                 
                 print(value)
+                let data = FitnessCenterDetailResponse(json: value as! JSON)
+                
+                print(data)
 //                if let data = FitnessCenterModelArray.init(json: value as! JSON)  {
 //                    completionHandler(data.results)
 //                    Loader.sharedInstance.hideLoader()
