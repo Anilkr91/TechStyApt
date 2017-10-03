@@ -13,6 +13,7 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     let array = ["Gym Name", "Information", "Gallery" ,"Classes", "Facilities", "Timetable", "Trainers", "Membership"]
     
     var fcId : String?
+    var fitnessCenterDetail: FitnessCenterDetailResponse!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +82,19 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         
         let param = ["fcid" : id]
         FitnessCenterDetailsGetService.executeRequest(param as [String : AnyObject]) { (data) in
-            print(data)
+            
+            self.fitnessCenterDetail = data
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showClassesSegue" {
+          
+            let dvc = segue.destination as! FitnessClassesCollectionViewController
+            print(fitnessCenterDetail)
+            dvc.memberArray =  fitnessCenterDetail.classes
+        }
+    }
+    
 }

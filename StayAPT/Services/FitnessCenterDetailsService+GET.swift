@@ -11,7 +11,7 @@ import Alamofire
 import Gloss
 
 class FitnessCenterDetailsGetService {
-    static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping ([FitnessCenterModel]) -> Void) {
+    static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (FitnessCenterDetailResponse) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
@@ -24,20 +24,16 @@ class FitnessCenterDetailsGetService {
             
             switch response.result {
             case .success(let value) :
-                
                 print(value)
-                let data = FitnessCenterDetailResponse(json: value as! JSON)
-                
-                print(data)
-//                if let data = FitnessCenterModelArray.init(json: value as! JSON)  {
-//                    completionHandler(data.results)
-//                    Loader.sharedInstance.hideLoader()
-                
-//                } else {
+                if let data = FitnessCenterDetailResponse(json: value as! JSON) {
+                    completionHandler(data)
                     Loader.sharedInstance.hideLoader()
-//                    let error = ErrorModel.init(json: value as! JSON)
-//                    Alert.showAlertWithMessage("Error", message: error!.message!)
-//                }
+                    
+                } else {
+                    Loader.sharedInstance.hideLoader()
+                    let error = ErrorModel.init(json: value as! JSON)
+                    Alert.showAlertWithMessage("Error", message: error!.message!)
+                }
                 
             case .failure(let error):
                 Loader.sharedInstance.hideLoader()

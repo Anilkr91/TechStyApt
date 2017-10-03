@@ -12,31 +12,11 @@ private let reuseIdentifier = "Cell"
 
 class FitnessClassesCollectionViewController: BaseCollectionViewController {
     
-    var memberArray = [SACheckedInMember]()
-//    weak var pvc: CheckInMemberViewController?
+    var memberArray: [FitnessCenterDetailClassModel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        memberArray = [ SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "John", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohit", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Abhram", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Rohan", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Prakash", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ankur", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "20/20"),
-                        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "20/20")
-        ]
     }
     
     // MARK: UICollectionViewDataSource

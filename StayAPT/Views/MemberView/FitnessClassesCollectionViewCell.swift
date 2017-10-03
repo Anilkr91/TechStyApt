@@ -14,7 +14,7 @@ class FitnessClassesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    var member: SACheckedInMember? {
+    var member: FitnessCenterDetailClassModel? {
         didSet {
             if let member = member {
                 didSetCategory(member)
@@ -36,15 +36,15 @@ class FitnessClassesCollectionViewCell: UICollectionViewCell {
         backgroundColor = UIColor.clear
     }
     
-    func didSetCategory(_ member: SACheckedInMember) {
+    func didSetCategory(_ member: FitnessCenterDetailClassModel) {
         
-        let url = URL(string: member.image)!
+        let url = URL(string: member.classImage)!
         let image = UIImage(named: "gym")
         
         imageView.kf.setImage(with: url, placeholder: image)
         //imageView.image = UIImage(imageLiteralResourceName: member.image)
-        imageView.image = UIImage(imageLiteralResourceName: "insta-icon")
-        label.text = member.name
+//        imageView.image = UIImage(imageLiteralResourceName: "insta-icon")
+        label.text = member.className
 //        dateLabel.text = member.counter
     }
 }
