@@ -3437,7 +3437,7 @@
         <!--Profile-->
         <scene sceneID="UlY-Hl-qHE">
             <objects>
-                <viewController id="iey-bh-Nib" sceneMemberID="viewController">
+                <viewController id="iey-bh-Nib" customClass="ProfileViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qRi-wf-Xr0"/>
                         <viewControllerLayoutGuide type="bottom" id="quD-Gv-iOl"/>
@@ -3501,10 +3501,16 @@
                     <navigationItem key="navigationItem" title="Profile" id="3gs-7y-5h1">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="73T-Fa-Ofo">
                             <connections>
-                                <segue destination="nhB-sd-8Wl" kind="show" id="KKo-cr-OfD"/>
+                                <action selector="editProfileTapped:" destination="iey-bh-Nib" id="7dg-PB-ZQP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="qRV-ar-vA1" id="q7f-5r-e2t"/>
+                        <outlet property="nameLabel" destination="pbh-Em-dXM" id="MY0-cV-Ds4"/>
+                        <outlet property="profileImageView" destination="23T-Sx-Izm" id="c2i-PS-IGv"/>
+                        <segue destination="nhB-sd-8Wl" kind="show" identifier="showEditProfileSegue" id="jc9-eM-lD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTo-9i-U22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

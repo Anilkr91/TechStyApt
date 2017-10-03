@@ -23,15 +23,18 @@ class EditProfileTableViewController: BaseTableViewController {
     lazy var dateOfBirthDatePicker = UIDatePicker()
     let dateFormatter = "YYYY-MM-dd"
     var gender: String = "Male"
+    var profile: ProfileResponse! = nil
     
-//    let dateFormatter = DateFormatter()
+    //    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateOfBirthDatePicker.datePickerMode = .date
         dateOfBirthTextField.inputView = dateOfBirthDatePicker
         
-         dateOfBirthDatePicker.addTarget(self, action: #selector(EditProfileTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
+        dateOfBirthDatePicker.addTarget(self, action: #selector(EditProfileTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
+        
+        setupPreFilledProfile()
     }
     
     func segmentIndex(sender: UISegmentedControl?) {
@@ -55,11 +58,6 @@ class EditProfileTableViewController: BaseTableViewController {
     }
     
     func getDate(sender: Any) {
-//        let selectedDate =  datePicker.date
-//        date = selectedDate
-//        dateString = selectedDate.toString(.Custom(dateFormatter))
-//        dateTextField.text = dateString
-        
         let selectedDate =  dateOfBirthDatePicker.date
         let dateString =  selectedDate.string(custom: dateFormatter)
         dateOfBirthTextField.text = dateString
@@ -95,7 +93,7 @@ class EditProfileTableViewController: BaseTableViewController {
             print("passed all validation")
             
             let user = LoginUtils.getCurrentMemberUserLogin()
-        
+            
             let param = ProfileModel(fname: firstName, lname: lastName, loc_id: "1", height: height, weight: weight, about_me: aboutme, gender: gender, birthday: dateOfBirth, userId: user!.id).toJSON()
             
             EditProfilePostService.executeRequest(param! as [String : AnyObject]) { (data) in
@@ -103,21 +101,19 @@ class EditProfileTableViewController: BaseTableViewController {
             }
         }
     }
-}
+    
+    func setupPreFilledProfile() {
 
-/*
- extension EditProfileTableViewController: UIPickerViewDelegate {
- 
- func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
- return ageGroupInfo.count
- }
- 
- func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
- return ageGroupInfo[row].title
- }
- 
- func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
- selectedAgeGroupInfo = ageGroupInfo[row]
- ageGroupTextField.text = ageGroupInfo[row].title
- }
- }*/
+        if let profile = LoginUtils.getCurrentUserProfile() {
+            aboutMeTextField.text! = profile.about_me
+            firstNameTextField.text! = profile.fname
+            lastNameTextField.text! = profile.lname
+            dateOfBirthTextField.text! = profile.birthday
+            heightTextField.text!  =  profile.height
+            weightTextField.text! = profile.weight
+            
+        }else {
+            return
+        }
+    }
+}

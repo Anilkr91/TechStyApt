@@ -133,6 +133,8 @@
 		84CE7F291F82A28C002F7BB3 /* TimeTableFridayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F281F82A28B002F7BB3 /* TimeTableFridayResponse.swift */; };
 		84CE7F2B1F82A29A002F7BB3 /* TimeTableSaturdayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F2A1F82A29A002F7BB3 /* TimeTableSaturdayResponse.swift */; };
 		84CE7F2F1F82BA89002F7BB3 /* UploadImageService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F2E1F82BA89002F7BB3 /* UploadImageService+POST.swift */; };
+		84CE7F311F836E15002F7BB3 /* ProfileService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F301F836E15002F7BB3 /* ProfileService+GET.swift */; };
+		84CE7F331F837391002F7BB3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F321F837391002F7BB3 /* ProfileResponse.swift */; };
 		84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */; };
 		84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */; };
 		84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8A1F4FF8610002074D /* HomeViewController.swift */; };
@@ -279,6 +281,8 @@
 		84CE7F281F82A28B002F7BB3 /* TimeTableFridayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableFridayResponse.swift; sourceTree = "<group>"; };
 		84CE7F2A1F82A29A002F7BB3 /* TimeTableSaturdayResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableSaturdayResponse.swift; sourceTree = "<group>"; };
 		84CE7F2E1F82BA89002F7BB3 /* UploadImageService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UploadImageService+POST.swift"; sourceTree = "<group>"; };
+		84CE7F301F836E15002F7BB3 /* ProfileService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileService+GET.swift"; sourceTree = "<group>"; };
+		84CE7F321F837391002F7BB3 /* ProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84F92F8A1F4FF8610002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -628,6 +632,7 @@
 			children = (
 				84CE7EE01F7EA6D8002F7BB3 /* ProfileModel.swift */,
 				84CE7EE11F7EA6D8002F7BB3 /* ProfileModelResponse.swift */,
+				84CE7F321F837391002F7BB3 /* ProfileResponse.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */,
 				84CCA0761F7BD3B8006E3388 /* EditProfileService+POST.swift */,
 				84CE7EC51F7E56D0002F7BB3 /* FitnessCenterDetailsService+GET.swift */,
+				84CE7F301F836E15002F7BB3 /* ProfileService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1024,6 +1030,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CE7F331F837391002F7BB3 /* ProfileResponse.swift in Sources */,
 				84CCA0C51F7E31CE006E3388 /* InformationTableViewController.swift in Sources */,
 				84409B261F5D58D4005BAC61 /* ErrorModel.swift in Sources */,
 				841CA8141F66E82B004C95CF /* MemberButton.swift in Sources */,
@@ -1031,6 +1038,7 @@
 				841CA2501F613A7D004C95CF /* MembershipDetailsTableViewController.swift in Sources */,
 				84CE7EE31F7EA6D8002F7BB3 /* BlogModelArray.swift in Sources */,
 				841CA24D1F613A7D004C95CF /* CheckedInMemberCollectionViewController.swift in Sources */,
+				84CE7F311F836E15002F7BB3 /* ProfileService+GET.swift in Sources */,
 				84CBB53D1F55C334001C369F /* BlogService+GET.swift in Sources */,
 				84CE7EF51F7EB330002F7BB3 /* FacilitiesCenterDetailsTimeTable.swift in Sources */,
 				84C4CF3D1F569AD9001DA94A /* DietTableViewCell.swift in Sources */,

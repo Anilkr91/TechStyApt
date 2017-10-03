@@ -1,17 +1,16 @@
 //
-//  ProfileModel.swift
+//  ProfileResponse.swift
 //  StayAPT
 //
-//  Created by admin on 27/09/17.
+//  Created by admin on 03/10/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
-
 import Gloss
 
-struct ProfileModel {
+struct ProfileResponse: Decodable {
     
-    let userImage: String? = ""
+    let userImage: String
     let fname: String
     let lname: String
     let loc_id: String
@@ -20,9 +19,17 @@ struct ProfileModel {
     let about_me: String
     let gender: String
     let birthday: String
-    let userId: String
     
-    init(fname: String, lname: String, loc_id: String, height: String, weight: String, about_me: String, gender: String, birthday: String, userId: String ) {
+    init?(json: JSON) {
+        guard let fname: String = "fname" <~~ json,
+            let lname: String = "lname" <~~ json,
+            let loc_id: String = "loc_id" <~~ json,
+            let height: String = "height" <~~ json,
+            let weight: String = "weight" <~~ json,
+            let about_me: String = "about_me" <~~ json,
+            let gender: String = "gender" <~~ json,
+            let birthday: String = "birthday" <~~ json,
+            let userImage: String = "userImage" <~~ json else { return nil }
         
         self.fname = fname
         self.lname = lname
@@ -32,9 +39,10 @@ struct ProfileModel {
         self.about_me = about_me
         self.gender = gender
         self.birthday = birthday
-        self.userId = userId
-    }
+        self.userImage = userImage
         
+    }
+    
     func toJSON() -> JSON? {
         return jsonify([
             
@@ -46,8 +54,7 @@ struct ProfileModel {
             "about_me" ~~> self.about_me,
             "gender" ~~> self.gender,
             "birthday" ~~> self.birthday,
-            "userId" ~~> self.userId
-            
+            "userImage" ~~> self.userImage
             ])
     }
 }

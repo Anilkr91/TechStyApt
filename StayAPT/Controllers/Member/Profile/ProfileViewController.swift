@@ -7,29 +7,71 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var aboutMeLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    var profile: ProfileResponse! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let user = LoginUtils.getCurrentMemberUserLogin()
+        let param = ["userId": user!.id] as [String : AnyObject]
+        
+        
+        if let profile = LoginUtils.getCurrentUserProfile() {
+            setupView(profile: profile)
+            
+        } else {
+            
+            ProfileGetService.executeRequest(param) { (response) in
+                self.profile = response
+                LoginUtils.setCurrentUserProfile(response)
+                self.setupView()
+                
+            }
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        let name = "\(profile.fname) \(profile.lname)"
+        let image = UIImage(named: "gym")
+        let url = URL(string: profile.userImage)!
+        nameLabel.text = name
+        aboutMeLabel.text = profile.about_me
+        profileImageView.kf.setImage(with: url, placeholder: image)
     }
-    */
-
+    
+    func setupView(profile: ProfileResponse) {
+        let name = "\(profile.fname) \(profile.lname)"
+        let image = UIImage(named: "gym")
+        let url = URL(string: profile.userImage)!
+        nameLabel.text = name
+        aboutMeLabel.text = profile.about_me
+        profileImageView.kf.setImage(with: url, placeholder: image)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showEditProfileSegue" {
+            
+            let dvc = segue.destination as! EditProfileTableViewController
+            dvc.profile = profile
+        }
+    }
+    
+    @IBAction func editProfileTapped(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "showEditProfileSegue", sender: self)
+    }
 }

@@ -10,12 +10,12 @@ import Gloss
 struct ProfileModelResponse: Decodable {
     
     let status: Bool
-    let profile: ProfileModel
+    let profile: ProfileResponse
     
     
     init?(json: JSON) {
         guard let status: Bool = "status" <~~ json,
-            let profile: ProfileModel = "data" <~~ json else { return nil }
+            let profile: ProfileResponse = "data" <~~ json else { return nil }
         
         self.status = status
         self.profile = profile

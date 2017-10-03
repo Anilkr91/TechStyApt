@@ -11,6 +11,7 @@ import SwiftyUserDefaults
 extension DefaultsKeys {
     
     static let memberLogin = DefaultsKey<[String: Any]?>("memberLogin")
+    static let profile = DefaultsKey<[String: Any]?>("profile")
     static let fitnessCenterLogin = DefaultsKey<[String: Any]?>("fitnessCenterLogin")
     
 }
