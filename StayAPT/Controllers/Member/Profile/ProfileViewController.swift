@@ -24,17 +24,17 @@ class ProfileViewController: UIViewController {
         let param = ["userId": user!.id] as [String : AnyObject]
         
         
-        if let profile = LoginUtils.getCurrentUserProfile() {
-            setupView(profile: profile)
-            
-        } else {
-            
+//        if let profile = LoginUtils.getCurrentUserProfile() {
+//            setupView(profile: profile)
+//            
+//        } else {
+        
             ProfileGetService.executeRequest(param) { (response) in
                 self.profile = response
                 LoginUtils.setCurrentUserProfile(response)
                 self.setupView()
                 
-            }
+//            }
         }
     }
     

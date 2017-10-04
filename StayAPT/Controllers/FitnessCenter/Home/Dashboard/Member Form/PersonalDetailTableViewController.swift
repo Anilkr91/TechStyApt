@@ -91,13 +91,14 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
 //            //print(imageData.count)
             
             
-            let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
+//            let header: HTTPHeaders = []
             let BaseUrl = Constants.BASE_URL
 
             
             let parameters: Parameters = [
                 "userId" : "25",
-                "oldImage" : ""
+                "oldImage" : "",
+                "X_API_KEY" : Constants.API_KEY
             ]
             
             let request =  Alamofire.upload(multipartFormData:{ multipartFormData in
@@ -114,7 +115,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
                                             usingThreshold:UInt64.init(),
                                             to: BaseUrl + "user/profile/profileImage",
                                             method:.post,
-                                            headers: header,
+                                            headers: nil,
                                             encodingCompletion: { encodingResult in
                                                 
                                                 switch encodingResult {

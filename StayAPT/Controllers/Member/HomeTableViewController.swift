@@ -1,43 +1,45 @@
 //
-//  FitnessFacilitiesTableViewController.swift
+//  HomeTableViewController.swift
 //  StayAPT
 //
-//  Created by admin on 29/09/17.
+//  Created by admin on 04/10/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
 import UIKit
 
-class FitnessFacilitiesTableViewController: BaseTableViewController {
+class HomeTableViewController: BaseTableViewController {
     
-    var memberArray: [FitnessCenterDetailsFacilities]!
-
+    let array = ["Notes","Goal of the Month","Ultimate Goal","Fitness Buddies","Fitness Center","My Workout","My Stats","Rate yourself"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return memberArray.count
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FitnessFacilitiesTableViewCell
-        cell.info = memberArray[indexPath.section]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        return cell
+        cell.textLabel?.text = array[indexPath.section]
+        return UITableViewCell()
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return array.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showGoalSegue", sender: self)
+    }
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
         return 2
     }
     

@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class UploadImagePostService {
-    static func executeRequest (_ data: Data, completionHandler: @escaping (Data) -> Void) {
+    static func executeRequest (_ data: Data, image: String, completionHandler: @escaping (Data) -> Void) {
         
         Loader.sharedInstance.showLoader()
         let BaseURL = Constants.BASE_URL
@@ -18,30 +18,25 @@ class UploadImagePostService {
         
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
-        
-         let headers: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
-        let parameters: Parameters = ["userId": user?.id,
-                                      "newImage": ""
-                                      ]
-        
+    
         let request =  manager.upload(multipartFormData:{ multipartFormData in
             
-            multipartFormData.append(data, withName: "newImage", fileName: "image", mimeType: "image/png")
+            multipartFormData.append(data, withName: "newImage", fileName: "image", mimeType: "image/jpg")
 //             multipartFormData.append(, withName: "userId")
             
         },
                                       usingThreshold:UInt64.init(),
-                                      to: BaseURL + "profileImage",
+                                      to: BaseURL + "user/profile/profileImage?X_API_KEY=\(Constants.API_KEY)&userId=\(user!.id)&oldImage=\(image)",
                                       method:.post,
-                                      headers: headers,
+                                      headers: nil,
                                       encodingCompletion: { encodingResult in
                                         
                                         switch encodingResult {
                                             
                                         case .success(let upload, _, _):
-                                            
+                                             debugPrint(upload)
                                             upload.responseJSON { response in
-                                                
+                                                Loader.sharedInstance.hideLoader()
                                                 print(response)
 //                                                if let info = response.result.value as? [String: Any]  {
 //                                                    

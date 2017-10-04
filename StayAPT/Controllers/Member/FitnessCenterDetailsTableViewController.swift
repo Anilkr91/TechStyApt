@@ -13,11 +13,12 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     let array = ["Gym Name", "Information", "Gallery" ,"Classes", "Facilities", "Timetable", "Trainers", "Membership"]
     
     var fcId : String?
+    var gymName: String?
+    
     var fitnessCenterDetail: FitnessCenterDetailResponse!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(fcId)
         populateFitnessCenterDetails(id: fcId!)
     }
     
@@ -68,7 +69,7 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     
     func setUpSegue(indexPath: Int) {
         switch indexPath {
-//        case 0: performSegue(withIdentifier: "showInformationSegue", sender: self)
+        case 0: performSegue(withIdentifier: "showInformationSegue", sender: self)
         case 1: performSegue(withIdentifier: "showInformationSegue", sender: self)
 //        case 2: performSegue(withIdentifier: "showClassesSegue", sender: self)
         case 3: performSegue(withIdentifier: "showClassesSegue", sender: self)
@@ -92,9 +93,16 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         if segue.identifier == "showClassesSegue" {
           
             let dvc = segue.destination as! FitnessClassesCollectionViewController
-            print(fitnessCenterDetail)
             dvc.memberArray =  fitnessCenterDetail.classes
+        
+        } else if segue.identifier == "showFacilitiesSegue" {
+            let dvc = segue.destination as! FitnessFacilitiesTableViewController
+            dvc.memberArray =  fitnessCenterDetail.facilities
+        
+        }else if  segue.identifier == "showInformationSegue" {
+            let dvc = segue.destination as! FitnessInformationTableViewController
+            dvc.information =  fitnessCenterDetail.information
+
         }
     }
-    
 }

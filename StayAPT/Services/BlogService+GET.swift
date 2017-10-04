@@ -24,8 +24,9 @@ class BlogGetService {
             switch response.result {
             case .success(let value) :
                 if let data = BlogModelArray.init(json: value as! JSON)  {
-                    completionHandler(data.results)
                     Loader.sharedInstance.hideLoader()
+                    completionHandler(data.results)
+                    
                 } else {
                     Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)

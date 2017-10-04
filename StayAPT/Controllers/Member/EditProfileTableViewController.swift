@@ -19,8 +19,11 @@ class EditProfileTableViewController: BaseTableViewController {
     @IBOutlet weak var dateOfBirthTextField: BaseTextField!
     @IBOutlet weak var heightTextField: BaseTextField!
     @IBOutlet weak var weightTextField: BaseTextField!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     lazy var dateOfBirthDatePicker = UIDatePicker()
+    let imagePickerController = UIImagePickerController()
+    let tapGesture =  UITapGestureRecognizer()
     let dateFormatter = "YYYY-MM-dd"
     var gender: String = "Male"
     var profile: ProfileResponse! = nil
@@ -34,8 +37,18 @@ class EditProfileTableViewController: BaseTableViewController {
         
         dateOfBirthDatePicker.addTarget(self, action: #selector(EditProfileTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
         
+        profileImageView.isUserInteractionEnabled  = true
+        tapGesture.addTarget(self, action: #selector(EditProfileTableViewController.uploadImage))
+        profileImageView.addGestureRecognizer(tapGesture)
+        
         setupPreFilledProfile()
     }
+    
+    func uploadImage() {
+        handleImageTapGestureRecognizer()
+    }
+    
+    
     
     func segmentIndex(sender: UISegmentedControl?) {
         
@@ -103,7 +116,7 @@ class EditProfileTableViewController: BaseTableViewController {
     }
     
     func setupPreFilledProfile() {
-
+        
         if let profile = LoginUtils.getCurrentUserProfile() {
             aboutMeTextField.text! = profile.about_me
             firstNameTextField.text! = profile.fname
@@ -117,3 +130,62 @@ class EditProfileTableViewController: BaseTableViewController {
         }
     }
 }
+
+extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func handleImageTapGestureRecognizer() {
+        let imagePickerMenu = UIAlertController(title: "Choose image to upload", message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Take photo", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+            self.imagePickerController.sourceType = .camera
+            self.imagePickerController.cameraDevice = .front
+            self.presentImagePickerController()
+        })
+        
+        let galleryAction = UIAlertAction(title: "Choose from Library", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.imagePickerController.sourceType = .photoLibrary
+            self.presentImagePickerController()
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        imagePickerMenu.addAction(cameraAction)
+        imagePickerMenu.addAction(galleryAction)
+        imagePickerMenu.addAction(cancelAction)
+        
+        self.present(imagePickerMenu, animated: true, completion: nil)
+    }
+    
+    func presentImagePickerController() {
+        self.imagePickerController.delegate = self
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.imagePickerController.dismiss(animated: true, completion: nil)
+        
+        if let imageData = image?.jpeg(.medium)  {
+            
+            UploadImagePostService.executeRequest(imageData, image: "", completionHandler: { (response) in
+                print(response)
+            })
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func countDataInMB(data: NSData) {
+        let bcf = ByteCountFormatter()
+        bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
+        bcf.countStyle = .file
+        let string = bcf.string(fromByteCount: Int64(data.length))
+        print("formatted result: \(string)")
+    }
+}
+
