@@ -142,6 +142,10 @@
 		84D152331F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152321F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift */; };
 		84D152351F84CD170076253D /* FitnessMembershipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152341F84CD170076253D /* FitnessMembershipTableViewCell.swift */; };
 		84D152371F84CE5B0076253D /* FitnessMembershipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152361F84CE5B0076253D /* FitnessMembershipTableViewController.swift */; };
+		84D152391F867E950076253D /* SalesPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152381F867E950076253D /* SalesPersonModel.swift */; };
+		84D1523B1F867ECA0076253D /* SalesPersonArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523A1F867ECA0076253D /* SalesPersonArray.swift */; };
+		84D1523D1F8684610076253D /* SalesPersonService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523C1F8684610076253D /* SalesPersonService+GET.swift */; };
+		84D1523F1F868CDC0076253D /* VisitorsFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */; };
 		84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */; };
 		84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */; };
 		84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8A1F4FF8610002074D /* HomeViewController.swift */; };
@@ -297,6 +301,10 @@
 		84D152321F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTrainersCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D152341F84CD170076253D /* FitnessMembershipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewCell.swift; sourceTree = "<group>"; };
 		84D152361F84CE5B0076253D /* FitnessMembershipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewController.swift; sourceTree = "<group>"; };
+		84D152381F867E950076253D /* SalesPersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesPersonModel.swift; sourceTree = "<group>"; };
+		84D1523A1F867ECA0076253D /* SalesPersonArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesPersonArray.swift; sourceTree = "<group>"; };
+		84D1523C1F8684610076253D /* SalesPersonService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SalesPersonService+GET.swift"; sourceTree = "<group>"; };
+		84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormModel.swift; sourceTree = "<group>"; };
 		84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84F92F8A1F4FF8610002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -718,6 +726,7 @@
 				84CCA0761F7BD3B8006E3388 /* EditProfileService+POST.swift */,
 				84CE7EC51F7E56D0002F7BB3 /* FitnessCenterDetailsService+GET.swift */,
 				84CE7F301F836E15002F7BB3 /* ProfileService+GET.swift */,
+				84D1523C1F8684610076253D /* SalesPersonService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -825,6 +834,9 @@
 				841CA8411F690666004C95CF /* SuccessModel.swift */,
 				841CA8C11F6AB9A1004C95CF /* FCLoginResponse.swift */,
 				841CA8C51F6AE698004C95CF /* CheckInModel.swift */,
+				84D152381F867E950076253D /* SalesPersonModel.swift */,
+				84D1523A1F867ECA0076253D /* SalesPersonArray.swift */,
+				84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1067,6 +1079,7 @@
 				841CA82B1F68130E004C95CF /* Loader.swift in Sources */,
 				84D152331F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift in Sources */,
 				841CA2511F613A7D004C95CF /* PersonalDetailTableViewController.swift in Sources */,
+				84D1523F1F868CDC0076253D /* VisitorsFormModel.swift in Sources */,
 				84409B3F1F5D7041005BAC61 /* GalleryCollectionViewController.swift in Sources */,
 				841CA8281F68130E004C95CF /* AlertView+Helper.swift in Sources */,
 				84409B2F1F5D6D20005BAC61 /* MenuTableViewController.swift in Sources */,
@@ -1115,6 +1128,7 @@
 				84CBB5321F559A90001C369F /* VisitorsListingTableViewCell.swift in Sources */,
 				84CE7EFF1F7ED245002F7BB3 /* QuaterlyResponse.swift in Sources */,
 				841CA8C61F6AE698004C95CF /* CheckInModel.swift in Sources */,
+				84D1523D1F8684610076253D /* SalesPersonService+GET.swift in Sources */,
 				841CA8D21F6D42DA004C95CF /* DefaultKeys.swift in Sources */,
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
 				841CA2191F612F80004C95CF /* FitnessCenterLoginTableViewController.swift in Sources */,
@@ -1154,6 +1168,7 @@
 				84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */,
 				84409B2B1F5D6B5F005BAC61 /* FitnessCenterViewController.swift in Sources */,
 				84409B1E1F5D3658005BAC61 /* FitnessCenterModel.swift in Sources */,
+				84D1523B1F867ECA0076253D /* SalesPersonArray.swift in Sources */,
 				841CA24F1F613A7D004C95CF /* FitnessDashBoardTableViewController.swift in Sources */,
 				841CA8C21F6AB9A1004C95CF /* FCLoginResponse.swift in Sources */,
 				841CA82C1F68130E004C95CF /* StayAptConstants.swift in Sources */,
@@ -1180,6 +1195,7 @@
 				84CBB5311F559A90001C369F /* FitnessNotificationTableViewCell.swift in Sources */,
 				844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */,
 				84CE7F251F82A26F002F7BB3 /* TimeTableWednesdayResponse.swift in Sources */,
+				84D152391F867E950076253D /* SalesPersonModel.swift in Sources */,
 				84D1522F1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift in Sources */,
 				84CE7EF91F7EB330002F7BB3 /* FitnessCenterDetailsFacilities.swift in Sources */,
 				84409B2A1F5D6B5F005BAC61 /* FitnessCenterTableViewController.swift in Sources */,

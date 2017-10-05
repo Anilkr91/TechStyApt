@@ -23,6 +23,7 @@ class StayAptTableViewController: BaseTableViewController {
         super.viewDidLoad()
         salesPersonTextField.inputView = picker
         picker.delegate = self
+        getSalesPerson()
         
     }
     
@@ -74,6 +75,15 @@ extension StayAptTableViewController: UIPickerViewDelegate {
             
         }   else {
             print("passed all validation")
+        }
+    }
+    
+    
+    func getSalesPerson() {
+        
+        let param = ["fcID": "1"] as [String: AnyObject]
+        SalesPersonGetService.executeRequest(param) { (data) in
+            print(data)
         }
     }
 }

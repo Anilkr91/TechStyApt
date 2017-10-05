@@ -1510,7 +1510,7 @@
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhI-oV-hiK" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhI-oV-hiK" customClass="BaseLabel" customModule="StayAPT" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="20" width="293" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -1543,7 +1543,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-So-0AI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-So-0AI" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="14" width="343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1582,9 +1582,9 @@
                                                                 <constraint firstAttribute="height" constant="20" id="QXi-64-tE4"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-tj-cpk" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="62" width="129" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjS-tj-cpk" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="55.666666666666671" width="129" height="20.000000000000014"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1592,21 +1592,21 @@
                                                             <rect key="frame" x="8" y="89.666666666666671" width="129" height="30"/>
                                                             <state key="normal" title="Call"/>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-wz-WFg" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="33" width="129" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrI-wz-WFg">
+                                                            <rect key="frame" x="8" y="33" width="129" height="14.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBP-lt-EqV">
-                                                            <rect key="frame" x="145" y="15" width="230" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="145" y="15.000000000000002" width="230" height="13.66666666666667"/>
+                                                            <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-f9-ocu">
-                                                            <rect key="frame" x="145" y="44" width="230" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-f9-ocu" customClass="MediumBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                            <rect key="frame" x="145" y="36.666666666666664" width="230" height="13"/>
+                                                            <fontDescription key="fontDescription" name="cuyabra-Regular" family="cuyabra" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1656,15 +1656,15 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBG-9G-deP">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79.666666666666671"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvK-H4-Wh0" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvK-H4-Wh0" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="59.666666666666657" width="367" height="20.333333333333343"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4x-1m-Qzl" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="367" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4x-1m-Qzl">
+                                                            <rect key="frame" x="8" y="8" width="367" height="13.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1695,15 +1695,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-fD-MDZ" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-fD-MDZ" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="37" width="359" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow Features" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-LD-yxH" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow Features" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-LD-yxH" customClass="MediumBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="359" height="13.666666666666668"/>
+                                                    <fontDescription key="fontDescription" name="cuyabra-Bold" family="cuyabra" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1712,8 +1712,8 @@
                                                 <constraint firstItem="SdC-fD-MDZ" firstAttribute="leading" secondItem="hE0-LD-yxH" secondAttribute="leading" id="55X-hL-eFb"/>
                                                 <constraint firstAttribute="trailing" secondItem="hE0-LD-yxH" secondAttribute="trailing" constant="8" id="6se-4z-ba8"/>
                                                 <constraint firstItem="hE0-LD-yxH" firstAttribute="top" secondItem="q9q-xJ-asL" secondAttribute="top" constant="8" id="917-Aa-hKG"/>
-                                                <constraint firstItem="SdC-fD-MDZ" firstAttribute="top" secondItem="hE0-LD-yxH" secondAttribute="bottom" constant="8" id="9an-9S-2Jl"/>
                                                 <constraint firstItem="SdC-fD-MDZ" firstAttribute="trailing" secondItem="hE0-LD-yxH" secondAttribute="trailing" id="MHx-jh-rTu"/>
+                                                <constraint firstItem="SdC-fD-MDZ" firstAttribute="top" secondItem="hE0-LD-yxH" secondAttribute="bottom" constant="15" id="OrJ-ga-6zY"/>
                                                 <constraint firstAttribute="bottom" secondItem="SdC-fD-MDZ" secondAttribute="bottom" id="S7j-nl-pw6"/>
                                                 <constraint firstItem="hE0-LD-yxH" firstAttribute="leading" secondItem="q9q-xJ-asL" secondAttribute="leading" constant="8" id="poP-1p-dT7"/>
                                             </constraints>
