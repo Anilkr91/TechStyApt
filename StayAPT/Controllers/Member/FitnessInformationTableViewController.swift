@@ -24,17 +24,19 @@ class FitnessInformationTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
     }
     
     func setupViews() {
       nameLabel.text = information?.fitness_center_name
         addressLabel.text  = information?.address
-//        ratingView = ""
         mottoLabel.text = information?.moto
         uspLabel.text = information?.usp
         phoneNumberLabel.text = information?.phone_number
-        wowFeaturesLabel.text = information?.description
+        
+        
+        let description = information!.description
+        let replacedString = description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        wowFeaturesLabel.text = replacedString
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
