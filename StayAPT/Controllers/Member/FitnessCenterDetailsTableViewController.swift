@@ -16,19 +16,19 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     var gymName: String?
     
     var fitnessCenterDetail: FitnessCenterDetailResponse!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateFitnessCenterDetails(id: fcId!)
     }
     
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return array.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
@@ -39,7 +39,7 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         if indexPath.section % 2 == 0 {
-           cell.backgroundColor  =  UIColor.red
+            cell.backgroundColor  =  UIColor.red
         } else {
             cell.backgroundColor  = UIColor.white
         }
@@ -71,10 +71,12 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         switch indexPath {
         case 0: performSegue(withIdentifier: "showInformationSegue", sender: self)
         case 1: performSegue(withIdentifier: "showInformationSegue", sender: self)
-//        case 2: performSegue(withIdentifier: "showClassesSegue", sender: self)
+        //        case 2: performSegue(withIdentifier: "showClassesSegue", sender: self)
         case 3: performSegue(withIdentifier: "showClassesSegue", sender: self)
         case 4: performSegue(withIdentifier: "showFacilitiesSegue", sender: self)
-       // case 5: performSegue(withIdentifier: "", sender: self)
+        // case 5: performSegue(withIdentifier: "", sender: self)
+        case 6: performSegue(withIdentifier: "showTrainersSegue", sender: self)
+        case 7: performSegue(withIdentifier: "showMembershipSegue", sender: self)
         default: print(indexPath)
         }
     }
@@ -91,17 +93,28 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showClassesSegue" {
-          
+            
             let dvc = segue.destination as! FitnessClassesCollectionViewController
             dvc.memberArray =  fitnessCenterDetail.classes
-        
+            
         } else if segue.identifier == "showFacilitiesSegue" {
             let dvc = segue.destination as! FitnessFacilitiesTableViewController
             dvc.memberArray =  fitnessCenterDetail.facilities
-        
+            
         }else if  segue.identifier == "showInformationSegue" {
             let dvc = segue.destination as! FitnessInformationTableViewController
             dvc.information =  fitnessCenterDetail.information
+            
+        } else if  segue.identifier == "showTrainersSegue" {
+            let dvc = segue.destination as! FitnessTrainersCollectionViewController
+            dvc.memberArray =  fitnessCenterDetail.trainers
+       
+        } else if  segue.identifier == "showMembershipSegue" {
+            let dvc = segue.destination as! FitnessMembershipTableViewController
+            dvc.memberArray.append(fitnessCenterDetail.membershipMonthly)
+            dvc.memberArray.append(fitnessCenterDetail.membershipQuaterly)
+            dvc.memberArray.append(fitnessCenterDetail.membershiphalfYearly)
+            dvc.memberArray.append(fitnessCenterDetail.membershipYearly)
 
         }
     }

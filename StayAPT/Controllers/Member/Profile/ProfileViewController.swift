@@ -20,6 +20,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        
         let user = LoginUtils.getCurrentMemberUserLogin()
         let param = ["userId": user!.id] as [String : AnyObject]
         
@@ -28,7 +32,6 @@ class ProfileViewController: UIViewController {
 //            setupView(profile: profile)
 //            
 //        } else {
-        
             ProfileGetService.executeRequest(param) { (response) in
                 self.profile = response
                 LoginUtils.setCurrentUserProfile(response)
@@ -71,7 +74,6 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func editProfileTapped(_ sender: Any) {
-        
         self.performSegue(withIdentifier: "showEditProfileSegue", sender: self)
     }
 }

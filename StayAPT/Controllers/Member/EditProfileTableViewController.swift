@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 import SwiftDate
 
 class EditProfileTableViewController: BaseTableViewController {
@@ -27,9 +28,7 @@ class EditProfileTableViewController: BaseTableViewController {
     let dateFormatter = "YYYY-MM-dd"
     var gender: String = "Male"
     var profile: ProfileResponse! = nil
-    
-    //    let dateFormatter = DateFormatter()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         dateOfBirthDatePicker.datePickerMode = .date
@@ -48,20 +47,15 @@ class EditProfileTableViewController: BaseTableViewController {
         handleImageTapGestureRecognizer()
     }
     
-    
-    
     func segmentIndex(sender: UISegmentedControl?) {
         
         let index = sender!.selectedSegmentIndex
         
         switch index {
-            
         case 0:
             gender = "Male"
-            
         case 1:
             gender = "Female"
-            
         case 2:
             gender = "Other"
             
@@ -110,6 +104,7 @@ class EditProfileTableViewController: BaseTableViewController {
             let param = ProfileModel(fname: firstName, lname: lastName, loc_id: "1", height: height, weight: weight, about_me: aboutme, gender: gender, birthday: dateOfBirth, userId: user!.id).toJSON()
             
             EditProfilePostService.executeRequest(param! as [String : AnyObject]) { (data) in
+                self.navigationController?.popViewController(animated: true)
                 Alert.showAlertWithMessage("Success", message: data.response!)
             }
         }
@@ -117,17 +112,22 @@ class EditProfileTableViewController: BaseTableViewController {
     
     func setupPreFilledProfile() {
         
-        if let profile = LoginUtils.getCurrentUserProfile() {
-            aboutMeTextField.text! = profile.about_me
-            firstNameTextField.text! = profile.fname
-            lastNameTextField.text! = profile.lname
-            dateOfBirthTextField.text! = profile.birthday
-            heightTextField.text!  =  profile.height
-            weightTextField.text! = profile.weight
-            
-        }else {
-            return
-        }
+        //        if let profile = LoginUtils.getCurrentUserProfile() {
+        
+        let image = UIImage(named: "gym")
+        let url = URL(string: profile.userImage)!
+        
+        profileImageView.kf.setImage(with: url, placeholder: image)
+        aboutMeTextField.text! = profile.about_me
+        firstNameTextField.text! = profile.fname
+        lastNameTextField.text! = profile.lname
+        dateOfBirthTextField.text! = profile.birthday
+        heightTextField.text!  =  profile.height
+        weightTextField.text! = profile.weight
+        
+        //        }else {
+        return
+        //        }
     }
 }
 
@@ -171,7 +171,7 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
         if let imageData = image?.jpeg(.medium)  {
             
             UploadImagePostService.executeRequest(imageData, image: "", completionHandler: { (response) in
-                print(response)
+                self.profileImageView.image = image
             })
         }
     }
@@ -179,13 +179,4 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    func countDataInMB(data: NSData) {
-        let bcf = ByteCountFormatter()
-        bcf.allowedUnits = [.useMB] // optional: restricts the units to MB only
-        bcf.countStyle = .file
-        let string = bcf.string(fromByteCount: Int64(data.length))
-        print("formatted result: \(string)")
-    }
 }
-

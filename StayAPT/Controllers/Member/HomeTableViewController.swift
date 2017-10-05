@@ -26,7 +26,7 @@ class HomeTableViewController: BaseTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         cell.textLabel?.text = array[indexPath.section]
-        return UITableViewCell()
+        return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

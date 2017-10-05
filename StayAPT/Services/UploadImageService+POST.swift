@@ -10,11 +10,11 @@ import Alamofire
 import Gloss
 
 class UploadImagePostService {
-    static func executeRequest (_ data: Data, image: String, completionHandler: @escaping (Data) -> Void) {
+    static func executeRequest (_ data: Data, image: String, completionHandler: @escaping (DataResponse<Any>) -> Void) {
         
         Loader.sharedInstance.showLoader()
-        let BaseURL = Constants.BASE_URL
         let user = LoginUtils.getCurrentMemberUserLogin()
+        let uploadUrl = "http://stayapt.com/UploadImageController/profileUploadImage?X_API_KEY=\(Constants.API_KEY)&userId=\(user!.id)"
         
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
@@ -22,11 +22,10 @@ class UploadImagePostService {
         let request =  manager.upload(multipartFormData:{ multipartFormData in
             
             multipartFormData.append(data, withName: "newImage", fileName: "image", mimeType: "image/jpg")
-//             multipartFormData.append(, withName: "userId")
             
         },
                                       usingThreshold:UInt64.init(),
-                                      to: BaseURL + "user/profile/profileImage?X_API_KEY=\(Constants.API_KEY)&userId=\(user!.id)&oldImage=\(image)",
+                                      to: uploadUrl,
                                       method:.post,
                                       headers: nil,
                                       encodingCompletion: { encodingResult in
@@ -42,7 +41,7 @@ class UploadImagePostService {
 //                                                    
 ////                                                    let data = ImageModel(json: info )
 //                                                    
-//                                                    completionHandler(data)
+                                                    completionHandler(response)
 //                                                }
                                             }
                                             
