@@ -39,7 +39,6 @@ class CheckedInMemberCollectionViewController: UICollectionViewController {
 extension CheckedInMemberCollectionViewController: UICollectionViewDelegateFlowLayout {
     fileprivate var sectionInsets: UIEdgeInsets {
         return .init(top: 8, left: 8, bottom: 8, right: 8)
-        
     }
     
     fileprivate var itemsPerRow: CGFloat {
