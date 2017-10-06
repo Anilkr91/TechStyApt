@@ -69,7 +69,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFitnessCenterDetailsSegue" {
             
-            let dvc = segue.destination as! FitnessCenterDetailsTableViewController
+            let dvc = segue.destination as! FitnessCenterDetailsCollectionViewController
             dvc.fcId = fcId
         }
     }

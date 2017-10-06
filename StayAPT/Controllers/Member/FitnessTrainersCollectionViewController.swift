@@ -16,7 +16,6 @@ class FitnessTrainersCollectionViewController: BaseCollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: UICollectionViewDataSource
@@ -40,12 +39,10 @@ class FitnessTrainersCollectionViewController: BaseCollectionViewController {
 extension FitnessTrainersCollectionViewController: UICollectionViewDelegateFlowLayout {
     fileprivate var sectionInsets: UIEdgeInsets {
         return .init(top: 8, left: 8, bottom: 8, right: 8)
-        
     }
     
     fileprivate var itemsPerRow: CGFloat {
         return 3
-        
     }
     
     fileprivate var interitemSpace: CGFloat {

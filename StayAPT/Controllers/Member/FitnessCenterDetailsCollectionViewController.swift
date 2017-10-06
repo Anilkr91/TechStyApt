@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import YBSlantedCollectionViewLayout
 
-class FitnessCenterDetailsTableViewController: BaseTableViewController {
+class FitnessCenterDetailsCollectionViewController: BaseViewController {
+    
+     @IBOutlet weak var collectionView: UICollectionView!
     
     let array = ["Gym Name", "Information", "Gallery" ,"Classes", "Facilities", "Timetable", "Trainers", "Membership"]
     
@@ -19,53 +22,11 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpCollectionView()
         populateFitnessCenterDetails(id: fcId!)
     }
     
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return array.count
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        if indexPath.section % 2 == 0 {
-            cell.backgroundColor  =  UIColor.red
-        } else {
-            cell.backgroundColor  = UIColor.white
-        }
-        cell.textLabel?.text = array[indexPath.section]
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setUpSegue(indexPath: indexPath.section)
-    }
     
     func setUpSegue(indexPath: Int) {
         switch indexPath {
@@ -85,9 +46,54 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         
         let param = ["fcid" : id]
         FitnessCenterDetailsGetService.executeRequest(param as [String : AnyObject]) { (data) in
-            
             self.fitnessCenterDetail = data
         }
+    }
+}
+
+extension FitnessCenterDetailsCollectionViewController: UICollectionViewDataSource {
+    
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! FitnessCenterDetailCollectionCell
+        
+        cell.member = array[indexPath.item]
+        return cell
+    }
+}
+
+extension FitnessCenterDetailsCollectionViewController: UICollectionViewDelegate {
+    
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
+//        performSegue(withIdentifier: "showDietPlanSegue", sender: self)
+        
+        setUpSegue(indexPath: indexPath.item)
+    }
+}
+
+extension FitnessCenterDetailsCollectionViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let collectionView = self.collectionView else {return}
+        guard let visibleCells = collectionView.visibleCells as? [FitnessCenterDetailCollectionViewCell] else {return}
+        for parallaxCell in visibleCells {
+            let yOffset = ((collectionView.contentOffset.y - parallaxCell.frame.origin.y) / parallaxCell.imageHeight) * yOffsetSpeed
+            let xOffset = ((collectionView.contentOffset.x - parallaxCell.frame.origin.x) / parallaxCell.imageWidth) * xOffsetSpeed
+            parallaxCell.offset(CGPoint(x: xOffset,y :yOffset))
+        }
+    }
+    
+    func setUpCollectionView() {
+        let layout = collectionView?.collectionViewLayout as! YBSlantedCollectionViewLayout
+        layout.reverseSlantingAngle = true
+        layout.firstCellSlantingEnabled = false
+        layout.lastCellSlantingEnabled = false
+        layout.lineSpacing = 0.5
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -108,14 +114,14 @@ class FitnessCenterDetailsTableViewController: BaseTableViewController {
         } else if  segue.identifier == "showTrainersSegue" {
             let dvc = segue.destination as! FitnessTrainersCollectionViewController
             dvc.memberArray =  fitnessCenterDetail.trainers
-       
+            
         } else if  segue.identifier == "showMembershipSegue" {
             let dvc = segue.destination as! FitnessMembershipTableViewController
             dvc.memberArray.append(fitnessCenterDetail.membershipMonthly)
             dvc.memberArray.append(fitnessCenterDetail.membershipQuaterly)
             dvc.memberArray.append(fitnessCenterDetail.membershiphalfYearly)
             dvc.memberArray.append(fitnessCenterDetail.membershipYearly)
-
+            
         }
     }
 }
