@@ -54,6 +54,8 @@
 		842AF9FA1F87F925008043B7 /* FitnessInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9F71F87F925008043B7 /* FitnessInformationTableViewController.swift */; };
 		842AF9FB1F87F925008043B7 /* FitnessTrainersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9F81F87F925008043B7 /* FitnessTrainersCollectionViewController.swift */; };
 		842AF9FD1F87F970008043B7 /* FitnessCenterDetailsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9FC1F87F970008043B7 /* FitnessCenterDetailsCollectionViewController.swift */; };
+		842AFA021F87FB57008043B7 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9FF1F87FB57008043B7 /* ForgotPasswordTableViewController.swift */; };
+		842AFA031F87FB57008043B7 /* GoalOfTheMonthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AFA011F87FB57008043B7 /* GoalOfTheMonthTableViewController.swift */; };
 		844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */; };
 		844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */; };
 		84409B1C1F5D349B005BAC61 /* FitnessCenterService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */; };
@@ -103,7 +105,6 @@
 		84CBB5351F559A90001C369F /* MenuListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB52D1F559A90001C369F /* MenuListingTableViewCell.swift */; };
 		84CBB5361F559A90001C369F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB52E1F559A90001C369F /* MenuTableViewCell.swift */; };
 		84CBB53D1F55C334001C369F /* BlogService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CBB53C1F55C334001C369F /* BlogService+GET.swift */; };
-		84CCA04C1F7A196A006E3388 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */; };
 		84CCA04E1F7A2051006E3388 /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */; };
 		84CCA0771F7BD3B8006E3388 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA0761F7BD3B8006E3388 /* EditProfileService+POST.swift */; };
 		84CCA0C91F7E37BC006E3388 /* FitnessFacilitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CCA0C81F7E37BC006E3388 /* FitnessFacilitiesTableViewController.swift */; };
@@ -142,7 +143,6 @@
 		84CE7F331F837391002F7BB3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F321F837391002F7BB3 /* ProfileResponse.swift */; };
 		84CE7F351F839D3A002F7BB3 /* FitnessFacilitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE7F341F839D3A002F7BB3 /* FitnessFacilitiesTableViewCell.swift */; };
 		84D1522D1F84AD020076253D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1522C1F84AD020076253D /* HomeTableViewController.swift */; };
-		84D1522F1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1522E1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift */; };
 		84D152331F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152321F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift */; };
 		84D152351F84CD170076253D /* FitnessMembershipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152341F84CD170076253D /* FitnessMembershipTableViewCell.swift */; };
 		84D152371F84CE5B0076253D /* FitnessMembershipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152361F84CE5B0076253D /* FitnessMembershipTableViewController.swift */; };
@@ -221,6 +221,8 @@
 		842AF9F71F87F925008043B7 /* FitnessInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessInformationTableViewController.swift; sourceTree = "<group>"; };
 		842AF9F81F87F925008043B7 /* FitnessTrainersCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTrainersCollectionViewController.swift; sourceTree = "<group>"; };
 		842AF9FC1F87F970008043B7 /* FitnessCenterDetailsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailsCollectionViewController.swift; sourceTree = "<group>"; };
+		842AF9FF1F87FB57008043B7 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		842AFA011F87FB57008043B7 /* GoalOfTheMonthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthTableViewController.swift; sourceTree = "<group>"; };
 		844099301F5B1971005BAC61 /* FitnessBuddyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewController.swift; sourceTree = "<group>"; };
 		844099321F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessBuddyTableViewCell.swift; sourceTree = "<group>"; };
 		84409B1B1F5D349B005BAC61 /* FitnessCenterService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterService+GET.swift"; sourceTree = "<group>"; };
@@ -270,7 +272,6 @@
 		84CBB52D1F559A90001C369F /* MenuListingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuListingTableViewCell.swift; sourceTree = "<group>"; };
 		84CBB52E1F559A90001C369F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		84CBB53C1F55C334001C369F /* BlogService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BlogService+GET.swift"; sourceTree = "<group>"; };
-		84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
 		84CCA04D1F7A2051006E3388 /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
 		84CCA0761F7BD3B8006E3388 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
 		84CCA0C81F7E37BC006E3388 /* FitnessFacilitiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessFacilitiesTableViewController.swift; sourceTree = "<group>"; };
@@ -309,7 +310,6 @@
 		84CE7F321F837391002F7BB3 /* ProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		84CE7F341F839D3A002F7BB3 /* FitnessFacilitiesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessFacilitiesTableViewCell.swift; sourceTree = "<group>"; };
 		84D1522C1F84AD020076253D /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		84D1522E1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthTableViewController.swift; sourceTree = "<group>"; };
 		84D152321F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTrainersCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D152341F84CD170076253D /* FitnessMembershipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewCell.swift; sourceTree = "<group>"; };
 		84D152361F84CE5B0076253D /* FitnessMembershipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewController.swift; sourceTree = "<group>"; };
@@ -519,6 +519,22 @@
 				842AF9F81F87F925008043B7 /* FitnessTrainersCollectionViewController.swift */,
 			);
 			path = FitnessCenterDetails;
+			sourceTree = "<group>";
+		};
+		842AF9FE1F87FB57008043B7 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				842AF9FF1F87FB57008043B7 /* ForgotPasswordTableViewController.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		842AFA001F87FB57008043B7 /* GoalOfTheMonth */ = {
+			isa = PBXGroup;
+			children = (
+				842AFA011F87FB57008043B7 /* GoalOfTheMonthTableViewController.swift */,
+			);
+			path = GoalOfTheMonth;
 			sourceTree = "<group>";
 		};
 		84409B271F5D6B5F005BAC61 /* FitnessCenter */ = {
@@ -804,6 +820,8 @@
 		84F92F881F4FF8610002074D /* Member */ = {
 			isa = PBXGroup;
 			children = (
+				842AF9FE1F87FB57008043B7 /* ForgotPassword */,
+				842AFA001F87FB57008043B7 /* GoalOfTheMonth */,
 				842AF9F51F87F925008043B7 /* FitnessCenterDetails */,
 				84409B461F5E700D005BAC61 /* Profile */,
 				84CBB51A1F5597E3001C369F /* Login */,
@@ -812,9 +830,7 @@
 				84CBB50D1F559769001C369F /* Menu */,
 				84F92F8A1F4FF8610002074D /* HomeCollectionViewController.swift */,
 				84F92F901F4FF8610002074D /* ViewController.swift */,
-				84CCA04B1F7A196A006E3388 /* ForgotPasswordTableViewController.swift */,
 				84D1522C1F84AD020076253D /* HomeTableViewController.swift */,
-				84D1522E1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift */,
 				84D152361F84CE5B0076253D /* FitnessMembershipTableViewController.swift */,
 			);
 			path = Member;
@@ -1108,6 +1124,7 @@
 				841CA8141F66E82B004C95CF /* MemberButton.swift in Sources */,
 				841CA8421F690666004C95CF /* SuccessModel.swift in Sources */,
 				841CA2501F613A7D004C95CF /* MembershipDetailsTableViewController.swift in Sources */,
+				842AFA021F87FB57008043B7 /* ForgotPasswordTableViewController.swift in Sources */,
 				84CE7EE31F7EA6D8002F7BB3 /* BlogModelArray.swift in Sources */,
 				841CA24D1F613A7D004C95CF /* CheckedInMemberCollectionViewController.swift in Sources */,
 				84CE7F311F836E15002F7BB3 /* ProfileService+GET.swift in Sources */,
@@ -1135,6 +1152,7 @@
 				84CBB5351F559A90001C369F /* MenuListingTableViewCell.swift in Sources */,
 				841CA8181F67A89B004C95CF /* ReportTableViewController.swift in Sources */,
 				84A7B6671F71012E00EC64D0 /* MediumBoldLabel.swift in Sources */,
+				842AFA031F87FB57008043B7 /* GoalOfTheMonthTableViewController.swift in Sources */,
 				841CA2181F612F80004C95CF /* FitnessHomeViewController.swift in Sources */,
 				841CA2541F613A7D004C95CF /* VisitorsFormTableViewController.swift in Sources */,
 				84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */,
@@ -1200,7 +1218,6 @@
 				84CE7EF81F7EB330002F7BB3 /* FitnessCenterDetailInformationModel.swift in Sources */,
 				84D152351F84CD170076253D /* FitnessMembershipTableViewCell.swift in Sources */,
 				841CA8D01F6D38B5004C95CF /* LoginUtils.swift in Sources */,
-				84CCA04C1F7A196A006E3388 /* ForgotPasswordTableViewController.swift in Sources */,
 				84D152371F84CE5B0076253D /* FitnessMembershipTableViewController.swift in Sources */,
 				84CE7EE81F7EA6D8002F7BB3 /* LoginModel.swift in Sources */,
 				841CA8201F681212004C95CF /* MediumLabel.swift in Sources */,
@@ -1242,7 +1259,6 @@
 				84D152451F86A75D0076253D /* VisitorsModel.swift in Sources */,
 				84CE7F251F82A26F002F7BB3 /* TimeTableWednesdayResponse.swift in Sources */,
 				84D152391F867E950076253D /* SalesPersonModel.swift in Sources */,
-				84D1522F1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift in Sources */,
 				84CE7EF91F7EB330002F7BB3 /* FitnessCenterDetailsFacilities.swift in Sources */,
 				84409B2A1F5D6B5F005BAC61 /* FitnessCenterTableViewController.swift in Sources */,
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
