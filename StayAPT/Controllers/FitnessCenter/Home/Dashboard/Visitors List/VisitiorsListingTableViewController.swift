@@ -25,6 +25,7 @@ class VisitiorsListingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getVisitorsList()
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,5 +80,14 @@ class VisitiorsListingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func getVisitorsList() {
+        
+        let param = ["fcID": "1"] as [String: AnyObject]
+        VisitorsServiceGetService.executeRequest(param) { (data) in
+            print(data)
+        }
+        
     }
 }

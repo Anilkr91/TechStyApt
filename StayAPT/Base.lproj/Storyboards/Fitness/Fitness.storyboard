@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Apt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-2U-Oph">
-                                    <rect key="frame" x="10" y="122" width="1004" height="20"/>
+                                    <rect key="frame" x="10" y="111" width="1004" height="31"/>
                                     <fontDescription key="fontDescription" name="Javacom" family="Javacom" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -731,7 +731,7 @@
         <scene sceneID="0Mr-CV-3fE">
             <objects>
                 <collectionViewController id="aqM-DG-w4t" customClass="CheckedInMemberCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a6C-mO-jvG">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a6C-mO-jvG">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1258"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -816,7 +816,7 @@
         <scene sceneID="GVt-H5-Imn">
             <objects>
                 <collectionViewController id="24Y-FS-EpT" customClass="MembersListCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v3m-Hj-rtv">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="v3m-Hj-rtv">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1122,7 +1122,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="5DH-M7-CwM">
-                            <rect key="frame" x="0.0" y="388" width="1024" height="44"/>
+                            <rect key="frame" x="0.0" y="432" width="1024" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQH-4H-P3x" customClass="RedButton" customModule="StayAPT" customModuleProvider="target">
@@ -1284,8 +1284,31 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kqp-kS-9xl">
+                                        <rect key="frame" x="0.0" y="264" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kqp-kS-9xl" id="eCa-0p-nKV">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sales Person*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7j-gJ-J8n" customClass="BaseTextField" customModule="StayAPT" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="0.0" width="1008" height="43.5"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S7j-gJ-J8n" firstAttribute="centerY" secondItem="eCa-0p-nKV" secondAttribute="centerY" id="0Kp-ox-YCX"/>
+                                                <constraint firstItem="S7j-gJ-J8n" firstAttribute="leading" secondItem="eCa-0p-nKV" secondAttribute="leading" constant="8" id="9dL-Ja-Jku"/>
+                                                <constraint firstAttribute="trailing" secondItem="S7j-gJ-J8n" secondAttribute="trailing" constant="8" id="FaA-uu-KO1"/>
+                                                <constraint firstItem="S7j-gJ-J8n" firstAttribute="top" secondItem="eCa-0p-nKV" secondAttribute="top" id="RNI-0T-6Jz"/>
+                                                <constraint firstAttribute="bottom" secondItem="S7j-gJ-J8n" secondAttribute="bottom" id="l3O-L6-HdD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="PJv-rg-5Aj">
-                                        <rect key="frame" x="0.0" y="264" width="1024" height="80"/>
+                                        <rect key="frame" x="0.0" y="308" width="1024" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PJv-rg-5Aj" id="FrV-8D-740">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="79.5"/>
@@ -1313,7 +1336,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gjf-aA-VXH">
-                                        <rect key="frame" x="0.0" y="344" width="1024" height="44"/>
+                                        <rect key="frame" x="0.0" y="388" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gjf-aA-VXH" id="rgc-BR-dD7">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
@@ -1351,6 +1374,7 @@
                         <outlet property="fullNameTextField" destination="srx-VF-hc1" id="DaX-dP-36X"/>
                         <outlet property="mobileNumberTextField" destination="iD6-jx-vcb" id="XUS-o1-ZUh"/>
                         <outlet property="remainderTextField" destination="aVQ-d1-iuz" id="2Rf-ZS-YpO"/>
+                        <outlet property="salesPersonTextField" destination="S7j-gJ-J8n" id="kwm-wm-SGx"/>
                         <outlet property="visitorsTextView" destination="cRS-I6-NID" id="PX4-Br-54m"/>
                     </connections>
                 </tableViewController>
@@ -2774,7 +2798,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F43-Ms-aLI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwp-Yw-hiJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Bwp-Yw-hiJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2789,7 +2813,7 @@
             <objects>
                 <navigationController storyboardIdentifier="FitnessHomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="uQ4-1v-Y22" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffU-Wf-Qyq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ffU-Wf-Qyq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

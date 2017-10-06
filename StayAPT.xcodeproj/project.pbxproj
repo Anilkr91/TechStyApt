@@ -146,6 +146,10 @@
 		84D1523B1F867ECA0076253D /* SalesPersonArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523A1F867ECA0076253D /* SalesPersonArray.swift */; };
 		84D1523D1F8684610076253D /* SalesPersonService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523C1F8684610076253D /* SalesPersonService+GET.swift */; };
 		84D1523F1F868CDC0076253D /* VisitorsFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */; };
+		84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152401F86912F0076253D /* AddVisitorsService+POST.swift */; };
+		84D152431F86A0A20076253D /* VisitorsService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152421F86A0A20076253D /* VisitorsService+GET.swift */; };
+		84D152451F86A75D0076253D /* VisitorsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152441F86A75D0076253D /* VisitorsModel.swift */; };
+		84D152471F86ACAC0076253D /* VisitorsModelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D152461F86ACAC0076253D /* VisitorsModelArray.swift */; };
 		84DDE46F1F4D934D00A2E244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */; };
 		84DDE4751F4E0C4700A2E244 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */; };
 		84F92F941F4FF8610002074D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F92F8A1F4FF8610002074D /* HomeViewController.swift */; };
@@ -305,6 +309,10 @@
 		84D1523A1F867ECA0076253D /* SalesPersonArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesPersonArray.swift; sourceTree = "<group>"; };
 		84D1523C1F8684610076253D /* SalesPersonService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SalesPersonService+GET.swift"; sourceTree = "<group>"; };
 		84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsFormModel.swift; sourceTree = "<group>"; };
+		84D152401F86912F0076253D /* AddVisitorsService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddVisitorsService+POST.swift"; sourceTree = "<group>"; };
+		84D152421F86A0A20076253D /* VisitorsService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VisitorsService+GET.swift"; sourceTree = "<group>"; };
+		84D152441F86A75D0076253D /* VisitorsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModel.swift; sourceTree = "<group>"; };
+		84D152461F86ACAC0076253D /* VisitorsModelArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorsModelArray.swift; sourceTree = "<group>"; };
 		84DDE46E1F4D934D00A2E244 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DDE4741F4E0C4700A2E244 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84F92F8A1F4FF8610002074D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -727,6 +735,8 @@
 				84CE7EC51F7E56D0002F7BB3 /* FitnessCenterDetailsService+GET.swift */,
 				84CE7F301F836E15002F7BB3 /* ProfileService+GET.swift */,
 				84D1523C1F8684610076253D /* SalesPersonService+GET.swift */,
+				84D152401F86912F0076253D /* AddVisitorsService+POST.swift */,
+				84D152421F86A0A20076253D /* VisitorsService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -837,6 +847,8 @@
 				84D152381F867E950076253D /* SalesPersonModel.swift */,
 				84D1523A1F867ECA0076253D /* SalesPersonArray.swift */,
 				84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */,
+				84D152441F86A75D0076253D /* VisitorsModel.swift */,
+				84D152461F86ACAC0076253D /* VisitorsModelArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1153,6 +1165,7 @@
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84CE7F211F82A243002F7BB3 /* TimeTableMondayResponse.swift in Sources */,
 				84409B481F5E700D005BAC61 /* ProfileViewController.swift in Sources */,
+				84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */,
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				84CE7EE71F7EA6D8002F7BB3 /* LocationModelArray.swift in Sources */,
@@ -1191,9 +1204,11 @@
 				84F92FAE1F50329F0002074D /* SACheckedInMember.swift in Sources */,
 				841CA8C01F6AB922004C95CF /* FCLoginService+POST.swift in Sources */,
 				84CE7EE51F7EA6D8002F7BB3 /* ClassModelArray.swift in Sources */,
+				84D152471F86ACAC0076253D /* VisitorsModelArray.swift in Sources */,
 				84409B4B1F5EA634005BAC61 /* FitnessCenterDetailsViewController.swift in Sources */,
 				84CBB5311F559A90001C369F /* FitnessNotificationTableViewCell.swift in Sources */,
 				844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */,
+				84D152451F86A75D0076253D /* VisitorsModel.swift in Sources */,
 				84CE7F251F82A26F002F7BB3 /* TimeTableWednesdayResponse.swift in Sources */,
 				84D152391F867E950076253D /* SalesPersonModel.swift in Sources */,
 				84D1522F1F84B72D0076253D /* GoalOfTheMonthTableViewController.swift in Sources */,
@@ -1210,6 +1225,7 @@
 				841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */,
 				84CE7EFD1F7EC959002F7BB3 /* MonthlyResponse.swift in Sources */,
 				84F92FE71F553A4C0002074D /* ClassService+GET.swift in Sources */,
+				84D152431F86A0A20076253D /* VisitorsService+GET.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

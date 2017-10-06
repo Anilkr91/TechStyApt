@@ -1,5 +1,5 @@
 //
-//  SalesPersonArray.swift
+//  VisitorsModelArray.swift
 //  StayAPT
 //
 //  Created by admin on 05/10/17.
@@ -7,15 +7,15 @@
 //
 
 import Gloss
-struct SalesPersonArray {
+struct VisitorsModelArray {
     
     let status: Bool
-    let results: [SalesPersonModel]
+    let results: [VisitorsModel]
     
     init?(json: JSON) {
-         guard let status: Bool = "status" <~~ json,
-         let results: [SalesPersonModel] = "message" <~~ json else {
-            return nil
+        guard let status: Bool = "status" <~~ json,
+            let results: [VisitorsModel] = "message" <~~ json else {
+                return nil
         }
         self.status = status
         self.results = results
