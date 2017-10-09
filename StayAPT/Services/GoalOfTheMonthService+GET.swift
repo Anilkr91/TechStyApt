@@ -22,7 +22,9 @@ class GoalOfTheMonthGetService {
         let request = manager.request( URL + "user/profile/profileData", method: .get, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
+            
             case .success(let value) :
+                
                 print(value)
                 if let data = GoalOfTheMonthResponse(json: value as! JSON) {
                     print(data)

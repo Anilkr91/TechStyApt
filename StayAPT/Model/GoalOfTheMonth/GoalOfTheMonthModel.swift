@@ -13,9 +13,9 @@ struct GoalOfTheMonthModel: Decodable {
     let ultimateGoal: String
     let notes: String
     let stats: GoalOfTheMonthStatsModel
-    let favouriteFitnessCenter: GoalOfTheMonthFavouriteFitnessCenter
-    let workOut: GoalOfTheMonthWorkOut
-    let rating: GoalOfTheMonthRating
+    let favouriteFitnessCenter: [GoalOfTheMonthFavouriteFitnessCenter]
+    let workOut: [GoalOfTheMonthWorkOut]
+    let rating: [GoalOfTheMonthRating]
     
     
     init?(json: JSON) {
@@ -23,9 +23,9 @@ struct GoalOfTheMonthModel: Decodable {
             let ultimateGoal: String = "ultimate_goal" <~~ json,
             let notes: String = "notes" <~~ json,
             let stats: GoalOfTheMonthStatsModel = "stats" <~~ json,
-            let favouriteFitnessCenter: GoalOfTheMonthFavouriteFitnessCenter = "favFC" <~~ json,
-            let workOut: GoalOfTheMonthWorkOut = "workout" <~~ json,
-            let rating: GoalOfTheMonthRating = "rate" <~~ json else { return nil }
+            let favouriteFitnessCenter: [GoalOfTheMonthFavouriteFitnessCenter] = "favFC" <~~ json,
+            let workOut: [GoalOfTheMonthWorkOut] = "workout" <~~ json,
+            let rating: [GoalOfTheMonthRating] = "rate" <~~ json else { return nil }
         
         self.goalMonth = goalMonth
         self.ultimateGoal = ultimateGoal
