@@ -7,7 +7,6 @@
 //
 
 import Gloss
-
 struct RegisterModel {
     
     let name: String
