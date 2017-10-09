@@ -28,7 +28,7 @@ class GoalOfTheMonthGetService {
                 print(value)
                 if let data = GoalOfTheMonthResponse(json: value as! JSON) {
                     print(data)
-//                    completionHandler(data.results)
+                    completionHandler(data.result)
                     Loader.sharedInstance.hideLoader()
 //                    
                 } else {

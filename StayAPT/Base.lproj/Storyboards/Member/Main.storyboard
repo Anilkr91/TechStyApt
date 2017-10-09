@@ -388,7 +388,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXF-WL-BIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="-421"/>
+            <point key="canvasLocation" x="2117" y="-421"/>
         </scene>
         <!--Home-->
         <scene sceneID="d0A-XR-iyc">
@@ -2990,7 +2990,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffn-f6-IU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="508"/>
+            <point key="canvasLocation" x="2116" y="360"/>
         </scene>
         <!--Fitness-->
         <scene sceneID="Tmc-zn-2su">
@@ -3817,7 +3817,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iC0-P6-gX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456" y="-421"/>
+            <point key="canvasLocation" x="2897" y="-421"/>
         </scene>
         <!--Fitness Center Details-->
         <scene sceneID="1uD-0e-OGq">
@@ -4074,7 +4074,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell0" rowHeight="100" id="KUK-sS-5dC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell0" rowHeight="100" id="KUK-sS-5dC" customClass="GoalOfTheMonthCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUK-sS-5dC" id="ow5-uN-qxQ">
@@ -4101,8 +4101,12 @@
                                         <constraint firstAttribute="trailing" secondItem="Nf0-vs-eUM" secondAttribute="trailing" id="xIJ-PI-dzP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="goalOfTheMonthImageView" destination="Nf0-vs-eUM" id="Kud-CK-fDB"/>
+                                    <outlet property="goalOfTheMonthLabel" destination="Gma-cd-9lj" id="fnt-l3-pgI"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="100" id="iGt-oJ-Sbd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" rowHeight="100" id="iGt-oJ-Sbd" customClass="UltimateGoalOfTheMonth" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="155.33333333333334" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iGt-oJ-Sbd" id="57t-4K-5XH">
@@ -4129,6 +4133,10 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="pKQ-hD-64x" secondAttribute="trailing" id="k0Y-RG-Lfj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ultimateGoalImageView" destination="bof-F4-5yS" id="NOO-pq-vNg"/>
+                                    <outlet property="ultimateGoalLabel" destination="pKQ-hD-64x" id="3S6-Ee-aN2"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="75" id="rSU-2r-rj1" customClass="GoalOfTheMonthFavouriteFitnessCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="255.33333333333334" width="375" height="75"/>
@@ -4229,7 +4237,7 @@
                                     <outlet property="priceLabel" destination="L2y-Tu-l2c" id="G26-HE-4iV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell4" rowHeight="188" id="itb-bb-fjA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell4" rowHeight="188" id="itb-bb-fjA" customClass="GoalOfTheMonthStats" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="405.33333333333337" width="375" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="itb-bb-fjA" id="jyS-gW-YvF">
@@ -4408,28 +4416,42 @@
                                         <constraint firstItem="l7x-N0-7Nh" firstAttribute="height" secondItem="cCK-lc-nGJ" secondAttribute="height" id="yeR-SI-7UE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="WaistLabel" destination="1Nh-XE-wR9" id="lae-wP-Spz"/>
+                                    <outlet property="bicepsLabel" destination="7PJ-LL-ufh" id="jXG-gt-w0l"/>
+                                    <outlet property="calvesLabel" destination="jlM-EW-u6z" id="cqX-Os-aGE"/>
+                                    <outlet property="chestLabel" destination="tsn-sx-sIL" id="FA7-Ql-Afw"/>
+                                    <outlet property="forearmLabel" destination="6a9-Ym-1mM" id="nIb-kp-ZVF"/>
+                                    <outlet property="shoulderLabel" destination="cCK-lc-nGJ" id="TIE-iS-Jt1"/>
+                                    <outlet property="thighsLabel" destination="jye-Wc-Gle" id="n2i-mz-QbV"/>
+                                    <outlet property="wristLabel" destination="mbm-UW-9sj" id="ObT-aU-ccA"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" rowHeight="122" id="elC-XI-28Z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" rowHeight="122" id="elC-XI-28Z" customClass="GoalOfTheMonthRateCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="593.33333333333337" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elC-XI-28Z" id="GHe-0m-1mZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="121.66666666666667"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="8j1-v4-oHi">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1x-xt-FkV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="121.66666666666667"/>
-                                        </imageView>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="8j1-v4-oHi" secondAttribute="trailing" id="ILe-p5-usW"/>
-                                        <constraint firstItem="8j1-v4-oHi" firstAttribute="leading" secondItem="GHe-0m-1mZ" secondAttribute="leading" id="TX5-O3-1YW"/>
-                                        <constraint firstAttribute="bottom" secondItem="8j1-v4-oHi" secondAttribute="bottom" id="ezk-Rk-Bza"/>
-                                        <constraint firstItem="8j1-v4-oHi" firstAttribute="top" secondItem="GHe-0m-1mZ" secondAttribute="top" id="oTi-7j-9qI"/>
+                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="leading" secondItem="GHe-0m-1mZ" secondAttribute="leading" id="CgD-vF-evs"/>
+                                        <constraint firstAttribute="bottom" secondItem="h1x-xt-FkV" secondAttribute="bottom" id="IMA-J6-3AU"/>
+                                        <constraint firstAttribute="trailing" secondItem="h1x-xt-FkV" secondAttribute="trailing" id="ORV-ci-p0i"/>
+                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="top" secondItem="GHe-0m-1mZ" secondAttribute="top" id="uvo-vB-3SJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ratingGraph" destination="h1x-xt-FkV" id="eIN-d1-Uiy"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell6" rowHeight="75" id="XmD-uH-pNz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell6" rowHeight="75" id="XmD-uH-pNz" customClass="GoalOfTheMonthNoteCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="715.33333333333337" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XmD-uH-pNz" id="KS7-en-mM1">
@@ -4451,6 +4473,9 @@
                                         <constraint firstAttribute="trailing" secondItem="ooE-75-8sX" secondAttribute="trailing" id="yr8-mS-buK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="notesTextView" destination="ooE-75-8sX" id="8o0-3z-lWd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -4458,25 +4483,10 @@
                             <outlet property="delegate" destination="zsz-Zk-4Nt" id="YR0-5d-wy6"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="WaistLabel" destination="1Nh-XE-wR9" id="C0g-HK-ivR"/>
-                        <outlet property="bicepsLabel" destination="7PJ-LL-ufh" id="mEE-9H-kck"/>
-                        <outlet property="calvesLabel" destination="jlM-EW-u6z" id="rbc-YU-gZD"/>
-                        <outlet property="chestLabel" destination="tsn-sx-sIL" id="rP1-ee-5Ch"/>
-                        <outlet property="forearmLabel" destination="6a9-Ym-1mM" id="Dtl-le-JEc"/>
-                        <outlet property="goalOfTheMonthImageView" destination="Nf0-vs-eUM" id="Vd7-n4-gkX"/>
-                        <outlet property="goalOfTheMonthLabel" destination="Gma-cd-9lj" id="wg3-lf-Op7"/>
-                        <outlet property="notesTextView" destination="ooE-75-8sX" id="iqL-tq-X0L"/>
-                        <outlet property="shoulderLabel" destination="cCK-lc-nGJ" id="705-gc-C7X"/>
-                        <outlet property="thighsLabel" destination="jye-Wc-Gle" id="h64-gw-I1J"/>
-                        <outlet property="ultimateGoalImageView" destination="bof-F4-5yS" id="lPh-sW-djg"/>
-                        <outlet property="ultimateGoalLabel" destination="pKQ-hD-64x" id="vdp-w3-gN3"/>
-                        <outlet property="wristLabel" destination="mbm-UW-9sj" id="JCi-SX-V34"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzZ-SN-vi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5469" y="-1712"/>
+            <point key="canvasLocation" x="5444" y="-2012"/>
         </scene>
     </scenes>
     <resources>

@@ -59,6 +59,7 @@
 		8423E9FD1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */; };
 		8423E9FF1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */; };
 		8423EA011F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */; };
+		8423EA031F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423EA021F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift */; };
 		842AF9E31F8766CA008043B7 /* AWCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E01F8766CA008043B7 /* AWCollectionCell.swift */; };
 		842AF9E41F8766CA008043B7 /* AWCollectionViewDialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E11F8766CA008043B7 /* AWCollectionViewDialLayout.swift */; };
 		842AF9E51F8766CA008043B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E21F8766CA008043B7 /* UIColorExtension.swift */; };
@@ -240,6 +241,7 @@
 		8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthCell.swift; sourceTree = "<group>"; };
 		8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthStatsCell.swift; sourceTree = "<group>"; };
 		8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthNoteCell.swift; sourceTree = "<group>"; };
+		8423EA021F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthRateCell.swift; sourceTree = "<group>"; };
 		842AF9E01F8766CA008043B7 /* AWCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionCell.swift; sourceTree = "<group>"; };
 		842AF9E11F8766CA008043B7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
 		842AF9E21F8766CA008043B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -845,6 +847,7 @@
 				8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */,
 				8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */,
 				8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */,
+				8423EA021F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1211,6 +1214,7 @@
 				84C4CF491F56D78E001DA94A /* BlackTextField.swift in Sources */,
 				84CE7F2F1F82BA89002F7BB3 /* UploadImageService+POST.swift in Sources */,
 				84CE7EE21F7EA6D8002F7BB3 /* BlogModel.swift in Sources */,
+				8423EA031F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift in Sources */,
 				841CA8161F66E83B004C95CF /* FitnessCenterButton.swift in Sources */,
 				84CE7EF71F7EB330002F7BB3 /* FitnessCenterDetailClassModel.swift in Sources */,
 				8423E9D21F895A34005C8E21 /* GoalOfTheMonthService+GET.swift in Sources */,

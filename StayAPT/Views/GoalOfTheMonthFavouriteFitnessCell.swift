@@ -35,13 +35,15 @@ class GoalOfTheMonthFavouriteFitnessCell: UITableViewCell {
     }
 }
 
-extension FitnessMembershipTableViewCell {
+extension GoalOfTheMonthFavouriteFitnessCell {
     func didSetCategory(_ info: GoalOfTheMonthFavouriteFitnessCenter) {
         //        let url = URL(string: info)!
         //        let placeholderImage = UIImage(named: "placeholder")
         
         //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-        priceLabel.text = info.price
-        discountLabel.text = info.offers.first
+//        priceLabel.text = info.price
+//        discountLabel.text = info.offers.first
+        nameLabel.text = info.fitness_center_name
+        addressLabel.text = info.address
     }
 }
