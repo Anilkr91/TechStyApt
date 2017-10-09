@@ -4130,7 +4130,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="75" id="rSU-2r-rj1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="75" id="rSU-2r-rj1" customClass="GoalOfTheMonthFavouriteFitnessCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="255.33333333333334" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rSU-2r-rj1" id="xna-fS-qlE">
@@ -4171,8 +4171,13 @@
                                         <constraint firstItem="6gE-zR-GRy" firstAttribute="leading" secondItem="F6m-kQ-CcP" secondAttribute="leading" id="zC3-Mi-Q7V"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="6gE-zR-GRy" id="Way-7W-zcj"/>
+                                    <outlet property="favouriteFitnessImageView" destination="ojQ-5b-2o5" id="ibh-rp-maU"/>
+                                    <outlet property="nameLabel" destination="F6m-kQ-CcP" id="fJU-0l-cps"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" rowHeight="75" id="dJN-Fa-8xF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" rowHeight="75" id="dJN-Fa-8xF" customClass="GoalOfTheMonthMyWorkOutCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="330.33333333333337" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJN-Fa-8xF" id="ECe-2p-cDt">
@@ -4218,6 +4223,11 @@
                                         <constraint firstItem="DnD-oF-dgM" firstAttribute="top" secondItem="ECe-2p-cDt" secondAttribute="top" id="zqS-It-sYZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="discountLabel" destination="bmv-IB-XPQ" id="drF-gL-Xqo"/>
+                                    <outlet property="membershipImageView" destination="DnD-oF-dgM" id="wKG-og-ZuZ"/>
+                                    <outlet property="priceLabel" destination="L2y-Tu-l2c" id="G26-HE-4iV"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell4" rowHeight="188" id="itb-bb-fjA">
                                 <rect key="frame" x="0.0" y="405.33333333333337" width="375" height="188"/>

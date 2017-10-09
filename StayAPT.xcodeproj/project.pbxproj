@@ -53,6 +53,12 @@
 		8423E9F11F8B6B5E005C8E21 /* GoalOfTheMonthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9EB1F8B6B5E005C8E21 /* GoalOfTheMonthResponse.swift */; };
 		8423E9F21F8B6B5E005C8E21 /* GoalOfTheMonthStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9EC1F8B6B5E005C8E21 /* GoalOfTheMonthStatsModel.swift */; };
 		8423E9F31F8B6B5E005C8E21 /* GoalOfTheMonthWorkOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9ED1F8B6B5E005C8E21 /* GoalOfTheMonthWorkOut.swift */; };
+		8423E9F71F8BAEA4005C8E21 /* GoalOfTheMonthFavouriteFitnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9F61F8BAEA4005C8E21 /* GoalOfTheMonthFavouriteFitnessCell.swift */; };
+		8423E9F91F8BAEC2005C8E21 /* GoalOfTheMonthMyWorkOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9F81F8BAEC2005C8E21 /* GoalOfTheMonthMyWorkOutCell.swift */; };
+		8423E9FB1F8BB0A3005C8E21 /* UltimateGoalOfTheMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9FA1F8BB0A3005C8E21 /* UltimateGoalOfTheMonthCell.swift */; };
+		8423E9FD1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */; };
+		8423E9FF1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */; };
+		8423EA011F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */; };
 		842AF9E31F8766CA008043B7 /* AWCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E01F8766CA008043B7 /* AWCollectionCell.swift */; };
 		842AF9E41F8766CA008043B7 /* AWCollectionViewDialLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E11F8766CA008043B7 /* AWCollectionViewDialLayout.swift */; };
 		842AF9E51F8766CA008043B7 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AF9E21F8766CA008043B7 /* UIColorExtension.swift */; };
@@ -228,6 +234,12 @@
 		8423E9EB1F8B6B5E005C8E21 /* GoalOfTheMonthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthResponse.swift; sourceTree = "<group>"; };
 		8423E9EC1F8B6B5E005C8E21 /* GoalOfTheMonthStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthStatsModel.swift; sourceTree = "<group>"; };
 		8423E9ED1F8B6B5E005C8E21 /* GoalOfTheMonthWorkOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthWorkOut.swift; sourceTree = "<group>"; };
+		8423E9F61F8BAEA4005C8E21 /* GoalOfTheMonthFavouriteFitnessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthFavouriteFitnessCell.swift; sourceTree = "<group>"; };
+		8423E9F81F8BAEC2005C8E21 /* GoalOfTheMonthMyWorkOutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthMyWorkOutCell.swift; sourceTree = "<group>"; };
+		8423E9FA1F8BB0A3005C8E21 /* UltimateGoalOfTheMonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltimateGoalOfTheMonthCell.swift; sourceTree = "<group>"; };
+		8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthCell.swift; sourceTree = "<group>"; };
+		8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthStatsCell.swift; sourceTree = "<group>"; };
+		8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthNoteCell.swift; sourceTree = "<group>"; };
 		842AF9E01F8766CA008043B7 /* AWCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionCell.swift; sourceTree = "<group>"; };
 		842AF9E11F8766CA008043B7 /* AWCollectionViewDialLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCollectionViewDialLayout.swift; sourceTree = "<group>"; };
 		842AF9E21F8766CA008043B7 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -827,6 +839,12 @@
 				84CE7F341F839D3A002F7BB3 /* FitnessFacilitiesTableViewCell.swift */,
 				84D152341F84CD170076253D /* FitnessMembershipTableViewCell.swift */,
 				842AF9F11F87B005008043B7 /* FitnessCenterDetailCollectionCell.swift */,
+				8423E9F61F8BAEA4005C8E21 /* GoalOfTheMonthFavouriteFitnessCell.swift */,
+				8423E9F81F8BAEC2005C8E21 /* GoalOfTheMonthMyWorkOutCell.swift */,
+				8423E9FA1F8BB0A3005C8E21 /* UltimateGoalOfTheMonthCell.swift */,
+				8423E9FC1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift */,
+				8423E9FE1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift */,
+				8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1152,6 +1170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CE7F331F837391002F7BB3 /* ProfileResponse.swift in Sources */,
+				8423E9F91F8BAEC2005C8E21 /* GoalOfTheMonthMyWorkOutCell.swift in Sources */,
 				84409B261F5D58D4005BAC61 /* ErrorModel.swift in Sources */,
 				841CA8141F66E82B004C95CF /* MemberButton.swift in Sources */,
 				841CA8421F690666004C95CF /* SuccessModel.swift in Sources */,
@@ -1168,6 +1187,7 @@
 				841CA82B1F68130E004C95CF /* Loader.swift in Sources */,
 				84D152331F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift in Sources */,
 				841CA2511F613A7D004C95CF /* PersonalDetailTableViewController.swift in Sources */,
+				8423EA011F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift in Sources */,
 				84D1523F1F868CDC0076253D /* VisitorsFormModel.swift in Sources */,
 				84409B3F1F5D7041005BAC61 /* GalleryCollectionViewController.swift in Sources */,
 				841CA8281F68130E004C95CF /* AlertView+Helper.swift in Sources */,
@@ -1178,6 +1198,7 @@
 				841CA8291F68130E004C95CF /* DeviceType+Helper.swift in Sources */,
 				84C4CF451F56D445001DA94A /* RedButton.swift in Sources */,
 				841CA2591F613DCE004C95CF /* MembersListCollectionViewController.swift in Sources */,
+				8423E9F71F8BAEA4005C8E21 /* GoalOfTheMonthFavouriteFitnessCell.swift in Sources */,
 				84CBB5301F559A90001C369F /* FitnessInformationTableViewCell.swift in Sources */,
 				84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */,
 				84CE7F1F1F82A20B002F7BB3 /* TimeTableSundayResponse.swift in Sources */,
@@ -1246,6 +1267,7 @@
 				84409B481F5E700D005BAC61 /* ProfileViewController.swift in Sources */,
 				84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */,
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
+				8423E9FD1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				842AF9E31F8766CA008043B7 /* AWCollectionCell.swift in Sources */,
 				84CE7EE71F7EA6D8002F7BB3 /* LocationModelArray.swift in Sources */,
@@ -1278,6 +1300,7 @@
 				8423E9F31F8B6B5E005C8E21 /* GoalOfTheMonthWorkOut.swift in Sources */,
 				84409B3B1F5D6FB4005BAC61 /* DietPlanViewController.swift in Sources */,
 				84409B341F5D6DFA005BAC61 /* BlogDetailTableViewController.swift in Sources */,
+				8423E9FF1F8BB0EE005C8E21 /* GoalOfTheMonthStatsCell.swift in Sources */,
 				84409B221F5D3809005BAC61 /* FitnessCenterModelArray.swift in Sources */,
 				84CE7F011F7ED33A002F7BB3 /* HalfYearlyResponse.swift in Sources */,
 				841CA8361F6816E1004C95CF /* RegisterModel.swift in Sources */,
@@ -1294,6 +1317,7 @@
 				84D152471F86ACAC0076253D /* VisitorsModelArray.swift in Sources */,
 				84409B4B1F5EA634005BAC61 /* FitnessCenterDetailsViewController.swift in Sources */,
 				84CBB5311F559A90001C369F /* FitnessNotificationTableViewCell.swift in Sources */,
+				8423E9FB1F8BB0A3005C8E21 /* UltimateGoalOfTheMonthCell.swift in Sources */,
 				844099331F5B19AD005BAC61 /* FitnessBuddyTableViewCell.swift in Sources */,
 				84D152451F86A75D0076253D /* VisitorsModel.swift in Sources */,
 				84CE7F251F82A26F002F7BB3 /* TimeTableWednesdayResponse.swift in Sources */,
