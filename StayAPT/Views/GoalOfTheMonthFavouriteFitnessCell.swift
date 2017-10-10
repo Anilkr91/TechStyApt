@@ -37,12 +37,10 @@ class GoalOfTheMonthFavouriteFitnessCell: UITableViewCell {
 
 extension GoalOfTheMonthFavouriteFitnessCell {
     func didSetCategory(_ info: GoalOfTheMonthFavouriteFitnessCenter) {
-        //        let url = URL(string: info)!
-        //        let placeholderImage = UIImage(named: "placeholder")
+        let url = URL(string: info.logo)!
+        let image = UIImage(named: "placeholder")
         
-        //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-//        priceLabel.text = info.price
-//        discountLabel.text = info.offers.first
+        favouriteFitnessImageView.kf.setImage(with: url, placeholder: image)
         nameLabel.text = info.fitness_center_name
         addressLabel.text = info.address
     }

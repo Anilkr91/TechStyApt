@@ -25,16 +25,14 @@ class GoalOfTheMonthGetService {
             
             case .success(let value) :
                 
-                print(value)
                 if let data = GoalOfTheMonthResponse(json: value as! JSON) {
                     print(data)
                     completionHandler(data.result)
-                    Loader.sharedInstance.hideLoader()
-//                    
+                    Loader.sharedInstance.hideLoader()                    
                 } else {
                     Loader.sharedInstance.hideLoader()
-//                    let error = ErrorModel.init(json: value as! JSON)
-//                    Alert.showAlertWithMessage("Error", message: error!.message!)
+                    let error = ErrorModel.init(json: value as! JSON)
+                    Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):

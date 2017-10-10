@@ -19,10 +19,6 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
         fetchGoalOfTheMonth()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        fetchGoalOfTheMonth()
-//    }
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDailyWeightSegue", sender: self)
     }
@@ -119,9 +115,21 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
         return UITableViewCell()
         
     }
+
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 27
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 8
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 4 {
+            return 150
+        } else  {
         return 100
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
