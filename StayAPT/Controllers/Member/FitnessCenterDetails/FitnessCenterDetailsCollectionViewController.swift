@@ -24,6 +24,8 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
         super.viewDidLoad()
         setUpCollectionView()
         populateFitnessCenterDetails(id: fcId!)
+        
+       
     }
     
     // MARK: - Table view data source
@@ -46,6 +48,15 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
         
         let param = ["fcid" : id]
         FitnessCenterDetailsGetService.executeRequest(param as [String : AnyObject]) { (data) in
+            
+            print(data.timeTableSunday)
+//            print(data.timeTableMonday)
+//            print(data.timeTableTuesday)
+//            print(data.timeTableWednesday)
+//            print(data.timeTableThursday)
+//            print(data.timeTableFriday)
+//            print(data.timeTableSaturday)
+            
             self.fitnessCenterDetail = data
         }
     }
@@ -117,11 +128,7 @@ extension FitnessCenterDetailsCollectionViewController: UIScrollViewDelegate {
             
         } else if  segue.identifier == "showMembershipSegue" {
             let dvc = segue.destination as! FitnessMembershipTableViewController
-            dvc.memberArray.append(fitnessCenterDetail.membershipMonthly)
-            dvc.memberArray.append(fitnessCenterDetail.membershipQuaterly)
-            dvc.memberArray.append(fitnessCenterDetail.membershiphalfYearly)
-            dvc.memberArray.append(fitnessCenterDetail.membershipYearly)
-            
+            dvc.membership = fitnessCenterDetail.membership
         }
     }
 }

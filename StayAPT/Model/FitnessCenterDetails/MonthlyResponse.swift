@@ -10,10 +10,16 @@ import Gloss
 
 struct MonthlyResponse: Decodable {
     
-    let monthly: FacilitiesCenterDetailsMembership
+    let monthlyPrice: String?
+    let membershipPlanMonthly: String?
+    let featuresMonthly: [String]?
+    let offersMonthly: String?
+    
     init?(json: JSON) {
-        guard let monthly: FacilitiesCenterDetailsMembership  = "monthly" <~~ json else { return nil }
-
-        self.monthly = monthly
+        
+        self.monthlyPrice = "price" <~~ json
+        self.membershipPlanMonthly = "membershipPlan" <~~ json
+        self.featuresMonthly = "features" <~~ json
+        self.offersMonthly = "offers" <~~ json
     }
 }

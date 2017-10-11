@@ -9,17 +9,22 @@
 import Gloss
 struct FacilitiesCenterDetailsMembership: Decodable {
     
-    let price: String
-    let features: [String]
-    let offers: [String]
+    let monthly: MonthlyResponse
+    let quaterly: QuaterlyResponse
+    let halfYearly: HalfYearlyResponse
+    let yearly: YearlyResponse
     
     init?(json: JSON) {
-        guard let price: String = "price" <~~ json,
-            let features: [String] = "features" <~~ json,
-            let offers: [String] = "offers" <~~ json else { return nil }
         
-        self.price = price
-        self.features = features
-        self.offers = offers
+        
+        guard let monthly: MonthlyResponse = "monthly" <~~ json,
+            let quaterly: QuaterlyResponse = "quaterly" <~~ json,
+            let halfYearly: HalfYearlyResponse = "halfYearly" <~~ json,
+            let yearly: YearlyResponse = "yearly" <~~ json else { return nil }
+        
+        self.monthly = monthly
+        self.quaterly = quaterly
+        self.halfYearly = halfYearly
+        self.yearly = yearly
     }
 }

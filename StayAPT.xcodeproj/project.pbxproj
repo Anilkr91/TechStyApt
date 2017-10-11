@@ -96,6 +96,7 @@
 		84409B561F5FD605005BAC61 /* ManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84409B551F5FD605005BAC61 /* ManagerService.swift */; };
 		846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */; };
 		84824A551F74EA21006F8C8C /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */; };
+		848776F51F8D3ECE00B79C1D /* MembershipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F41F8D3ECE00B79C1D /* MembershipModel.swift */; };
 		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */; };
 		84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */; };
@@ -278,6 +279,7 @@
 		84409B551F5FD605005BAC61 /* ManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerService.swift; sourceTree = "<group>"; };
 		846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
+		848776F41F8D3ECE00B79C1D /* MembershipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipModel.swift; sourceTree = "<group>"; };
 		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddFitnessCenterService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBoldLabel.swift; sourceTree = "<group>"; };
@@ -945,6 +947,7 @@
 				84D1523E1F868CDC0076253D /* VisitorsFormModel.swift */,
 				84D152441F86A75D0076253D /* VisitorsModel.swift */,
 				84D152461F86ACAC0076253D /* VisitorsModelArray.swift */,
+				848776F41F8D3ECE00B79C1D /* MembershipModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1330,6 +1333,7 @@
 				84409B2A1F5D6B5F005BAC61 /* FitnessCenterTableViewController.swift in Sources */,
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
 				84409B201F5D36CA005BAC61 /* FacilitiesModel.swift in Sources */,
+				848776F51F8D3ECE00B79C1D /* MembershipModel.swift in Sources */,
 				841CA82A1F68130E004C95CF /* Extension+Helpers.swift in Sources */,
 				842AF9E41F8766CA008043B7 /* AWCollectionViewDialLayout.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
@@ -1460,11 +1464,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z8HU92LYAQ;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = StayAPT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techximum.StayAPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;

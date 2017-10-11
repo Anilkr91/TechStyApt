@@ -9,50 +9,58 @@
 import UIKit
 
 class FitnessMembershipTableViewController: BaseTableViewController {
-
-     var memberArray: [Any] = []
+    
+    var membership: [FacilitiesCenterDetailsMembership] = []
+    var array: [MembershipModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(memberArray)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        setupMembershipArray()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupMembershipArray() {
+        for member in membership.enumerated() {
+            
+            let element = member.element
+            
+            let monthly = MembershipModel(monthlyPrice: element.monthly.monthlyPrice!, membershipPlanMonthly: element.monthly.membershipPlanMonthly!, featuresMonthly: element.monthly.featuresMonthly!, offersMonthly: element.monthly.offersMonthly!)
+            
+            let quaterly = MembershipModel(monthlyPrice: element.quaterly.monthlyPrice!, membershipPlanMonthly: element.quaterly.membershipPlanMonthly!, featuresMonthly: element.quaterly.featuresMonthly!, offersMonthly: element.quaterly.offersMonthly!)
+            
+            let halfYearly = MembershipModel(monthlyPrice: element.halfYearly.monthlyPrice!, membershipPlanMonthly: element.halfYearly.membershipPlanMonthly!, featuresMonthly: element.halfYearly.featuresMonthly!, offersMonthly: element.halfYearly.offersMonthly!)
+            
+            let yearly = MembershipModel(monthlyPrice: element.yearly.monthlyPrice!, membershipPlanMonthly: element.yearly.membershipPlanMonthly!, featuresMonthly: element.yearly.featuresMonthly!, offersMonthly: element.yearly.offersMonthly!)
+            
+            
+            array.append(monthly)
+            array.append(quaterly)
+            array.append(halfYearly)
+            array.append(yearly)
+            
+        }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return memberArray.count
+        return array.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!
         FitnessMembershipTableViewCell
         
-//    print(memberArray[indexPath.section] as FacilitiesCenterDetailsMembership)
-        
-//        cell.info = memberArray[indexPath.section] as? FacilitiesCenterDetailsMembership
-//         Configure the cell...
-
+        cell.info = array[indexPath.section]
         return cell
     }
- 
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 2

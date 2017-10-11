@@ -24,15 +24,14 @@ class FitnessCenterDetailsGetService {
             
             switch response.result {
             case .success(let value) :
-                print(value)
                 if let data = FitnessCenterDetailResponse(json: value as! JSON) {
                     completionHandler(data)
                     Loader.sharedInstance.hideLoader()
                     
                 } else {
                     Loader.sharedInstance.hideLoader()
-                    let error = ErrorModel.init(json: value as! JSON)
-                    Alert.showAlertWithMessage("Error", message: error!.message!)
+//                    let error = ErrorModel.init(json: value as! JSON)
+//                    Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):

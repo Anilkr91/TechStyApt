@@ -10,10 +10,16 @@ import Gloss
 
 struct QuaterlyResponse: Decodable {
     
-    let quaterly: FacilitiesCenterDetailsMembership
+    let monthlyPrice: String?
+    let membershipPlanMonthly: String?
+    let featuresMonthly: [String]?
+    let offersMonthly: String?
+    
     init?(json: JSON) {
-        guard let quaterly: FacilitiesCenterDetailsMembership  = "quaterly" <~~ json else { return nil }
         
-        self.quaterly = quaterly
+        self.monthlyPrice = "price" <~~ json
+        self.membershipPlanMonthly = "membershipPlan" <~~ json
+        self.featuresMonthly = "features" <~~ json
+        self.offersMonthly = "offers" <~~ json
     }
 }

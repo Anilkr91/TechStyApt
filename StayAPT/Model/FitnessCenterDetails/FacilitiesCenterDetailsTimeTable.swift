@@ -8,7 +8,7 @@
 
 import Gloss
 struct FacilitiesCenterDetailsTimeTable: Decodable{
-    
+
     let status: String?
     let singleSession: String?
     let coupleSession: String?
@@ -18,7 +18,7 @@ struct FacilitiesCenterDetailsTimeTable: Decodable{
     let duration: String?
     let start: String?
     let className: String?
-    
+
     init?(json: JSON) {
 //        guard let status: String = "status" <~~ json,
 //            let singleSession: String = "singleSession" <~~ json,
@@ -29,7 +29,7 @@ struct FacilitiesCenterDetailsTimeTable: Decodable{
 //            let duration: String = "duration" <~~ json,
 //            let start: String = "start" <~~ json,
 //            let className: String = "className" <~~ json else { return nil }
-        
+
         self.status = "status" <~~ json
         self.singleSession = "singleSession" <~~ json
         self.coupleSession = "coupleSession" <~~ json
@@ -40,10 +40,10 @@ struct FacilitiesCenterDetailsTimeTable: Decodable{
         self.start = "start" <~~ json
         self.className = "className" <~~ json
     }
-    
+
     func toJSON() -> JSON? {
         return jsonify([
-            
+
             "status" ~~> self.status ,
             "singleSession" ~~> self.singleSession ,
             "coupleSession" ~~> self.coupleSession ,
@@ -53,7 +53,38 @@ struct FacilitiesCenterDetailsTimeTable: Decodable{
             "duration" ~~> self.duration ,
             "start" ~~> self.start ,
             "className" ~~> self.className
-            
+
             ])
     }
 }
+
+//import Gloss
+//struct FacilitiesCenterDetailsTimeTable: Decodable {
+//    
+//    let sunday: [TimeTableSundayResponse]?
+//    let monday: [TimeTableMondayResponse]
+//    let tuesday: [TimeTableTuesdayResponse]
+//    let wednesday: [TimeTableWednesdayResponse]
+//    let thursday: [TimeTableThursdayResponse]
+//    let friday: [TimeTableFridayResponse]
+//    let saturday: [TimeTableSaturdayResponse]
+    
+//    init?(json: JSON) {
+
+//        guard let sunday: [TimeTableSundayResponse] = "Sunday" <~~ json else { return nil }
+//            let monday: [TimeTableMondayResponse] = "Monday" <~~ json,
+//            let tuesday: [TimeTableTuesdayResponse] = "Tuesday" <~~ json,
+//            let  wednesday: [TimeTableWednesdayResponse] = "Wednesday" <~~ json,
+//            let thursday: [TimeTableThursdayResponse] = "Monday" <~~ json,
+//            let friday: [TimeTableFridayResponse] = "Tuesday" <~~ json,
+//            let  saturday: [TimeTableSaturdayResponse] = "Wednesday" <~~ json else { return nil }
+        
+//        self.sunday = "Sunday" <~~ json
+//        self.monday = monday
+//        self.tuesday = tuesday
+//        self.wednesday = wednesday
+//        self.thursday = thursday
+//        self.friday = friday
+//        self.saturday = saturday
+//    }
+//}

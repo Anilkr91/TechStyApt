@@ -10,10 +10,10 @@ import Gloss
 
 struct TimeTableThursdayResponse: Decodable {
     
-    let thursday: [FacilitiesCenterDetailsTimeTable]
+    let thursday: [FacilitiesCenterDetailsTimeTable]?
     init?(json: JSON) {
-        guard let thursday: [FacilitiesCenterDetailsTimeTable]  = "Thursday" <~~ json else { return nil }
+//        guard let thursday: [FacilitiesCenterDetailsTimeTable]  = "Thursday" <~~ json else { return nil }
         
-        self.thursday = thursday
+        self.thursday = "Thursday" <~~ json
     }
 }

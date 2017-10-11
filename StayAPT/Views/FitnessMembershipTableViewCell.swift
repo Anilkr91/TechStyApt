@@ -26,7 +26,7 @@ class FitnessMembershipTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var info: FacilitiesCenterDetailsMembership? {
+    var info: MembershipModel? {
         didSet {
             if let member = info {
                 didSetCategory(member)
@@ -36,12 +36,12 @@ class FitnessMembershipTableViewCell: UITableViewCell {
 }
 
 extension FitnessMembershipTableViewCell {
-    func didSetCategory(_ info: FacilitiesCenterDetailsMembership) {
-//        let url = URL(string: info)!
+    func didSetCategory(_ info: MembershipModel) {
+//        let url = URL(string: info.)!
 //        let placeholderImage = UIImage(named: "placeholder")
-        
+//        
 //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-        priceLabel.text = info.price
-        discountLabel.text = info.offers.first
+        priceLabel.text = info.monthlyPrice
+        discountLabel.text = info.featuresMonthly.first
     }
 }
