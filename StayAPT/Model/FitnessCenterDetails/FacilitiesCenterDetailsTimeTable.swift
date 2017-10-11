@@ -57,34 +57,3 @@ struct FacilitiesCenterDetailsTimeTable: Decodable{
             ])
     }
 }
-
-//import Gloss
-//struct FacilitiesCenterDetailsTimeTable: Decodable {
-//    
-//    let sunday: [TimeTableSundayResponse]?
-//    let monday: [TimeTableMondayResponse]
-//    let tuesday: [TimeTableTuesdayResponse]
-//    let wednesday: [TimeTableWednesdayResponse]
-//    let thursday: [TimeTableThursdayResponse]
-//    let friday: [TimeTableFridayResponse]
-//    let saturday: [TimeTableSaturdayResponse]
-    
-//    init?(json: JSON) {
-
-//        guard let sunday: [TimeTableSundayResponse] = "Sunday" <~~ json else { return nil }
-//            let monday: [TimeTableMondayResponse] = "Monday" <~~ json,
-//            let tuesday: [TimeTableTuesdayResponse] = "Tuesday" <~~ json,
-//            let  wednesday: [TimeTableWednesdayResponse] = "Wednesday" <~~ json,
-//            let thursday: [TimeTableThursdayResponse] = "Monday" <~~ json,
-//            let friday: [TimeTableFridayResponse] = "Tuesday" <~~ json,
-//            let  saturday: [TimeTableSaturdayResponse] = "Wednesday" <~~ json else { return nil }
-        
-//        self.sunday = "Sunday" <~~ json
-//        self.monday = monday
-//        self.tuesday = tuesday
-//        self.wednesday = wednesday
-//        self.thursday = thursday
-//        self.friday = friday
-//        self.saturday = saturday
-//    }
-//}

@@ -37,7 +37,7 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
         //        case 2: performSegue(withIdentifier: "showClassesSegue", sender: self)
         case 3: performSegue(withIdentifier: "showClassesSegue", sender: self)
         case 4: performSegue(withIdentifier: "showFacilitiesSegue", sender: self)
-        // case 5: performSegue(withIdentifier: "", sender: self)
+        case 5: performSegue(withIdentifier: "showTimeTableSegue", sender: self)
         case 6: performSegue(withIdentifier: "showTrainersSegue", sender: self)
         case 7: performSegue(withIdentifier: "showMembershipSegue", sender: self)
         default: print(indexPath)
@@ -48,15 +48,6 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
         
         let param = ["fcid" : id]
         FitnessCenterDetailsGetService.executeRequest(param as [String : AnyObject]) { (data) in
-            
-            print(data.timeTableSunday)
-//            print(data.timeTableMonday)
-//            print(data.timeTableTuesday)
-//            print(data.timeTableWednesday)
-//            print(data.timeTableThursday)
-//            print(data.timeTableFriday)
-//            print(data.timeTableSaturday)
-            
             self.fitnessCenterDetail = data
         }
     }
@@ -129,6 +120,11 @@ extension FitnessCenterDetailsCollectionViewController: UIScrollViewDelegate {
         } else if  segue.identifier == "showMembershipSegue" {
             let dvc = segue.destination as! FitnessMembershipTableViewController
             dvc.membership = fitnessCenterDetail.membership
+        
+        } else if segue.identifier == "showTimeTableSegue" {
+           
+            let dvc = segue.destination as! FitnessTimeTableTableViewController
+            dvc.timeTable = fitnessCenterDetail.timeTableSunday
         }
     }
 }

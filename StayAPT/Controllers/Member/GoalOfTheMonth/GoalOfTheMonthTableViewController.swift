@@ -106,7 +106,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             
         case 6:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! GoalOfTheMonthNoteCell
-            cell.notesTextView.text = goalOfTheMonth?.notes
+            cell.notesLabel.text = goalOfTheMonth?.notes
             return cell
             
         default: break

@@ -11,7 +11,7 @@ import Kingfisher
 
 class  GoalOfTheMonthNoteCell: UITableViewCell {
     
-    @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var notesLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
