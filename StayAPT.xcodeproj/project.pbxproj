@@ -107,6 +107,7 @@
 		848777081F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */; };
 		8487770A1F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */; };
 		8487770C1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */; };
+		8487770E1F8F746200B79C1D /* UpdateGoalOfTheMonthStatsService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487770D1F8F746200B79C1D /* UpdateGoalOfTheMonthStatsService+POST.swift */; };
 		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */; };
 		84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */; };
@@ -299,6 +300,7 @@
 		848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateGoalOfTheMonthService+POST.swift"; sourceTree = "<group>"; };
 		848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateUltimateGoalOfTheMonthService+POST.swift"; sourceTree = "<group>"; };
 		8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateGoalOfTheMonthNotesServices+POST.swift"; sourceTree = "<group>"; };
+		8487770D1F8F746200B79C1D /* UpdateGoalOfTheMonthStatsService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateGoalOfTheMonthStatsService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddFitnessCenterService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBoldLabel.swift; sourceTree = "<group>"; };
@@ -853,6 +855,7 @@
 				848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */,
 				848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */,
 				8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */,
+				8487770D1F8F746200B79C1D /* UpdateGoalOfTheMonthStatsService+POST.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1377,6 +1380,7 @@
 				84D1522D1F84AD020076253D /* HomeTableViewController.swift in Sources */,
 				8423E9F01F8B6B5E005C8E21 /* GoalOfTheMonthRating.swift in Sources */,
 				84CE7EF61F7EB330002F7BB3 /* FacilitiesCenterDetailsTrainer.swift in Sources */,
+				8487770E1F8F746200B79C1D /* UpdateGoalOfTheMonthStatsService+POST.swift in Sources */,
 				848776FC1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift in Sources */,
 				841CA83A1F68FAD8004C95CF /* LocationServices+GET.swift in Sources */,
 				841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */,

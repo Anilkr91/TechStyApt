@@ -1,5 +1,5 @@
 //
-//  UpdateGoalOfTheMonthNotesServices+POST.swift
+//  UpdateGoalOfTheMonthStatsService+POST.swift
 //  StayAPT
 //
 //  Created by admin on 12/10/17.
@@ -9,7 +9,7 @@
 import Alamofire
 import Gloss
 
-class UpdateGoalOfTheMonthNotesPostService {
+class UpdateGoalOfTheMonthStatsPostService {
     
     static func executeRequest (_ params:[String: Any], completionHandler: @escaping (SuccessModel) -> Void) {
         
@@ -20,12 +20,13 @@ class UpdateGoalOfTheMonthNotesPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "user/profile/update_notes", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "user/profile/update_stats", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
                 
                 print(value)
+                
                 if let data = SuccessModel.init(json: value as! JSON)  {
                     
                     if data.status == true {

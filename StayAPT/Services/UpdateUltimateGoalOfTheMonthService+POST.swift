@@ -20,11 +20,12 @@ class UpdateUltimateGoalOfTheMonthPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "fitness_center/update_ultimategoal", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "user/profile/update_ultimategoal", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
                 print(value)
+                
                 if let data = SuccessModel.init(json: value as! JSON)  {
                     
                     if data.status == true {

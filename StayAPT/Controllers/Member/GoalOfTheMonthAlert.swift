@@ -19,6 +19,16 @@ class GoalOfTheMonthAlert: BaseViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
+        
+        let goal = goalOfTheMonthTextField.text!
+        
+        let param = ["userId": "22", "goal_month" : goal ] as [String: AnyObject]
+        
+        
+        UpdateGoalOfTheMonthPostService.executeRequest(param) { (data) in
+                        print(data)
+                    }
+        
         print("update goal of the month service ")
     }
 }

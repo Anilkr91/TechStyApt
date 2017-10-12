@@ -21,8 +21,13 @@ class GoalOfTheMonthNotesAlert: BaseViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
 
          print("update notes service ")
-//        UpdateGoalOfTheMonthNotesPostService.executeRequest([String : Any]) { (<#SuccessModel#>) in
-//            <#code#>
-//        }
-    }    
+        
+         let notes = notesTextField.text!
+        
+         let param = ["userId": "22", "notes" : notes ] as [String: AnyObject]
+        
+        UpdateGoalOfTheMonthNotesPostService.executeRequest(param) { (data) in
+            print(data)
+        }
+    }
 }

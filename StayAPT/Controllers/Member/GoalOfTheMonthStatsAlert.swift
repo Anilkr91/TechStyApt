@@ -26,11 +26,28 @@ class GoalOfTheMonthStatsAlert: BaseViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
-     
-         print("stats service ")
-//        UpdateGoalOfTheMonthPostService.executeRequest([String : Any]) { (<#SuccessModel#>) in
-//            <#code#>
+        
+        let chest = chestTextField.text!
+        let biceps = bicepsTextField.text!
+        let foreArm = foreArmTextField.text!
+        let wrist =   wristTextField.text!
+        let shoulders = shouldersTextField.text!
+        let waist = waistTextField.text!
+        let thighs = thighsTextField.text!
+        let calves =  calvesTextField.text!
+        
+//        let id = "22"
+        
+//        if let id = id {
+        
+            let params = GoalOfTheMonthStatsModel(chest: chest, biceps: biceps, forearm: foreArm, wrist: wrist, shoulders: shoulders, waist: waist, thighs: thighs, calves: calves, userId: "22").toJSON()
 //        }
+        
+        
+        print(params)
 
+        UpdateGoalOfTheMonthStatsPostService.executeRequest(params!) { (data) in
+            print(data)
+        }
     }
 }

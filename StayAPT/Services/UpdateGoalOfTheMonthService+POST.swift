@@ -21,7 +21,7 @@ class UpdateGoalOfTheMonthPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "itness_center/update_goalMonth", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "user/profile/update_goalMonth", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :

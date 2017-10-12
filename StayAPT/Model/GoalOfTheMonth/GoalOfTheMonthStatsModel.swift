@@ -17,8 +17,9 @@ struct GoalOfTheMonthStatsModel: Decodable {
     let waist: String
     let thighs: String
     let calves: String
+    let userId: String?
     
-    init (chest: String, biceps: String, forearm: String, wrist: String, shoulders: String, waist: String, thighs: String, calves: String) {
+    init (chest: String, biceps: String, forearm: String, wrist: String, shoulders: String, waist: String, thighs: String, calves: String, userId: String ) {
         
         self.chest = chest
         self.biceps = biceps
@@ -28,6 +29,7 @@ struct GoalOfTheMonthStatsModel: Decodable {
         self.waist = waist
         self.thighs = thighs
         self.calves = calves
+        self.userId = userId
     }
     
     init?(json: JSON) {
@@ -48,6 +50,7 @@ struct GoalOfTheMonthStatsModel: Decodable {
         self.waist = waist
         self.thighs = thighs
         self.calves = calves
+        self.userId = "userId" <~~ json
     }
     
     func toJSON() -> JSON? {
@@ -59,7 +62,8 @@ struct GoalOfTheMonthStatsModel: Decodable {
             "shoulders" ~~> self.shoulders,
             "waist" ~~> self.waist,
             "thighs" ~~> self.thighs,
-            "calves" ~~> self.calves
+            "calves" ~~> self.calves,
+            "userId" ~~> self.userId
             ])
     }
 }

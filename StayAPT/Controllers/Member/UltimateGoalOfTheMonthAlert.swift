@@ -21,8 +21,13 @@ class UltimateGoalOfTheMonthAlert: BaseViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         
         print("update ultimate goal service ")
-        //   UpdateUltimateGoalOfTheMonthPostService.executeRequest([String : Any]) { (<#SuccessModel#>) in
-        //    <#code#>
-        //    }
+        
+        let goal = ultimateGoalTextField.text!
+        
+         let param = ["userId": "22", "ultimate_goal" : goal ] as [String: AnyObject]
+        
+           UpdateUltimateGoalOfTheMonthPostService.executeRequest(param) { (data) in
+            print(data)
+            }
     }
 }
