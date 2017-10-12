@@ -19,7 +19,6 @@ class GoalOfTheMonthAlert: BaseViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
-        
+        print("update goal of the month service ")
     }
-    
 }

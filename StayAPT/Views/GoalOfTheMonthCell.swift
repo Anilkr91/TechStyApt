@@ -38,11 +38,7 @@ class  GoalOfTheMonthCell: UITableViewCell {
 
 extension GoalOfTheMonthCell {
     func didSetCategory(_ info: String) {
-        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
+        
         goalOfTheMonthLabel.text = info
-    }
-    
-    func animation(_ sender: UIButton) {
-        print("edit clicked")
     }
 }

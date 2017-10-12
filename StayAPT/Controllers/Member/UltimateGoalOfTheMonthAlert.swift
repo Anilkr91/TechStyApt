@@ -18,8 +18,11 @@ class UltimateGoalOfTheMonthAlert: BaseViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-
- @IBAction func submitButtonTapped(_ sender: Any) {
-    
-}
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        
+        print("update ultimate goal service ")
+        //   UpdateUltimateGoalOfTheMonthPostService.executeRequest([String : Any]) { (<#SuccessModel#>) in
+        //    <#code#>
+        //    }
+    }
 }

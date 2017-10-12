@@ -27,7 +27,7 @@ class  UltimateGoalOfTheMonth: UITableViewCell {
         // Configure the view for the selected state
     }
     
-        var info: GoalOfTheMonthModel? {
+        var info: String? {
             didSet {
                 if let member = info {
                     didSetCategory(member)
@@ -37,15 +37,13 @@ class  UltimateGoalOfTheMonth: UITableViewCell {
 }
 
 extension UltimateGoalOfTheMonth {
-    func didSetCategory(_ info: GoalOfTheMonthModel) {
+    func didSetCategory(_ info: String) {
         
-        print(info)
-        
-        //        let url = URL(string: info)!
-        //        let placeholderImage = UIImage(named: "placeholder")
-
-        //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-//        priceLabel.text = info.price
-//        discountLabel.text = info.offers.first
+//        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
+        ultimateGoalLabel.text = info
     }
+    
+//    func animation(_ sender: UIButton) {
+//        print("edit clicked")
+//    }
 }

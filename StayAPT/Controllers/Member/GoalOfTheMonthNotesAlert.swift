@@ -19,7 +19,10 @@ class GoalOfTheMonthNotesAlert: BaseViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
-        
-    }
-    
+
+         print("update notes service ")
+//        UpdateGoalOfTheMonthNotesPostService.executeRequest([String : Any]) { (<#SuccessModel#>) in
+//            <#code#>
+//        }
+    }    
 }

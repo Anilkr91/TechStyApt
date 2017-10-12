@@ -44,7 +44,7 @@ class  GoalOfTheMonthStats: UITableViewCell {
 extension GoalOfTheMonthStats {
     func didSetCategory(_ info: GoalOfTheMonthStatsModel) {
         
-        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
+//        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
 
         chestLabel.text = info.chest
         bicepsLabel.text = info.biceps
@@ -57,8 +57,8 @@ extension GoalOfTheMonthStats {
         
     }
     
-    func animation(_ sender: UIButton) {
-        
-        print("edit clicked")
-    }
+//    func animation(_ sender: UIButton) {
+//        
+//        print("edit clicked")
+//    }
 }

@@ -103,6 +103,10 @@
 		848777001F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */; };
 		848777021F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */; };
 		848777041F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */; };
+		848777061F8F53BC00B79C1D /* GoalOfTheMonthStatsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777051F8F53BC00B79C1D /* GoalOfTheMonthStatsAlert.swift */; };
+		848777081F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */; };
+		8487770A1F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */; };
+		8487770C1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */; };
 		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */; };
 		84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */; };
@@ -291,6 +295,10 @@
 		848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthAlert.swift; sourceTree = "<group>"; };
 		848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltimateGoalOfTheMonthAlert.swift; sourceTree = "<group>"; };
 		848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthNotesAlert.swift; sourceTree = "<group>"; };
+		848777051F8F53BC00B79C1D /* GoalOfTheMonthStatsAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthStatsAlert.swift; sourceTree = "<group>"; };
+		848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateGoalOfTheMonthService+POST.swift"; sourceTree = "<group>"; };
+		848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateUltimateGoalOfTheMonthService+POST.swift"; sourceTree = "<group>"; };
+		8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UpdateGoalOfTheMonthNotesServices+POST.swift"; sourceTree = "<group>"; };
 		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddFitnessCenterService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBoldLabel.swift; sourceTree = "<group>"; };
@@ -842,6 +850,9 @@
 				84D152401F86912F0076253D /* AddVisitorsService+POST.swift */,
 				84D152421F86A0A20076253D /* VisitorsService+GET.swift */,
 				8423E9D11F895A33005C8E21 /* GoalOfTheMonthService+GET.swift */,
+				848777071F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift */,
+				848777091F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift */,
+				8487770B1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -900,6 +911,7 @@
 				848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */,
 				848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */,
 				848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */,
+				848777051F8F53BC00B79C1D /* GoalOfTheMonthStatsAlert.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -1279,6 +1291,7 @@
 				84F92FA21F4FFD920002074D /* BaseButton.swift in Sources */,
 				841CA2531F613A7D004C95CF /* FitnessNotificationTableViewController.swift in Sources */,
 				842AF9F91F87F925008043B7 /* FitnessClassesCollectionViewController.swift in Sources */,
+				8487770A1F8F5D6C00B79C1D /* UpdateUltimateGoalOfTheMonthService+POST.swift in Sources */,
 				844099311F5B1971005BAC61 /* FitnessBuddyTableViewController.swift in Sources */,
 				84F92FDD1F542A3E0002074D /* NotificationModel.swift in Sources */,
 				841CA2551F613A7D004C95CF /* VisitiorsListingTableViewController.swift in Sources */,
@@ -1290,6 +1303,7 @@
 				841CA8C81F6AEE01004C95CF /* FCCheckoutService+POST.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84CE7F211F82A243002F7BB3 /* TimeTableMondayResponse.swift in Sources */,
+				8487770C1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift in Sources */,
 				84409B481F5E700D005BAC61 /* ProfileViewController.swift in Sources */,
 				84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */,
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
@@ -1349,6 +1363,7 @@
 				84D152451F86A75D0076253D /* VisitorsModel.swift in Sources */,
 				84CE7F251F82A26F002F7BB3 /* TimeTableWednesdayResponse.swift in Sources */,
 				84D152391F867E950076253D /* SalesPersonModel.swift in Sources */,
+				848777081F8F5D4F00B79C1D /* UpdateGoalOfTheMonthService+POST.swift in Sources */,
 				84CE7EF91F7EB330002F7BB3 /* FitnessCenterDetailsFacilities.swift in Sources */,
 				84409B2A1F5D6B5F005BAC61 /* FitnessCenterTableViewController.swift in Sources */,
 				84F92FA51F4FFD920002074D /* BaseView.swift in Sources */,
@@ -1356,6 +1371,7 @@
 				848776F51F8D3ECE00B79C1D /* MembershipModel.swift in Sources */,
 				841CA82A1F68130E004C95CF /* Extension+Helpers.swift in Sources */,
 				842AF9E41F8766CA008043B7 /* AWCollectionViewDialLayout.swift in Sources */,
+				848777061F8F53BC00B79C1D /* GoalOfTheMonthStatsAlert.swift in Sources */,
 				84F92FCF1F540DC20002074D /* StayAptEnums.swift in Sources */,
 				84CE7F271F82A27E002F7BB3 /* TimeTableThursdayResponse.swift in Sources */,
 				84D1522D1F84AD020076253D /* HomeTableViewController.swift in Sources */,

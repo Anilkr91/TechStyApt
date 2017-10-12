@@ -46,8 +46,8 @@ extension GoalOfTheMonthRateCell {
         //        discountLabel.text = info.offers.first
     }
     
-    func animation(_ sender: UIButton) {
-        
-        print("edit clicked")
-    }
+//    func animation(_ sender: UIButton) {
+//        
+//        print("edit clicked")
+//    }
 }

@@ -38,7 +38,7 @@ extension GoalOfTheMonthNoteCell {
     func didSetCategory(_ info: String) {
         
         notesLabel.text = info
-         editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
+//         editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
         
         print(info)
         //        let url = URL(string: info)!
@@ -49,8 +49,8 @@ extension GoalOfTheMonthNoteCell {
 //        discountLabel.text = info.offers.first
     }
     
-    func animation(_ sender: UIButton) {
-        
-        print("edit clicked")
-    }
+//    func animation(_ sender: UIButton) {
+//        
+//        print("edit clicked")
+//    }
 }
