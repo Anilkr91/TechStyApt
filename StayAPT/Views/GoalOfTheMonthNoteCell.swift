@@ -12,6 +12,7 @@ import Kingfisher
 class  GoalOfTheMonthNoteCell: UITableViewCell {
     
     @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +25,7 @@ class  GoalOfTheMonthNoteCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-        var info: GoalOfTheMonthModel? {
+        var info: String? {
             didSet {
                 if let member = info {
                     didSetCategory(member)
@@ -34,7 +35,10 @@ class  GoalOfTheMonthNoteCell: UITableViewCell {
 }
 
 extension GoalOfTheMonthNoteCell {
-    func didSetCategory(_ info: GoalOfTheMonthModel) {
+    func didSetCategory(_ info: String) {
+        
+        notesLabel.text = info
+         editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
         
         print(info)
         //        let url = URL(string: info)!
@@ -43,5 +47,10 @@ extension GoalOfTheMonthNoteCell {
         //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
 //        priceLabel.text = info.price
 //        discountLabel.text = info.offers.first
+    }
+    
+    func animation(_ sender: UIButton) {
+        
+        print("edit clicked")
     }
 }

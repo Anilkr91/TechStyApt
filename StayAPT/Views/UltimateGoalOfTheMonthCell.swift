@@ -13,6 +13,7 @@ class  UltimateGoalOfTheMonth: UITableViewCell {
     
     @IBOutlet weak var ultimateGoalImageView: UIImageView!
     @IBOutlet weak var ultimateGoalLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
     
     
     override func awakeFromNib() {

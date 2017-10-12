@@ -35,6 +35,8 @@ class  GoalOfTheMonthRateCell: UITableViewCell {
 
 extension GoalOfTheMonthRateCell {
     func didSetCategory(_ info: GoalOfTheMonthRating) {
+        
+       // editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
         print(info)
         //        let url = URL(string: info)!
         //        let placeholderImage = UIImage(named: "placeholder")
@@ -42,5 +44,10 @@ extension GoalOfTheMonthRateCell {
         //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
         //        priceLabel.text = info.price
         //        discountLabel.text = info.offers.first
+    }
+    
+    func animation(_ sender: UIButton) {
+        
+        print("edit clicked")
     }
 }

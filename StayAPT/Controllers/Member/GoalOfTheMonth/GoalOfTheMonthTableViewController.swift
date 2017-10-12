@@ -65,8 +65,9 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
         switch index {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell0", for: indexPath) as! GoalOfTheMonthCell
+            
+            cell.info = goalOfTheMonth?.goalMonth
             cell.goalOfTheMonthImageView.image = UIImage(named: "GGym")
-            cell.goalOfTheMonthLabel.text = goalOfTheMonth?.goalMonth
             return cell
        
         case 1:
@@ -87,15 +88,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
         
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell4", for: indexPath) as! GoalOfTheMonthStats
-            
-            cell.chestLabel.text = goalOfTheMonth?.stats.chest
-            cell.bicepsLabel.text = goalOfTheMonth?.stats.biceps
-            cell.forearmLabel.text = goalOfTheMonth?.stats.forearm
-            cell.calvesLabel.text = goalOfTheMonth?.stats.calves
-            cell.wristLabel.text = goalOfTheMonth?.stats.wrist
-            cell.shoulderLabel.text =  goalOfTheMonth?.stats.shoulders
-            cell.WaistLabel.text = goalOfTheMonth?.stats.waist
-            cell.thighsLabel.text = goalOfTheMonth?.stats.thighs
+            cell.info = goalOfTheMonth?.stats
             return cell
         
         case 5:
@@ -106,7 +99,8 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             
         case 6:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell6", for: indexPath) as! GoalOfTheMonthNoteCell
-            cell.notesLabel.text = goalOfTheMonth?.notes
+            
+            cell.info = goalOfTheMonth?.notes
             return cell
             
         default: break
@@ -129,6 +123,15 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             return 150
         } else  {
         return 100
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoalOfTheMonthTableViewController" {
+            
+        } else if segue.identifier == "GoalOfTheMonthTableViewController" {
+            
         }
     }
     

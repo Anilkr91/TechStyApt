@@ -14,8 +14,8 @@ class  GoalOfTheMonthCell: UITableViewCell {
     
     @IBOutlet weak var goalOfTheMonthImageView: UIImageView!
     @IBOutlet weak var goalOfTheMonthLabel: UILabel!
-    
-    
+    @IBOutlet weak var editButton: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +27,7 @@ class  GoalOfTheMonthCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var info: GoalOfTheMonthModel? {
+    var info: String? {
         didSet {
             if let member = info {
                 didSetCategory(member)
@@ -37,14 +37,12 @@ class  GoalOfTheMonthCell: UITableViewCell {
 }
 
 extension GoalOfTheMonthCell {
-    func didSetCategory(_ info: GoalOfTheMonthModel) {
-        
-        print(info)
-//                let url = URL(string: info)!
-//                let placeholderImage = UIImage(named: "placeholder")
-//        
-//                membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-//        priceLabel.text = info.price
-//        discountLabel.text = info.offers.first
+    func didSetCategory(_ info: String) {
+        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
+        goalOfTheMonthLabel.text = info
+    }
+    
+    func animation(_ sender: UIButton) {
+        print("edit clicked")
     }
 }

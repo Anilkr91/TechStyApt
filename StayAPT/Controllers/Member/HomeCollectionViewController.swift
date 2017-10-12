@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SpinWheelControl
+//import SpinWheelControl
 
 class HomeCollectionViewController: BaseCollectionViewController {
 

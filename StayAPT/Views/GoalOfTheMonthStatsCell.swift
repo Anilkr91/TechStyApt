@@ -15,12 +15,11 @@ class  GoalOfTheMonthStats: UITableViewCell {
     @IBOutlet weak var bicepsLabel: smallLabel!
     @IBOutlet weak var forearmLabel: smallLabel!
     @IBOutlet weak var wristLabel: smallLabel!
-    
     @IBOutlet weak var shoulderLabel: smallLabel!
     @IBOutlet weak var WaistLabel: smallLabel!
     @IBOutlet weak var thighsLabel: smallLabel!
     @IBOutlet weak var calvesLabel: smallLabel!
-    
+    @IBOutlet weak var editButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,12 +44,21 @@ class  GoalOfTheMonthStats: UITableViewCell {
 extension GoalOfTheMonthStats {
     func didSetCategory(_ info: GoalOfTheMonthStatsModel) {
         
-        print(info)
-        //        let url = URL(string: info)!
-        //        let placeholderImage = UIImage(named: "placeholder")
+        editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
 
-        //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-//        priceLabel.text = info.price
-//        discountLabel.text = info.offers.first
+        chestLabel.text = info.chest
+        bicepsLabel.text = info.biceps
+        forearmLabel.text = info.forearm
+        calvesLabel.text = info.calves
+        wristLabel.text = info.wrist
+        shoulderLabel.text =  info.shoulders
+        WaistLabel.text = info.waist
+        thighsLabel.text = info.thighs
+        
+    }
+    
+    func animation(_ sender: UIButton) {
+        
+        print("edit clicked")
     }
 }

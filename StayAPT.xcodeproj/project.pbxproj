@@ -100,6 +100,9 @@
 		848776FA1F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */; };
 		848776FC1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */; };
 		848776FE1F8E41D400B79C1D /* TimeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FD1F8E41D400B79C1D /* TimeTableModel.swift */; };
+		848777001F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */; };
+		848777021F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */; };
+		848777041F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */; };
 		84A7B6611F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */; };
 		84A7B6631F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */; };
 		84A7B6651F7100E100EC64D0 /* BaseBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */; };
@@ -285,6 +288,9 @@
 		848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewController.swift; sourceTree = "<group>"; };
 		848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTimeTableTableViewController.swift; sourceTree = "<group>"; };
 		848776FD1F8E41D400B79C1D /* TimeTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableModel.swift; sourceTree = "<group>"; };
+		848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthAlert.swift; sourceTree = "<group>"; };
+		848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltimateGoalOfTheMonthAlert.swift; sourceTree = "<group>"; };
+		848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthNotesAlert.swift; sourceTree = "<group>"; };
 		84A7B6601F6F8F9A00EC64D0 /* MembersDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDetailTableViewController.swift; sourceTree = "<group>"; };
 		84A7B6621F6FFC9900EC64D0 /* AddFitnessCenterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddFitnessCenterService+POST.swift"; sourceTree = "<group>"; };
 		84A7B6641F7100E100EC64D0 /* BaseBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBoldLabel.swift; sourceTree = "<group>"; };
@@ -891,6 +897,9 @@
 				84F92F8A1F4FF8610002074D /* HomeCollectionViewController.swift */,
 				84F92F901F4FF8610002074D /* ViewController.swift */,
 				84D1522C1F84AD020076253D /* HomeTableViewController.swift */,
+				848776FF1F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift */,
+				848777011F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift */,
+				848777031F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -1136,8 +1145,9 @@
 				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework",
+				"${BUILT_PRODUCTS_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
-				"${BUILT_PRODUCTS_DIR}/SpinWheelControl/SpinWheelControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/YBSlantedCollectionViewLayout/YBSlantedCollectionViewLayout.framework",
@@ -1148,8 +1158,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZAppearance.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetPresentationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpinWheelControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YBSlantedCollectionViewLayout.framework",
@@ -1206,6 +1217,7 @@
 				84409B2F1F5D6D20005BAC61 /* MenuTableViewController.swift in Sources */,
 				84CE7EC41F7E3EAA002F7BB3 /* FitnessClassesCollectionViewCell.swift in Sources */,
 				84409B351F5D6DFA005BAC61 /* BlogsTableViewController.swift in Sources */,
+				848777041F8E919500B79C1D /* GoalOfTheMonthNotesAlert.swift in Sources */,
 				841CA24E1F613A7D004C95CF /* CheckInMemberViewController.swift in Sources */,
 				841CA8291F68130E004C95CF /* DeviceType+Helper.swift in Sources */,
 				84C4CF451F56D445001DA94A /* RedButton.swift in Sources */,
@@ -1256,6 +1268,7 @@
 				841CA8D21F6D42DA004C95CF /* DefaultKeys.swift in Sources */,
 				84F92FA41F4FFD920002074D /* BaseTextField.swift in Sources */,
 				841CA2191F612F80004C95CF /* FitnessCenterLoginTableViewController.swift in Sources */,
+				848777001F8E8EC800B79C1D /* GoalOfTheMonthAlert.swift in Sources */,
 				84F92F941F4FF8610002074D /* HomeCollectionViewController.swift in Sources */,
 				84C4CF511F57FF35001DA94A /* DietPlanTableViewCell.swift in Sources */,
 				84CE7EFB1F7EB3EA002F7BB3 /* FitnessCenterDetailResponse.swift in Sources */,
@@ -1352,6 +1365,7 @@
 				841CA83A1F68FAD8004C95CF /* LocationServices+GET.swift in Sources */,
 				841CA8301F6813BC004C95CF /* RegisterService+POST.swift in Sources */,
 				84CE7EFD1F7EC959002F7BB3 /* MonthlyResponse.swift in Sources */,
+				848777021F8E8EDA00B79C1D /* UltimateGoalOfTheMonthAlert.swift in Sources */,
 				84F92FE71F553A4C0002074D /* ClassService+GET.swift in Sources */,
 				84D152431F86A0A20076253D /* VisitorsService+GET.swift in Sources */,
 			);
