@@ -26,6 +26,8 @@ class GoalOfTheMonthAlert: BaseViewController {
         
         
         UpdateGoalOfTheMonthPostService.executeRequest(param) { (data) in
+            
+//            dismiss(animated: true, completion: nil)
                         print(data)
                     }
         

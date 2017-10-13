@@ -20,6 +20,7 @@ class HomeCollectionViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         circleCollectionView()
+//        placeOffer()
         
     }
     

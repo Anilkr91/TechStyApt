@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoalOfTheMonthStatsAlert: BaseViewController {
+class GoalOfTheMonthStatsAlert: BaseTableViewController {
     
     @IBOutlet weak var chestTextField: BaseTextField!
     @IBOutlet weak var bicepsTextField: BaseTextField!
@@ -35,19 +35,31 @@ class GoalOfTheMonthStatsAlert: BaseViewController {
         let waist = waistTextField.text!
         let thighs = thighsTextField.text!
         let calves =  calvesTextField.text!
-        
-//        let id = "22"
-        
-//        if let id = id {
-        
+            
             let params = GoalOfTheMonthStatsModel(chest: chest, biceps: biceps, forearm: foreArm, wrist: wrist, shoulders: shoulders, waist: waist, thighs: thighs, calves: calves, userId: "22").toJSON()
-//        }
-        
-        
-        print(params)
 
         UpdateGoalOfTheMonthStatsPostService.executeRequest(params!) { (data) in
             print(data)
         }
     }
+}
+
+extension GoalOfTheMonthStatsAlert {
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
 }

@@ -14,7 +14,8 @@ class FitnessMembershipTableViewCell: UITableViewCell {
     @IBOutlet weak var membershipImageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var discountLabel: UILabel!
-
+    @IBOutlet weak var offerButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -124,7 +124,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 4 {
-            return 120
+            return 150
         } else  {
             return UITableViewAutomaticDimension
         }
@@ -186,7 +186,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             formSheetController.contentViewControllerTransitionStyle = .bounce
             formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
             self.present(formSheetController, animated: true, completion: nil)
-            navigationController.titleLabel.text = " Edit Stats"
+            navigationController.navigationItem.title = "Edit Stats"
 
         }else if segue.identifier == "GoalOfTheMonthTableViewController" {
             return

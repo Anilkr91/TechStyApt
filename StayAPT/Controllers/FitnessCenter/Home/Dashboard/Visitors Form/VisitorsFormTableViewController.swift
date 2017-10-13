@@ -72,13 +72,9 @@ class VisitorsFormTableViewController: BaseTableViewController {
             AddVisitorsPostService.executeRequest(param! as [String : AnyObject], completionHandler: { (data) in
                 print(data)
             })
-            
-            
             print("passed all validation")
 //        }
-        
     }
-    
     
     func getSalesPerson() {
         

@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MZFormSheetPresentationController
 
 class FitnessMembershipTableViewController: BaseTableViewController {
     
     var membership: [FacilitiesCenterDetailsMembership] = []
     var array: [MembershipModel] = []
+    var object: MembershipModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +60,9 @@ class FitnessMembershipTableViewController: BaseTableViewController {
         FitnessMembershipTableViewCell
         
         cell.info = array[indexPath.section]
+        cell.offerButton.tag  = indexPath.section
+        cell.offerButton.addTarget(self, action: #selector(placeOffer(_:)), for: .touchUpInside)
+            
         return cell
     }
     
@@ -76,5 +81,28 @@ class FitnessMembershipTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func placeOffer(_ sender: UIButton) {
+    
+        object = array[sender.tag]
+        performSegue(withIdentifier: "showOfferSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showOfferSegue" {
+            
+            let presentationSegue = segue as! MZFormSheetPresentationViewControllerSegue
+            let navigationController = presentationSegue.formSheetPresentationController.contentViewController as! PlaceOfferAlert
+            let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
+            formSheetController.presentationController?.contentViewSize = CGSize(width: 280, height: 350)
+            formSheetController.presentationController?.shouldCenterVertically = true
+            formSheetController.contentViewControllerTransitionStyle = .bounce
+            formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
+            self.present(formSheetController, animated: true, completion: nil)
+            navigationController.titleLabel.text = "Make an Offer"
+            navigationController.object = object
+        }
     }
 }

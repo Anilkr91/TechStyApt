@@ -23,5 +23,4 @@ struct MembershipModel {
         self.offersMonthly = offersMonthly
 
     }
-    
 }
