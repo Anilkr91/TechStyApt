@@ -13,7 +13,7 @@ class UpdateUltimateGoalOfTheMonthPostService {
     
     static func executeRequest (_ params:[String: Any], completionHandler: @escaping (SuccessModel) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -30,10 +30,10 @@ class UpdateUltimateGoalOfTheMonthPostService {
                     
                     if data.status == true {
                         completionHandler(data)
-                        Loader.sharedInstance.hideLoader()
+                        ProgressBarView.hideHUD()
                         
                     } else {
-                        Loader.sharedInstance.hideLoader()
+                        ProgressBarView.hideHUD()
                         let error = ErrorModel.init(json: value as! JSON)
                         
                         let message = error?.error
@@ -42,7 +42,7 @@ class UpdateUltimateGoalOfTheMonthPostService {
                 }
                 
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

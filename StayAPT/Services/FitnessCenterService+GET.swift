@@ -13,7 +13,7 @@ import Gloss
 class FitnessCenterGetService {
     static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping ([FitnessCenterModel]) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -26,16 +26,16 @@ class FitnessCenterGetService {
             case .success(let value) :
                 if let data = FitnessCenterModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
-                     Loader.sharedInstance.hideLoader()
+                     ProgressBarView.hideHUD()
                     
                 } else {
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     let error = ErrorModel.init(json: value as! JSON)
                     Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

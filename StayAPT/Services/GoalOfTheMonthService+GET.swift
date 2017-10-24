@@ -12,7 +12,7 @@ import Gloss
 class GoalOfTheMonthGetService {
     static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (GoalOfTheMonthModel) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -28,15 +28,15 @@ class GoalOfTheMonthGetService {
                 if let data = GoalOfTheMonthResponse(json: value as! JSON) {
                     print(data)
                     completionHandler(data.result)
-                    Loader.sharedInstance.hideLoader()                    
+                    ProgressBarView.hideHUD()                    
                 } else {
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     let error = ErrorModel.init(json: value as! JSON)
 //                    Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

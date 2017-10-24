@@ -12,7 +12,7 @@ import Gloss
 class AddVisitorsPostService {
     static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (DataResponse<Any>) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -27,16 +27,16 @@ class AddVisitorsPostService {
                 print(value)
 //                if let data = LoginModelResponse.init(json: value as! JSON)  {
 //                    completionHandler(data)
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     
 //                } else {
-//                    Loader.sharedInstance.hideLoader()
+//                    ProgressBarView.hideHUD()
 //                    let error = ErrorModel.init(json: value as! JSON)
 //                    Alert.showAlertWithMessage("Error", message: error!.message!)
 //                }
                 
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

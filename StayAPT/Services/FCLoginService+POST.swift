@@ -12,7 +12,7 @@ import Gloss
 class FCLoginPostService {
     static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (FCLoginResponse) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -25,10 +25,10 @@ class FCLoginPostService {
             case .success(let value) :
                 if let data = FCLoginResponse.init(json: value as! JSON)  {
                     completionHandler(data)
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     
                 } else {
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     let error = ErrorModel.init(json: value as! JSON)
                     
                     let message = error?.error ?? error?.errorMessage
@@ -36,7 +36,7 @@ class FCLoginPostService {
                 }
                 
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

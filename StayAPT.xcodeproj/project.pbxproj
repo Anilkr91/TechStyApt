@@ -97,6 +97,7 @@
 		846250751F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */; };
 		84824A551F74EA21006F8C8C /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */; };
 		8482D0A91F9DC854000E17E8 /* FitnessCenterTimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0A81F9DC854000E17E8 /* FitnessCenterTimeTableCell.swift */; };
+		8482D0AF1F9F56F3000E17E8 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0AE1F9F56F3000E17E8 /* ProgressBarView.swift */; };
 		848776F51F8D3ECE00B79C1D /* MembershipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F41F8D3ECE00B79C1D /* MembershipModel.swift */; };
 		848776FA1F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */; };
 		848776FC1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */; };
@@ -296,6 +297,7 @@
 		846250741F4EC3B400654E3D /* FitnessCenterDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		84824A541F74EA21006F8C8C /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
 		8482D0A81F9DC854000E17E8 /* FitnessCenterTimeTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessCenterTimeTableCell.swift; sourceTree = "<group>"; };
+		8482D0AE1F9F56F3000E17E8 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		848776F41F8D3ECE00B79C1D /* MembershipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipModel.swift; sourceTree = "<group>"; };
 		848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewController.swift; sourceTree = "<group>"; };
 		848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTimeTableTableViewController.swift; sourceTree = "<group>"; };
@@ -831,6 +833,7 @@
 		84DDE4681F4D8EC000A2E244 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8482D0AE1F9F56F3000E17E8 /* ProgressBarView.swift */,
 				841CA8221F68130E004C95CF /* Extensions */,
 				841CA81B1F681212004C95CF /* Labels */,
 				84F92FCD1F540DC20002074D /* Enums */,
@@ -1178,6 +1181,7 @@
 				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework",
 				"${BUILT_PRODUCTS_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
@@ -1191,6 +1195,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZAppearance.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZFormSheetPresentationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
@@ -1330,6 +1335,7 @@
 				84409B481F5E700D005BAC61 /* ProfileViewController.swift in Sources */,
 				84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */,
 				848777101F8F9C5500B79C1D /* PlaceOfferServices+POST.swift in Sources */,
+				8482D0AF1F9F56F3000E17E8 /* ProgressBarView.swift in Sources */,
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
 				8423E9FD1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,

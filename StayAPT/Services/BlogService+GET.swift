@@ -12,7 +12,7 @@ import Gloss
 class BlogGetService {
     static func executeRequest (_ completionHandler: @escaping ([BlogModel]) -> Void) {
         
-        Loader.sharedInstance.showLoader()
+       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -24,17 +24,17 @@ class BlogGetService {
             switch response.result {
             case .success(let value) :
                 if let data = BlogModelArray.init(json: value as! JSON)  {
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     completionHandler(data.results)
                     
                 } else {
-                    Loader.sharedInstance.hideLoader()
+                    ProgressBarView.hideHUD()
                     let error = ErrorModel.init(json: value as! JSON)
                     Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
             
             case .failure(let error):
-                Loader.sharedInstance.hideLoader()
+                ProgressBarView.hideHUD()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }
