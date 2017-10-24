@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupNavigationAppearance() {
         let navigationbarAppearance = UINavigationBar.appearance()
-        //navigationbarAppearance.barStyle = .black
+        navigationbarAppearance.barStyle = .default
         //navigationbarAppearance.tintColor = UIColor.white
         //navigationbarAppearance.barTintColor = UIColor.red
        // navigationbarAppearance.shadowImage = nil

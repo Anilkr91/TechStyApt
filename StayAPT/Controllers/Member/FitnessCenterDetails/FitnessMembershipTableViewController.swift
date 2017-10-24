@@ -32,13 +32,11 @@ class FitnessMembershipTableViewController: BaseTableViewController {
             let halfYearly = MembershipModel(monthlyPrice: element.halfYearly.monthlyPrice!, membershipPlanMonthly: element.halfYearly.membershipPlanMonthly!, featuresMonthly: element.halfYearly.featuresMonthly!, offersMonthly: element.halfYearly.offersMonthly!)
             
             let yearly = MembershipModel(monthlyPrice: element.yearly.monthlyPrice!, membershipPlanMonthly: element.yearly.membershipPlanMonthly!, featuresMonthly: element.yearly.featuresMonthly!, offersMonthly: element.yearly.offersMonthly!)
-            
-            
+    
             array.append(monthly)
             array.append(quaterly)
             array.append(halfYearly)
             array.append(yearly)
-            
         }
     }
     
@@ -54,11 +52,10 @@ class FitnessMembershipTableViewController: BaseTableViewController {
         return 1
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!
         FitnessMembershipTableViewCell
-        
+        print(array[indexPath.section])
         cell.info = array[indexPath.section]
         cell.offerButton.tag  = indexPath.section
         cell.offerButton.addTarget(self, action: #selector(placeOffer(_:)), for: .touchUpInside)
@@ -67,7 +64,6 @@ class FitnessMembershipTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         return 2
     }
     

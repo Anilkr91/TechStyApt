@@ -43,6 +43,6 @@ extension FitnessMembershipTableViewCell {
 //        
 //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
         priceLabel.text = info.monthlyPrice
-        discountLabel.text = info.featuresMonthly.first
+        discountLabel.text = info.featuresMonthly.joined(separator: ",")
     }
 }

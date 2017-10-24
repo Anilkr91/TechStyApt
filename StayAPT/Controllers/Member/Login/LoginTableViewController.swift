@@ -17,13 +17,6 @@ class LoginTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //test
-        // loginApi()
-        //locationApi()
-        // regiterApi()
-        
-        
         togglePassword.addTarget(self, action: #selector(toggleButtonImage), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none

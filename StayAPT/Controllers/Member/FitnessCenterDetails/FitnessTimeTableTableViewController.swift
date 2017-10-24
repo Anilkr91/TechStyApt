@@ -11,55 +11,86 @@ import UIKit
 class FitnessTimeTableTableViewController: UITableViewController {
     
     var timeTable: [TimeTableSundayResponse] = []
-    var array: [Any] = []
+    var array: [FacilitiesCenterDetailsTimeTable] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTimeTableArray()
+        print(array)
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return array.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FitnessCenterTimeTableCell
         
-        // Configure the cell...
-        
+        cell.info = array[indexPath.row]
         return cell
     }
     
     func setupTimeTableArray() {
         
             for time in timeTable.enumerated() {
-                array.append(time.element.sunday)
-                array.append(time.element.monday)
-                 array.append(time.element.tuesday)
-                 array.append(time.element.wednesday)
-                 array.append(time.element.thursday)
-                 array.append(time.element.friday)
-                array.append(time.element.saturday)
-//    array.append(time.element.sunday)
-        //
-//                    for value in time.element.sunday!.enumerated() {
-//                        
-//                      let sunday = TimeTableModel(status: value.element.status!, singleSession: value.element.singleSession!, coupleSession: value.element.coupleSession!, freeSession: value.element.freeSession!, class_id: value.element.class_id!, days: value.element.days!, duration: value.element.duration!, start: value.element.start!, className: value.element.className!)
-//                        
-//                        array.append(sunday)
-//                        
-//                    }
+                
+                if let sundays = time.element.sunday {
+                    
+                    for day in sundays{
+                        array.append(day)
+                    }
+                }
+                
+                if let mondays = time.element.monday {
+                    
+                    for day in mondays{
+                        array.append(day)
+                    }
+                }
+                
+                if let tuesdays = time.element.tuesday {
+                    
+                    for day in tuesdays{
+                        array.append(day)
+                    }
+                }
+            
+                if let wednesdays = time.element.wednesday {
+                
+                    for day in wednesdays{
+                        array.append(day)
+                    }
+                }
+                
+                if let thursdays = time.element.thursday {
+                    
+                    for day in thursdays{
+                         array.append(day)
+                    }
+                }
+                
+                if let fridays = time.element.friday {
+                    
+                    for day in fridays{
+                        array.append(day)
+                    }
+                }
+                
+                if let saturdays = time.element.saturday {
+                    
+                    for day in saturdays{
+                        array.append(day)
+                    }
+                }
         }
-        let list = array.filter { $0 != nil }
-     print(list)
     }
 }

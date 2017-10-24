@@ -42,7 +42,7 @@ extension FitnessTrainersCollectionViewController: UICollectionViewDelegateFlowL
     }
     
     fileprivate var itemsPerRow: CGFloat {
-        return 3
+        return 2
     }
     
     fileprivate var interitemSpace: CGFloat {

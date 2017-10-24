@@ -125,6 +125,10 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 4 {
             return 150
+       
+        } else if indexPath.section == 5 {
+            return 150
+            
         } else  {
             return UITableViewAutomaticDimension
         }

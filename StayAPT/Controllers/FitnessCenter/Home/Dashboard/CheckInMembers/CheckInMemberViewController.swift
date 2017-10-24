@@ -17,6 +17,7 @@ class CheckInMemberViewController: BaseViewController {
         super.viewDidLoad()
 
         setupChild()
+        fetchCheckedInCurrentMembers()
         menuSegmentedControl.addTarget(self, action: #selector(segmentIndex(sender:)), for: .valueChanged)
     }
 
@@ -99,8 +100,37 @@ class CheckInMemberViewController: BaseViewController {
                                 SACheckedInMember(image: "GGym2", name: "Ram Rahim", counter: "20/20")
             ]
             cvc.collectionView?.reloadData()
+            fetchCheckedInPreviousMembers()
         default:
             print("out of bound")
         }
     }
+    
+    
+    func fetchCheckedInCurrentMembers() {
+        
+       let user = LoginUtils.getCurrentFitnessCenterUserLogin()
+        
+        let param = ["fcID": user!.id, "userType": "0"] as [String: AnyObject]
+        
+        CheckedInCurrentMembersGetService.executeRequest(param) { (data) in
+            print(data)
+            
+        }
+    }
+    
+    
+    func fetchCheckedInPreviousMembers() {
+        
+        let user = LoginUtils.getCurrentFitnessCenterUserLogin()
+        
+        let param = ["fcID": user!.id, "userType": "0"] as [String: AnyObject]
+        
+        CheckedInLastMembersGetService.executeRequest(param) { (data) in
+            print(data)
+            
+        }
+    }
+    
+    
 }
