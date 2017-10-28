@@ -13,7 +13,7 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
     
      @IBOutlet weak var collectionView: UICollectionView!
     
-    let array = ["Gym Name", "Information", "Gallery" ,"Classes", "Facilities", "Timetable", "Trainers", "Membership"]
+    var array = ["Information", "Gallery" ,"Classes", "Facilities", "Timetable", "Trainers", "Membership"]
     
     var fcId : String?
     var gymName: String?

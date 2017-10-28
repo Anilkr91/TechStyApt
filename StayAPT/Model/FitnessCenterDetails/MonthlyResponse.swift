@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct MonthlyResponse: Decodable {
+struct MonthlyResponse: Gloss.Decodable {
     
     let monthlyPrice: String?
     let membershipPlanMonthly: String?

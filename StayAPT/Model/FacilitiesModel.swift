@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct FacilitiesModel: Decodable {
+struct FacilitiesModel: Gloss.Decodable {
     
     let img: String
     

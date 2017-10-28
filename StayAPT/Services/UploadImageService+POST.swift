@@ -12,7 +12,7 @@ import Gloss
 class UploadImagePostService {
     static func executeRequest (_ data: Data, image: String, completionHandler: @escaping (DataResponse<Any>) -> Void) {
         
-       ProgressBarView.showHUD()
+      Loader.sharedInstance.showLoader()
         let user = LoginUtils.getCurrentMemberUserLogin()
         let uploadUrl = "http://stayapt.com/UploadImageController/profileUploadImage?X_API_KEY=\(Constants.API_KEY)&userId=\(user!.id)"
         
@@ -35,7 +35,7 @@ class UploadImagePostService {
                                         case .success(let upload, _, _):
                                              debugPrint(upload)
                                             upload.responseJSON { response in
-                                                ProgressBarView.hideHUD()
+                                                Loader.sharedInstance.hideLoader()
                                                 print(response)
 //                                                if let info = response.result.value as? [String: Any]  {
 //                                                    

@@ -13,6 +13,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
     weak var pvc: FitnessCenterViewController?
     var fitnessCenterArray: [FitnessCenterModel] = []
     var fcId : String!
+    var gymName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
+        gymName = fitnessCenterArray[indexPath.section].name
         fcId = fitnessCenterArray[indexPath.section].id
         
         self.performSegue(withIdentifier: "showFitnessCenterDetailsSegue", sender: self)
@@ -70,6 +72,7 @@ class FitnessCenterTableViewController: BaseTableViewController {
         if segue.identifier == "showFitnessCenterDetailsSegue" {
             
             let dvc = segue.destination as! FitnessCenterDetailsCollectionViewController
+            dvc.array.insert(gymName, at: 0)
             dvc.fcId = fcId
         }
     }

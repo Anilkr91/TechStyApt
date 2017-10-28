@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FitnessCenterDetailResponse: Decodable {
+struct FitnessCenterDetailResponse: Gloss.Decodable {
     
     let information: FitnessCenterDetailInformationModel
     let classes: [FitnessCenterDetailClassModel]

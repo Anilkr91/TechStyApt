@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct FCLoginResponse: Decodable {
+struct FCLoginResponse: Gloss.Decodable {
     let id: String
     let datetime: String
     let ip_address: String

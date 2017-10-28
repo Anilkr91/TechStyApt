@@ -38,14 +38,14 @@ class FitnessNotificationTableViewCell: UITableViewCell {
 
 extension FitnessNotificationTableViewCell {
     func didSetCategory(_ member: NotificationModel) {
-        notificationImageView.image = UIImage(imageLiteralResourceName: member.image)
-        notificationLabel.text = member.title
-        notificationNameLabel.text = member.name
-        
-        if member.type == Notification.Request.rawValue {
-            notificationAcceptButton.addTarget(self, action: #selector(Acceptrequest), for: .touchUpInside)
-             notificationRejectButton.addTarget(self, action: #selector(Rejectrequest), for: .touchUpInside)
-        }
+//        notificationImageView.image = UIImage(imageLiteralResourceName: member.image)
+//        notificationLabel.text = member.title
+//        notificationNameLabel.text = member.name
+//        
+//        if member.type == Notification.Request.rawValue {
+//            notificationAcceptButton.addTarget(self, action: #selector(Acceptrequest), for: .touchUpInside)
+//             notificationRejectButton.addTarget(self, action: #selector(Rejectrequest), for: .touchUpInside)
+//        }
     }
     
     func Acceptrequest(_ sender: UIButton) {

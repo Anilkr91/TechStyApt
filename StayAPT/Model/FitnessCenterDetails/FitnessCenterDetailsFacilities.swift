@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct FitnessCenterDetailsFacilities: Decodable {
+struct FitnessCenterDetailsFacilities: Gloss.Decodable {
     
     let fac_image: String
     let fac_name: String

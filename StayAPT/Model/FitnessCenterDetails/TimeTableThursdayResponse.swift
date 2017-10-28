@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct TimeTableThursdayResponse: Decodable {
+struct TimeTableThursdayResponse: Gloss.Decodable {
     
     let thursday: [FacilitiesCenterDetailsTimeTable]?
     init?(json: JSON) {

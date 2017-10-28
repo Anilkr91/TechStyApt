@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct SuccessModel: Decodable {
+struct SuccessModel: Gloss.Decodable {
     
     let status: Bool
     let message: String?

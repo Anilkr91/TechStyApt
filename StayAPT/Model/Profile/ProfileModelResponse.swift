@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct ProfileModelResponse: Decodable {
+struct ProfileModelResponse: Gloss.Decodable {
     
     let status: Bool
     let profile: ProfileResponse

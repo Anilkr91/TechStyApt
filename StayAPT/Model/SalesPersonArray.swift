@@ -14,7 +14,7 @@ struct SalesPersonArray {
     
     init?(json: JSON) {
          guard let status: Bool = "status" <~~ json,
-         let results: [SalesPersonModel] = "message" <~~ json else {
+         let results: [SalesPersonModel] = "data" <~~ json else {
             return nil
         }
         self.status = status
@@ -24,7 +24,7 @@ struct SalesPersonArray {
     func toJSON() -> JSON? {
         return jsonify([
             "status" ~~> self.status,
-            "message" ~~> self.results
+            "data" ~~> self.results
             ])
     }
 }

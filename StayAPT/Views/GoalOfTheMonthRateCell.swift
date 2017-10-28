@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SwiftChart
 import Kingfisher
 
 class  GoalOfTheMonthRateCell: UITableViewCell {
@@ -45,9 +46,14 @@ extension GoalOfTheMonthRateCell {
         //        priceLabel.text = info.price
         //        discountLabel.text = info.offers.first
     }
-    
-//    func animation(_ sender: UIButton) {
+
+//    func setupRateGraph() {
 //        
-//        print("edit clicked")
+//        let chart = Chart(frame: CGRect(x: 0, y: 0, width: 375, height: 15
+////        let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
+//            let series = 
+//        
+//        series.color = ChartColors.greenColor()
+//        chart.add(series)
 //    }
 }

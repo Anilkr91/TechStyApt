@@ -17,5 +17,7 @@ enum TabIndex : Int {
 
 enum Notification: String {
     case Request = "Request"
-    case Information = "Information"
+    case Booking = "Booking Session"
+    case Offer = "Place An Offer"
+    case Workout = "Workout"
 }

@@ -19,6 +19,8 @@ class ProgressBarView {
             hud = MBProgressHUD.showAdded(to: window!, animated: true)
             hud.bezelView.color = UIColor.red
             hud.label.text = "Please wait..."
+            hud.label.font = UIFont(name: "cuyabra", size: 12)
+            
             hud.bezelView.backgroundColor = UIColor.clear
             hud.bezelView.style = .blur
         }
@@ -29,5 +31,4 @@ class ProgressBarView {
             hud.hide(animated: true)
         }
     }
-    
 }

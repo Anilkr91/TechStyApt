@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct GoalOfTheMonthFavouriteFitnessCenter: Decodable {
+struct GoalOfTheMonthFavouriteFitnessCenter: Gloss.Decodable {
     
     let id: String
     let logo: String

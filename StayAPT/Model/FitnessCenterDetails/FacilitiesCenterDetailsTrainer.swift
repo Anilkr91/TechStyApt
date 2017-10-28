@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FacilitiesCenterDetailsTrainer: Decodable {
+struct FacilitiesCenterDetailsTrainer: Gloss.Decodable {
     
     let trainerImage: String
     let trainerName: String

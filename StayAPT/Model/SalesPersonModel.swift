@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct SalesPersonModel: Decodable {
+struct SalesPersonModel: Gloss.Decodable {
     
     let id: String
     let name: String

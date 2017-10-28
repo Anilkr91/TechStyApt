@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct TimeTableSundayResponse: Decodable {
+struct TimeTableSundayResponse: Gloss.Decodable {
     
     let sunday: [FacilitiesCenterDetailsTimeTable]?
     let monday: [FacilitiesCenterDetailsTimeTable]?

@@ -144,7 +144,7 @@ extension PersonalDetailTableViewController: UIImagePickerControllerDelegate, UI
             
         }
 //
-//        //        ProgressBarView.showHUD()
+//        //       Loader.sharedInstance.showLoader()
 //        let data = self.getDataFromImage(image!)
 //        countDataInMB(data: data as NSData)
 //        

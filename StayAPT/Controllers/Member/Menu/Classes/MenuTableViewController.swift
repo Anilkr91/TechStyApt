@@ -57,6 +57,7 @@ class MenuTableViewController: BaseTableViewController {
     }
     
     func populateTableView() {
+       Loader.sharedInstance.showLoader()
         ClassGetService.executeRequest { (data) in
             self.dataArray = data
             self.tableView.reloadData()

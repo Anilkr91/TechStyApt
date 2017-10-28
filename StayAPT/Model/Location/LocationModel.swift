@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct LocationModel: Decodable {
+struct LocationModel: Gloss.Decodable {
     
     let loc_id: String
     let location_name: String

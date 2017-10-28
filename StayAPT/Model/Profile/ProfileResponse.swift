@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct ProfileResponse: Decodable {
+struct ProfileResponse: Gloss.Decodable {
     
     let userImage: String
     let fname: String

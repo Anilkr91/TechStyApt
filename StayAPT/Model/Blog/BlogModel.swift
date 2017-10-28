@@ -9,7 +9,7 @@
 
 import Gloss
 
-struct BlogModel: Decodable {
+struct BlogModel: Gloss.Decodable {
     
     let id: String
     let title: String

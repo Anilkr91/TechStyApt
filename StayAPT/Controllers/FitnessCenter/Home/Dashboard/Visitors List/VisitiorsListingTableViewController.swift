@@ -10,18 +10,8 @@ import UIKit
 
 class VisitiorsListingTableViewController: UITableViewController {
     
-    let memberArray = [
-        SACheckedInMember(image: "GGym", name: "Abhram", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "John", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Rohit", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Abhram", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Rohan", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Prakash", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Ankur", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Bhagat", counter: "9873123782"),
-        SACheckedInMember(image: "GGym", name: "Ram Rahim", counter: "9873123782")
-    ]
-
+    var memberArray: [VisitorsModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,15 +39,7 @@ class VisitiorsListingTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VisitorsListingTableViewCell
         
-        cell.saVisitorsImageView.image = UIImage(imageLiteralResourceName: memberArray[indexPath.section].image)
-        cell.saCallIncomingImageView.image = UIImage(imageLiteralResourceName: memberArray[indexPath.section].image)
-        cell.saCallOutgoingImageView.image = UIImage(imageLiteralResourceName: memberArray[indexPath.section].image)
-        cell.saVisitorsNameLabel.text = memberArray[indexPath.section].name
-        cell.saVisitorsMobileLabel.text = memberArray[indexPath.section].counter
-        
-        cell.saVisitorsCommentLabel.text = "This is a comment label which contains lots of text This is a comment label which contains lots of text This is a comment label which contains lots of text"
-        cell.saFollowUpLastDateLabel.text = "20th Aug 2017"
-        cell.saFollowUpNewDateLabel.text = "25th Aug 2017"
+        cell.info = memberArray[indexPath.section]
         return cell
     }
 
@@ -66,7 +48,6 @@ class VisitiorsListingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         return 2
     }
     
@@ -86,8 +67,8 @@ class VisitiorsListingTableViewController: UITableViewController {
         
         let param = ["fcID": "1"] as [String: AnyObject]
         VisitorsServiceGetService.executeRequest(param) { (data) in
-            print(data)
+            self.memberArray = data
+            self.tableView.reloadData()
         }
-        
     }
 }

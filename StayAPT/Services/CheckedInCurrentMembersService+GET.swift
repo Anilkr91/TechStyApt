@@ -12,7 +12,7 @@ import Gloss
 class CheckedInCurrentMembersGetService {
     static func executeRequest (_ params:[String: Any], completionHandler: @escaping (DataResponse<Any>) -> Void) {
         
-       ProgressBarView.showHUD()
+      Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -30,15 +30,15 @@ class CheckedInCurrentMembersGetService {
 //                if let data = GoalOfTheMonthResponse(json: value as! JSON) {
 //                    print(data)
 //                    completionHandler(data.result)
-//                    ProgressBarView.hideHUD()
+//                    Loader.sharedInstance.hideLoader()
 //                } else {
-                    ProgressBarView.hideHUD()
+                    Loader.sharedInstance.hideLoader()
 //                    let error = ErrorModel.init(json: value as! JSON)
 //                    //                    Alert.showAlertWithMessage("Error", message: error!.message!)
 //                }
                 
             case .failure(let error):
-                ProgressBarView.hideHUD()
+                Loader.sharedInstance.hideLoader()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

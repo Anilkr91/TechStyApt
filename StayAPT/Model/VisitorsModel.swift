@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct VisitorsModel: Decodable {
+struct VisitorsModel: Gloss.Decodable {
     
     let id: String
     let fcId: String

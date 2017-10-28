@@ -731,7 +731,7 @@
         <scene sceneID="0Mr-CV-3fE">
             <objects>
                 <collectionViewController id="aqM-DG-w4t" customClass="CheckedInMemberCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a6C-mO-jvG">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a6C-mO-jvG">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1258"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -816,7 +816,7 @@
         <scene sceneID="GVt-H5-Imn">
             <objects>
                 <collectionViewController id="24Y-FS-EpT" customClass="MembersListCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="v3m-Hj-rtv">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v3m-Hj-rtv">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2108,7 +2108,7 @@
                                     <outlet property="notificationRejectButton" destination="07s-ou-Ow2" id="fxg-Td-4GB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InformationCell" rowHeight="66" id="C8c-wD-VoF" customClass="FitnessInformationTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferCell" rowHeight="66" id="C8c-wD-VoF" customClass="FitnessInformationTableViewCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="155.5" width="1024" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C8c-wD-VoF" id="HjK-UD-RMg">
@@ -2798,7 +2798,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F43-Ms-aLI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Bwp-Yw-hiJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwp-Yw-hiJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2813,7 +2813,7 @@
             <objects>
                 <navigationController storyboardIdentifier="FitnessHomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="uQ4-1v-Y22" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ffU-Wf-Qyq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffU-Wf-Qyq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

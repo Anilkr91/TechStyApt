@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct LoginModelResponse: Decodable {
+struct LoginModelResponse: Gloss.Decodable {
     
     let account_type: String
     let address: String?

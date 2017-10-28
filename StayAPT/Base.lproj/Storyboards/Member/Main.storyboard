@@ -1140,7 +1140,7 @@
             <objects>
                 <navigationController storyboardIdentifier="InitialViewController" automaticallyAdjustsScrollViewInsets="NO" id="bQZ-Yj-Pin" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="igJ-0T-g9M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igJ-0T-g9M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1235,7 +1235,7 @@
         <scene sceneID="5m7-hI-sBx">
             <objects>
                 <collectionViewController storyboardIdentifier="GalleryCollectionViewController" id="Iz2-ME-IO6" customClass="GalleryCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="0P2-ts-bBw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0P2-ts-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1361,7 +1361,7 @@
         <scene sceneID="5qD-JQ-bkt">
             <objects>
                 <collectionViewController id="w67-RN-AaD" customClass="FitnessClassesCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="53s-Ah-Af2">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="53s-Ah-Af2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1421,7 +1421,7 @@
         <scene sceneID="BAO-3N-jq5">
             <objects>
                 <collectionViewController id="pIS-zc-PpI" customClass="FitnessTrainersCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="39e-4t-5kv">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="39e-4t-5kv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2353,13 +2353,13 @@
         <!--Notification-->
         <scene sceneID="9h7-Qh-Sjk">
             <objects>
-                <tableViewController id="Ab4-Zd-XBc" customClass="FitnessNotificationTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ab4-Zd-XBc" customClass="MemberNotificationTableViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="103" sectionHeaderHeight="18" sectionFooterHeight="18" id="Gxe-KG-fLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RequestCell" rowHeight="100" id="YXm-mR-YHt" customClass="FitnessNotificationTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RequestCell" rowHeight="100" id="YXm-mR-YHt">
                                 <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YXm-mR-YHt" id="taT-J9-UEb">
@@ -2431,7 +2431,7 @@
                                     <outlet property="notificationRejectButton" destination="eHz-Ga-4HQ" id="xPO-wo-ka0"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InformationCell" rowHeight="66" id="hN1-sb-Txx" customClass="FitnessInformationTableViewCell" customModule="StayAPT" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationCell" rowHeight="66" id="hN1-sb-Txx" customClass="MemberNotificationTableViewCell" customModule="StayAPT" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="155.33333333333334" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hN1-sb-Txx" id="NN4-cC-qcn">
@@ -2441,43 +2441,42 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VHo-cJ-ZiS">
                                             <rect key="frame" x="8" y="7.6666666666666643" width="50" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="1Nn-gf-gBQ"/>
-                                                <constraint firstAttribute="width" constant="50" id="OCi-kC-fcW"/>
-                                                <constraint firstAttribute="width" secondItem="VHo-cJ-ZiS" secondAttribute="height" multiplier="1:1" id="zAk-kh-WZ7"/>
+                                                <constraint firstAttribute="height" constant="50" id="6ib-WX-55T"/>
+                                                <constraint firstAttribute="width" constant="50" id="mcK-0h-VC0"/>
+                                                <constraint firstAttribute="width" secondItem="VHo-cJ-ZiS" secondAttribute="height" multiplier="1:1" id="rcO-OA-MrG"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHb-Uc-yLk">
-                                            <rect key="frame" x="66" y="7.6666666666666679" width="293" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHb-Uc-yLk" customClass="smallLabel" customModule="StayAPT" customModuleProvider="target">
+                                            <rect key="frame" x="66" y="7.6666666666666679" width="301" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXH-rt-Ql1">
-                                            <rect key="frame" x="66" y="32" width="293" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXH-rt-Ql1" customClass="SmallBoldLabel" customModule="StayAPT" customModuleProvider="target">
+                                            <rect key="frame" x="66" y="36.666666666666664" width="301" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="VHo-cJ-ZiS" firstAttribute="top" secondItem="NN4-cC-qcn" secondAttribute="top" constant="8" id="2Im-Dt-bLd"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="lHb-Uc-yLk" secondAttribute="trailing" constant="8" id="2v7-h3-621"/>
-                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="trailing" secondItem="lHb-Uc-yLk" secondAttribute="trailing" id="B73-gt-vM0"/>
-                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="centerY" secondItem="VHo-cJ-ZiS" secondAttribute="centerY" constant="8" id="KS2-Dm-xvK"/>
-                                        <constraint firstItem="lHb-Uc-yLk" firstAttribute="top" secondItem="VHo-cJ-ZiS" secondAttribute="top" id="PNq-Ij-MGJ"/>
-                                        <constraint firstItem="VHo-cJ-ZiS" firstAttribute="leading" secondItem="NN4-cC-qcn" secondAttribute="leading" constant="8" id="VNd-1v-F3G"/>
-                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="leading" secondItem="lHb-Uc-yLk" secondAttribute="leading" id="bKM-vq-7rr"/>
-                                        <constraint firstItem="lHb-Uc-yLk" firstAttribute="leading" secondItem="VHo-cJ-ZiS" secondAttribute="trailing" constant="8" id="dbi-MP-Wlv"/>
-                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="top" secondItem="lHb-Uc-yLk" secondAttribute="bottom" constant="8" id="hJZ-Cf-nsv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rXH-rt-Ql1" secondAttribute="bottom" constant="8" id="qnx-Qz-ed4"/>
-                                        <constraint firstAttribute="bottom" secondItem="VHo-cJ-ZiS" secondAttribute="bottom" constant="8" id="zO8-Ag-9hu"/>
+                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="trailing" secondItem="lHb-Uc-yLk" secondAttribute="trailing" id="4yr-p5-Gmq"/>
+                                        <constraint firstItem="VHo-cJ-ZiS" firstAttribute="leading" secondItem="NN4-cC-qcn" secondAttribute="leading" constant="8" id="6yu-WZ-kms"/>
+                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="leading" secondItem="lHb-Uc-yLk" secondAttribute="leading" id="9qY-Ek-7ut"/>
+                                        <constraint firstItem="lHb-Uc-yLk" firstAttribute="leading" secondItem="VHo-cJ-ZiS" secondAttribute="trailing" constant="8" id="Meq-r7-IXk"/>
+                                        <constraint firstAttribute="trailing" secondItem="lHb-Uc-yLk" secondAttribute="trailing" constant="8" id="NSZ-Nu-zhb"/>
+                                        <constraint firstItem="rXH-rt-Ql1" firstAttribute="top" secondItem="lHb-Uc-yLk" secondAttribute="bottom" constant="12" id="QkK-Qr-ZrB"/>
+                                        <constraint firstAttribute="bottom" secondItem="VHo-cJ-ZiS" secondAttribute="bottom" constant="8" id="Sn6-mx-pMz"/>
+                                        <constraint firstAttribute="bottom" secondItem="rXH-rt-Ql1" secondAttribute="bottom" constant="12" id="gzG-hj-hbe"/>
+                                        <constraint firstItem="lHb-Uc-yLk" firstAttribute="top" secondItem="NN4-cC-qcn" secondAttribute="top" constant="8" id="jgp-mQ-Nna"/>
+                                        <constraint firstItem="VHo-cJ-ZiS" firstAttribute="top" secondItem="NN4-cC-qcn" secondAttribute="top" constant="8" id="vNU-di-VuK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <connections>
-                                    <outlet property="notificationImageView" destination="VHo-cJ-ZiS" id="ZYK-R7-xYX"/>
-                                    <outlet property="notificationLabel" destination="lHb-Uc-yLk" id="l8P-01-aFX"/>
-                                    <outlet property="notificationNameLabel" destination="rXH-rt-Ql1" id="GHh-pT-jRN"/>
+                                    <outlet property="notificationImageView" destination="VHo-cJ-ZiS" id="eaP-Dn-v5H"/>
+                                    <outlet property="notificationLabel" destination="lHb-Uc-yLk" id="SPo-F3-gGf"/>
+                                    <outlet property="notificationNameLabel" destination="rXH-rt-Ql1" id="una-tx-pgP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2957,7 +2956,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sJm-dS-Vju" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BTc-rS-5GI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BTc-rS-5GI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3010,7 +3009,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="bu5-BS-3tc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Is9-N9-ZKn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Is9-N9-ZKn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3186,8 +3185,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-zm-cat">
-                                            <rect key="frame" x="8" y="8" width="40" height="44"/>
+                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Lrm-Na-HfE"/>
+                                                <constraint firstAttribute="width" secondItem="i3L-zm-cat" secondAttribute="height" multiplier="1:1" id="PB6-bo-Kxg"/>
                                                 <constraint firstAttribute="width" constant="40" id="jCp-c3-eEg"/>
                                             </constraints>
                                         </imageView>
@@ -3214,6 +3215,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="WZV-jJ-vtK" firstAttribute="leading" secondItem="ANP-9b-GMM" secondAttribute="leading" id="0Ko-Kl-869"/>
+                                        <constraint firstAttribute="bottom" secondItem="i3L-zm-cat" secondAttribute="bottom" constant="12" id="78M-n3-KfD"/>
                                         <constraint firstItem="WZV-jJ-vtK" firstAttribute="trailing" secondItem="ANP-9b-GMM" secondAttribute="trailing" id="JkC-rn-Ih4"/>
                                         <constraint firstAttribute="bottom" secondItem="WZV-jJ-vtK" secondAttribute="bottom" constant="8" id="Le5-Im-UN9"/>
                                         <constraint firstItem="i3L-zm-cat" firstAttribute="top" secondItem="8II-Gz-qJI" secondAttribute="top" id="Q0l-Xl-CAT"/>
@@ -3226,7 +3228,6 @@
                                         <constraint firstItem="ANP-9b-GMM" firstAttribute="leading" secondItem="i3L-zm-cat" secondAttribute="trailing" constant="8" symbolic="YES" id="mzO-d7-DeQ"/>
                                         <constraint firstItem="WZV-jJ-vtK" firstAttribute="leading" secondItem="i3L-zm-cat" secondAttribute="trailing" constant="8" symbolic="YES" id="rYH-rb-AQx"/>
                                         <constraint firstItem="8II-Gz-qJI" firstAttribute="top" secondItem="zc0-BI-q52" secondAttribute="top" constant="8" id="y8r-6J-eNN"/>
-                                        <constraint firstAttribute="bottom" secondItem="i3L-zm-cat" secondAttribute="bottom" constant="8" id="yx0-Yb-4UK"/>
                                         <constraint firstItem="8II-Gz-qJI" firstAttribute="leading" secondItem="ANP-9b-GMM" secondAttribute="trailing" constant="8" id="zgi-Wc-Jnl"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -3319,7 +3320,7 @@
         <scene sceneID="Zdd-kZ-mna">
             <objects>
                 <collectionViewController id="rFB-dU-ALR" customClass="HomeCollectionViewController" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xot-2c-hre">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Xot-2c-hre">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3864,8 +3865,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1x-xt-FkV" customClass="LineChartView" customModule="Charts">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.66666666666666"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1x-xt-FkV" customClass="GoalOfTheMonthRateCell" customModule="StayAPT" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
@@ -3878,7 +3879,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ratingGraph" destination="h1x-xt-FkV" id="eIN-d1-Uiy"/>
+                                    <outlet property="ratingGraph" destination="h1x-xt-FkV" id="LU0-07-afz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell6" rowHeight="75" id="XmD-uH-pNz" customClass="GoalOfTheMonthNoteCell" customModule="StayAPT" customModuleProvider="target">

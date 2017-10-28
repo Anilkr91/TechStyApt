@@ -13,7 +13,7 @@ class EditProfilePostService {
     
 //    static func executeRequest (data: Data, _ params:[String: Any], completionHandler: @escaping (SuccessModel) -> Void) {
 //        
-//       ProgressBarView.showHUD()
+//      Loader.sharedInstance.showLoader()
 //        let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
 //        let URL = Constants.BASE_URL
 //        //        //
@@ -56,7 +56,7 @@ class EditProfilePostService {
     
     static func executeRequest (_ params:[String: AnyObject], completionHandler: @escaping (SuccessModel) -> Void) {
         
-       ProgressBarView.showHUD()
+      Loader.sharedInstance.showLoader()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -69,17 +69,17 @@ class EditProfilePostService {
             case .success(let value) :
                 if let data = SuccessModel.init(json: value as! JSON)  {
                     completionHandler(data)
-                    ProgressBarView.hideHUD()
+                    Loader.sharedInstance.hideLoader()
                     
                 } else {
-                    ProgressBarView.hideHUD()
+                    Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
                     Alert.showAlertWithMessage("Error", message: error!.errorMessage!)
                 }
                 
                 
             case .failure(let error):
-                ProgressBarView.hideHUD()
+                Loader.sharedInstance.hideLoader()
                 Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

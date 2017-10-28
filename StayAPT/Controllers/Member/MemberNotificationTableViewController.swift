@@ -1,16 +1,17 @@
 //
-//  FitnessNotificationTableViewController.swift
+//  MemberNotificationTableViewController.swift
 //  StayAPT
 //
-//  Created by admin on 28/08/17.
+//  Created by admin on 25/10/17.
 //  Copyright © 2017 Techximum. All rights reserved.
 //
 
+
 import UIKit
 
-class FitnessNotificationTableViewController: BaseTableViewController {
+class MemberNotificationTableViewController: BaseTableViewController {
     
-     var notificationArray: [NotificationModel] = []
+    var notificationArray: [NotificationModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +35,22 @@ class FitnessNotificationTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if notificationArray[indexPath.section].notificationName == Notification.Offer.rawValue || notificationArray[indexPath.section].notificationName == Notification.Booking.rawValue
-        || notificationArray[indexPath.section].notificationName == Notification.Workout.rawValue{
+        if notificationArray[indexPath.section].notificationName == Notification.Booking.rawValue {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OfferCell", for: indexPath) as! FitnessInformationTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! MemberNotificationTableViewCell
+            print(notificationArray[indexPath.section])
             cell.member = notificationArray[indexPath.section]
             return cell
-            
         }
-        /*else if notificationArray[indexPath.section].type == Notification.Request.rawValue {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell", for: indexPath) as! FitnessNotificationTableViewCell
-            cell.notificationAcceptButton.tag = indexPath.section
-            cell.notificationRejectButton.tag = indexPath.section
-            cell.member = notificationArray[indexPath.section]
-            return cell
-        } */
+        
+        //        } else if notificationArray[indexPath.section].type == Notification.Request.rawValue {
+        //
+        //            let cell = tableView.dequeueReusableCell(withIdentifier: "RequestCell", for: indexPath) as! FitnessNotificationTableViewCell
+        //            cell.notificationAcceptButton.tag = indexPath.section
+        //            cell.notificationRejectButton.tag = indexPath.section
+        //            cell.member = notificationArray[indexPath.section]
+        //            return cell
+        //         }
         
         return UITableViewCell()
     }
@@ -77,11 +78,13 @@ class FitnessNotificationTableViewController: BaseTableViewController {
     
     func populateTableView() {
         
-        let param = ["fcID": "1"]
+        let param = ["userId": "22"]
         
-        FitnessCenterNotificationGetService.executeRequest(param) { (response) in
+        MemberNotificationGetService.executeRequest(param) { (response) in
+            
             self.notificationArray = response
             self.tableView.reloadData()
         }
     }
+    
 }

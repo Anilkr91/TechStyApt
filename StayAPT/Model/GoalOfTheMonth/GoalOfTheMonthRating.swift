@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct GoalOfTheMonthRating: Decodable {
+struct GoalOfTheMonthRating: Gloss.Decodable {
     
     let day: String
     let value: String

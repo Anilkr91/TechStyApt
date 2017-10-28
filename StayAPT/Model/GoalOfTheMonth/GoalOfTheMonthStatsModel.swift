@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct GoalOfTheMonthStatsModel: Decodable {
+struct GoalOfTheMonthStatsModel: Gloss.Decodable {
     
     let chest: String
     let biceps: String

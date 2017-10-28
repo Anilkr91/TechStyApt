@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FacilitiesCenterDetailsMembership: Decodable {
+struct FacilitiesCenterDetailsMembership: Gloss.Decodable {
     
     let monthly: MonthlyResponse
     let quaterly: QuaterlyResponse

@@ -11,8 +11,6 @@ import Gloss
 
 class ClassGetService {
     static func executeRequest (_ completionHandler: @escaping ([ClassModel]) -> Void) {
-        
-       ProgressBarView.showHUD()
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -25,16 +23,16 @@ class ClassGetService {
             case .success(let value) :
                 if let data = ClassModelArray.init(json: value as! JSON)  {
                     completionHandler(data.results)
-                    ProgressBarView.hideHUD()
+                    Loader.sharedInstance.hideLoader()
                     
                 } else {
-                    ProgressBarView.hideHUD()
+                    Loader.sharedInstance.hideLoader()
                     let error = ErrorModel.init(json: value as! JSON)
                     Alert.showAlertWithMessage("Error", message: error!.message!)
                 }
                 
             case .failure(let error):
-                ProgressBarView.hideHUD()
+                Loader.sharedInstance.hideLoader()
                  Alert.showAlertWithMessage("Error", message: error.localizedDescription)
             }
         }

@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct FitnessCenterDetailClassModel: Decodable {
+struct FitnessCenterDetailClassModel: Gloss.Decodable {
     
     let classImage: String
     let className: String

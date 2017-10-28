@@ -14,7 +14,7 @@ struct VisitorsModelArray {
     
     init?(json: JSON) {
         guard let status: Bool = "status" <~~ json,
-            let results: [VisitorsModel] = "message" <~~ json else {
+            let results: [VisitorsModel] = "data" <~~ json else {
                 return nil
         }
         self.status = status

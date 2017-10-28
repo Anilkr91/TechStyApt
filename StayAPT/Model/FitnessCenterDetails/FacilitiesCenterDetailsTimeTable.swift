@@ -7,7 +7,7 @@
 //
 
 import Gloss
-struct FacilitiesCenterDetailsTimeTable: Decodable{
+struct FacilitiesCenterDetailsTimeTable: Gloss.Decodable{
 
     let status: String?
     let singleSession: String?
