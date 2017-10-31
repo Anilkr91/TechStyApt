@@ -24,7 +24,9 @@ class FitnessCenterDetailsGetService {
             
             switch response.result {
             case .success(let value) :
+                print(value)
                 if let data = FitnessCenterDetailResponse(json: value as! JSON) {
+                    print(data)
                     completionHandler(data)
                     Loader.sharedInstance.hideLoader()
                     

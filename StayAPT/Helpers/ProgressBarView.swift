@@ -7,7 +7,7 @@
 //
 
 
-import MBProgressHUD
+/*import MBProgressHUD
 
 class ProgressBarView {
     
@@ -32,3 +32,4 @@ class ProgressBarView {
         }
     }
 }
+*/

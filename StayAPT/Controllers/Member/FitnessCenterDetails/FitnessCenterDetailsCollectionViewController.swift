@@ -48,6 +48,7 @@ class FitnessCenterDetailsCollectionViewController: BaseViewController {
         
         let param = ["fcid" : id]
         FitnessCenterDetailsGetService.executeRequest(param as [String : AnyObject]) { (data) in
+            print(data)
             self.fitnessCenterDetail = data
         }
     }
@@ -111,6 +112,8 @@ extension FitnessCenterDetailsCollectionViewController: UIScrollViewDelegate {
             
         }else if  segue.identifier == "showInformationSegue" {
             let dvc = segue.destination as! FitnessInformationTableViewController
+            print(fitnessCenterDetail.information)
+            
             dvc.information =  fitnessCenterDetail.information
             
         } else if  segue.identifier == "showTrainersSegue" {

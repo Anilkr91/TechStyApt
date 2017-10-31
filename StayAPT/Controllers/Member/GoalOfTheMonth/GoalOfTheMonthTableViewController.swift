@@ -12,11 +12,10 @@ import MZFormSheetPresentationController
 class  GoalOfTheMonthTableViewController: BaseTableViewController {
     
     let array = ["Goal Of The Month", "Ultimate Goal", "Fitness Center", "My WorkOut", "My Stats", "Rate Yourself", "Note"]
-    var goalOfTheMonth: GoalOfTheMonthModel?
+    var goalOfTheMonth: GoalOfTheMonthModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchGoalOfTheMonth()
     }
     
@@ -95,10 +94,9 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             return cell
             
         case 5:
+           
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! GoalOfTheMonthRateCell
-            
-            //            cell.ratingGraph = goalOfTheMonth.rating[indexPath.row].value
-            //            cell.editButton.addTarget(self, action: #selector(editRateYourself), for: .touchUpInside)
+            cell.rating = goalOfTheMonth.rating
             return cell
             
         case 6:

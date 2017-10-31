@@ -7,53 +7,73 @@
 //
 
 import UIKit
-//import SwiftChart
-import Kingfisher
+import Charts
 
 class  GoalOfTheMonthRateCell: UITableViewCell {
     
-    @IBOutlet weak var ratingGraph: UIView!
+    @IBOutlet weak var chart: LineChartView!
     
+    var rating: [GoalOfTheMonthRating] = []
+    var months: [String]!
+    var unitsSold: [Double] = []
+    weak var axisFormatDelegate: IAxisValueFormatter?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    var info: GoalOfTheMonthRating? {
-        didSet {
-            if let member = info {
-                didSetCategory(member)
-            }
-        }
+        setupRateGraph()
     }
 }
 
 extension GoalOfTheMonthRateCell {
-    func didSetCategory(_ info: GoalOfTheMonthRating) {
+    
+    func setupRateGraph() {
         
-       // editButton.addTarget(self, action: #selector(animation), for: .touchUpInside)
-        print(info)
-        //        let url = URL(string: info)!
-        //        let placeholderImage = UIImage(named: "placeholder")
+        print(rating)
         
-        //        membershipImageView.kf.setImage(with: url, placeholder: placeholderImage)
-        //        priceLabel.text = info.price
-        //        discountLabel.text = info.offers.first
+        for rate in rating.enumerated(){
+            print(rate)
+            
+            }
+        
+        axisFormatDelegate = self
+        months = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+        unitsSold = [1, 2, 3, 0, 5, 6, 7, 8]
+        
+        chart.rightAxis.drawLabelsEnabled = false
+        chart.chartDescription?.text = ""
+        setChart(dataEntryX: months, dataEntryY: unitsSold, chart: chart)
     }
+    
+    func setChart(dataEntryX forX:[String],dataEntryY forY: [Double], chart: LineChartView) {
+        
+        chart.noDataText = "You need to provide data for the chart."
+        var dataEntries:[BarChartDataEntry] = []
+        for i in 0..<forX.count{
+            
+            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(forY[i]) , data: months as AnyObject?)
+            dataEntries.append(dataEntry)
+        }
+        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Fitness chart")
+        chartDataSet.setCircleColor(NSUIColor.red)
+        chartDataSet.circleColors = [NSUIColor.red]
+        chartDataSet.fillColor = UIColor.red
+        chartDataSet.valueColors = [NSUIColor.red]
+        chartDataSet.valueFont = UIFont(name: "Verdana", size: 10.0)!
+        
+        chartDataSet.colors = [NSUIColor.red]
+        chartDataSet.circleRadius = 3
+        chartDataSet.mode = .cubicBezier
+        
+        let chartData = LineChartData(dataSet: chartDataSet)
+        chart.data = chartData
+        let xAxisValue = chart.xAxis
+        xAxisValue.valueFormatter = axisFormatDelegate
+    }
+}
 
-//    func setupRateGraph() {
-//        
-//        let chart = Chart(frame: CGRect(x: 0, y: 0, width: 375, height: 15
-////        let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
-//            let series = 
-//        
-//        series.color = ChartColors.greenColor()
-//        chart.add(series)
-//    }
+extension GoalOfTheMonthRateCell: IAxisValueFormatter {
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        return months[Int(value)]
+    }
 }
