@@ -55,7 +55,6 @@ class FitnessMembershipTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!
         FitnessMembershipTableViewCell
-        print(array[indexPath.section])
         cell.info = array[indexPath.section]
         cell.offerButton.tag  = indexPath.section
         cell.offerButton.addTarget(self, action: #selector(placeOffer(_:)), for: .touchUpInside)

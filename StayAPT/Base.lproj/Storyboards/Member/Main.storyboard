@@ -3858,32 +3858,51 @@
                                     <outlet property="wristLabel" destination="mbm-UW-9sj" id="ObT-aU-ccA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" rowHeight="150" id="elC-XI-28Z" customClass="GoalOfTheMonthRateCell" customModule="StayAPT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="593.33333333333337" width="375" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell5" rowHeight="250" id="elC-XI-28Z" customClass="GoalOfTheMonthRateCell" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="593.33333333333337" width="375" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elC-XI-28Z" id="GHe-0m-1mZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="249.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1x-xt-FkV" customClass="LineChartView" customModule="Charts">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="41" width="375" height="208"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VhN-PK-tu3">
+                                            <rect key="frame" x="5" y="8" width="365" height="29"/>
+                                            <segments>
+                                                <segment title="1"/>
+                                                <segment title="2"/>
+                                                <segment title="3"/>
+                                                <segment title="4"/>
+                                                <segment title="5"/>
+                                                <segment title="6"/>
+                                                <segment title="7"/>
+                                                <segment title="8"/>
+                                                <segment title="9"/>
+                                                <segment title="10"/>
+                                            </segments>
+                                        </segmentedControl>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="leading" secondItem="GHe-0m-1mZ" secondAttribute="leading" id="CgD-vF-evs"/>
-                                        <constraint firstAttribute="bottom" secondItem="h1x-xt-FkV" secondAttribute="bottom" id="IMA-J6-3AU"/>
-                                        <constraint firstAttribute="trailing" secondItem="h1x-xt-FkV" secondAttribute="trailing" id="ORV-ci-p0i"/>
-                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="top" secondItem="GHe-0m-1mZ" secondAttribute="top" id="uvo-vB-3SJ"/>
+                                        <constraint firstItem="VhN-PK-tu3" firstAttribute="top" secondItem="GHe-0m-1mZ" secondAttribute="top" constant="8" id="32S-Nu-Jwu"/>
+                                        <constraint firstAttribute="bottom" secondItem="h1x-xt-FkV" secondAttribute="bottom" id="91Z-lr-sgG"/>
+                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="leading" secondItem="GHe-0m-1mZ" secondAttribute="leading" id="ASJ-PK-3Sa"/>
+                                        <constraint firstItem="h1x-xt-FkV" firstAttribute="top" secondItem="VhN-PK-tu3" secondAttribute="bottom" constant="5" id="Tp8-fQ-v0y"/>
+                                        <constraint firstAttribute="trailing" secondItem="VhN-PK-tu3" secondAttribute="trailing" constant="5" id="Zhd-sx-I3H"/>
+                                        <constraint firstItem="VhN-PK-tu3" firstAttribute="leading" secondItem="GHe-0m-1mZ" secondAttribute="leading" constant="5" id="fu8-2l-2KV"/>
+                                        <constraint firstAttribute="trailing" secondItem="h1x-xt-FkV" secondAttribute="trailing" id="l2g-qa-Bb3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="chart" destination="h1x-xt-FkV" id="Xbe-uR-WkS"/>
+                                    <outlet property="rateScaleSegmentControl" destination="VhN-PK-tu3" id="SRT-gP-hYi"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell6" rowHeight="75" id="XmD-uH-pNz" customClass="GoalOfTheMonthNoteCell" customModule="StayAPT" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="743.33333333333337" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="843.33333333333337" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XmD-uH-pNz" id="KS7-en-mM1">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
@@ -3925,11 +3944,12 @@
                         <segue destination="1rw-L6-L3V" kind="custom" identifier="showUltimateGoalSegue" customClass="MZFormSheetPresentationViewControllerSegue" id="FBH-Uq-A2d"/>
                         <segue destination="DLp-OG-UEN" kind="custom" identifier="showEditNotesSegue" customClass="MZFormSheetPresentationViewControllerSegue" id="ZBT-Hr-8Up"/>
                         <segue destination="xwF-Ux-gdn" kind="custom" identifier="showEditStatsSegue" customClass="MZFormSheetPresentationViewControllerSegue" id="Dth-KH-os7"/>
+                        <segue destination="4fb-KA-yyg" kind="custom" identifier="showRatingSegue" customClass="MZFormSheetPresentationViewControllerSegue" id="jVZ-Qt-TRB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzZ-SN-vi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5444" y="-2012"/>
+            <point key="canvasLocation" x="5442.753623188406" y="-2012.3641304347827"/>
         </scene>
         <!--Goal Of The Month Alert-->
         <scene sceneID="UFl-W6-rpO">
@@ -4411,6 +4431,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B59-O2-yNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7220" y="3042"/>
+        </scene>
+        <!--Goal Of The Month Notes Alert-->
+        <scene sceneID="fL7-Li-nRt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chb-mB-YUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4fb-KA-yyg" customClass="GoalOfTheMonthNotesAlert" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Gq-5u-5bx"/>
+                        <viewControllerLayoutGuide type="bottom" id="EsO-hJ-RWK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7xc-gd-eeh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-gI-cmh">
+                                <rect key="frame" x="8" y="35" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmW-Ze-dKe">
+                                <rect key="frame" x="28" y="353" width="358" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLh-UX-I2s" customClass="BaseButton" customModule="StayAPT" customModuleProvider="target">
+                                <rect key="frame" x="28" y="708" width="358" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="4fb-KA-yyg" eventType="touchUpInside" id="y9O-iq-Ged"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ct-gI-cmh" firstAttribute="leading" secondItem="7xc-gd-eeh" secondAttribute="leading" constant="8" id="1o4-nS-vQv"/>
+                            <constraint firstItem="VmW-Ze-dKe" firstAttribute="centerX" secondItem="7xc-gd-eeh" secondAttribute="centerX" id="7lw-Kf-ikN"/>
+                            <constraint firstItem="1ct-gI-cmh" firstAttribute="top" secondItem="3Gq-5u-5bx" secondAttribute="bottom" constant="15" id="NIa-tk-JPW"/>
+                            <constraint firstItem="EsO-hJ-RWK" firstAttribute="top" secondItem="hLh-UX-I2s" secondAttribute="bottom" id="Q8H-xD-Zgh"/>
+                            <constraint firstItem="VmW-Ze-dKe" firstAttribute="leading" secondItem="7xc-gd-eeh" secondAttribute="leadingMargin" constant="8" id="a04-EC-IQp"/>
+                            <constraint firstItem="hLh-UX-I2s" firstAttribute="leading" secondItem="7xc-gd-eeh" secondAttribute="leadingMargin" constant="8" id="ghD-z4-DMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VmW-Ze-dKe" secondAttribute="trailing" constant="8" id="mg9-cc-8VA"/>
+                            <constraint firstAttribute="trailing" secondItem="1ct-gI-cmh" secondAttribute="trailing" constant="8" id="nxM-tv-nkT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hLh-UX-I2s" secondAttribute="trailing" constant="8" id="w8b-va-yPU"/>
+                            <constraint firstItem="VmW-Ze-dKe" firstAttribute="centerY" secondItem="7xc-gd-eeh" secondAttribute="centerY" id="xFZ-wA-O0e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notesTextField" destination="VmW-Ze-dKe" id="RaN-J9-Bwa"/>
+                        <outlet property="titleLabel" destination="1ct-gI-cmh" id="pHm-B8-4VX"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="7380" y="-2460"/>
         </scene>
     </scenes>
     <resources>

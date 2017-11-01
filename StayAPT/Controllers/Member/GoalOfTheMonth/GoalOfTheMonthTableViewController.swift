@@ -12,7 +12,7 @@ import MZFormSheetPresentationController
 class  GoalOfTheMonthTableViewController: BaseTableViewController {
     
     let array = ["Goal Of The Month", "Ultimate Goal", "Fitness Center", "My WorkOut", "My Stats", "Rate Yourself", "Note"]
-    var goalOfTheMonth: GoalOfTheMonthModel!
+    var goalOfTheMonth: GoalOfTheMonthModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showDailyWeightSegue", sender: self)
+//        self.performSegue(withIdentifier: "showDailyWeightSegue", sender: self)
     }
     
     func fetchGoalOfTheMonth() {
@@ -43,16 +43,12 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             
         case 2:
             guard let count = goalOfTheMonth?.favouriteFitnessCenter.count else { return 1 }
-            //             return goalOfTheMonth!.favouriteFitnessCenter.count
             return count
             
         case 3:
             guard let count = goalOfTheMonth?.workOut.count else { return 1 }
-            //             return goalOfTheMonth!.favouriteFitnessCenter.count
             return count
-            ////            return goalOfTheMonth!.workOut.count
-            //            return 1
-            
+           
         default:
             return 1
         }
@@ -96,7 +92,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
         case 5:
            
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell5", for: indexPath) as! GoalOfTheMonthRateCell
-            cell.rating = goalOfTheMonth.rating
+            cell.info = goalOfTheMonth?.rating
             return cell
             
         case 6:
@@ -125,7 +121,7 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             return 150
        
         } else if indexPath.section == 5 {
-            return 150
+            return 220
             
         } else  {
             return UITableViewAutomaticDimension
@@ -182,16 +178,13 @@ class  GoalOfTheMonthTableViewController: BaseTableViewController {
             let navigationController = presentationSegue.formSheetPresentationController.contentViewController as! GoalOfTheMonthStatsAlert
             let formSheetController = MZFormSheetPresentationViewController(contentViewController: navigationController)
             
-            formSheetController.presentationController?.contentViewSize = CGSize(width: 280, height: 385
-            )
+            formSheetController.presentationController?.contentViewSize = CGSize(width: 280, height: 385)
             formSheetController.presentationController?.shouldCenterVertically = true
             formSheetController.contentViewControllerTransitionStyle = .bounce
             formSheetController.presentationController?.shouldDismissOnBackgroundViewTap = true
             self.present(formSheetController, animated: true, completion: nil)
             navigationController.navigationItem.title = "Edit Stats"
 
-        }else if segue.identifier == "GoalOfTheMonthTableViewController" {
-            return
         }else if segue.identifier == "GoalOfTheMonthTableViewController" {
             return
         }else {
