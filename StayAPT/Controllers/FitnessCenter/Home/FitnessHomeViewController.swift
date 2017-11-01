@@ -45,7 +45,7 @@ class FitnessHomeViewController: BaseViewController {
                     } else {
                         let password = field.text!
                         
-                        let params = LoginModel(email: self.user.fitness_email, password: password, userType: 2).toJSON()
+                        let params = LoginModel(email: self.user.fitness_email, password: password, userType: 2, fcType: Int(self.user.fcId)!, stayAptId: self.user.stayAptId).toJSON()
                         
                         FCLoginPostService.executeRequest(params! as [String : AnyObject] , completionHandler: { (data) in
                             LoginUtils.setCurrentFitnessCenter(data)

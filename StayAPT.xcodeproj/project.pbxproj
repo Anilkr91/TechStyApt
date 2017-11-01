@@ -125,6 +125,7 @@
 		84A7B6691F71016200EC64D0 /* SmallBoldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7B6681F71016200EC64D0 /* SmallBoldLabel.swift */; };
 		84C164531FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164521FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift */; };
 		84C164551FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */; };
+		84C164571FA996E5007102E9 /* MemberLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164561FA996E5007102E9 /* MemberLoginModel.swift */; };
 		84C4CF3D1F569AD9001DA94A /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */; };
 		84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF421F56AFB8001DA94A /* BlackButton.swift */; };
 		84C4CF451F56D445001DA94A /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF441F56D445001DA94A /* RedButton.swift */; };
@@ -332,6 +333,7 @@
 		84A7B6681F71016200EC64D0 /* SmallBoldLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallBoldLabel.swift; sourceTree = "<group>"; };
 		84C164521FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthRatingAlert.swift; sourceTree = "<group>"; };
 		84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateGoalOfTheMonthRateYourself.swift; sourceTree = "<group>"; };
+		84C164561FA996E5007102E9 /* MemberLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberLoginModel.swift; sourceTree = "<group>"; };
 		84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
 		84C4CF421F56AFB8001DA94A /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		84C4CF441F56D445001DA94A /* RedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
@@ -796,6 +798,7 @@
 			children = (
 				84CE7EDD1F7EA6D8002F7BB3 /* LoginModel.swift */,
 				84CE7EDE1F7EA6D8002F7BB3 /* LoginModelResponse.swift */,
+				84C164561FA996E5007102E9 /* MemberLoginModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1358,6 +1361,7 @@
 				841CA8C81F6AEE01004C95CF /* FCCheckoutService+POST.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84CE7F211F82A243002F7BB3 /* TimeTableMondayResponse.swift in Sources */,
+				84C164571FA996E5007102E9 /* MemberLoginModel.swift in Sources */,
 				8487770C1F8F5D8B00B79C1D /* UpdateGoalOfTheMonthNotesServices+POST.swift in Sources */,
 				84409B481F5E700D005BAC61 /* ProfileViewController.swift in Sources */,
 				84D152411F86912F0076253D /* AddVisitorsService+POST.swift in Sources */,

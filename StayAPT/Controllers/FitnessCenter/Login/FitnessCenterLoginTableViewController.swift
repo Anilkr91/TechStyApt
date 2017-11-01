@@ -10,13 +10,22 @@ import UIKit
 
 class FitnessCenterLoginTableViewController: BaseTableViewController {
     
+    @IBOutlet weak var fcTextField: BaseTextField!
+    @IBOutlet weak var stayAptIdTextField: BaseTextField!
     @IBOutlet weak var fitnessCenterIdTextField: BaseTextField!
     @IBOutlet weak var passwordTextField: BaseTextField!
     @IBOutlet weak var togglePasswordButton: UIButton!
     var isShowPassword : Bool = false
     
+    let array = ["Admin", "Employee"]
+    lazy var picker = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fcTextField.inputView = picker
+        picker.delegate = self
+        
         togglePasswordButton.addTarget(self, action: #selector(toggleButtonImage), for: .touchUpInside)
         setupBackgroundImage()
         tableView.separatorStyle = .none
@@ -69,28 +78,64 @@ class FitnessCenterLoginTableViewController: BaseTableViewController {
         
         let id = fitnessCenterIdTextField.text!
         let password = passwordTextField.text!
+        let stayAptId = stayAptIdTextField.text!
+        let fitnessCenterType = fcTextField.text!
+        var fcId: Int
         
-        if id.removeAllSpaces().isEmpty {
+        if fitnessCenterType == "Admin" {
+            fcId = 1
+            
+        } else {
+            fcId = 0
+        }
+        
+        if fitnessCenterType.removeAllSpaces().isEmpty {
+             Alert.showAlertWithMessage("Error", message: "FitnessCenter Type cannot be empty")
+            
+        } else if stayAptId.removeAllSpaces().isEmpty {
+             Alert.showAlertWithMessage("Error", message: "StayAptId ID cannot be empty")
+        }
+        
+        else if id.removeAllSpaces().isEmpty {
             Alert.showAlertWithMessage("Error", message: "Center ID cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
             Alert.showAlertWithMessage("Error", message: "Password cannot be empty")
             
         } else {
-            let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2).toJSON()
-            
-            //        let params = LoginModel(email: id, password: password, userType: 2).toJSON()
+            let params = LoginModel(email: "lokesh@techximum.in", password: "123", userType: 2, fcType: fcId, stayAptId: "STAYHFCSD01").toJSON()
             
             FCLoginPostService.executeRequest(params! as [String : AnyObject] , completionHandler: { (data) in
-                print(data)
                 LoginUtils.setCurrentFitnessCenter(data)
                 
                 let application = UIApplication.shared.delegate as! AppDelegate
                 application.setHomeFitnessCenterUserAsRVC()
                 
-//                self.performSegue(withIdentifier: "showSignInSegue", sender: self)
+                // self.performSegue(withIdentifier: "showSignInSegue", sender: self)
             })
             
         }
+    }
+}
+
+
+extension FitnessCenterLoginTableViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return array.count;
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return array[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        fcTextField.text = array[row]
     }
 }

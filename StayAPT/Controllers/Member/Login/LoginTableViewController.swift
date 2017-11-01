@@ -78,7 +78,8 @@ class LoginTableViewController: BaseTableViewController {
             Alert.showAlertWithMessage("Error", message: "Password cannot be  empty")
             
         } else {
-            let params = LoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
+          
+            let params = MemberLoginModel(email: "abcd@gmail.com", password: "123456789", userType: 1).toJSON()
             UserLoginPostService.executeRequest(params! as [String : AnyObject]) { (data) in
                 LoginUtils.setCurrentMemberUser(data)
                 let application = UIApplication.shared.delegate as! AppDelegate

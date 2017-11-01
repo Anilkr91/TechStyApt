@@ -23,6 +23,7 @@ class FCLoginPostService {
             
             switch response.result {
             case .success(let value) :
+                
                 if let data = FCLoginResponse.init(json: value as! JSON)  {
                     completionHandler(data)
                     Loader.sharedInstance.hideLoader()

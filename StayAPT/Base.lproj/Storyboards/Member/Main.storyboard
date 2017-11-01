@@ -4435,7 +4435,6 @@
         <!--Goal Of The Month Notes Alert-->
         <scene sceneID="fL7-Li-nRt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="chb-mB-YUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4fb-KA-yyg" customClass="GoalOfTheMonthNotesAlert" customModule="StayAPT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Gq-5u-5bx"/>
@@ -4485,6 +4484,7 @@
                         <outlet property="titleLabel" destination="1ct-gI-cmh" id="pHm-B8-4VX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chb-mB-YUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7380" y="-2460"/>
         </scene>

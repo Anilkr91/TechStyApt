@@ -29,6 +29,7 @@ struct FCLoginResponse: Gloss.Decodable {
     let information: String
     let status: String
     let is_display: String
+    let fcId: String
     
     init?(json: JSON) {
         guard let id: String = "fitness_login_session.id" <~~ json,
@@ -50,6 +51,7 @@ struct FCLoginResponse: Gloss.Decodable {
             let owner: String = "fitness_login_session.owner" <~~ json,
             let information: String = "fitness_login_session.information" <~~ json,
             let status: String = "fitness_login_session.status" <~~ json,
+            let fcId: String = "fitness_login_session.fcId" <~~ json,
             let is_display: String = "fitness_login_session.is_display" <~~ json else { return nil }
         
         self.id = id
@@ -72,6 +74,7 @@ struct FCLoginResponse: Gloss.Decodable {
         self.information = information
         self.status = status
         self.is_display = is_display
+        self.fcId = fcId
     }
     
     func toJSON() -> JSON? {
@@ -96,8 +99,8 @@ struct FCLoginResponse: Gloss.Decodable {
             "fitness_login_session.owner" ~~> self.owner,
             "fitness_login_session.information" ~~> self.information,
             "fitness_login_session.status" ~~> self.status,
-            "fitness_login_session.is_display" ~~> self.is_display
-            
+            "fitness_login_session.is_display" ~~> self.is_display,
+            "fitness_login_session.fcId" ~~> self.fcId
             ])
     }
 }

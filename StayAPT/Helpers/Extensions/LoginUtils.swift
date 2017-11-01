@@ -40,8 +40,8 @@ class LoginUtils {
     
     class func setCurrentFitnessCenterUserLogin(_ login: FCLoginResponse?) {
         if let login = login {
+            
             Defaults[.fitnessCenterLogin] = login.toJSON()
-        } else {
             Defaults.removeAll()
         }
     }
