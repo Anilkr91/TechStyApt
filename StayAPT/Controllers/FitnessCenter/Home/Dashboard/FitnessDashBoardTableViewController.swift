@@ -129,7 +129,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
             performSegue(withIdentifier: "showReportSegue", sender: self)
             
         case 7:
-            self.navigationController?.popViewController(animated: true)
+            performSegue(withIdentifier: "showEmployeeListSegue", sender: self)
             
         case 8:
             performSegue(withIdentifier: "showNotificationSegue", sender: self)

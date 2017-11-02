@@ -20,7 +20,6 @@ struct TimeTableSundayResponse: Gloss.Decodable {
     
     
     init?(json: JSON) {
-        //        guard let sunday: [FacilitiesCenterDetailsTimeTable]  =  else { return nil }
         
         self.sunday = "Sunday" <~~ json
         self.monday = "Monday" <~~ json

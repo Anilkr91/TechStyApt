@@ -20,16 +20,7 @@ struct FacilitiesCenterDetailsTimeTable: Gloss.Decodable{
     let className: String?
 
     init?(json: JSON) {
-//        guard let status: String = "status" <~~ json,
-//            let singleSession: String = "singleSession" <~~ json,
-//            let coupleSession: String = "coupleSession" <~~ json,
-//            let freeSession: String = "freeSession" <~~ json,
-//            let class_id: String = "class_id" <~~ json,
-//            let days: String = "days" <~~ json,
-//            let duration: String = "duration" <~~ json,
-//            let start: String = "start" <~~ json,
-//            let className: String = "className" <~~ json else { return nil }
-
+        
         self.status = "status" <~~ json
         self.singleSession = "singleSession" <~~ json
         self.coupleSession = "coupleSession" <~~ json

@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class EmployeeListGetService {
-    static func executeRequest (_ params:[String: Any], _ completionHandler: @escaping (DashBoardMemberCountModel) -> Void) {
+    static func executeRequest (_ params:[String: Any], _ completionHandler: @escaping (EmployeeListArray) -> Void) {
        
         let header: HTTPHeaders = ["X_API_KEY" : Constants.API_KEY]
         let URL = Constants.BASE_URL
@@ -23,10 +23,8 @@ class EmployeeListGetService {
             switch response.result {
             case .success(let value) :
                 
-                print(value)
-                
-                if let data = DashBoardMemberCountModel.init(json: value as! JSON)  {
-                    completionHandler(data)
+                if let data = EmployeeListResponse.init(json: value as! JSON)  {
+                    completionHandler(data.results)
                     Loader.sharedInstance.hideLoader()
                     
                 } else {
