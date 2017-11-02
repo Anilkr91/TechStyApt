@@ -35,9 +35,23 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .none
+        
         setup()
         getMembersCount()
-        tableView.separatorStyle = .none
+        addViewinArray()
+        
+        checkedInView.tag = 1
+        membersView.tag = 2
+        membersFormView.tag = 3
+        visitorsView.tag = 4
+        visitorsFormView.tag = 5
+        reportView.tag = 6
+        employeesView.tag = 7
+        sendNotificationView.tag = 8
+        totalRevenueView.tag = 9
+        dateView.tag = 10
     }
     
     func addViewinArray() {
@@ -62,7 +76,7 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     }
     
     func viewTapped(_ sender: UITapGestureRecognizer) {
-        performSegue(withIdentifier: "MoodReportSegue", sender: sender.view)
+        showSegue(sender.view!.tag)
     }
     
     func setup() {
@@ -81,51 +95,46 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
     func getMembersCount() {
         
         let param = ["fcID": "1"]
-        
         DashBoardMembersCountGetService.executeRequest(param) { (data) in
             print(data)
         }
-        
     }
     
     // MARK: - Table view data source
     
-    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
     }
     
-    
     func showSegue(_ index: Int) {
         
         switch index {
-        case 0:
+        case 1:
             performSegue(withIdentifier: "showMembersSegue", sender: self)
             
-        case 1:
+        case 2:
             performSegue(withIdentifier: "showMembersListSegue", sender: self)
             
-        case 2:
+        case 3:
             performSegue(withIdentifier: "showMemberFormSegue", sender: self)
             
-        case 3:
+        case 4:
             performSegue(withIdentifier: "showVisitorsSegue", sender: self)
             
-        case 4:
+        case 5:
             performSegue(withIdentifier: "showVisitorsFormSegue", sender: self)
             
-        case 5:
+        case 6:
             performSegue(withIdentifier: "showReportSegue", sender: self)
             
-        case 6:
+        case 7:
             self.navigationController?.popViewController(animated: true)
             
-        case 7:
+        case 8:
             performSegue(withIdentifier: "showNotificationSegue", sender: self)
             
-        case 8:
+        case 9:
             LoginUtils.setCurrentFitnessCenterUserLogin(nil)
             let application = UIApplication.shared.delegate as! AppDelegate
             application.setHomeGuestAsRVC()

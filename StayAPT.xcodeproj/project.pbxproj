@@ -103,6 +103,9 @@
 		8482D0B51FA05739000E17E8 /* MemberNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0B41FA05739000E17E8 /* MemberNotificationTableViewCell.swift */; };
 		8482D0B71FA0830E000E17E8 /* NotificationModelArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0B61FA0830E000E17E8 /* NotificationModelArray.swift */; };
 		8482D0B91FA1A0A5000E17E8 /* FitnessCenterNotificationService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482D0B81FA1A0A5000E17E8 /* FitnessCenterNotificationService+GET.swift */; };
+		848541571FAB055800A94965 /* EmployeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848541561FAB055800A94965 /* EmployeeListTableViewController.swift */; };
+		848541591FAB089300A94965 /* EmployeeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848541581FAB089300A94965 /* EmployeeListTableViewCell.swift */; };
+		8485415B1FAB0A3700A94965 /* EmployeeListService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8485415A1FAB0A3700A94965 /* EmployeeListService+GET.swift */; };
 		848776F51F8D3ECE00B79C1D /* MembershipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F41F8D3ECE00B79C1D /* MembershipModel.swift */; };
 		848776FA1F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */; };
 		848776FC1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */; };
@@ -313,6 +316,9 @@
 		8482D0B41FA05739000E17E8 /* MemberNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		8482D0B61FA0830E000E17E8 /* NotificationModelArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModelArray.swift; sourceTree = "<group>"; };
 		8482D0B81FA1A0A5000E17E8 /* FitnessCenterNotificationService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitnessCenterNotificationService+GET.swift"; sourceTree = "<group>"; };
+		848541561FAB055800A94965 /* EmployeeListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewController.swift; sourceTree = "<group>"; };
+		848541581FAB089300A94965 /* EmployeeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewCell.swift; sourceTree = "<group>"; };
+		8485415A1FAB0A3700A94965 /* EmployeeListService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EmployeeListService+GET.swift"; sourceTree = "<group>"; };
 		848776F41F8D3ECE00B79C1D /* MembershipModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembershipModel.swift; sourceTree = "<group>"; };
 		848776F91F8E1F9800B79C1D /* FitnessMembershipTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessMembershipTableViewController.swift; sourceTree = "<group>"; };
 		848776FB1F8E1FF800B79C1D /* FitnessTimeTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTimeTableTableViewController.swift; sourceTree = "<group>"; };
@@ -901,6 +907,7 @@
 				8482D0B81FA1A0A5000E17E8 /* FitnessCenterNotificationService+GET.swift */,
 				84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */,
 				84C164581FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift */,
+				8485415A1FAB0A3700A94965 /* EmployeeListService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -922,6 +929,7 @@
 				8423EA001F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift */,
 				8423EA021F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift */,
 				8482D0A81F9DC854000E17E8 /* FitnessCenterTimeTableCell.swift */,
+				848541581FAB089300A94965 /* EmployeeListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -939,6 +947,7 @@
 			children = (
 				841CA20A1F612F80004C95CF /* Home */,
 				841CA20C1F612F80004C95CF /* Login */,
+				848541561FAB055800A94965 /* EmployeeListTableViewController.swift */,
 			);
 			path = FitnessCenter;
 			sourceTree = "<group>";
@@ -1309,6 +1318,7 @@
 				84CE7F2F1F82BA89002F7BB3 /* UploadImageService+POST.swift in Sources */,
 				84CE7EE21F7EA6D8002F7BB3 /* BlogModel.swift in Sources */,
 				8423EA031F8BDFC0005C8E21 /* GoalOfTheMonthRateCell.swift in Sources */,
+				848541591FAB089300A94965 /* EmployeeListTableViewCell.swift in Sources */,
 				841CA8161F66E83B004C95CF /* FitnessCenterButton.swift in Sources */,
 				84CE7EF71F7EB330002F7BB3 /* FitnessCenterDetailClassModel.swift in Sources */,
 				8423E9D21F895A34005C8E21 /* GoalOfTheMonthService+GET.swift in Sources */,
@@ -1364,6 +1374,7 @@
 				84CE7F351F839D3A002F7BB3 /* FitnessFacilitiesTableViewCell.swift in Sources */,
 				84CBB5361F559A90001C369F /* MenuTableViewCell.swift in Sources */,
 				84A7B6691F71016200EC64D0 /* SmallBoldLabel.swift in Sources */,
+				8485415B1FAB0A3700A94965 /* EmployeeListService+GET.swift in Sources */,
 				842AF9E51F8766CA008043B7 /* UIColorExtension.swift in Sources */,
 				841CA8C81F6AEE01004C95CF /* FCCheckoutService+POST.swift in Sources */,
 				84C164591FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift in Sources */,
@@ -1376,6 +1387,7 @@
 				848777101F8F9C5500B79C1D /* PlaceOfferServices+POST.swift in Sources */,
 				8482D0AF1F9F56F3000E17E8 /* ProgressBarView.swift in Sources */,
 				84CBB5331F559A90001C369F /* BlogsTableViewCell.swift in Sources */,
+				848541571FAB055800A94965 /* EmployeeListTableViewController.swift in Sources */,
 				8423E9FD1F8BB0D5005C8E21 /* GoalOfTheMonthCell.swift in Sources */,
 				84CBB52F1F559A90001C369F /* CheckedInMemberCollectionViewCell.swift in Sources */,
 				842AF9E31F8766CA008043B7 /* AWCollectionCell.swift in Sources */,

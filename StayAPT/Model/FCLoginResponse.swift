@@ -9,98 +9,71 @@
 import Gloss
 
 struct FCLoginResponse: Gloss.Decodable {
-    let id: String
-    let datetime: String
-    let ip_address: String
+    
+    let address: String
+    let author_name: String
     let empID: String
-    let stayAptId: String
-    let logoImage: String
+    let fcId: String
     let fitness_center_name: String
     let fitness_email: String
-    let password: String
+    let id: String
+    let is_login: String
+    let logoImage: String
     let phone_number: String
-    let address: String
-    let loc_id: String
-    let sub_loc_id: String
-    let alternate_number: String
-    let pincode: String
-    let author_name: String
-    let owner: String
-    let information: String
+    let roleID: String
     let status: String
-    let is_display: String
-    let fcId: String
+    let stayAptId: String
     
     init?(json: JSON) {
-        guard let id: String = "fitness_login_session.id" <~~ json,
-            let datetime: String = "fitness_login_session.datetime" <~~ json,
-            let ip_address: String = "fitness_login_session.ip_address" <~~ json,
+        
+        print(json)
+        
+        guard let address: String = "fitness_login_session.address" <~~ json,
+            let author_name: String = "fitness_login_session.author_name" <~~ json,
             let empID: String = "fitness_login_session.empID" <~~ json,
-            let stayAptId: String = "fitness_login_session.userName" <~~ json,
-            let logoImage: String = "fitness_login_session.logoImage" <~~ json,
+            let fcId: String = "fitness_login_session.fcId" <~~ json,
             let fitness_center_name: String = "fitness_login_session.fitness_center_name" <~~ json,
             let fitness_email: String = "fitness_login_session.fitness_email" <~~ json,
-            let password: String = "fitness_login_session.password" <~~ json,
+            let id: String = "fitness_login_session.id" <~~ json,
+            let is_login: String = "fitness_login_session.is_login" <~~ json,
+            let logoImage: String = "fitness_login_session.logoImage" <~~ json,
             let phone_number: String = "fitness_login_session.phone_number" <~~ json,
-            let address: String = "fitness_login_session.address" <~~ json,
-            let loc_id: String = "fitness_login_session.loc_id" <~~ json,
-            let sub_loc_id: String = "fitness_login_session.sub_loc_id" <~~ json,
-            let alternate_number: String = "fitness_login_session.alternate_number" <~~ json,
-            let pincode: String = "fitness_login_session.pincode" <~~ json,
-            let author_name: String = "fitness_login_session.author_name" <~~ json,
-            let owner: String = "fitness_login_session.owner" <~~ json,
-            let information: String = "fitness_login_session.information" <~~ json,
+            let roleID: String = "fitness_login_session.roleID" <~~ json,
             let status: String = "fitness_login_session.status" <~~ json,
-            let fcId: String = "fitness_login_session.fcId" <~~ json,
-            let is_display: String = "fitness_login_session.is_display" <~~ json else { return nil }
+            let stayAptId: String = "fitness_login_session.userName" <~~ json else { return nil }
         
         self.id = id
-        self.datetime = datetime
-        self.ip_address = ip_address
+        self.is_login = is_login
+        self.roleID = roleID
         self.empID = empID
         self.stayAptId = stayAptId
         self.logoImage = logoImage
         self.fitness_center_name = fitness_center_name
         self.fitness_email = fitness_email
-        self.password = password
         self.phone_number = phone_number
         self.address = address
-        self.loc_id = loc_id
-        self.sub_loc_id = sub_loc_id
-        self.alternate_number = alternate_number
-        self.pincode = pincode
         self.author_name = author_name
-        self.owner = owner
-        self.information = information
         self.status = status
-        self.is_display = is_display
         self.fcId = fcId
+        
     }
     
     func toJSON() -> JSON? {
         return jsonify([
             
-            "fitness_login_session.id" ~~> self.id,
-            "fitness_login_session.datetime" ~~> self.datetime,
-            "fitness_login_session.ip_address" ~~> self.ip_address,
+            "fitness_login_session.address" ~~> self.address,
+            "fitness_login_session.author_name" ~~> self.author_name,
             "fitness_login_session.empID" ~~> self.empID,
-            "fitness_login_session.userName" ~~> self.stayAptId,
-            "fitness_login_session.logoImage" ~~> self.logoImage,
+            "fitness_login_session.fcId" ~~> self.fcId,
             "fitness_login_session.fitness_center_name" ~~> self.fitness_center_name,
             "fitness_login_session.fitness_email" ~~> self.fitness_email,
-            "fitness_login_session.password" ~~> self.password,
+            "fitness_login_session.id" ~~> self.id,
+            "fitness_login_session.is_login" ~~> self.is_login,
+            "fitness_login_session.logoImage" ~~> self.logoImage,
             "fitness_login_session.phone_number" ~~> self.phone_number,
-            "fitness_login_session.address" ~~> self.address,
-            "fitness_login_session.loc_id" ~~> self.loc_id,
-            "fitness_login_session.sub_loc_id" ~~> self.sub_loc_id,
-            "fitness_login_session.alternate_number" ~~> self.alternate_number,
-            "fitness_login_session.pincode" ~~> self.pincode,
-            "fitness_login_session.author_name" ~~> self.author_name,
-            "fitness_login_session.owner" ~~> self.owner,
-            "fitness_login_session.information" ~~> self.information,
+            "fitness_login_session.roleID" ~~> self.roleID,
             "fitness_login_session.status" ~~> self.status,
-            "fitness_login_session.is_display" ~~> self.is_display,
-            "fitness_login_session.fcId" ~~> self.fcId
+            "fitness_login_session.userName" ~~> self.stayAptId
             ])
     }
 }
