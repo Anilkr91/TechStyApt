@@ -126,6 +126,8 @@
 		84C164531FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164521FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift */; };
 		84C164551FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */; };
 		84C164571FA996E5007102E9 /* MemberLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164561FA996E5007102E9 /* MemberLoginModel.swift */; };
+		84C164591FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C164581FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift */; };
+		84C1645B1FA9F539007102E9 /* DashBoardMemberCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1645A1FA9F539007102E9 /* DashBoardMemberCountModel.swift */; };
 		84C4CF3D1F569AD9001DA94A /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */; };
 		84C4CF431F56AFB8001DA94A /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF421F56AFB8001DA94A /* BlackButton.swift */; };
 		84C4CF451F56D445001DA94A /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C4CF441F56D445001DA94A /* RedButton.swift */; };
@@ -334,6 +336,8 @@
 		84C164521FA8EB8C007102E9 /* GoalOfTheMonthRatingAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalOfTheMonthRatingAlert.swift; sourceTree = "<group>"; };
 		84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateGoalOfTheMonthRateYourself.swift; sourceTree = "<group>"; };
 		84C164561FA996E5007102E9 /* MemberLoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberLoginModel.swift; sourceTree = "<group>"; };
+		84C164581FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DashBoardMembersCountService+GET.swift"; sourceTree = "<group>"; };
+		84C1645A1FA9F539007102E9 /* DashBoardMemberCountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashBoardMemberCountModel.swift; sourceTree = "<group>"; };
 		84C4CF3C1F569AD9001DA94A /* DietTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
 		84C4CF421F56AFB8001DA94A /* BlackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		84C4CF441F56D445001DA94A /* RedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
@@ -896,6 +900,7 @@
 				8482D0B01FA05525000E17E8 /* MemberNotificationService+GET.swift */,
 				8482D0B81FA1A0A5000E17E8 /* FitnessCenterNotificationService+GET.swift */,
 				84C164541FA8F6F9007102E9 /* UpdateGoalOfTheMonthRateYourself.swift */,
+				84C164581FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1023,6 +1028,7 @@
 				848776FD1F8E41D400B79C1D /* TimeTableModel.swift */,
 				848777111F8F9EB600B79C1D /* PlaceOfferModel.swift */,
 				8482D0B61FA0830E000E17E8 /* NotificationModelArray.swift */,
+				84C1645A1FA9F539007102E9 /* DashBoardMemberCountModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1274,6 +1280,7 @@
 				84CBB5341F559A90001C369F /* GalleryCollectionViewCell.swift in Sources */,
 				841CA82B1F68130E004C95CF /* Loader.swift in Sources */,
 				84D152331F84C0AC0076253D /* FitnessTrainersCollectionViewCell.swift in Sources */,
+				84C1645B1FA9F539007102E9 /* DashBoardMemberCountModel.swift in Sources */,
 				841CA2511F613A7D004C95CF /* PersonalDetailTableViewController.swift in Sources */,
 				8423EA011F8BB10C005C8E21 /* GoalOfTheMonthNoteCell.swift in Sources */,
 				84D1523F1F868CDC0076253D /* VisitorsFormModel.swift in Sources */,
@@ -1359,6 +1366,7 @@
 				84A7B6691F71016200EC64D0 /* SmallBoldLabel.swift in Sources */,
 				842AF9E51F8766CA008043B7 /* UIColorExtension.swift in Sources */,
 				841CA8C81F6AEE01004C95CF /* FCCheckoutService+POST.swift in Sources */,
+				84C164591FA9F1FF007102E9 /* DashBoardMembersCountService+GET.swift in Sources */,
 				84F92FA31F4FFD920002074D /* FacebookButon.swift in Sources */,
 				84CE7F211F82A243002F7BB3 /* TimeTableMondayResponse.swift in Sources */,
 				84C164571FA996E5007102E9 /* MemberLoginModel.swift in Sources */,

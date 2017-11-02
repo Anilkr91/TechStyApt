@@ -42,6 +42,8 @@ class LoginUtils {
         if let login = login {
             
             Defaults[.fitnessCenterLogin] = login.toJSON()
+//            print(Defaults[.fitnessCenterLogin])
+        } else {
             Defaults.removeAll()
         }
     }

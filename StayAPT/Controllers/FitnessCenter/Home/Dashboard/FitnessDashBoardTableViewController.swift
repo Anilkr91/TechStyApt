@@ -11,20 +11,58 @@ import Kingfisher
 
 class FitnessDashBoardTableViewController: BaseTableViewController {
     
-    let fitnessOptions = ["Checked in Members", "Members", "Members Form", "Visitor's List", "Visitor's Form", "Report", "Home", "Notification", "Logout"]
-
     @IBOutlet weak var nameLabel: MediumLabel!
     @IBOutlet weak var locationLabel: smallLabel!
-    @IBOutlet weak var packageLabel: smallLabel!
     @IBOutlet weak var stayaptId: smallLabel!
-    @IBOutlet weak var subscriptionLabel: smallLabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var checkedInView: UIView!
+    @IBOutlet weak var membersView: UIView!
+    @IBOutlet weak var membersFormView: UIView!
+    
+    @IBOutlet weak var visitorsView: UIView!
+    @IBOutlet weak var visitorsFormView: UIView!
+    @IBOutlet weak var reportView: UIView!
+    @IBOutlet weak var employeesView: UIView!
+    
+    @IBOutlet weak var sendNotificationView: UIView!
+    @IBOutlet weak var totalRevenueView: UIView!
+    @IBOutlet weak var dateView: UIView!
+    
+    var views: [UIView] = []
     
     let user = LoginUtils.getCurrentFitnessCenterUserLogin()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        getMembersCount()
+        tableView.separatorStyle = .none
+    }
+    
+    func addViewinArray() {
+        views.append(checkedInView)
+        views.append(membersView)
+        views.append(membersFormView)
+        views.append(visitorsView)
+        
+        views.append(visitorsFormView)
+        views.append(reportView)
+        views.append(employeesView)
+        views.append(sendNotificationView)
+        
+        views.append(totalRevenueView)
+        views.append(dateView)
+        
+        for view in views {
+            
+             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FitnessDashBoardTableViewController.viewTapped(_:)))
+            view.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    func viewTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "MoodReportSegue", sender: sender.view)
     }
     
     func setup() {
@@ -37,50 +75,28 @@ class FitnessDashBoardTableViewController: BaseTableViewController {
         }
         nameLabel.text = user.fitness_center_name
         locationLabel.text = user.address
-        packageLabel.text = user.owner
         stayaptId.text = user.stayAptId
-        subscriptionLabel.text = user.fitness_email
+    }
+    
+    func getMembersCount() {
+        
+        let param = ["fcID": "1"]
+        
+        DashBoardMembersCountGetService.executeRequest(param) { (data) in
+            print(data)
+        }
+        
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return fitnessOptions.count
-    }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        cell.textLabel?.text = fitnessOptions[indexPath.section]
-        return cell
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.section)
-        showSegue(indexPath.section)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
     
     func showSegue(_ index: Int) {
         
